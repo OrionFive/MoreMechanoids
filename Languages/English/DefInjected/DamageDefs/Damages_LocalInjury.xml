@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Paralyze.label>paralyze</Paralyze.label>
+	<Paralyze.deathMessage>{0} died from nerve damage.</Paralyze.deathMessage>	
+	
+</LanguageData>

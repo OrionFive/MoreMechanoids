@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<MechanoidChip.label>mechanoid AI chip</MechanoidChip.label>
+	<MechanoidChip.description>An AI chip for repurposing dead mechanoids.</MechanoidChip.description>
+  
+	<UnfinishedMechanoidChip.label>unfinished mechanoid AI chip</UnfinishedMechanoidChip.label>
+	<UnfinishedMechanoidChip.description>An unfinished AI chip for repurposing dead mechanoids.</UnfinishedMechanoidChip.description>
+	
+</LanguageData>

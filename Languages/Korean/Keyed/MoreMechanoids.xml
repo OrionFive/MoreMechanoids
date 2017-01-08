@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Buildings -->
+  <InnerTemperature>내부 온도: {0}/{1}</InnerTemperature>
+  <NoPower>건물 전기 끊김</NoPower>
+  <CurrentLevel>현재 등급: {0}</CurrentLevel>
+  <LevelRequired>다음 등급에 필요: </LevelRequired>
+  <MechanoidsControlled>조종되는 메카노이드: {0}/{1}</MechanoidsControlled>
+  <MechanoidsOwned>소유한 메카노이드: {0}</MechanoidsOwned>
+  <KeepInside>모든 메카노이드 내부로 이동</KeepInside>
+  <NotConnected>PAL에 연결되지 않음.</NotConnected>
+  <NoBots>지시 받는 메카노이드가 없습니다.</NoBots>
+  <LabelOffline>연결 끊김</LabelOffline>
+  <PlaceOnLink>PAL 연결선 위에 설치되어야 합니다.</PlaceOnLink>
+  
+  <!-- Needs -->
+  <BotTooltipFood>메카노이드는 음식을 필요로 하지 않습니다.</BotTooltipFood>
+  <BotTooltipRest>메카노이드는 독립적인 사고를 할 수 있지만 처리장치에 많은 부하를 줄 것입니다. 과열된 칩은 오류를 일으킬 수 있습니다.</BotTooltipRest>
+  <BotLabelRest>칩 냉각</BotLabelRest>
+  
+  <!-- Story -->
+  <BotStoryAdultTitle>사로잡힌 메카노이드</BotStoryAdultTitle>
+  <BotStoryAdultShort>사로잡힘</BotStoryAdultShort>
+  <BotStoryAdultDesc>이 메카노이드는 붙잡힌 후에 다시 설정되었습니다.</BotStoryAdultDesc>
+  <BotStoryChildTitle>알려지지 않음</BotStoryChildTitle>
+  <BotStoryChildDesc>붙잡히기 전의 정보는 알려지지 않았습니다.</BotStoryChildDesc>
+  
+  <!-- Misc -->
+  <BotShortCircuit>메카노이드 {0}의 전원이 합선을 일으켰습니다.</BotShortCircuit>
+  <BotStandingBy>대기 중.</BotStandingBy>
+  
+</LanguageData>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<MechanicalCrawler.label>crawler</MechanicalCrawler.label>
+	<MechanicalSkullywag.label>skullywag</MechanicalSkullywag.label>
+	<AssimilatedHuman.label>human</AssimilatedHuman.label>
+	<MechanicalScoutbot.label>scoutbot</MechanicalScoutbot.label>
+	<MechanicalAssaulter.label>assaulter</MechanicalAssaulter.label>
+	<MechanicalCarrier.label>carrier</MechanicalCarrier.label>
+	<MechanicalMammoth.label>mammoth</MechanicalMammoth.label>
+	<MechanicalFlamebot.label>flamebot</MechanicalFlamebot.label>
+	<MechanicalBoombot.label>boombot</MechanicalBoombot.label>
+
+</LanguageData>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<Mechanoid_Crawler.label>crawler</Mechanoid_Crawler.label>
+	<Mechanoid_Crawler.description>Small spider-like robots. While not particularly sturdy, their speed, size and numbers more than make up for it. A tiny plasma cutter at their front allows them to cut through metal like butter. Their favorite passtime is open surgery.</Mechanoid_Crawler.description>
+	<Mechanoid_Crawler_Converted.label>crawler</Mechanoid_Crawler_Converted.label>
+	<Mechanoid_Crawler_Converted.description>Small spider-like robots. While not particularly sturdy, their speed, size and numbers more than make up for it. A tiny plasma cutter at their front allows them to cut through metal like butter. Their favorite passtime is open surgery.</Mechanoid_Crawler_Converted.description>
+  
+	<Mechanoid_Skullywag.label>skullywag</Mechanoid_Skullywag.label>
+	<Mechanoid_Skullywag.description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing component.</Mechanoid_Skullywag.description>
+	<Mechanoid_Skullywag_Converted.label>skullywag</Mechanoid_Skullywag_Converted.label>
+	<Mechanoid_Skullywag_Converted.description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing component.</Mechanoid_Skullywag_Converted.description>
+  
+	<Mechanoid_Scyther_Converted.label>scyther</Mechanoid_Scyther_Converted.label>
+	<Mechanoid_Scyther_Converted.description>Fast, spindly, human-sized combat mechanoids. They usually carry one primary ranged weapon, and their bodies are adorned with multiple knife-like protrusions to make them deadly in melee combat. They don't use cover. Best handled by concentrated, overwhelming force.</Mechanoid_Scyther_Converted.description>
+  
+	<Mechanoid_Flamebot.label>flamebot</Mechanoid_Flamebot.label>
+	<Mechanoid_Flamebot.description>A small mechanoid that spews fire. Though they are lightly armored, they can quickly cause chaos within your colony.</Mechanoid_Flamebot.description>
+	
+</LanguageData>

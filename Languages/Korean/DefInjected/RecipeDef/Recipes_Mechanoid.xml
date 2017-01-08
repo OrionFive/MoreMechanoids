@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	<MM_CreateMechanoidChip.label>메카노이드 인공지능 칩 제작</MM_CreateMechanoidChip.label>
+	<MM_CreateMechanoidChip.description>쓰러진 메카노이드를 다시 사용하기 위해 필요한 칩을 제작합니다. 높은 등급의 회로를 제작하기 위해 금이 필요합니다.</MM_CreateMechanoidChip.description>
+	<MM_CreateMechanoidChip.jobString>칩 제작 중.</MM_CreateMechanoidChip.jobString>
+
+	<MM_ChipCrawlerCleaning.label>청소용 크롤러 제작</MM_ChipCrawlerCleaning.label>
+	<MM_ChipCrawlerCleaning.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipCrawlerCleaning.description>
+	<MM_ChipCrawlerCleaning.jobString>메카노이드 복구 중.</MM_ChipCrawlerCleaning.jobString>
+
+	<MM_ChipCrawlerHauling.label>운반용 크롤러 제작</MM_ChipCrawlerHauling.label>
+	<MM_ChipCrawlerHauling.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipCrawlerHauling.description>
+	<MM_ChipCrawlerHauling.jobString>메카노이드 복구 중.</MM_ChipCrawlerHauling.jobString>
+
+	<MM_ChipCrawlerCutting.label>제초용 크롤러 제작</MM_ChipCrawlerCutting.label>
+	<MM_ChipCrawlerCutting.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipCrawlerCutting.description>
+	<MM_ChipCrawlerCutting.jobString>메카노이드 복구 중.</MM_ChipCrawlerCutting.jobString>
+
+	<MM_ChipSkullywagCooking.label>요리용 스컬리웨그 제작</MM_ChipSkullywagCooking.label>
+	<MM_ChipSkullywagCooking.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipSkullywagCooking.description>
+	<MM_ChipSkullywagCooking.jobString>메카노이드 복구 중.</MM_ChipSkullywagCooking.jobString>
+
+	<MM_ChipSkullywagDoctor.label>의료용 크롤러 제작</MM_ChipSkullywagDoctor.label>
+	<MM_ChipSkullywagDoctor.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipSkullywagDoctor.description>
+	<MM_ChipSkullywagDoctor.jobString>메카노이드 복구 중.</MM_ChipSkullywagDoctor.jobString>
+
+	<MM_ChipScytherHunting.label>사냥용 사이더 제작</MM_ChipScytherHunting.label>
+	<MM_ChipScytherHunting.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipScytherHunting.description>
+	<MM_ChipScytherHunting.jobString>메카노이드 복구 중.</MM_ChipScytherHunting.jobString>
+
+	<MM_ChipScytherCutting.label>제초용 사이더 제작</MM_ChipScytherCutting.label>
+	<MM_ChipScytherCutting.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipScytherCutting.description>
+	<MM_ChipScytherCutting.jobString>메카노이드 복구 중.</MM_ChipScytherCutting.jobString>
+
+	<MM_ChipScytherMining.label>채굴용 사이더 제작</MM_ChipScytherMining.label>
+	<MM_ChipScytherMining.description>새로 만든 인공지능 칩으로 쓰러진 메카노이드를 복구합니다. 하나의 역할을 할 수 있습니다.</MM_ChipScytherMining.description>
+	<MM_ChipScytherMining.jobString>메카노이드 복구 중.</MM_ChipScytherMining.jobString>
+
+
+</LanguageData>

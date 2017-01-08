@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<!-- Crawler -->
+	<MechanicalShell.label>껍데기</MechanicalShell.label>
+	<PlasmaCutter.label>플라즈마 절단기</PlasmaCutter.label>
+	<MechanicalAntenna.label>안테나</MechanicalAntenna.label>
+	<MechanicalCore.label>중심핵</MechanicalCore.label>
+	<FrontLeftMechanicalLeg.label>왼쪽 앞다리</FrontLeftMechanicalLeg.label>
+	<FrontRightMechanicalLeg.label>오른쪽 앞다리</FrontRightMechanicalLeg.label>
+	<MiddleLeftMechanicalLeg.label>왼쪽 중간 다리</MiddleLeftMechanicalLeg.label>
+	<MiddleRightMechanicalLeg.label>오른쪽 중간 다리</MiddleRightMechanicalLeg.label>
+	<RearLeftMechanicalLeg.label>왼쪽 뒷다리</RearLeftMechanicalLeg.label>
+	<RearRightMechanicalLeg.label>오른쪽 뒷다리</RearRightMechanicalLeg.label>
+	<MechanicalGearBox.label>전동 장치</MechanicalGearBox.label>
+	
+	<!-- Skullywag -->
+	<FrontParalyzeComponent.label>마비 장치</FrontParalyzeComponent.label>
+	<WheelsEnclosure.label>바퀴 보호대</WheelsEnclosure.label>
+	<LeftWheel.label>왼쪽 바퀴</LeftWheel.label>
+	<RightWheel.label>오른쪽 바퀴</RightWheel.label>
+	<BackWheel.label>뒤쪽 바퀴</BackWheel.label>
+	<MechanicalCoreSkullywag.label>중심핵</MechanicalCoreSkullywag.label>
+	<CoreProcessor.label>중앙처리장치</CoreProcessor.label>
+	<InfraredSensor.label>적외선 감지기</InfraredSensor.label>
+
+	<!-- Assimilated Human -->
+	<MechanicalSkull.label>강철 두개골</MechanicalSkull.label>
+  
+	<!-- Scoutbot -->
+	<MechanicalCoreScoutbot.label>중심핵</MechanicalCoreScoutbot.label>
+	<MechanicalHoverComponent.label>부양기</MechanicalHoverComponent.label>
+	<MechanicalBackupHoverComponent.label>비상용 부양기</MechanicalBackupHoverComponent.label>
+	<FrontGun.label>전면 총</FrontGun.label>
+	
+	<!-- Assaulter -->
+	<TopRightGunProtrusion.label>오른쪽 상단 돌출 총</TopRightGunProtrusion.label>
+	<BottomRightGunProtrusion.label>오른쪽 하단 돌출 총</BottomRightGunProtrusion.label>
+	<TopLeftGunProtrusion.label>왼쪽 상단 돌출 총</TopLeftGunProtrusion.label>
+	<BottomLeftGunProtrusion.label>왼쪽 하단 돌출 총</BottomLeftGunProtrusion.label>
+	<FrontShield.label>전면 방패</FrontShield.label>
+	<ShieldWindow.label>방패 유리창</ShieldWindow.label>
+
+	<!-- Carrier -->
+	<MechanicalCephalothorax.label>두흉부</MechanicalCephalothorax.label>
+	<LargeMechanicalAbdomen.label>거대 복부</LargeMechanicalAbdomen.label>
+	<MechanicalTentacle.label>촉수</MechanicalTentacle.label>
+	<MechanicalTentacleSection.label>촉수 마디</MechanicalTentacleSection.label>
+	<Claw.label>발톱</Claw.label>
+	<ClawGrip.label>발톱 집게</ClawGrip.label>
+	<SightSensor.label>빛 감지기</SightSensor.label>
+	<FrontLeftMechanicalPalp.label>전면 방패 유리창</FrontLeftMechanicalPalp.label>
+	<FrontRightMechanicalPalp.label>전면 방패 유리창</FrontRightMechanicalPalp.label>
+  
+	<!-- Mammoth -->
+	<MechanicalBody.label>기계 몸체</MechanicalBody.label>
+	<ArmorPlating.label>장갑판</ArmorPlating.label>
+	<InternalMetalPlate.label>내부 금속판</InternalMetalPlate.label>
+	<MetalTusk.label>금속 어금니</MetalTusk.label>
+  
+	<!-- Flamebot -->
+	<MechanicalBodySmall.label>몸체</MechanicalBodySmall.label>
+	<LeftTubing.label>왼쪽 배출구</LeftTubing.label>
+	<RightTubing.label>오른쪽 배출구</RightTubing.label>
+	<FuelContainer.label>연료 용기</FuelContainer.label>
+	<Igniter.label>점화 장치</Igniter.label>
+  
+	<!-- Boombot -->
+	<LeftExplosiveTank.label>왼쪽 폭발물 용기</LeftExplosiveTank.label>
+	<RightExplosiveTank.label>오른쪽 폭발물 용기</RightExplosiveTank.label>
+
+
+</LanguageData>

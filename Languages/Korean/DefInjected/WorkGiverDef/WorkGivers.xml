@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<DoBillsTinker.verb>개조</DoBillsTinker.verb>
+	<DoBillsTinker.gerund>개조</DoBillsTinker.gerund>
+	
+	<FinishUnfinishedTinkering.verb>개조</FinishUnfinishedTinkering.verb>
+	<FinishUnfinishedTinkering.gerund>개조</FinishUnfinishedTinkering.gerund>
+
+</LanguageData>

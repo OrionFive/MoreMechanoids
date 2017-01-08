@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<PAL_Link.label>PAL link</PAL_Link.label>
+	<PAL_Link.description>Connects PAL to various subparts required for its operation.</PAL_Link.description>
+  
+	<PAL_Core.label>PAL core</PAL_Core.label>
+	<PAL_Core.description>PAL (Personality driven ALgorithmic computer) is a sentient computer (or artificial intelligence) that controls the mechanoids of the colony and interacts with the colony's crew.
+		Must be placed on a link.</PAL_Core.description>
+  
+	<PAL_Memory.label>PAL memory</PAL_Memory.label>
+	<PAL_Memory.description>A memory component for PAL. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</PAL_Memory.description>
+  
+	<PAL_PowerUnit.label>PAL power unit</PAL_PowerUnit.label>
+	<PAL_PowerUnit.description>A component for PAL required to handle higher amounts of energy. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</PAL_PowerUnit.description>
+  
+	<PAL_Sensor.label>PAL sensor</PAL_Sensor.label>
+	<PAL_Sensor.description>A sensor component for PAL required to process environment data and connect to mechanoids. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</PAL_Sensor.description>
+  
+	<PAL_Cooler.label>PAL cooler</PAL_Cooler.label>
+	<PAL_Cooler.description>This PAL component cools adjacent components and disperses the heat into the room. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</PAL_Cooler.description>
+	
+</LanguageData>

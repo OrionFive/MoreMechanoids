@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<Crawler_Convertable_Cleaning.label>재설정된 크롤러</Crawler_Convertable_Cleaning.label>
+	<Crawler_Convertable_Cleaning.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Crawler_Convertable_Cleaning.description>
+  
+	<Crawler_Convertable_Hauling.label>재설정된 크롤러</Crawler_Convertable_Hauling.label>
+	<Crawler_Convertable_Hauling.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Crawler_Convertable_Hauling.description>
+  
+	<Crawler_Convertable_Cutting.label>재설정된 크롤러</Crawler_Convertable_Cutting.label>
+	<Crawler_Convertable_Cutting.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Crawler_Convertable_Cutting.description>
+  
+	<Skullywag_Convertable_Cooking.label>재설정된 스컬리웨그</Skullywag_Convertable_Cooking.label>
+	<Skullywag_Convertable_Cooking.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Skullywag_Convertable_Cooking.description>
+  
+	<Skullywag_Convertable_Doctor.label>재설정된 스컬리웨그</Skullywag_Convertable_Doctor.label>
+	<Skullywag_Convertable_Doctor.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Skullywag_Convertable_Doctor.description>
+  
+	<Scyther_Convertable_Hunting.label>재설정된 사이더</Scyther_Convertable_Hunting.label>
+	<Scyther_Convertable_Hunting.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Scyther_Convertable_Hunting.description>
+  
+	<Scyther_Convertable_Mining.label>재설정된 사이더</Scyther_Convertable_Mining.label>
+	<Scyther_Convertable_Mining.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Scyther_Convertable_Mining.description>
+  
+	<Scyther_Convertable_Cutting.label>재설정된 사이더</Scyther_Convertable_Cutting.label>
+	<Scyther_Convertable_Cutting.description>수리되고 재설정되어 여러 일을 할 수 있는 메카노이드입니다.</Scyther_Convertable_Cutting.description>
+	
+</LanguageData>

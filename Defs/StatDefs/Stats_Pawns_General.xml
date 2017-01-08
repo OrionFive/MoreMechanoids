@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StatDefs>
+
+  <StatDef>
+    <defName>ImmunityGainSpeed</defName>
+    <label>immunity gain speed</label>
+    <description>Speed at which this character gains immunity to diseases. If this is too slow, the character will die from a disease before developing immunity.</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>40</displayPriorityInCategory>
+    <!--Don't!-->
+	<showOnMechanoids>false</showOnMechanoids>
+    <capacityFactors>
+      <li>
+        <capacity>BloodFiltration</capacity>
+        <weight>1</weight>
+      </li>
+    </capacityFactors>
+    <parts>
+      <li Class="StatPart_Food">
+        <factorUrgentlyHungry>0.9</factorUrgentlyHungry>
+        <factorStarving>0.7</factorStarving>
+      </li>
+      <li Class="StatPart_Rest">
+        <factorTired>0.96</factorTired>
+        <factorVeryTired>0.92</factorVeryTired>
+        <factorExhausted>0.8</factorExhausted>
+      </li>
+      <li Class="StatPart_BedStat">
+        <stat>ImmunityGainSpeedFactor</stat>
+      </li>
+      <li Class="StatPart_Age">
+        <curve>
+          <points>
+            <li>(40,1)</li>
+            <li>(80,0.8)</li>
+          </points>
+        </curve>
+      </li>
+    </parts>
+  </StatDef>
+  
+</StatDefs>

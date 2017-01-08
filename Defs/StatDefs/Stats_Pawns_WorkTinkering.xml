@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StatDefs>
+
+
+  <StatDef>
+    <defName>TinkerSpeed</defName>
+    <label>tinkering speed</label>
+    <description>Speed at which this person works on mechanical devices.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Research</skill>
+        <baseFactor>0.4</baseFactor>
+        <bonusFactor>0.06</bonusFactor>
+      </li>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Crafting</skill>
+        <baseFactor>0.4</baseFactor>
+        <bonusFactor>0.06</bonusFactor>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Consciousness</capacity>
+        <weight>1</weight>
+      </li>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.3</weight>
+      </li>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>0.9</weight>
+      </li>
+    </capacityFactors>
+  </StatDef>
+
+
+</StatDefs>

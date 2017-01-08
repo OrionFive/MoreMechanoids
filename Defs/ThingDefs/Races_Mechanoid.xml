@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BasePawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <repairEffect>Repair</repairEffect>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <!--li>ITab_Pawn_Needs</li-->
+      <li>ITab_Pawn_Character</li>
+      <!--li>ITab_Pawn_Gear</li-->
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+
+  
+  
+  
+  
+  <!-- ============================ Mechanoids ========================== -->
+
+  <ThingDef ParentName="BasePawn" Name="BaseMechanoid" Abstract="True">
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <statBases>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+    </statBases>
+    <race>
+      <mechanoid>true</mechanoid>
+      <hasGenders>false</hasGenders>
+      <isFlesh>false</isFlesh>
+      <diet>NeverEats</diet>
+    </race>
+  </ThingDef>
+  
+  
+
+  <!-- Crawler -->
+  <ThingDef Name="MechanoidCrawler" ParentName="BaseMechanoid">
+    <defName>Mechanoid_Crawler</defName>
+    <label>crawler</label>
+    <description>Small spider-like robots. While not particularly sturdy, their speed, size and numbers more than make up for it. A tiny plasma cutter at their front allows them to cut through metal like butter. Their favorite passtime is open surgery.</description>
+	<stackLimit>5</stackLimit>
+    <statBases>
+      <MoveSpeed>7.0</MoveSpeed>
+	  <ArmorRating_Blunt>-0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Electric>-0.5</ArmorRating_Electric>
+      <MeatAmount>5</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftMechanicalLeg</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightMechanicalLeg</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>185</defaultCooldownTicks>
+        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <meleeDamageDef>SurgicalCut</meleeDamageDef>
+        <linkedBodyPartsGroup>PlasmaCutter</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>MechanicalCrawler</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHealthScale>0.5</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+		  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+		  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundAngry>Pawn_Mech_Scyther_Angry</soundAngry>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>100000</min>
+        <max>200000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+	  <!--li>ReprogramMechanoid</li-->
+    </recipes>
+    <butcherProducts>
+      <Steel>15</Steel>
+      <Plasteel>10</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+  
+  <!-- Converted Mechanoid Crawler -->
+  <ThingDef Name="MechanoidCrawlerConverted" ParentName="MechanoidCrawler">
+    <defName>Mechanoid_Crawler_Converted</defName>
+    <thingClass>MoreMechanoids.PawnConverted</thingClass>
+    <race>
+      <nameCategory>HumanStandard</nameCategory>
+      <thinkTree>Mechanoid_Converted</thinkTree>
+      <mechanoid>true</mechanoid>
+      <hasGenders>true</hasGenders>
+      <isFlesh>false</isFlesh>
+      <diet>NeverEats</diet>
+	</race>
+	<recipes/>
+   </ThingDef>
+
+  
+  <!-- Skullywag -->
+  <ThingDef Name="MechanoidSkullywag" ParentName="BaseMechanoid">
+    <defName>Mechanoid_Skullywag</defName>
+    <label>skullywag</label>
+    <description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing component.</description>
+    <statBases>
+      <MoveSpeed>6</MoveSpeed>
+	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <MeatAmount>30</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>MoreMechanoids.Verb_UnlockDoor</verbClass>
+        <defaultCooldownTicks>30</defaultCooldownTicks>
+        <meleeDamageBaseAmount>50</meleeDamageBaseAmount>
+        <linkedBodyPartsGroup>FrontParalyzeComponent</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+		<targetParams>
+			<canTargetPawns>false</canTargetPawns>
+		</targetParams>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>30</defaultCooldownTicks>
+        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <meleeDamageDef>Paralyze</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontParalyzeComponent</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+ 		<targetParams>
+			<canTargetBuildings>false</canTargetBuildings>
+			<neverTargetDoors>true</neverTargetDoors>
+		</targetParams>
+     </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid_Skullywag</thinkTree>
+      <body>MechanicalSkullywag</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Pawn_Mech_Scyther_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Steel>45</Steel>
+      <Plasteel>20</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+  
+  <!-- Converted Mechanoid Skullywag -->
+  <ThingDef Name="MechanoidSkullywagConverted" ParentName="MechanoidSkullywag">
+    <defName>Mechanoid_Skullywag_Converted</defName>
+    <thingClass>MoreMechanoids.PawnConverted</thingClass>
+    <race>
+      <nameCategory>HumanStandard</nameCategory>
+      <thinkTree>Mechanoid_Converted</thinkTree>
+      <mechanoid>true</mechanoid>
+      <hasGenders>true</hasGenders>
+      <isFlesh>false</isFlesh>
+     <diet>NeverEats</diet>
+	</race>
+	<recipes/>
+   </ThingDef>
+
+
+  <!-- Centipede -->
+  <ThingDef Name="MechanoidCentipede" ParentName="BaseMechanoid">
+    <defName>Mechanoid_Centipede</defName>
+    <label>centipede</label>
+    <description>Heavy combat mechanoids that glide on dozens of tiny legs. Their heavy armor and firepower makes them very effective against bunched-up static defenders. They are somewhat vulnerable to mobile hit-and-run tactics.</description>
+    <statBases>
+      <MoveSpeed>1.33</MoveSpeed>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <MeatAmount>30</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>140</defaultCooldownTicks>
+        <meleeDamageBaseAmount>25</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>MechanicalCentipede</body>
+      <baseBodySize>2.0</baseBodySize>
+      <baseHealthScale>1.2</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+          <soundAngry>Pawn_Mech_Centipede_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Steel>80</Steel>
+      <Plasteel>50</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+
+  
+  <!-- Converted Mechanoid Centipede -->
+  <ThingDef Name="MechanoidCentipedeConverted" ParentName="MechanoidCentipede">
+    <defName>Mechanoid_Centipede_Converted</defName>
+    <thingClass>MoreMechanoids.PawnConverted</thingClass>
+    <race>
+      <nameCategory>HumanStandard</nameCategory>
+      <thinkTree>Mechanoid_Converted</thinkTree>
+      <mechanoid>true</mechanoid>
+      <hasGenders>true</hasGenders>
+      <isFlesh>false</isFlesh>
+     <diet>NeverEats</diet>
+	</race>
+	<recipes/>
+   </ThingDef>
+
+
+
+  <!-- Scyther -->
+  <ThingDef Name="MechanoidScyther" ParentName="BaseMechanoid">
+    <defName>Mechanoid_Scyther</defName>
+    <label>scyther</label>
+    <description>Fast, spindly, human-sized combat mechanoids. They usually carry one primary ranged weapon, and their bodies are adorned with two articulated blades to make them deadly in melee combat. They don't use cover. Best handled by concentrated, overwhelming force.</description>
+    <statBases>
+      <MoveSpeed>5.6</MoveSpeed>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <MeatAmount>30</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>24</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>24</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>Scyther</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Pawn_Mech_Scyther_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>RemoveMechanoidBodyPart</li>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Steel>45</Steel>
+      <Plasteel>25</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+
+
+  <!-- Converted Mechanoid Scyther -->
+  <ThingDef Name="MechanoidScytherConverted" ParentName="MechanoidScyther">
+    <defName>Mechanoid_Scyther_Converted</defName>
+    <thingClass>MoreMechanoids.PawnConverted</thingClass>
+    <race>
+      <nameCategory>HumanStandard</nameCategory>
+      <thinkTree>Mechanoid_Converted</thinkTree>
+      <mechanoid>true</mechanoid>
+      <hasGenders>true</hasGenders>
+      <isFlesh>false</isFlesh>
+      <diet>NeverEats</diet>
+	</race>
+	<recipes/>
+   </ThingDef>
+
+
+
+  <!-- Flamebot -->
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>Mechanoid_Flamebot</defName>
+    <label>flamebot</label>
+    <description>A small mechanoid that spews fire. Though they are lightly armored, they can quickly cause chaos within your colony.</description>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+	  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Electric>-0.5</ArmorRating_Electric>
+      <MeatAmount>10</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>Igniter</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>MechanicalFlamebot</body>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHealthScale>0.5</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+          <soundAngry>Pawn_Mech_Scyther_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Steel>25</Steel>
+      <Plasteel>13</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+
+  
+  <!-- Mammoth -->
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>Mechanoid_Mammoth</defName>
+    <label>mammoth</label>
+    <description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down.</description>
+    <statBases>
+      <MoveSpeed>6</MoveSpeed>
+	  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <MeatAmount>100</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>100</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>MechanicalMammoth</body>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>2.5</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+          <soundAngry>Pawn_Mech_Centipede_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Steel>180</Steel>
+      <Plasteel>150</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+  
+  <!-- Assaulter -->
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>Mechanoid_Assaulter</defName>
+    <label>assaulter</label>
+    <description>The assaulter is a heavy combat mechanoid. It's built in front shield protects it from most gunfire.</description>
+    <statBases>
+      <MoveSpeed>5.7</MoveSpeed>
+	  <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.84</ArmorRating_Sharp>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>30</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>CoveredByShield</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>MechanicalAssaulter</body>
+      <baseBodySize>1.25</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+		  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+		  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundAngry>Pawn_Mech_Scyther_Angry</soundAngry>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+    </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Steel>60</Steel>
+      <Plasteel>25</Plasteel>
+    </butcherProducts>
+  </ThingDef>
+
+  
+</ThingDefs>

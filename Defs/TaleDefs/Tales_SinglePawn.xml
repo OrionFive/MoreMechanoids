@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TaleDef>
+    <defName>CreatedMechanoid</defName>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <baseInterest>1.5</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>image->[pawn_nameFull], [circumstance_group] on a workbench. [desc_sentence_group]</li>
+        <li>image->The mechanoid [pawn_nameFull], [circumstance_group]. [desc_sentence_group]</li>
+        <li>image->A silhouette next to [pawn_nameFull], [circumstance_group]. [desc_sentence_group]</li>
+        <li>image->[pawn_nameFull], [circumstance_group], with [pawn_possessive] maker. [desc_sentence_group]</li>
+        <li>circumstance_phrase->fully assembled</li>
+        <li>circumstance_phrase->still under construction</li>
+        <li>circumstance_phrase->getting the final piece attached to [pawn_possessive] body</li>
+        <li>circumstance_phrase->with sparks flying out of [pawn_possessive] back</li>
+        <li>circumstance_phrase->lying around in single pieces</li>
+        <li>circumstance_phrase->opening [pawn_possessive] mechanical eyes</li>
+        <li>circumstance_phrase->being reassembled</li>
+        <li>circumstance_phrase->being switched on</li>
+        <li>circumstance_phrase->being opened up</li>
+        <li>circumstance_phrase->finally looking peaceful</li>
+        <li>desc_sentence->[pawn_pronoun] looks rather damaged.</li>
+        <li>desc_sentence->[pawn_pronoun] is a work of art.</li>
+        <li>desc_sentence->[pawn_pronoun] is not moving, but you can still feel a sense of threat.</li>
+        <li>desc_sentence->There is an eerie glow inside of [pawn_possessive] body.</li>
+        <li>desc_sentence->A nearby [animal] is looking up, startled.</li>
+        <li>desc_sentence->A small [animal] got trapped inside [pawn_possessive] chassis.</li>
+        <li>desc_sentence->Tools are lying around left and right.</li>
+        <li>desc_sentence->It is obvious that [pawn_possessive] insides are totally destroyed.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+
+  <TaleDef>
+    <defName>Paralyzed</defName>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <baseInterest>4</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>image->[pawn_nameFull] lying on the ground [circumstance_group]. [desc_sentence_group]</li>
+        <li>image->[pawn_nameFull] twisting [pawn_possessive] his limbs [circumstance_group]. [desc_sentence_group]</li>
+        <li>image->[pawn_nameFull] falling over [circumstance_group]. [desc_sentence_group]</li>
+        <li>image->[pawn_nameFull] collapsing [circumstance_group]. [desc_sentence_group]</li>
+        <li>circumstance_phrase->with [pawn_possessive] eyes spinning</li>
+        <li>circumstance_phrase->in agony</li>
+        <li>circumstance_phrase->while watching [pawn_possessive] life go by</li>
+        <li>circumstance_phrase->with [pawn_possessive] arms shaking</li>
+        <li>circumstance_phrase->while drooling</li>
+        <li>circumstance_phrase->while breathing heavily</li>
+        <li>circumstance_phrase->while looking pathetic</li>
+        <li>circumstance_phrase->while looking around [pawn_objective] for help</li>
+        <li>circumstance_phrase->while waiting for rescue</li>
+        <li>circumstance_phrase->while attempting to flee</li>
+        <li>circumstance_phrase->with a dead stare in [pawn_possessive] eyes</li>
+        <li>circumstance_phrase->while holding back vomit</li>
+        <li>circumstance_phrase->without a care in the world</li>
+        <li>circumstance_phrase->with a scared look in [pawn_possessive] face</li>
+        <li>circumstance_phrase->while trying to call for help</li>
+        <li>desc_sentence->[pawn_pronoun] seems totally unaware of what is around [pawn_objective].</li>
+        <li>desc_sentence->[pawn_possessive] expression is helpless.</li>
+        <li>desc_sentence->[pawn_pronoun] is nearly unconscious, [pawn_possessive] tongue lolling out, drool dripping.</li>
+        <li>desc_sentence->[pawn_pronoun] looks scared.</li>
+        <li>desc_sentence->[pawn_pronoun] is covered in dirt.</li>
+        <li>desc_sentence->[pawn_pronoun] seems to have lost a shoe.</li>
+        <li>desc_sentence->[pawn_possessive] hair is totally messed up.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+</Defs>

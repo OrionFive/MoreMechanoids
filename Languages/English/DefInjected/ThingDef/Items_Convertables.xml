@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<Crawler_Convertable_Cleaning.label>converted crawler</Crawler_Convertable_Cleaning.label>
+	<Crawler_Convertable_Cleaning.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Crawler_Convertable_Cleaning.description>
+  
+	<Crawler_Convertable_Hauling.label>converted crawler</Crawler_Convertable_Hauling.label>
+	<Crawler_Convertable_Hauling.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Crawler_Convertable_Hauling.description>
+  
+	<Crawler_Convertable_Cutting.label>converted crawler</Crawler_Convertable_Cutting.label>
+	<Crawler_Convertable_Cutting.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Crawler_Convertable_Cutting.description>
+  
+	<Skullywag_Convertable_Cooking.label>converted skullywag</Skullywag_Convertable_Cooking.label>
+	<Skullywag_Convertable_Cooking.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Skullywag_Convertable_Cooking.description>
+  
+	<Skullywag_Convertable_Doctor.label>converted skullywag</Skullywag_Convertable_Doctor.label>
+	<Skullywag_Convertable_Doctor.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Skullywag_Convertable_Doctor.description>
+  
+	<Scyther_Convertable_Tailoring.label>converted scyther</Scyther_Convertable_Tailoring.label>
+	<Scyther_Convertable_Tailoring.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Scyther_Convertable_Tailoring.description>
+  
+	<Scyther_Convertable_Cutting.label>converted scyther</Scyther_Convertable_Cutting.label>
+	<Scyther_Convertable_Cutting.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Scyther_Convertable_Cutting.description>
+
+	<Centipede_Convertable_Growing.label>converted centipede</Centipede_Convertable_Growing.label>
+	<Centipede_Convertable_Growing.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Centipede_Convertable_Growing.description>
+  
+	<Centipede_Convertable_Mining.label>converted centipede</Centipede_Convertable_Mining.label>
+	<Centipede_Convertable_Mining.description>A repaired and ready to use mechanoid that is programmed to perform various household functions.</Centipede_Convertable_Mining.description>
+  
+</LanguageData>

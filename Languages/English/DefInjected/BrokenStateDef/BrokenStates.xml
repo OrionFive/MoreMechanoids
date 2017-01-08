@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<Crashed.label>crashed</Crashed.label>
+	<Crashed.beginLetterLabel></Crashed.beginLetterLabel>
+	<Crashed.beginLetter></Crashed.beginLetter>
+	<Crashed.inspectLine>Broken: Rebooting...</Crashed.inspectLine>
+		
+</LanguageData>

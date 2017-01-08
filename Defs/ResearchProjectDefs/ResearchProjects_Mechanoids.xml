@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+		<defName>MechanoidReprogramming</defName>
+		<label>mechanoid reprogramming</label>
+		<description>Learn to craft AI chips at the machining table that allow you to repurpose destroyed mechanoids. Actual reprogramming will require further research.</description>
+		<descriptionDiscovered>You can now create AI chips at the machining table. Perform further research to discover how to use it on different mechanoid types.</descriptionDiscovered>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+		  <li>Machining</li>
+		</prerequisites>
+		<researchMods>
+		  <li><specialAction>MoreMechanoids.UnlockResearch.CreateMechanoidChip</specialAction></li>
+		</researchMods>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>MechanoidController</defName>
+		<label>mechanoid control computer</label>
+		<description>Learn to build a control computer that performs the thinking for your mechanoids for improved performance and more control.</description>
+		<descriptionDiscovered>You have discovered how to build PAL, the benevolent self-learning computing unit. It allows you to keep your mechanoids at your base if required and lets them operate at much faster speeds with less down time.</descriptionDiscovered>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+		  <li>MechanoidReprogramming</li>
+		  <li>MechanoidController</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ReprogramCrawler</defName>
+    <label>reprogram crawler</label>
+    <description>Figure out ways to reuse the crawler mechanoid.</description>
+	<descriptionDiscovered>You can now repurpose crawlers at the machining table. It requires crafting AI chips.</descriptionDiscovered>
+    <totalCost>500</totalCost>
+	<prerequisites>
+	  <li>MechanoidReprogramming</li>
+	</prerequisites>
+	<researchMods>
+		  <li><specialAction>MoreMechanoids.UnlockResearch.ChipCrawler</specialAction></li>
+	</researchMods>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>ReprogramSkullywag</defName>
+    <label>reprogram skullywag</label>
+    <description>Figure out ways to reuse the skullywag mechanoid.</description>
+ 	<descriptionDiscovered>You can now repurpose skullywags at the machining table. It requires crafting AI chips.</descriptionDiscovered>
+    <totalCost>500</totalCost>
+	<prerequisites>
+	  <li>MechanoidReprogramming</li>
+	</prerequisites>
+	<researchMods>
+		  <li><specialAction>MoreMechanoids.UnlockResearch.ChipSkullywag</specialAction></li>
+	</researchMods>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>ReprogramScyther</defName>
+    <label>reprogram scyther</label>
+    <description>Figure out ways to reuse the scyther mechanoid.</description>
+	<descriptionDiscovered>You can now repurpose scythers at the machining table. It requires crafting AI chips.</descriptionDiscovered>
+    <totalCost>500</totalCost>
+	<prerequisites>
+	  <li>MechanoidReprogramming</li>
+	</prerequisites>
+	<researchMods>
+		  <li><specialAction>MoreMechanoids.UnlockResearch.ChipScyther</specialAction></li>
+	</researchMods>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>ReprogramCentipede</defName>
+    <label>reprogram centipede</label>
+    <description>Figure out ways to reuse the centipede mechanoid.</description>
+	<descriptionDiscovered>You can now repurpose centipedes at the machining table. It requires crafting AI chips.</descriptionDiscovered>
+    <totalCost>500</totalCost>
+	<prerequisites>
+	  <li>MechanoidReprogramming</li>
+	</prerequisites>
+	<researchMods>
+		  <li><specialAction>MoreMechanoids.UnlockResearch.ChipCentipede</specialAction></li>
+	</researchMods>
+  </ResearchProjectDef>
+
+</ResearchProjectDefs>

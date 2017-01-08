@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Crawler.label>크롤러</Crawler.label>
+	<CrawlerConverted.label>크롤러</CrawlerConverted.label>
+
+	<Skullywag.label>스컬리웨그</Skullywag.label>
+	<SkullywagConverted.label>크롤러</SkullywagConverted.label>
+
+	<ScytherConverted.label>사이더</ScytherConverted.label>
+
+	<Flamebot.label>화염기</Flamebot.label>
+	
+	<Doomsday_Centipede.label>"최후의 날" 센티피드</Doomsday_Centipede.label>
+	
+</LanguageData>

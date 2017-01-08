@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Mechanoids.label>Mechanoids</Mechanoids.label>
+	<Mechanoids.description>Configure how the colony's converted Mechanoids should be treated.</Mechanoids.description>
+
+</LanguageData>

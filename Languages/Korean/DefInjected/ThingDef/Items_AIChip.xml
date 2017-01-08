@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<MechanoidChip.label>메카노이드 인공지능 칩</MechanoidChip.label>
+	<MechanoidChip.description>쓰러진 메카노이드를 재설정하는 일에 필요한 인공지능 칩입니다.</MechanoidChip.description>
+  
+	<UnfinishedMechanoidChip.label>미완성 메카노이드 인공지능 칩</UnfinishedMechanoidChip.label>
+	<UnfinishedMechanoidChip.description>아직 완성되지 않은 인공지능 칩입니다. 쓰러진 메카노이드를 재설정하는 일에 필요합니다.</UnfinishedMechanoidChip.description>
+	
+</LanguageData>

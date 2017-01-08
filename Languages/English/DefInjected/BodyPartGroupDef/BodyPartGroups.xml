@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<PlasmaCutter.label>plasma cutter</PlasmaCutter.label>
+	<FrontLeftMechanicalLeg.label>front left leg</FrontLeftMechanicalLeg.label>
+	<FrontRightMechanicalLeg.label>front right leg</FrontRightMechanicalLeg.label>
+	<FrontParalyzeComponent.label>paralytic component</FrontParalyzeComponent.label>
+	<WheelsEnclosure.label>wheels enclosure</WheelsEnclosure.label>
+	<MechanicalCoreSkullywag.label>core</MechanicalCoreSkullywag.label>
+	<MechanicalCoreScoutbot.label>core</MechanicalCoreScoutbot.label>
+	<CoveredByShield.label>shield</CoveredByShield.label>
+	<MeleeTentacles.label>tentacle</MeleeTentacles.label>
+	<Igniter.label>igniter</Igniter.label>
+	<FuelContainer.label>fuel container</FuelContainer.label>
+
+</LanguageData>

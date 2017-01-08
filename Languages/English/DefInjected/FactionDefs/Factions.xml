@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Mechanoid.label>mechanoid hive</Mechanoid.label>
+	<Mechanoid.description>A hive of ancient self-replicating machines.</Mechanoid.description>
+	<Mechanoid.pawnsPlural>mechanoids</Mechanoid.pawnsPlural>
+	<Mechanoid.fixedName>a mechanoid hive</Mechanoid.fixedName>
+	<Mechanoid.leaderTitle>controller</Mechanoid.leaderTitle>
+
+</LanguageData>

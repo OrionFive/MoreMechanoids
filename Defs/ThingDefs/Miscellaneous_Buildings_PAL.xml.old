@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+	    <thingClass>Building</thingClass>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<castEdgeShadows>true</castEdgeShadows>
+		<graphicOverdraw>true</graphicOverdraw>
+		<designationCategory>Advanced</designationCategory>
+		<researchPrerequisite>MechanoidController</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>PAL_Link</defName>
+		<label>PAL link</label>
+		<thingClass>MoreMechanoids.Building_PAL_Link</thingClass>
+		<description>Connects PAL to various subparts required for its operation.</description>
+		<graphicPath>Things/Building/PAL/Link</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/PAL/Link_menuicon</uiIconPath>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<fillPercent>0.15</fillPercent>
+		<passability>Standable</passability>
+		<statBases>
+		  <WorkToMake>1500</WorkToMake>
+		  <MaxHitPoints>75</MaxHitPoints>
+		  <Flammability>0.1</Flammability>
+		  <!--Beauty>3</Beauty-->
+		</statBases>
+		<size>(1,1)</size>
+		<costList>
+			<Steel>80</Steel>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<!--
+		<graphicSunShadowInfo>
+		  <basewidth>0.3</basewidth>
+		  <baseHeight>0.3</baseHeight>
+		  <tallness>0.6</tallness>
+		</graphicSunShadowInfo>
+		-->
+		<comps>
+		    <li>
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+				<shortCircuitInRain>true</shortCircuitInRain>
+		    </li>
+		</comps>
+		<linkDrawerType>Basic</linkDrawerType>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<rotatable>false</rotatable>
+		<linkFlags>
+		  <li>Custom3</li>
+		</linkFlags>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+	</ThingDef>
+
+	<ThingDef Name="PAL_Component" ParentName="BuildingBase" Abstract="True">
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<building>
+		  <isEdifice>true</isEdifice>
+		  <allowWireConnection>false</allowWireConnection>
+		</building>
+		<passability>Impassable</passability>
+		<size>(1,1)</size>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+		<linkFlags>
+		  <li>Custom3</li>
+		</linkFlags>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<placeWorkers>
+			<li>MoreMechanoids.PlaceWorker_OnLink</li>
+		</placeWorkers>
+	</ThingDef>
+
+	<ThingDef ParentName="PAL_Component" Class="MoreMechanoids.PalComponentDef">
+		<defName>PAL_Core</defName>
+		<label>PAL core</label>
+		<description>PAL (Personality driven ALgorithmic computer) is a sentient computer (or artificial intelligence) that controls the mechanoids of the colony and interacts with the colony's crew.
+		Must be placed on a link.</description>
+		<thingClass>MoreMechanoids.Building_PAL_Core</thingClass>
+		<graphicPath>Things/Building/PAL/Core_back</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/PAL/Core_back</uiIconPath>
+		<!-->
+		<ShaderType>Transparent</ShaderType>
+		<pathCost>150</pathCost>
+		<-->
+		<innerHeatPerSecond>9</innerHeatPerSecond>
+		<criticalTemperature>200</criticalTemperature>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<costList>
+			<Steel>400</Steel>
+			<AIPersonaCore>1</AIPersonaCore>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<powerToggleable>true</powerToggleable>
+				<basePowerConsumption>250</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>8</glowRadius>
+				<glowColor>(22,143,188,0)</glowColor>
+			</li>
+			<li>
+				<compClass>CompHeatPusher</compClass>
+				<heatPushMaxTemperature>1000</heatPushMaxTemperature>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="PAL_Component" Class="MoreMechanoids.PalComponentDef">
+		<defName>PAL_Memory</defName>
+		<label>PAL memory</label>
+		<description>A memory component for PAL. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</description>
+		<thingClass>MoreMechanoids.Building_PAL_Component</thingClass>
+		<graphicPath>Things/Building/PAL/Memory_back_frame1</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/PAL/Memory_back_frame1</uiIconPath>
+		<ticksPerFrameMin>30</ticksPerFrameMin>
+		<ticksPerFrameMax>100</ticksPerFrameMax>
+		<frames>9</frames>
+		<noPowerFrame>1</noPowerFrame>
+		<innerHeatPerSecond>7</innerHeatPerSecond>
+		<criticalTemperature>150</criticalTemperature>
+		<randomFrames>true</randomFrames>
+		<!-->
+		<ShaderType>Transparent</ShaderType>
+		<pathCost>150</pathCost>
+		<-->
+		<amountRequiredForLevelTen>20</amountRequiredForLevelTen>
+		<uniqueFrequency>4</uniqueFrequency>
+		<firstLevelRequired>0</firstLevelRequired>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>15</Plasteel>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<powerToggleable>false</powerToggleable>
+				<basePowerConsumption>300</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li>
+				<compClass>CompHeatPusher</compClass>
+				<heatPushMaxTemperature>1000</heatPushMaxTemperature>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>4</glowRadius>
+				<glowColor>(231,48,48,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="PAL_Component" Class="MoreMechanoids.PalComponentDef">
+		<defName>PAL_PowerUnit</defName>
+		<label>PAL power unit</label>
+		<description>A component for PAL required to handle higher amounts of energy. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</description>
+		<thingClass>MoreMechanoids.Building_PAL_Component</thingClass>
+		<graphicPath>Things/Building/PAL/PowerUnit_back_frame1</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/PAL/PowerUnit_back_frame1</uiIconPath>
+		<ticksPerFrameMin>1</ticksPerFrameMin>
+		<ticksPerFrameMax>1</ticksPerFrameMax>
+		<frames>6</frames>
+		<!-->
+		<ShaderType>Transparent</ShaderType>
+		<pathCost>150</pathCost>
+		<-->
+		<amountRequiredForLevelTen>15</amountRequiredForLevelTen>
+		<uniqueFrequency>2</uniqueFrequency>
+		<firstLevelRequired>1</firstLevelRequired>
+		<innerHeatPerSecond>3</innerHeatPerSecond>
+		<criticalTemperature>180</criticalTemperature>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>175</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<costList>
+			<Steel>350</Steel>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<powerToggleable>false</powerToggleable>
+				<basePowerConsumption>150</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li>
+				<compClass>CompHeatPusher</compClass>
+				<heatPushMaxTemperature>1000</heatPushMaxTemperature>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="PAL_Component" Class="MoreMechanoids.PalComponentDef">
+		<defName>PAL_Sensor</defName>
+		<label>PAL sensor</label>
+		<description>A sensor component for PAL required to process environment data and connect to mechanoids. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</description>
+		<thingClass>MoreMechanoids.Building_PAL_Component</thingClass>
+		<graphicPath>Things/Building/PAL/Sensor_back_frame1</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/PAL/Sensor_back_frame1</uiIconPath>
+		<ticksPerFrameMin>10</ticksPerFrameMin>
+		<ticksPerFrameMax>13</ticksPerFrameMax>
+		<frames>4</frames>
+		<noPowerFrame>1</noPowerFrame>
+		<!-->
+		<ShaderType>Transparent</ShaderType>
+		<pathCost>150</pathCost>
+		<-->
+		<amountRequiredForLevelTen>5</amountRequiredForLevelTen>
+		<uniqueFrequency>0</uniqueFrequency>
+		<firstLevelRequired>-1</firstLevelRequired>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>-10</Beauty>
+		</statBases>
+		<costList>
+			<Steel>120</Steel>
+			<Plasteel>25</Plasteel>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<powerToggleable>false</powerToggleable>
+				<basePowerConsumption>300</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li>
+				<compClass>CompGlower</compClass>
+				<glowRadius>3</glowRadius>
+				<glowColor>(212,72,228,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+		
+	<ThingDef ParentName="PAL_Component" Class="MoreMechanoids.PalComponentDef">
+		<defName>PAL_Cooler</defName>
+		<label>PAL cooler</label>
+		<description>This PAL component cools adjacent components and disperses the heat into the room. Required to upgrade PAL to higher levels.
+		Must be placed on a link.</description>
+		<thingClass>MoreMechanoids.Building_PAL_Cooler</thingClass>
+		<graphicPath>Things/Building/PAL/Cooler_back_frame1</graphicPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<uiIconPath>Things/Building/PAL/Cooler_back_frame1</uiIconPath>
+		<ticksPerFrameMin>2</ticksPerFrameMin>
+		<ticksPerFrameMax>2</ticksPerFrameMax>
+		<frames>6</frames>
+		<!-->
+		<ShaderType>Transparent</ShaderType>
+		<pathCost>150</pathCost>
+		<-->
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+		</costList>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+				<powerToggleable>false</powerToggleable>
+				<basePowerConsumption>125</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li>
+				<compClass>CompHeatPusher</compClass>
+				<heatPushMaxTemperature>1000</heatPushMaxTemperature>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</ThingDefs>

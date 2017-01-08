@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<JobDefs>
+
+  <JobDef>
+    <defName>Standby</defName>
+    <driverClass>MoreMechanoids.JobDriver_Standby</driverClass>
+    <reportString>Standing by.</reportString>
+    <canCheckOverrideOnDamage>true</canCheckOverrideOnDamage>
+  </JobDef>
+
+  	<JobDef>
+		<defName>RepairMechanoid</defName>
+		<driverClass>MoreMechanoids.JobDriver_RepairMechanoid</driverClass>
+		<reportString>Repairing TargetA.</reportString>
+		<canCheckOverrideOnDamage>true</canCheckOverrideOnDamage>
+	</JobDef>
+
+</JobDefs>
