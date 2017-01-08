@@ -66,11 +66,6 @@
     <Compile Include="Convertable\PawnKindDef.cs" />
     <Compile Include="Convertable\State_AgentAttack.cs" />
     <Compile Include="Convertable\ThinkNode_ConditionalCrashed.cs" />
-    <Compile Include="PAL\Building_PAL_Component.cs" />
-    <Compile Include="PAL\Building_PAL_Connectable.cs" />
-    <Compile Include="PAL\Building_PAL_Cooler.cs" />
-    <Compile Include="PAL\Building_PAL_Core.cs" />
-    <Compile Include="PAL\Building_PAL_Link.cs" />
     <Compile Include="DamageWorker_AddStaged.cs" />
     <Compile Include="Convertable\IncidentWorker_ShortCircuitMechanoid.cs" />
     <Compile Include="Convertable\JobDriver_RepairMechanoid.cs" />
@@ -78,12 +73,9 @@
     <Compile Include="Convertable\JobGiver_Standby.cs" />
     <Compile Include="Convertable\MapComponent_FixMechanoidCorpseDef.cs" />
     <Compile Include="Convertable\Need_Rest_Mechanoid.cs" />
-    <Compile Include="PAL\PAL_TalkTracker.cs" />
     <Compile Include="Convertable\Pawn_Converted_TalkTracker.cs" />
-    <Compile Include="PAL\PlaceWorker_OnLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Convertable\PawnConverted.cs" />
-    <Compile Include="PAL\PalComponentDef.cs" />
     <Compile Include="Convertable\ThinkNode_ConditionalAIEnabled.cs" />
     <Compile Include="Convertable\ThinkNode_ConditionalStayHome.cs" />
     <Compile Include="UnlockResearch.cs" />
