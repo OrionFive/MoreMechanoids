@@ -12,11 +12,11 @@ namespace MoreMechanoids
         public Danger maxDanger = Danger.None;
         public bool instantly;
 
-        protected override Job TryGiveTerminalJob(Pawn pawn)
+        protected override Job TryGiveJob(Pawn pawn)
         {
-            if (instantly)
+            if (this.instantly)
             {
-                return new Job(Defs.StandbyDef, pawn.Position);
+                return new Job(MoreMechanoidsDefOf.Standby, pawn.Position);
             }
             Building_RestSpot restSpot = Building_RestSpot.Find(pawn);
             if (restSpot != null)
@@ -25,13 +25,13 @@ namespace MoreMechanoids
                 //{
                 //   spot.Claim(pawn as PawnConverted);
                 //}
-                return new Job(Defs.StandbyDef, restSpot);
+                return new Job(MoreMechanoidsDefOf.Standby, restSpot);
             }
 
             {
-                var restPos = GetRestSpot(pawn.Position, maxDanger, pawn);
+                IntVec3 restPos = GetRestSpot(pawn.Position, this.maxDanger, pawn);
                 
-                return new Job(Defs.StandbyDef, restPos);
+                return new Job(MoreMechanoidsDefOf.Standby, restPos);
             }
         }
 
@@ -39,61 +39,56 @@ namespace MoreMechanoids
         {
             if (!(me is PawnConverted)) return originCell;
 
-            var currentDanger = me.Position.GetDangerFor(me);
-            var danger = (Danger)Math.Max((int) maxDanger, (int)currentDanger);
+            Danger currentDanger = me.Position.GetDangerFor(me);
+            Danger danger = (Danger)Math.Max((int) maxDanger, (int)currentDanger);
 
-            Predicate<IntVec3> validator = c => c.Standable() && Find.RoofGrid.Roofed(c) 
-                && CoverUtility.TotalSurroundingCoverScore(c) > 2.5f && !NextToDoor(c, me)
-                && originCell.CanReach(c, PathEndMode.OnCell, TraverseMode.PassDoors, danger);
+            Predicate<IntVec3> validator = c => c.Standable(me.Map) && me.Map.roofGrid.Roofed(c) 
+                && CoverUtility.TotalSurroundingCoverScore(c, me.Map) > 2.5f && !NextToDoor(c, me)
+                && me.Map.reachability.CanReach(originCell, c, PathEndMode.OnCell, TraverseMode.PassDoors, danger);
 
             if (validator(originCell) && InRange(originCell, me, 20)) return originCell;
 
             for (int i = 0; i < 50; i++)
             {
-                Thing thing = GetRandom(Find.ListerBuildings.allBuildingsColonist);
+                Thing thing = GetRandom(me.Map.listerBuildings.allBuildingsColonist);
                 
-                if (thing == null) thing = GetRandom(Find.ListerBuildings.allBuildingsColonistCombatTargets);
-                if (thing == null) thing = GetRandom(Find.ListerPawns.FreeColonists);
-                if (thing == null) thing = GetRandom(Find.ListerPawns.ColonistsAndPrisoners);
+                if (thing == null) thing = GetRandom(me.Map.listerBuildings.allBuildingsColonistCombatTargets);
+                if (thing == null) thing = GetRandom(me.Map.mapPawns.FreeColonists);
+                if (thing == null) thing = GetRandom(me.Map.mapPawns.FreeColonistsAndPrisoners);
 
                 if (thing == null) break;
-                IntVec3 result;
-                if (CellFinder.TryFindRandomCellNear(thing.Position, 10, validator, out result))
+                if (CellFinder.TryFindRandomCellNear(thing.Position, me.Map, 10, validator, out IntVec3 result))
                 {
                     return result;
                 }
             }
 
-            Predicate<IntVec3> simpleValidator = c => c.Standable()
-               && CoverUtility.TotalSurroundingCoverScore(c) > 1 && !NextToDoor(c, me)
-               && originCell.CanReach(c, PathEndMode.OnCell, TraverseMode.PassDoors, danger);
+            Predicate<IntVec3> simpleValidator = c => c.Standable(me.Map)
+               && CoverUtility.TotalSurroundingCoverScore(c, me.Map) > 1 && !NextToDoor(c, me)
+               && me.Map.reachability.CanReach(originCell, c, PathEndMode.OnCell, TraverseMode.PassDoors, danger);
 
-            IntVec3 randomCell;
-            return CellFinder.TryFindRandomCellNear(originCell, 20, simpleValidator, out randomCell) ? randomCell : originCell;
+            return CellFinder.TryFindRandomCellNear(originCell, me.Map, 20, simpleValidator, out IntVec3 randomCell) ? randomCell : originCell;
         }
 
-        private static bool InRange(IntVec3 originCell, Pawn me, int range)
-        {
-            return originCell.InHorDistOf(me.Position, range);
-        }
+        private static bool InRange(IntVec3 originCell, Pawn me, int range) => originCell.InHorDistOf(me.Position, range);
 
         private static T GetRandom<T>(IEnumerable<T> list) where T : class 
         {
             if (list == null) return null;
-            var array = list as T[] ?? list.ToArray();
+            T[] array = list as T[] ?? list.ToArray();
             return array.Any() ? array.RandomElement() : null;
         }
 
         private static bool NextToDoor(IntVec3 c, Pawn me)
         {
             // Any door or pawn (excluding myself)?
-            Func<IntVec3, bool> predicate = a => a.InBounds() && a.GetThingList().Any(t =>
+            Func<IntVec3, bool> predicate = a => a.InBounds(me.Map) && a.GetThingList(me.Map).Any(t =>
                                                                                       {
                                                                                           if (t == me) return false;
                                                                                           return t is Building_Door;
                                                                                       });
 
-            return predicate(c) || c.GetThingList().Any(t=>t != me && t is Pawn) || GenAdj.CellsAdjacentCardinal(c, new Rot4(), IntVec2.One).Any(predicate);
+            return predicate(c) || c.GetThingList(me.Map).Any(t=>t != me && t is Pawn) || GenAdj.CellsAdjacentCardinal(c, new Rot4(), IntVec2.One).Any(predicate);
         }
     }
 }

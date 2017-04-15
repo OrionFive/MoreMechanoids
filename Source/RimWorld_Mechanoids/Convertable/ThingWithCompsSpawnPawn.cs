@@ -5,15 +5,15 @@ namespace MoreMechanoids
 {
     public class ThingWithCompsSpawnPawn : ThingWithComps
     {
-        public override void SpawnSetup()
+        public override void SpawnSetup(Map map)
         {
-            base.SpawnSetup();
+            base.SpawnSetup(map);
 
-            var thingDef = (ThingSpawnPawnDef) def;
-            var newPawn = (PawnConverted) PawnGenerator.GeneratePawn(thingDef.spawnPawnDef, Faction.OfColony);
-            IntVec3 pos = CellFinder.RandomClosewalkCellNear(Position, 2);
+            ThingSpawnPawnDef thingDef = (ThingSpawnPawnDef)this.def;
+            PawnConverted newPawn = (PawnConverted) PawnGenerator.GeneratePawn(thingDef.spawnPawnDef, Faction.OfPlayer);
+            IntVec3 pos = CellFinder.RandomClosewalkCellNear(this.Position, map, 2);
             newPawn.workTypes = thingDef.workTypes;
-            GenSpawn.Spawn(newPawn, pos);
+            GenSpawn.Spawn(newPawn, pos, map);
 
             TaleRecorder.RecordTale(TaleDef.Named("CreatedMechanoid"), new object[] {newPawn});
 

@@ -14,17 +14,10 @@ namespace MoreMechanoids
         private const float WorkTypeWidth = 110f;
         private const float AreaAllowedWidth = 350f;
 
-        public override Vector2 RequestedTabSize
-        {
-            get { return new Vector2(1010f, TopAreaHeight + PawnsCount*30f + TopAreaHeight); }
-        }
-
-        protected override void BuildPawnList()
-        {
-            pawns = (from p in Find.ListerPawns.PawnsInFaction(Faction.OfColony).OfType<PawnConverted>()
-                orderby p.WorkType, p.NameStringShort
-                select (Pawn)p).ToList<Pawn>();
-        }
+        public override Vector2 RequestedTabSize => new Vector2(1010f, TopAreaHeight + this.PawnsCount * 30f + TopAreaHeight);
+        protected override void BuildPawnList() => this.pawns = (from p in Find.World.worldPawns.AllPawnsAliveOrDead.Where((Pawn p) => p.Faction.Equals(Faction.OfPlayer)).OfType<PawnConverted>()
+                                                                 orderby p.WorkType, p.NameStringShort
+                                                                 select (Pawn)p).ToList<Pawn>();
 
         public override void DoWindowContents(Rect fillRect)
         {
@@ -39,17 +32,17 @@ namespace MoreMechanoids
             //Widgets.Label(rect5, "WorkTypeHeading".Translate());
             num += StayHomeWidth;
 
-            if (pawns.OfType<PawnConverted>().Any())
+            if (this.pawns.OfType<PawnConverted>().Any())
             {
                 Rect rect6 = new Rect(num, position.height/2f + 6, StayHomeWidth, position.height/2f);
                 Rect rect7 = rect6.ContractedBy(2f);
                 Text.Font = GameFont.Small;
-                bool stayHomeAllOld = pawns.OfType<PawnConverted>().All(p => p.stayHome);
+                bool stayHomeAllOld = this.pawns.OfType<PawnConverted>().All(p => p.stayHome);
                 bool stayHomeAll = stayHomeAllOld;
-                Widgets.LabelCheckbox(rect7, string.Empty, ref stayHomeAll);
+                Widgets.CheckboxLabeled(rect7, string.Empty, ref stayHomeAll);
                 if (stayHomeAll != stayHomeAllOld)
                 {
-                    foreach (var pawn in pawns.OfType<PawnConverted>())
+                    foreach (PawnConverted pawn in this.pawns.OfType<PawnConverted>())
                     {
                         pawn.SetStayHome(stayHomeAll);
                     }
@@ -58,17 +51,17 @@ namespace MoreMechanoids
             //Widgets.Label(rect, "Stay At Home".Translate());
             num += StayHomeWidth;
 
-            if (pawns.OfType<PawnConverted>().Any())
+            if (this.pawns.OfType<PawnConverted>().Any())
             {
                 Rect rect4 = new Rect(num, position.height/2f + 6, StayHomeWidth, position.height/2f);
                 Rect rect5 = rect4.ContractedBy(2f);
                 Text.Font = GameFont.Small;
-                bool fullRepairAllOld = pawns.OfType<PawnConverted>().All(p => p.fullRepair);
+                bool fullRepairAllOld = this.pawns.OfType<PawnConverted>().All(p => p.fullRepair);
                 bool fullRepairAll = fullRepairAllOld;
-                Widgets.LabelCheckbox(rect5, string.Empty, ref fullRepairAll);
+                Widgets.CheckboxLabeled(rect5, string.Empty, ref fullRepairAll);
                 if (fullRepairAll != fullRepairAllOld)
                 {
-                    foreach (var pawn in pawns.OfType<PawnConverted>())
+                    foreach (PawnConverted pawn in this.pawns.OfType<PawnConverted>())
                     {
                         pawn.SetFullRepair(fullRepairAll);
                     }
@@ -80,9 +73,9 @@ namespace MoreMechanoids
 
             Rect rect2 = new Rect(num, 0f, AreaAllowedWidth, Mathf.Round(position.height/2f));
             Text.Font = GameFont.Small;
-            if (Widgets.TextButton(rect2, "ManageAreas".Translate()))
+            if (Widgets.ButtonText(rect2, "ManageAreas".Translate()))
             {
-                Find.WindowStack.Add(new Dialog_ManageAreas());
+                Find.WindowStack.Add(new Dialog_ManageAreas(Find.VisibleMap));
             }
 
             Text.Font = GameFont.Tiny;
@@ -101,14 +94,14 @@ namespace MoreMechanoids
 
         protected override void DrawPawnRow(Rect rect, Pawn p)
         {
-            var pawn = (PawnConverted) p;
+            PawnConverted pawn = (PawnConverted) p;
             GUI.BeginGroup(rect);
             float num = 175f;
 
             Rect rect7 = new Rect(num, 0f, WorkTypeWidth, rect.height);
             Rect rect8 = rect7.ContractedBy(2f);
             Text.Font = GameFont.Small;
-            var workType = DefDatabase<WorkTypeDef>.GetNamed(pawn.WorkType);
+            WorkTypeDef workType = DefDatabase<WorkTypeDef>.GetNamed(pawn.WorkType);
             //if (workType!=null)
             {
                 Widgets.Label(rect8, workType.pawnLabel);
@@ -118,13 +111,13 @@ namespace MoreMechanoids
             Rect rect2 = new Rect(num, 0f, StayHomeWidth, rect.height);
             Rect rect3 = rect2.ContractedBy(2f);
             Text.Font = GameFont.Small;
-            Widgets.LabelCheckbox(rect3, "StayHomeCheck".Translate(), ref pawn.stayHome, pawn.Crashed);
+            Widgets.CheckboxLabeled(rect3, "StayHomeCheck".Translate(), ref pawn.stayHome, pawn.Crashed);
             num += StayHomeWidth;
 
             Rect rect4 = new Rect(num, 0f, FullRepairWidth, rect.height);
             Rect rect5 = rect4.ContractedBy(2f);
             Text.Font = GameFont.Small;
-            Widgets.LabelCheckbox(rect5, "FullRepairCheck".Translate(), ref pawn.fullRepair, pawn.Crashed);
+            Widgets.CheckboxLabeled(rect5, "FullRepairCheck".Translate(), ref pawn.fullRepair, pawn.Crashed);
             num += FullRepairWidth;
             
             Rect rect6 = new Rect(num, 0f, AreaAllowedWidth, rect.height);

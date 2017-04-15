@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
+using RimWorld.Planet;
 
 namespace MoreMechanoids
 {
@@ -22,7 +23,7 @@ namespace MoreMechanoids
 
     public class JobGiver_AITakeWeapon : ThinkNode_JobGiver
     {
-        protected override Job TryGiveTerminalJob(Pawn pawn)
+        protected override Job TryGiveJob(Pawn pawn)
         {
             //if (pawn.equipment.Primary != null) return null;
 
@@ -36,7 +37,7 @@ namespace MoreMechanoids
             //var weapon = GenClosest.ClosestThing_Global_Reachable(pawn.Position,
             //    Find.ListerThings.ThingsInGroup(ThingRequestGroup.HaulableAlways), PathEndMode.InteractionCell,
             //    traverseParams, 50, validator);
-            var weapon = Find.ListerThings.ThingsInGroup(ThingRequestGroup.HaulableAlways)
+            Thing weapon = pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.HaulableAlways)
                 .Where(t => validator(t))
                 .OrderByDescending(t => t.MarketValue - t.Position.DistanceToSquared(pawn.Position)*2)
                 .FirstOrDefault();
@@ -59,17 +60,16 @@ namespace MoreMechanoids
             return null;
         }
 
-        private static Job GotoForce(Pawn pawn, TargetInfo target, PathEndMode pathEndMode)
+        private static Job GotoForce(Pawn pawn, LocalTargetInfo target, PathEndMode pathEndMode)
         {
             Log.Message(pawn+", "+target);
-            PawnPath pawnPath = PathFinder.FindPath(pawn.Position, target, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAnything), pathEndMode);
+            PawnPath pawnPath = pawn.Map.pathFinder.FindPath(pawn.Position, target, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAnything), pathEndMode);
             
             Thing thing = null;
             Log.Message("Path Length: "+pawnPath.NodesLeftCount);
             //if (pawnPath.NodesLeftCount >= 3)
             //{
-                IntVec3 cellBeforeBlocker;
-                thing = pawnPath.FirstBlockingBuilding(out cellBeforeBlocker);
+            thing = pawnPath.FirstBlockingBuilding(out IntVec3 cellBeforeBlocker);
             //}
             pawnPath.ReleaseToPool();
 
@@ -115,7 +115,7 @@ namespace MoreMechanoids
         {
             if (!pawn.CanReserve(blocker))
             {
-                return new Job(JobDefOf.Goto, CellFinder.RandomClosewalkCellNear(cellBeforeBlocker, 10), 100, true);
+                return new Job(JobDefOf.Goto, CellFinder.RandomClosewalkCellNear(cellBeforeBlocker, pawn.Map, 10), 100, true);
             }
             return new Job(JobDefOf.AttackMelee, blocker)
             {
@@ -125,9 +125,6 @@ namespace MoreMechanoids
             };
         }
 
-        private static bool IsBetter(Thing newWeapon, ThingWithComps oldWeapon)
-        {
-            return newWeapon.MarketValue > oldWeapon.MarketValue*1.2f;
-        }
+        private static bool IsBetter(Thing newWeapon, ThingWithComps oldWeapon) => newWeapon.MarketValue > oldWeapon.MarketValue * 1.2f;
     }
 }

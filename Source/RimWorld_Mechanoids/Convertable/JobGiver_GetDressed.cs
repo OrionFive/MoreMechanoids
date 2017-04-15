@@ -11,12 +11,12 @@ namespace MoreMechanoids
         public static readonly BodyPartGroupDef[] bodyparts = {BodyPartGroupDefOf.Legs, BodyPartGroupDefOf.Torso};
         private static readonly TraverseParms traverseParams = TraverseParms.For(TraverseMode.PassDoors, Danger.Deadly, false);
 
-        protected override Job TryGiveTerminalJob(Pawn pawn)
+        protected override Job TryGiveJob(Pawn pawn)
         {
             Log.Message("Pawn: "+pawn);
             if (pawn == null) return null;
             if (pawn.apparel == null) return null;
-            foreach (var bodypart in bodyparts)
+            foreach (BodyPartGroupDef bodypart in bodyparts)
             {
                 if (pawn.apparel.BodyPartGroupIsCovered(bodypart)) continue;
                 
@@ -36,8 +36,8 @@ namespace MoreMechanoids
         {
             Predicate<Thing> validator = apparel => apparel.def.apparel.bodyPartGroups.Contains(bodyPartGroupDef) & pawn.CanReserve(apparel);
 
-            return (Apparel)GenClosest.ClosestThing_Global_Reachable(pawn.Position,
-                Find.ListerThings.ThingsInGroup(ThingRequestGroup.Apparel), PathEndMode.InteractionCell,
+            return (Apparel)GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map,
+                pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.Apparel), PathEndMode.InteractionCell,
                 traverseParams, 20, validator);
         }
     }

@@ -7,29 +7,23 @@ namespace MoreMechanoids
 {
     public class UnlockResearch : MapComponent
     {
-        public UnlockResearch()
-        {
-            LockAllRecipes();
-        }
+        public UnlockResearch(Map map) : base(map) => LockAllRecipes();
 
         private static void LockAllRecipes()
         {
-            foreach (var recipe in DefDatabase<RecipeDef>.AllDefs.Where(def => def.defName.StartsWith("MM_")))
+            foreach (RecipeDef recipe in DefDatabase<RecipeDef>.AllDefs.Where(def => def.defName.StartsWith("MM_")))
             {
                 LockRecipe(recipe);
             }
         }
 
-        private static void LockRecipe(RecipeDef def)
-        {
-            def.recipeUsers = new List<ThingDef>();
-        }
+        private static void LockRecipe(RecipeDef def) => def.recipeUsers = new List<ThingDef>();
 
         private static void UnlockRecipe(string tableDefName, string defName)
         {
-            var tableDef = DefDatabase<ThingDef>.GetNamed(tableDefName);
+            ThingDef tableDef = DefDatabase<ThingDef>.GetNamed(tableDefName);
 
-            var recipeDef = DefDatabase<RecipeDef>.GetNamed(defName);
+            RecipeDef recipeDef = DefDatabase<RecipeDef>.GetNamed(defName);
             recipeDef.recipeUsers = new List<ThingDef> {tableDef};
 
             // Clear cache to update existing objects
@@ -37,10 +31,7 @@ namespace MoreMechanoids
                 .SetValue(tableDef, null);
         }
 
-        public static void CreateMechanoidChip()
-        {
-            UnlockRecipe("TableMachining", "MM_CreateMechanoidChip");
-        }
+        public static void CreateMechanoidChip() => UnlockRecipe("TableMachining", "MM_CreateMechanoidChip");
 
         public static void ChipCrawler()
         {

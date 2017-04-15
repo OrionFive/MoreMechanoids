@@ -2,7 +2,7 @@ using Verse.AI;
 
 namespace MoreMechanoids
 {
-    public class BrokenState_Crashed : BrokenState
+    public class BrokenState_Crashed : MentalState
     {
     }
 }

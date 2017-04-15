@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef ParentName="BuildingBase" Name="BuildingBaseMM" Abstract="True">
+		<category>Building</category>
+	    <thingClass>Building</thingClass>
+		<designationCategory>Misc</designationCategory>
+		<researchPrerequisites>
+			<li>Electricity</li>
+			<li>MechanoidReprogramming</li>
+		</researchPrerequisites>
+    <constructEffect>ConstructMetal</constructEffect>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBaseMM">
+		<defName>RestMechanoidSmall</defName>
+		<label>small mechanoid charge panel</label>
+		<thingClass>MoreMechanoids.Building_RestSpot</thingClass>
+		<description>Allows converted Mechanoids to sleep safe and sound. And not wear out so fast.</description>
+		<graphicData>
+		  <texPath>Things/Building/Rest/RestSmall_back</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>3</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Rest/RestSmall_back</uiIconPath>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<fillPercent>0.15</fillPercent>
+		<passability>Standable</passability>
+		<statBases>
+		  <WorkToMake>1500</WorkToMake>
+		  <MaxHitPoints>75</MaxHitPoints>
+		  <Flammability>0.0</Flammability>
+		  <Beauty>-5</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<costList>
+			<Steel>100</Steel>
+			<Component>5</Component>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>390</basePowerConsumption>
+				<startElectricalFires>true</startElectricalFires>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBaseMM">
+		<defName>RestMechanoidLarge</defName>
+		<label>large mechanoid charge panel</label>
+		<thingClass>MoreMechanoids.Building_RestSpot</thingClass>
+		<description>Allows converted Mechanoids to sleep save and sound.</description>
+		<graphicData>
+			<texPath>Things/Building/Rest/RestLarge_back</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>3</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Rest/RestLarge_back</uiIconPath>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<fillPercent>0.15</fillPercent>
+		<passability>Standable</passability>
+		<statBases>
+		  <WorkToMake>7000</WorkToMake>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <Flammability>0.0</Flammability>
+		  <Beauty>-20</Beauty>
+		</statBases>
+		<size>(3,3)</size>
+		<costList>
+			<Steel>500</Steel>
+			<Component>10</Component>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>390</basePowerConsumption>
+				<startElectricalFires>true</startElectricalFires>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+	</ThingDef>
+	
+</ThingDefs>

@@ -9,7 +9,7 @@ namespace MoreMechanoids
     {
         private const int TicksBetweenSleepZs = 100;
         private int ticksToSleepZ;
-        private readonly string txtStandingBy = "BotStandingBy".Translate();
+        private readonly string txtStandingBy = "BotStandingBy";
 
         //[DebuggerHidden]
         protected override IEnumerable<Toil> MakeNewToils()
@@ -18,14 +18,14 @@ namespace MoreMechanoids
             yield return Toils_Reserve.Reserve(TargetIndex.A);
             
             yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell)
-                    .FailOn(() => !pawn.CanReach(TargetA, PathEndMode.OnCell, Danger.Deadly))
+                    .FailOn(() => !this.pawn.CanReach(this.TargetA, PathEndMode.OnCell, Danger.Deadly))
                     .FailOn(() => {
-                        var spot = TargetA.Thing as Building_RestSpot;
+                        Building_RestSpot spot = this.TargetA.Thing as Building_RestSpot;
                         if (spot == null) return false;
-                        return spot.CurOccupant != null && spot.CurOccupant != pawn;
+                        return spot.CurOccupant != null && spot.CurOccupant != this.pawn;
                     });
 
-            yield return ToilStandby;
+            yield return this.ToilStandby;
 
             //yield return Toils_Reserve.Release(TargetIndex.A).FailOn(()=>!Find.Reservations.);
         }
@@ -38,7 +38,7 @@ namespace MoreMechanoids
                 {
                     defaultCompleteMode = ToilCompleteMode.Delay,
                     defaultDuration = TicksBetweenSleepZs*Rand.Range(5, 15),
-                    tickAction = ToilTick
+                    tickAction = this.ToilTick
                 };
 
                 //toil.initAction = () => { toil.actor.pather.StopDead(); };
@@ -46,21 +46,17 @@ namespace MoreMechanoids
                 return toil;
             }
         }
-        public bool StandingBy { get { return HaveCurToil && CurToil.tickAction == ToilTick; } }
-
+        public bool StandingBy => this.HaveCurToil && this.CurToil.tickAction == this.ToilTick;
         private void ToilTick()
         {
-            ticksToSleepZ --;
-            if (ticksToSleepZ <= 0)
+            this.ticksToSleepZ --;
+            if (this.ticksToSleepZ <= 0)
             {
-                MoteThrower.ThrowDrift(pawn.Position,ThingDefOf.Mote_SleepZ);
-                ticksToSleepZ += TicksBetweenSleepZs;
+                MoteMaker.ThrowMetaIcon(this.pawn.Position, this.pawn.Map, ThingDefOf.Mote_SleepZ);
+                this.ticksToSleepZ += TicksBetweenSleepZs;
             }
         }
 
-        public override string GetReport()
-        {
-            return txtStandingBy;
-        }
+        public override string GetReport() => this.txtStandingBy;
     }
 }

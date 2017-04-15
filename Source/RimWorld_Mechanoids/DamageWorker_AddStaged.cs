@@ -9,7 +9,7 @@ namespace MoreMechanoids
             Pawn pawn = thing as Pawn;
             if (pawn != null)
             {
-                var hediff = (Hediff_Staged)HediffMaker.MakeHediff(dinfo.Def.hediff, pawn);
+                Hediff hediff = HediffMaker.MakeHediff(dinfo.Def.hediff, pawn);
                 //hediff.Severity = dinfo.Amount;
                 pawn.health.AddHediff(hediff, null, dinfo);
             }

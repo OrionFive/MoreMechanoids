@@ -2,23 +2,23 @@ using System;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
-using RimWorld.SquadAI;
 using Verse;
 using Verse.AI;
+using Verse.AI.Group;
 
 namespace MoreMechanoids
 {
     public class JobGiver_DownAllHumans : JobGiver_AIFightEnemies
     {
-        public float targetKeepRadius = 72;
-        public float targetAcquireRadius = 65;
+        public float targetKeepRadius = 72f;
+        public float targetAcquireRadius = 65f;
 
         protected override void UpdateEnemyTarget(Pawn pawn)
         {
-            var thing = pawn.mindState.enemyTarget;
+            Thing thing = pawn.mindState.enemyTarget;
             if (thing != null)
             {
-                if (thing.Destroyed || Find.TickManager.TicksGame - pawn.mindState.lastEngageTargetTick > 400 || !pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly, true) || (pawn.Position - thing.Position).LengthHorizontalSquared > targetKeepRadius * targetKeepRadius)
+                if (thing.Destroyed || Find.TickManager.TicksGame - pawn.mindState.lastEngageTargetTick > 400 || !pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly, true) || (pawn.Position - thing.Position).LengthHorizontalSquared > this.targetKeepRadius * this.targetKeepRadius)
                 {
                     thing = null;
                 }
@@ -34,7 +34,7 @@ namespace MoreMechanoids
                 }
             }
             // Select only flesh stuff
-            Predicate<Thing> validatorPawn = t => t is Pawn && !t.Destroyed && !(t as Pawn).Downed && t.def.race != null && t.def.race.isFlesh;
+            Predicate<Thing> validatorPawn = t => t is Pawn && !t.Destroyed && !(t as Pawn).Downed && t.def.race != null && t.def.race.IsFlesh;
             Predicate<Thing> validatorDoor = t => t is Building_Door && !t.Destroyed && !(t as Building_Door).Open;
 
             // Method is internal (duh)
@@ -46,24 +46,24 @@ namespace MoreMechanoids
                 //Log.Message(pawn.Label + ": trying to find target...");
                 const TargetScanFlags targetScanFlags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachable;
 
-                thing=AttackTargetFinder.BestAttackTarget(pawn, validatorPawn, targetAcquireRadius, 0f, targetScanFlags);
+                thing=AttackTargetFinder.BestAttackTarget(pawn, targetScanFlags, validatorPawn, 0f, this.targetAcquireRadius);
                 if (thing != null)
                 {
                     //Log.Message("Selected pawn " + thing.Label);
                     notifyEngagedTarget.Invoke(pawn.mindState, null);
-                    Brain brain = Find.SquadBrainManager.SquadBrainFor(pawn);
-                    if (brain != null)
+                    Lord lord = pawn.Map.lordManager.LordOf(pawn);
+                    if (lord != null)
                     {
-                        brain.Notify_PawnAcquiredTarget(pawn, thing);
+                        lord.Notify_PawnAcquiredTarget(pawn, thing);
                     }
                 }
                 else
                 {
                     //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
                     Building_Door thing2 =
-                        Find.ListerBuildings.AllBuildingsColonistOfClass<Building_Door>()
+                        thing.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
                             .Where(
-                                b => validatorDoor(b) && Reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
+                                b => validatorDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
                             .OrderBy(door => door.Position.DistanceToSquared(pawn.Position)).FirstOrDefault();
                     if (thing2 != null && thing2 != thing)
                     {
