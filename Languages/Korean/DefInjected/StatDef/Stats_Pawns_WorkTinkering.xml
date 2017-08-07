@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--suppress ALL -->
-<LanguageData>
-	
-	<TinkerSpeed.label>개조 속도</TinkerSpeed.label>
-	<TinkerSpeed.description>대상이 기계 장치를 개조하는 속도입니다.</TinkerSpeed.description>
-
-</LanguageData>

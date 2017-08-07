@@ -2,10 +2,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using RimWorld;
-using RimWorld.SquadAI;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using Verse.AI.Group;
 
 namespace MoreMechanoids
 {
@@ -22,14 +22,14 @@ namespace MoreMechanoids
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue(ref discovered, "discovered");
-            Scribe_Values.LookValue(ref disguiseDamage, "disguiseDamage", true);
-            Scribe_Values.LookValue(ref ticksToNextRepair, "ticksToNextRepair");
+            Scribe_Values.LookValue(ref this.discovered, "discovered");
+            Scribe_Values.LookValue(ref this.disguiseDamage, "disguiseDamage", true);
+            Scribe_Values.LookValue(ref this.ticksToNextRepair, "ticksToNextRepair");
         }
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            if (!discovered && mode == DestroyMode.Kill)
+            if (!this.discovered && mode == DestroyMode.Kill)
             {
                 Log.Message("Agent got killed...");
             }
@@ -40,35 +40,33 @@ namespace MoreMechanoids
         {
             base.Tick();
 
-            if (Dead) Log.Message("Dead");
-            if (!SpawnedInWorld) Log.Message("!SpawnedInWorld");
-            if (holder != null) Log.Message("Has holder: " + holder);
+            if (this.Dead) Log.Message("Dead");
+            if (!this.Spawned) Log.Message("!SpawnedInWorld");
+            if (this.holdingContainer != null) Log.Message("Has holder: " + this.holdingContainer);
 
             // Don't heal right after crash
             // Once not downed, start healing faster
-            if (disguiseDamage && !health.Downed)
+            if (this.disguiseDamage && !this.health.Downed)
             {
-                disguiseDamage = false;
+                this.disguiseDamage = false;
             }
 
             // Only heal if not disguising
-            if (!disguiseDamage) TickHeal(discovered);
+            if (!this.disguiseDamage) TickHeal(this.discovered);
 
-            if (discovered && guest != null)
+            if (this.discovered && this.guest != null)
             {
-                guest.released = true;
+                this.guest.released = true;
             }
         }
 
-        public override void SpawnSetup()
+        public override void SpawnSetup(Map map)
         {
-            base.SpawnSetup();
+            base.SpawnSetup(map);
 
-            drawer.Notify_Spawned();
-            pather.ResetToCurrentPosition();
-            Find.ListerPawns.RegisterPawn(this);
-
-            MapComponent_FixMechanoidCorpseDef.FixAgentCorpse();
+            this.Drawer.Notify_Spawned();
+            this.pather.ResetToCurrentPosition();
+            map.mapPawns.RegisterPawn(this);
         }
 
         internal static void Discover(Pawn pawn, IntVec3 position)
@@ -89,29 +87,30 @@ namespace MoreMechanoids
             pawn.jobs = new Pawn_JobTracker(pawn);
             pawn.stances = new Pawn_StanceTracker(pawn);
             pawn.mindState = new Pawn_MindState(pawn);
-            pawn.carrier = new Pawn_CarryTracker(pawn);
+            pawn.carryTracker = new Pawn_CarryTracker(pawn);
             pawn.drafter = new Pawn_DraftController(pawn);
             pawn.needs = new Pawn_NeedsTracker(pawn);
             pawn.workSettings = new Pawn_WorkSettings(pawn);
             pawn.outfits = new Pawn_OutfitTracker(pawn);
-            pawn.timetable = new Pawn_TimetableTracker();
+            pawn.timetable = new Pawn_TimetableTracker(pawn);
             pawn.ownership = new Pawn_Ownership(pawn);
             pawn.thinker = new Pawn_Thinker(pawn);
             Log.Message(pawn.Name + ": New settings.");
 
-            var agent = (MechanoidAgent) pawn;
+            MechanoidAgent agent = (MechanoidAgent) pawn;
             agent.discovered = true;
             agent.disguiseDamage = false;
             Log.Message("Agent settings.");
 
-            typeof (Thing).GetField("thingStateInt", BindingFlags.NonPublic | BindingFlags.Instance)
-                .SetValue(pawn, ThingState.Unspawned);
 
-            GenPlace.TryPlaceThing(pawn, position, ThingPlaceMode.Direct);
+            typeof (Thing).GetField("mapIndexOrState", BindingFlags.NonPublic | BindingFlags.Instance)
+                .SetValue(pawn, -1);
+
+            GenPlace.TryPlaceThing(pawn, position, pawn.Map, ThingPlaceMode.Direct);
             Log.Message(pawn.Name + ": Spawned new instance.");
 
             // Not discovered before?
-            if (pawn.story.skinColor != Color.white)
+            if (pawn.story.SkinColor != Color.white)
             {
                 Find.LetterStack.ReceiveLetter("Mechanoid Agent", pawn.Name + " has been exposed as a Mechanoid agent!",
                     LetterType.BadUrgent, pawn);
@@ -122,28 +121,28 @@ namespace MoreMechanoids
             //BrainMaker.MakeNewBrain(Faction.OfMechanoids, stateGraph, new[] {pawn});
 
             pawn.ClearMind();
-            var brain = BrainMaker.MakeNewBrain(Faction.OfMechanoids, CreateAttackGraph(), new[] {pawn});
+            Lord lord = LordMaker.MakeNewLord(Faction.OfMechanoids, new LordJob_AssaultColony() /*CreateAttackGraph(pawn.Map)*/, pawn.Map, new[] {pawn});
             Log.Message(pawn.Name + ": " + pawn.mindState.Active);
         }
 
-        private static StateGraph CreateAttackGraph()
+        private static StateGraph CreateAttackGraph(Map map)
         {
             bool sappers = false;
             bool canTimeoutOrFlee = false;
             bool canKidnap = false;
-            var assaulterFaction = Faction.OfMechanoids;
-
+            Faction assaulterFaction = Faction.OfMechanoids;
+            
             StateGraph stateGraph = new StateGraph();
-            State stateSap = null;
+            LordToil stateSap = null;
             if (sappers)
             {
-                stateSap = new State_AssaultColonySappers();
-                stateGraph.states.Add(stateSap);
+                stateSap = new LordToil_AssaultColonySappers();
+                stateGraph.AddToil(stateSap);
             }
-            State stateAssault = new State_AgentAttack();
-            stateGraph.states.Add(stateAssault);
-            State_ExitMapAnywhere stateExitMapAnywhere = new State_ExitMapAnywhere();
-            stateGraph.states.Add(stateExitMapAnywhere);
+            LordToil stateAssault = new LordToil_AgentAttack();
+            stateGraph.lordToils.Add(stateAssault);
+            LordToil_ExitMapBest stateExitMapAnywhere = new LordToil_ExitMapBest();
+            stateGraph.lordToils.Add(stateExitMapAnywhere);
             if (sappers)
             {
                 Transition sapToAssault = new Transition(stateSap, stateAssault);
@@ -162,7 +161,7 @@ namespace MoreMechanoids
                     assaultToExit.preActions.Add(
                         new TransitionAction_Message(
                             "MessageRaidersGivenUpLeaving".Translate(new object[]
-                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.name})));
+                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
                     assaultToExit.triggers.Add(
                         new Trigger_TicksPassed((!sappers)
                             ? AssaultTimeBeforeGiveUp.RandomInRange
@@ -176,21 +175,22 @@ namespace MoreMechanoids
                     assaultToExit2.preActions.Add(
                         new TransitionAction_Message(
                             "MessageRaidersSatisfiedLeaving".Translate(new object[]
-                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.name})));
+                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
                     FloatRange floatRange = new FloatRange(0.25f, 0.35f);
-                    float num = floatRange.RandomInRange*(float) Find.StoryWatcher.watcherWealth.HealthTotal;
+                    float num = floatRange.RandomInRange*(float) map.wealthWatcher.HealthTotal;
                     if (num < 900f)
                     {
                         num = 900f;
                     }
-                    assaultToExit2.triggers.Add(new Trigger_ColonyDamageTaken(num));
+                    assaultToExit2.triggers.Add(new Trigger_FractionColonyDamageTaken(num));
                     stateGraph.transitions.Add(assaultToExit2);
                 }
                 if (canKidnap)
                 {
-                    State_Kidnap stateKidnap = new State_Kidnap();
-                    stateGraph.states.Add(stateKidnap);
-                    Transition assaultToKidnap = new Transition(stateAssault, stateKidnap);
+                    LordToil_KidnapCover kidnap = new LordToil_KidnapCover();
+                    //State_Kidnap stateKidnap = new State_Kidnap();
+                    stateGraph.lordToils.Add(kidnap);
+                    Transition assaultToKidnap = new Transition(stateAssault, kidnap);
                     if (stateSap != null)
                     {
                         assaultToKidnap.sources.Add(stateSap);
@@ -198,7 +198,7 @@ namespace MoreMechanoids
                     assaultToKidnap.preActions.Add(
                         new TransitionAction_Message(
                             "MessageRaidersKidnapping".Translate(new object[]
-                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.name})));
+                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
                     assaultToKidnap.triggers.Add(new Trigger_KidnapVictimPresent());
                     stateGraph.transitions.Add(assaultToKidnap);
                 }
@@ -211,7 +211,7 @@ namespace MoreMechanoids
             assaultToExit3.preActions.Add(
                 new TransitionAction_Message(
                     "MessageRaidersLeaving".Translate(new object[]
-                    {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.name})));
+                    {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
             assaultToExit3.triggers.Add(new Trigger_BecameColonyAlly());
             stateGraph.transitions.Add(assaultToExit3);
             return stateGraph;
@@ -219,12 +219,12 @@ namespace MoreMechanoids
 
         private void TickHeal(bool allowMiracles)
         {
-            if (ticksToNextRepair-- > 0) return;
-            ticksToNextRepair = TicksBetweenRepairs;
+            if (this.ticksToNextRepair-- > 0) return;
+            this.ticksToNextRepair = TicksBetweenRepairs;
 
-            if (allowMiracles && CurJob != null)
+            if (allowMiracles && this.CurJob != null)
             {
-                if (CurJob.def == JobDefOf.AttackMelee)
+                if (this.CurJob.def == JobDefOf.AttackMelee)
                 {
                     if (Rand.Value < 0.5) GrowJackhammer();
                     else GrowSpike();
@@ -235,62 +235,56 @@ namespace MoreMechanoids
                 }
             }
        
-            if (allowMiracles && def.repairEffect != null) def.repairEffect.Spawn();
+            if (allowMiracles && this.def.repairEffect != null)
+                this.def.repairEffect.Spawn();
 
             // Injuries
-            var damages = GetHediffs(allowMiracles);
+            Hediff[] damages = GetHediffs(allowMiracles);
             if (damages.Length == 0)
             {
                 return;
             }
-            var hediff = damages.RandomElement();
-            var severity = hediff.Severity;
-            health.HealHediff(hediff, 1);
+            Hediff hediff = damages.RandomElement();
+            float severity = hediff.Severity;
+            hediff.Heal(1);
 
             // Healing had no effect? Remove eventually
             if (allowMiracles && severity >= hediff.Severity)
             {
                 if (Rand.Value < 0.05f)
                 {
-                    health.RemoveHediff(hediff);
+                    this.health.RemoveHediff(hediff);
                 }
             }
         }
 
-        private Hediff[] GetHediffs(bool allowMiracles)
-        {
-            return allowMiracles
-                ? health.hediffSet.hediffs.Where(h =>/* !(h is Hediff_MissingPart) &&*/ !(h is Hediff_AddedPart)).ToArray()
-                : health.hediffSet.hediffs.Where(h => h is Hediff_Injury).ToArray();
-        }
+        private Hediff[] GetHediffs(bool allowMiracles) => allowMiracles
+                ? this.health.hediffSet.hediffs.Where(h =>/* !(h is Hediff_MissingPart) &&*/ !(h is Hediff_AddedPart)).ToArray()
+                : this.health.hediffSet.hediffs.Where(h => h is Hediff_Injury).ToArray();
 
         private void RestoreArms()
         {
-                //BodyPartRecord part;
-                //var hasArm = RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out part);
-            var addedPart = health.hediffSet.GetHediffs<Hediff_AddedPart>().InRandomOrder().FirstOrDefault(part => part.def.addedPartProps.isBionic && ForManipulation(part));
+            //BodyPartRecord part;
+            //var hasArm = RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out part);
+            Hediff_AddedPart addedPart = this.health.hediffSet.GetHediffs<Hediff_AddedPart>().InRandomOrder().FirstOrDefault(part => part.def.addedPartProps.isBionic && ForManipulation(part));
             if (addedPart != null)
             {
-                health.hediffSet.RestorePart(addedPart.Part);
+                this.health.RestorePart(addedPart.Part);
                 //health.RemoveHediff(addedPart);
             }
         }
 
-        private static bool ForManipulation(Hediff_AddedPart part)
-        {
-            return part.Part.def.Activities.Any(c => c.First == PawnCapacityDefOf.Manipulation);
-        }
+        private static bool ForManipulation(Hediff_AddedPart part) => part.Part.def.Activities.Any(c => c.First == PawnCapacityDefOf.Manipulation);
 
         private void GrowJackhammer()
         {
-            var defArm = HediffDef.Named("JackhammerArm");
+            HediffDef defArm = HediffDef.Named("JackhammerArm");
             //if (!health.hediffSet.HasHediff(defArm))
             {
-                BodyPartRecord part;
-                var hasArm = RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out part);
+                bool hasArm = this.RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out BodyPartRecord part);
                 if (hasArm)
                 {
-                    health.AddHediff(defArm, part);
+                    this.health.AddHediff(defArm, part);
                     Log.Message("Added jackhammer!");
                 }
                 else
@@ -302,14 +296,13 @@ namespace MoreMechanoids
 
         private void GrowSpike()
         {
-            var defArm = HediffDef.Named("SpikeArm");
+            HediffDef defArm = HediffDef.Named("SpikeArm");
             //if (!health.hediffSet.HasHediff(defArm))
             {
-                BodyPartRecord part;
                 if ( //pawn.RaceProps.body.AllParts.Where(p=>p.def.ca)
-                    RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out part))
+    this.RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out BodyPartRecord part))
                 {
-                    health.AddHediff(defArm, part);
+                    this.health.AddHediff(defArm, part);
                     Log.Message("Added spike!");
                 }
                 else
@@ -321,12 +314,12 @@ namespace MoreMechanoids
 
         public override string GetInspectString()
         {
-            var sb = new StringBuilder();
-            var pawnDuty = mindState.duty;
+            StringBuilder sb = new StringBuilder();
+            PawnDuty pawnDuty = this.mindState.duty;
             if (pawnDuty == null) sb.AppendLine("No duty");
             else sb.AppendLine("Duty: " + pawnDuty.def.defName);
-            if (jobs.curDriver != null) sb.AppendLine("Driver: " + jobs.curDriver.GetType().Name);
-            if (jobs.curJob != null) sb.AppendLine("Job: " + jobs.curJob.def.label);
+            if (this.jobs.curDriver != null) sb.AppendLine("Driver: " + this.jobs.curDriver.GetType().Name);
+            if (this.jobs.curJob != null) sb.AppendLine("Job: " + this.jobs.curJob.def.label);
             return sb.ToString();
         }
     }

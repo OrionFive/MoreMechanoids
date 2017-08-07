@@ -7,7 +7,7 @@ namespace MoreMechanoids
     {
         protected override bool Satisfied(Pawn pawn)
         {
-            var converted = pawn as PawnConverted;
+            PawnConverted converted = pawn as PawnConverted;
             return converted != null && converted.Crashed;
         }
     }

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThinkTrees>
+
+	<ThinkTreeDef>
+		<defName>Mechanoid_Converted</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Downed -->
+				<li Class="ThinkNode_Subtree">
+				  <treeDef>Downed</treeDef>
+				</li>
+				
+				<!-- Burning response -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>BurningResponse</treeDef>
+				</li>
+				
+				<!-- Mind broken -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>MentalStateCritical</treeDef>
+				</li>
+
+				<!-- Flee explosions -->
+				<li Class="JobGiver_FleeExplosion" />
+
+				<!-- Self-defense only if not drafted -->
+				<li Class="ThinkNode_ConditionalDrafted">
+					<invert>true</invert>				
+					<subNodes>
+						<li Class="JobGiver_ConfigurableHostilityResponse" />
+					</subNodes>
+				</li>
+
+				<!-- Mind broken - Wander -->
+				<li Class="ThinkNode_ConditionalMentalState">
+					<state>WanderSad</state>
+					<subNodes>
+						<li Class="JobGiver_WanderAnywhere">
+						  <maxDanger>Deadly</maxDanger>
+						</li>
+					</subNodes>
+				</li>
+	
+				<!-- Connected -->
+				<li Class="MoreMechanoids.ThinkNode_ConditionalAIEnabled">
+					<subNodes>
+					
+						<!-- If on colonist team, do forced and emergency work -->
+						<li Class="ThinkNode_ConditionalColonist">
+							<subNodes>
+								<!-- Take direct orders when drafted -->
+								<li Class="JobGiver_Orders" />
+
+								<!-- Queue for forced work -->
+								<li Class="JobGiver_JobQueue" />
+
+								<!-- Do emergency work (supercedes satisfying needs, unless needs are extreme) -->
+								<li Class="JobGiver_Work">
+								  <emergency>true</emergency>
+								</li>
+							</subNodes>
+						</li>
+
+						<li Class="MoreMechanoids.ThinkNode_ConditionalStayHome">
+							<subNodes>
+								<li Class="MoreMechanoids.JobGiver_Standby">
+									<maxDanger>None</maxDanger>
+								</li>
+							</subNodes>
+						</li>
+				
+					</subNodes>
+				</li>
+
+				<li Class="MoreMechanoids.ThinkNode_ConditionalAIEnabled">
+					<invert>true</invert>		
+					<subNodes>
+						<li Class="MoreMechanoids.JobGiver_Standby">
+							<instantly>true</instantly>
+						</li>
+					</subNodes>
+				</li>
+
+				<!-- If on colonist team, do non-forced non-emergency work and idle -->
+				<!--li Class="ThinkNode_ConditionalColonist">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>Idle</tagToGive>
+							<subNodes>
+								<li Class="MoreMechanoids.JobGiver_Standby">
+									<maxDanger>None</maxDanger>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>-->
+				
+				<!-- Seek allowed area -->
+			    <li Class="JobGiver_SeekAllowedArea" />			
+
+				<!-- Main behavior core-->
+				<li Class="JobGiver_Work" >
+				</li>
+			
+				<li Class="MoreMechanoids.JobGiver_Standby"> 
+				  <maxDanger>None</maxDanger>
+				</li>
+
+				<!--WanderAnywhere-->
+				<li Class="JobGiver_WanderAnywhere">
+				  <maxDanger>Deadly</maxDanger>
+				</li>
+
+				<li Class="JobGiver_IdleError"/>
+
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+</ThinkTrees>

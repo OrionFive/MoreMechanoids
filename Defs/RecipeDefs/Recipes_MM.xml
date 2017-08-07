@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+  
+  <RecipeDef>
+    <defName>MM_CreateMechanoidChip</defName>
+    <label>Make mechanoid AI chip</label>
+    <description>Crafts an AI chip for repurposing dead mechanoids. Needs silver for highest quality circuitry.</description>
+    <jobString>Crafting chip.</jobString>
+    <workAmount>4000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>0.5</workSkillLearnFactor>
+    <workerCounterClass>RecipeWorkerCounter</workerCounterClass>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+    <unfinishedThingDef>UnfinishedMechanoidChip</unfinishedThingDef>
+	<!--recipeUsers>
+	  <li>TableMachining</li>
+	</recipeUsers-->
+	<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>		
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>		
+      </li>
+    </ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>Plasteel</li>
+            <li>Silver</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	
+	<products>
+		<MechanoidChip>1</MechanoidChip>
+	</products>
+	<skillRequirements>
+		<li>
+			<skill>Crafting</skill>
+			<minLevel>7</minLevel>
+		</li>
+		<li>
+			<skill>Research</skill>
+			<minLevel>3</minLevel>
+		</li>
+	</skillRequirements>
+  </RecipeDef>
+  
+  <RecipeDef Name="Chip" Abstract="True">
+    <description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</description>
+    <jobString>Restoring mechanoid.</jobString>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>1</workSkillLearnFactor>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+	<!--recipeUsers>
+	  <li>TableMachining</li>
+    </recipeUsers-->	
+	<skillRequirements>
+		<li>
+			<skill>Crafting</skill>
+			<minLevel>9</minLevel>
+		</li>
+	</skillRequirements>
+    <isViolation>true</isViolation>
+  </RecipeDef>
+
+  <!-- CRAWLER -->
+  
+  <RecipeDef Name="ChipCrawler" ParentName="Chip" Abstract="True">
+    <workAmount>2500</workAmount>
+	<ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Mechanoid_Crawler_Corpse</li>
+         </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MechanoidChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+            <li>Plasteel</li>
+			<li>MechanoidChip</li>
+			<li>Mechanoid_Crawler_Corpse</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>MechanoidChip</li>
+        <li>Mechanoid_Crawler_Corpse</li>
+      </thingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipCrawler">
+    <defName>MM_ChipCrawlerCleaning</defName>
+    <label>Chip crawler for cleaning</label>
+	<products>
+		<Crawler_Convertable_Cleaning>1</Crawler_Convertable_Cleaning>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipCrawler">
+    <defName>MM_ChipCrawlerHauling</defName>
+    <label>Chip crawler for hauling</label>
+	<products>
+		<Crawler_Convertable_Hauling>1</Crawler_Convertable_Hauling>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipCrawler">
+    <defName>MM_ChipCrawlerCutting</defName>
+    <label>Chip crawler for cutting plants</label>
+	<products>
+		<Crawler_Convertable_Cutting>1</Crawler_Convertable_Cutting>
+	</products>
+  </RecipeDef>
+  
+    <!-- SKULLYWAG -->
+  
+  <RecipeDef Name="ChipSkullywag" ParentName="Chip" Abstract="True">
+    <workAmount>3000</workAmount>
+	<ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Mechanoid_Skullywag_Corpse</li>
+         </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MechanoidChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+            <li>Plasteel</li>
+			<li>MechanoidChip</li>
+			<li>Mechanoid_Skullywag_Corpse</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>MechanoidChip</li>
+        <li>Mechanoid_Skullywag_Corpse</li>
+      </thingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipSkullywag">
+    <defName>MM_ChipSkullywagCooking</defName>
+    <label>Chip skullywag for cooking</label>
+	<products>
+		<Skullywag_Convertable_Cooking>1</Skullywag_Convertable_Cooking>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipSkullywag">
+    <defName>MM_ChipSkullywagDoctor</defName>
+    <label>Chip skullywag for healing</label>
+	<products>
+		<Skullywag_Convertable_Doctor>1</Skullywag_Convertable_Doctor>
+	</products>
+  </RecipeDef>
+    
+	
+	<!-- SCYTHER -->
+  
+  <RecipeDef Name="ChipScyther" ParentName="Chip" Abstract="True">
+    <workAmount>3000</workAmount>
+	<ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Mechanoid_Scyther_Corpse</li>
+         </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MechanoidChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+            <li>Plasteel</li>
+			<li>MechanoidChip</li>
+			<li>Mechanoid_Scyther_Corpse</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>MechanoidChip</li>
+        <li>Mechanoid_Scyther_Corpse</li>
+      </thingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipScyther">
+    <defName>MM_ChipScytherTailoring</defName>
+    <label>Chip scyther for tailoring</label>
+	<products>
+		<Scyther_Convertable_Tailoring>1</Scyther_Convertable_Tailoring>
+	</products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="ChipScyther">
+    <defName>MM_ChipScytherCutting</defName>
+    <label>Chip scyther for plant cutting</label>
+	<products>
+		<Scyther_Convertable_Cutting>1</Scyther_Convertable_Cutting>
+	</products>
+  </RecipeDef>
+  
+	<!-- CENTIPEDE -->
+  
+  <RecipeDef Name="ChipCentipede" ParentName="Chip" Abstract="True">
+    <workAmount>3000</workAmount>
+	<ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Mechanoid_Centipede_Corpse</li>
+         </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MechanoidChip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+            <li>Plasteel</li>
+			<li>MechanoidChip</li>
+			<li>Mechanoid_Centipede_Corpse</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+		<li>MechanoidChip</li>
+        <li>Mechanoid_Centipede_Corpse</li>
+      </thingDefs>
+    </defaultIngredientFilter>
+  </RecipeDef>
+  
+  <!--RecipeDef ParentName="ChipCentipede">
+    <defName>MM_ChipCentipedeMining</defName>
+    <label>Chip centipede for mining</label>
+	<products>
+		<Centipede_Convertable_Mining>1</Centipede_Convertable_Mining>
+	</products>
+  </RecipeDef>
+  
+  
+  <RecipeDef ParentName="ChipCentipede">
+    <defName>MM_ChipCentipedeGrowing</defName>
+    <label>Chip centipede for growing</label>
+	<products>
+		<Centipede_Convertable_Growing>1</Centipede_Convertable_Growing>
+	</products>
+  </RecipeDef-->
+  
+</RecipeDefs>

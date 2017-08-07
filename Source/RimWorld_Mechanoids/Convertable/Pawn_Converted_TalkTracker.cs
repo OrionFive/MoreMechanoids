@@ -4,13 +4,15 @@ using Verse;
 
 namespace MoreMechanoids
 {
-    public class Pawn_Converted_TalkTracker : Pawn_TalkTracker
+    /*
+    public class Pawn_Converted_TalkTracker : Pawn_InteractionsTracker
     {
         public const int MinPreferredTalkInterval = 700;
         private Pawn pawn;
         private int lastBeChattyTick = -1;
         private int lastTalkTime = -9999;
         public new const int ChattyModeDuration = 60;
+
         private List<Pawn> workingList = new List<Pawn>();
 
         public Pawn_Converted_TalkTracker(Pawn pawn) : base(pawn)
@@ -95,5 +97,5 @@ namespace MoreMechanoids
         {
             lastBeChattyTick = Find.TickManager.TicksGame;
         }
-    }
+    }*/
 }

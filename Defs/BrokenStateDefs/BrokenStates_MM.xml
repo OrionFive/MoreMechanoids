@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MentalStateDef Class="MoreMechanoids.BrokenStateDef">
+    <defName>Crashed</defName>
+    <stateClass>MoreMechanoids.BrokenState_Crashed</stateClass>
+    <label>crashed</label>
+    <!--<breakType>Special</breakType>-->
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <nameColor>(0.65, 0.9, 0.93)</nameColor>
+    <beginLetterLabel></beginLetterLabel>
+    <beginLetter></beginLetter>
+    <recoveryMessage></recoveryMessage>
+    <baseInspectLine>Broken: Rebooting...</baseInspectLine>
+    <stateEffecter>Crashed</stateEffecter>
+    <recoveryMtbDays>0.15</recoveryMtbDays>
+    <minTicksBeforeRecovery>100</minTicksBeforeRecovery>
+  </MentalStateDef>
+
+</Defs>

@@ -10,18 +10,18 @@ namespace MoreMechanoids
         public CompPowerTrader powerComp;
         //public Pawn owner;
 
-        public override void SpawnSetup()
+        public override void SpawnSetup(Map map)
         {
-            base.SpawnSetup();
-            powerComp = GetComp<CompPowerTrader>();
+            base.SpawnSetup(map);
+            this.powerComp = GetComp<CompPowerTrader>();
         }
 
         public Pawn CurOccupant
         {
             get
             {
-                List<Thing> list = Verse.Find.ThingGrid.ThingsListAt(Position);
-                return list.OfType<Pawn>().FirstOrDefault(pawn => pawn.Position==Position);
+                List<Thing> list = this.Map.thingGrid.ThingsListAt(this.Position);
+                return list.OfType<Pawn>().FirstOrDefault(pawn => pawn.Position== this.Position);
             }
         }
 
@@ -47,14 +47,14 @@ namespace MoreMechanoids
         public bool Fits(Pawn pawn)
         {
             // Huge bots need size 2.
-            if (def.size.x >= 2 && def.size.z >= 2) return (pawn.def.race.baseBodySize >= 1.5f);
+            if (this.def.size.x >= 2 && this.def.size.z >= 2) return (pawn.def.race.baseBodySize >= 1.5f);
             return pawn.def.race.baseBodySize < 1.5f;
         }
 
         public static Building_RestSpot Find(Pawn pawn)
         {
-            var spots = Verse.Find.ListerBuildings.AllBuildingsColonistOfClass<Building_RestSpot>()
-                .Where(spot => (spot.CurOccupant == null || spot.CurOccupant==pawn) && spot.Fits(pawn) && !Verse.Find.Reservations.IsReserved(spot, pawn.Faction)).ToArray();
+            Building_RestSpot[] spots = pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_RestSpot>()
+                .Where(spot => (spot.CurOccupant == null || spot.CurOccupant==pawn) && spot.Fits(pawn) && !pawn.Map.reservationManager.IsReserved(spot, pawn.Faction)).ToArray();
 
             if (!spots.Any()) return null;
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MainTabDefs>
+
+  <MainTabDef>
+    <defName>Mechanoids</defName>
+    <label>mechanoids</label>
+    <description>Configure how the colony's converted Mechanoids should be treated.</description>
+    <windowClass>MoreMechanoids.MainTabWindow_Mechanoids</windowClass>
+    <order>45</order>
+  </MainTabDef>
+  
+</MainTabDefs>

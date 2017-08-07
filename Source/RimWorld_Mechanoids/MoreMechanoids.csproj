@@ -55,7 +55,6 @@
     <Compile Include="Convertable\BrokenStateDef.cs" />
     <Compile Include="Convertable\BrokenState_Crashed.cs" />
     <Compile Include="Convertable\Building_RestSpot.cs" />
-    <Compile Include="Convertable\Defs.cs" />
     <Compile Include="Convertable\IncidentWorker_CovertPodCrash.cs" />
     <Compile Include="Convertable\JobGiver_AITakeWeapon.cs" />
     <Compile Include="Convertable\JobGiver_DownAllHumans.cs" />
@@ -63,15 +62,16 @@
     <Compile Include="Convertable\MainTabWindow_Mechanoids.cs" />
     <Compile Include="Convertable\MechanoidAgent.cs" />
     <Compile Include="Convertable\MechanoidAgentCorpseComp.cs" />
+    <Compile Include="Convertable\MoreMechanoidsDefOf.cs" />
     <Compile Include="Convertable\PawnKindDef.cs" />
-    <Compile Include="Convertable\State_AgentAttack.cs" />
+    <Compile Include="Convertable\LordToil_AgentAttack.cs" />
     <Compile Include="Convertable\ThinkNode_ConditionalCrashed.cs" />
     <Compile Include="DamageWorker_AddStaged.cs" />
     <Compile Include="Convertable\IncidentWorker_ShortCircuitMechanoid.cs" />
     <Compile Include="Convertable\JobDriver_RepairMechanoid.cs" />
     <Compile Include="Convertable\JobDriver_Standby.cs" />
     <Compile Include="Convertable\JobGiver_Standby.cs" />
-    <Compile Include="Convertable\MapComponent_FixMechanoidCorpseDef.cs" />
+    <Compile Include="Convertable\FixMechanoidCorpseDef.cs" />
     <Compile Include="Convertable\Need_Rest_Mechanoid.cs" />
     <Compile Include="Convertable\Pawn_Converted_TalkTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

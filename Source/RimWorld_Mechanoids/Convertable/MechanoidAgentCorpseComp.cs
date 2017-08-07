@@ -1,3 +1,5 @@
+using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -18,8 +20,8 @@ namespace MoreMechanoids
         {
             get
             {
-                var corpse = (Corpse) parent;
-                var pawn = corpse.innerPawn;
+                Corpse corpse = (Corpse)this.parent;
+                Pawn pawn = corpse.InnerPawn;
                 return pawn;
             }
         }
@@ -27,12 +29,12 @@ namespace MoreMechanoids
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue(ref raiseTicks, "raiseTicks");
-            Scribe_Values.LookValue(ref raiseVelocity, "raiseVelocity");
-            Scribe_Values.LookValue(ref ticksToNextRepair, "ticksToNextRepair");
-            Scribe_Values.LookValue(ref showRealFace, "showRealFace");
-            Scribe_Values.LookValue(ref appearTicks, "appearTicks");
-            Scribe_Values.LookValue(ref originalSkinColor, "originalSkinColor");
+            Scribe_Values.LookValue(ref this.raiseTicks, "raiseTicks");
+            Scribe_Values.LookValue(ref this.raiseVelocity, "raiseVelocity");
+            Scribe_Values.LookValue(ref this.ticksToNextRepair, "ticksToNextRepair");
+            Scribe_Values.LookValue(ref this.showRealFace, "showRealFace");
+            Scribe_Values.LookValue(ref this.appearTicks, "appearTicks");
+            Scribe_Values.LookValue(ref this.originalSkinColor, "originalSkinColor");
         }
 
         public override void Initialize(CompProperties props)
@@ -40,10 +42,10 @@ namespace MoreMechanoids
             base.Initialize(props);
             
             Log.Message("Created agent corpse");
-            raiseTicks = Rand.Range(60*1, 60*4);
-            Log.Message(parent.def.category.ToString());
-            Log.Message("Class: " + parent.def.thingClass);
-            Log.Message(parent.def.thingClass == typeof(Corpse) ? "Is corprse" : "Not corpse");
+            this.raiseTicks = Rand.Range(60*1, 60*4);
+            Log.Message(this.parent.def.category.ToString());
+            Log.Message("Class: " + this.parent.def.thingClass);
+            Log.Message(this.parent.def.thingClass == typeof(Corpse) ? "Is corpse" : "Not corpse");
 
             //var smt = Type.GetType("EdB.Interface.SquadManagerThing,EdBInterface");
             //if (smt != null)
@@ -59,12 +61,12 @@ namespace MoreMechanoids
         public override void CompTick()
         {
             base.CompTick();
-            raiseTicks--;
-            if(raiseTicks <= 0)
+            this.raiseTicks--;
+            if(this.raiseTicks <= 0)
             {
                 TickHeal();
-                if (!showRealFace || appearTicks > 0) ShowRealFace();
-                if (Pawn.health.hediffSet.hediffs.Count <= 0)
+                if (!this.showRealFace || this.appearTicks > 0) ShowRealFace();
+                if (this.Pawn.health.hediffSet.hediffs.Count <= 0)
                 {
                     //if (!raisePosition.IsValid)
                     //{
@@ -72,8 +74,8 @@ namespace MoreMechanoids
                     //    Find.PawnDestinationManager.ReserveDestinationFor(innerPawn, raisePosition);
                     //    raisePosition.Walkable()
                     //}
-                    var wiggler = Pawn.drawer.renderer.wiggler;
-                    wiggler.SetToCustomRotation(Mathf.SmoothDampAngle(wiggler.downedAngle, 0, ref raiseVelocity, 1.2f));
+                    PawnDownedWiggler wiggler = this.Pawn.Drawer.renderer.wiggler;
+                    wiggler.SetToCustomRotation(Mathf.SmoothDampAngle(wiggler.downedAngle, 0, ref this.raiseVelocity, 1.2f));
                     if (wiggler.downedAngle < 1 || wiggler.downedAngle > 359)
                     {
                         wiggler.SetToCustomRotation(0);
@@ -85,68 +87,68 @@ namespace MoreMechanoids
 
         private void TickHeal()
         {
-            if (ticksToNextRepair-- > 0) return;
-            ticksToNextRepair = TicksBetweenRepairs;
+            if (this.ticksToNextRepair-- > 0) return;
+            this.ticksToNextRepair = TicksBetweenRepairs;
 
-            if(Pawn.def.repairEffect!=null)
-            Pawn.def.repairEffect.Spawn();
+            if(this.Pawn.def.repairEffect!=null)
+                this.Pawn.def.repairEffect.Spawn();
 
             // Injuries
-            var damages = Pawn.health.hediffSet.hediffs;
+            List<Hediff> damages = this.Pawn.health.hediffSet.hediffs;
             if (damages.Count == 0)
             {
                 return;
             }
-            var hediff = damages.RandomElement();
-            var severity = hediff.Severity;
-            Pawn.health.HealHediff(hediff, 1);
+            Hediff hediff = damages.RandomElement();
+            float severity = hediff.Severity;
+            hediff.Heal(1);
 
             // Healing had no effect? Remove eventually
             if (severity >= hediff.Severity)
             {
                 if (Rand.Value < 0.10f)
                 {
-                    Pawn.health.RemoveHediff(hediff);
+                    this.Pawn.health.RemoveHediff(hediff);
                 }
             }
         }
 
         private void ShowRealFace()
         {
-            if (Pawn == null) return;
+            if (this.Pawn == null) return;
 
-            if (!showRealFace)
+            if (!this.showRealFace)
             {
-                showRealFace = true;
-                if (Pawn.story.skinColor == Color.white)
+                this.showRealFace = true;
+                if (this.Pawn.story.SkinColor == Color.white)
                 {
-                    appearTicks = 0;
+                    this.appearTicks = 0;
                 }
                 else
                 {
-                    originalSkinColor = Pawn.story.skinColor;
+                    this.originalSkinColor = this.Pawn.story.SkinColor;
                 }
             }
 
-            appearTicks--;
-            if (appearTicks <= 0)
+            this.appearTicks--;
+            if (this.appearTicks <= 0)
             {
-                Pawn.story.skinColor = Color.white;
-                Pawn.drawer.renderer.graphics.headGraphic =
+                //Pawn.story.SkinColor = Color.white;
+                this.Pawn.Drawer.renderer.graphics.headGraphic =
                     GraphicDatabase.Get<Graphic_Multi>("Things/Pawn/Humanlike/Heads/Female/Female_Average_Agent",
                         ShaderDatabase.Cutout, Vector2.one, Color.white);
-                Pawn.drawer.renderer.graphics.nakedGraphic.color = Color.white;
+                this.Pawn.Drawer.renderer.graphics.nakedGraphic.color = Color.white;
                 Log.Message("Head fixed.");
             }
             else
             {
-                var color = Color.Lerp(Color.white, originalSkinColor, appearTicks/AppearTicks);
-                Pawn.story.skinColor = color;
-                Pawn.drawer.renderer.graphics.headGraphic =
+                Color color = Color.Lerp(Color.white, this.originalSkinColor, this.appearTicks /AppearTicks);
+                //Pawn.story.skinColor = color;
+                this.Pawn.Drawer.renderer.graphics.headGraphic =
                     GraphicDatabase.Get<Graphic_Multi>(
                         "Things/Pawn/Humanlike/Heads/Female/Female_Average_Agent"
-                        + Mathf.RoundToInt(1 + appearTicks/AppearTicks*6), ShaderDatabase.Cutout, Vector2.one, color);
-                Pawn.drawer.renderer.graphics.nakedGraphic.color = color;
+                        + Mathf.RoundToInt(1 + this.appearTicks /AppearTicks*6), ShaderDatabase.Cutout, Vector2.one, color);
+                this.Pawn.Drawer.renderer.graphics.nakedGraphic.color = color;
             }
 
             //Log.Message(innerPawn.story.headGraphicPath);
@@ -160,8 +162,8 @@ namespace MoreMechanoids
             //GenPlace.TryPlaceThing(innerPawn, Position, ThingPlaceMode.Direct, out thing);
             //var raisedPawn = thing as MechanoidAgent;
             Log.Message("Creating agent.");
-            parent.Destroy();
-            MechanoidAgent.Discover(Pawn, parent.Position);
+            this.parent.Destroy();
+            MechanoidAgent.Discover(this.Pawn, this.parent.Position);
         }
     }
 }

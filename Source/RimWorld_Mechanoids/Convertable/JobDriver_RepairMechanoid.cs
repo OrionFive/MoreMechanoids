@@ -19,8 +19,8 @@ namespace MoreMechanoids
             //yield return GetMaterial;
             //yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return Toils_Reserve.Reserve(TargetIndex.A);
-            yield return Goto;
-            yield return ToilRepair;
+            yield return this.Goto;
+            yield return this.ToilRepair;
             yield return Toils_Reserve.Release(TargetIndex.A);
         }
 
@@ -28,21 +28,21 @@ namespace MoreMechanoids
         {
             get
             {
-                var toil = new Toil
+                Toil toil = new Toil
                            {
-                               actor = pawn,
+                               actor = this.pawn,
                                defaultCompleteMode = ToilCompleteMode.Instant,
                                initAction = () =>
                                             {
-                                                if (!WorkGiver_RepairMechanoid.IsRepairTarget(TargetThingA))
+                                                if (!WorkGiver_RepairMechanoid.IsRepairTarget(this.TargetThingA))
                                                 {
                                                     EndJobWith(JobCondition.Incompletable);
                                                     return;
                                                 }
-                                                var converted = (PawnConverted) TargetThingA;
-                                                var needed = WorkGiver_RepairMechanoid.GetDamages(converted).Sum(h => Mathf.Max(1, h.PainOffset)*80);
+                                                PawnConverted converted = (PawnConverted)this.TargetThingA;
+                                                float needed = WorkGiver_RepairMechanoid.GetDamages(converted).Sum(h => Mathf.Max(1, h.PainOffset)*80);
                                                 Log.Message("Fixing damages costs "+needed+" plasteel.");
-                                                var available = Find.ResourceCounter.GetCount(ThingDefOf.Plasteel);
+                                                int available = this.pawn.Map.resourceCounter.GetCount(ThingDefOf.Plasteel);
                                                 if (available*2 < needed)
                                                 {
                                                     EndJobWith(JobCondition.Incompletable);
@@ -61,7 +61,7 @@ namespace MoreMechanoids
             get
             {
                 Toil toil = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-                toil.AddFailCondition(() => !WorkGiver_RepairMechanoid.IsRepairTarget(TargetThingA));
+                toil.AddFailCondition(() => !WorkGiver_RepairMechanoid.IsRepairTarget(this.TargetThingA));
                 return toil;
             }
         }
@@ -70,34 +70,34 @@ namespace MoreMechanoids
         {
             get
             {
-                var toil = new Toil
+                Toil toil = new Toil
                 {
-                    actor=pawn,
+                    actor= this.pawn,
                     defaultCompleteMode = ToilCompleteMode.Never,
-                    tickAction = ToilTick
+                    tickAction = this.ToilTick
                 };
 
                 //toil.initAction = () => { toil.actor.pather.StopDead(); };
-                toil.AddFailCondition(() => !WorkGiver_RepairMechanoid.IsRepairTarget(TargetThingA));
+                toil.AddFailCondition(() => !WorkGiver_RepairMechanoid.IsRepairTarget(this.TargetThingA));
                 return toil;
             }
         }
 
         private void ToilTick()
         {
-            if (ticksToNextRepair-- > 0) return;
-            ticksToNextRepair = TicksBetweenRepairs;
+            if (this.ticksToNextRepair-- > 0) return;
+            this.ticksToNextRepair = TicksBetweenRepairs;
 
-            TargetA.Thing.def.repairEffect.Spawn();
+            this.TargetA.Thing.def.repairEffect.Spawn();
 
-            var converted = TargetThingA as PawnConverted;
+            PawnConverted converted = this.TargetThingA as PawnConverted;
             if (converted == null)
             {
                 EndJobWith(JobCondition.Incompletable);
                 return;
             }
 
-            var damages = WorkGiver_RepairMechanoid.GetDamages(converted).ToArray();
+            Hediff[] damages = WorkGiver_RepairMechanoid.GetDamages(converted).ToArray();
             if(damages.Length==0)
             {
                 EndJobWith(JobCondition.Succeeded);
@@ -105,13 +105,13 @@ namespace MoreMechanoids
                 converted.OnFullRepairComplete();
                 return;
             }
-            var hediff = damages.RandomElement();
-            repairingDone += repairAmount;
-            if (repairingDone >= 3)
+            Hediff hediff = damages.RandomElement();
+            this.repairingDone += repairAmount;
+            if (this.repairingDone >= 3)
             {
                 converted.health.hediffSet.hediffs.Remove(hediff);
                 converted.health.Notify_HediffChanged(null);
-                repairingDone = 0;
+                this.repairingDone = 0;
                 converted.UpdateWorkCapacity();
             }
         }
