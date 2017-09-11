@@ -5,7 +5,6 @@
 	<defName>Paralyze</defName>
 	<label>paralyze</label>
 	<harmsHealth>false</harmsHealth>
-	<incapChanceMultiplier>30</incapChanceMultiplier>
 	<hasForcefulImpact>False</hasForcefulImpact>
 	<canInterruptJobs>true</canInterruptJobs>
 	<makesBlood>false</makesBlood>
