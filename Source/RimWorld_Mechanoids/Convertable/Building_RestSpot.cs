@@ -9,19 +9,18 @@ namespace MoreMechanoids
     {
         public CompPowerTrader powerComp;
         //public Pawn owner;
-
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            base.SpawnSetup(map);
-            this.powerComp = GetComp<CompPowerTrader>();
+            base.SpawnSetup(map, respawningAfterLoad);
+            powerComp = GetComp<CompPowerTrader>();
         }
 
         public Pawn CurOccupant
         {
             get
             {
-                List<Thing> list = this.Map.thingGrid.ThingsListAt(this.Position);
-                return list.OfType<Pawn>().FirstOrDefault(pawn => pawn.Position== this.Position);
+                List<Thing> list = Map.thingGrid.ThingsListAt(Position);
+                return list.OfType<Pawn>().FirstOrDefault(pawn => pawn.Position == Position);
             }
         }
 
@@ -47,18 +46,20 @@ namespace MoreMechanoids
         public bool Fits(Pawn pawn)
         {
             // Huge bots need size 2.
-            if (this.def.size.x >= 2 && this.def.size.z >= 2) return (pawn.def.race.baseBodySize >= 1.5f);
+            if (def.size.x >= 2 && def.size.z >= 2) return (pawn.def.race.baseBodySize >= 1.5f);
             return pawn.def.race.baseBodySize < 1.5f;
         }
 
         public static Building_RestSpot Find(Pawn pawn)
         {
-            Building_RestSpot[] spots = pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_RestSpot>()
-                .Where(spot => (spot.CurOccupant == null || spot.CurOccupant==pawn) && spot.Fits(pawn) && !pawn.Map.reservationManager.IsReserved(spot, pawn.Faction)).ToArray();
+            Building_RestSpot[] spots =
+                pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_RestSpot>()
+                    .Where(spot => (spot.CurOccupant == null || spot.CurOccupant == pawn) && spot.Fits(pawn) && !pawn.Map.reservationManager.IsReserved(spot, pawn.Faction))
+                    .ToArray();
 
             if (!spots.Any()) return null;
 
-            return spots.MinBy(spot => spot.Position.DistanceToSquared(pawn.Position)*(spot.powerComp.PowerOn?4:1));
+            return spots.MinBy(spot => spot.Position.DistanceToSquared(pawn.Position)*(spot.powerComp.PowerOn ? 4 : 1));
         }
     }
 }

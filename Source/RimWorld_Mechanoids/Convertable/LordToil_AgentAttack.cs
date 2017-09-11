@@ -22,7 +22,5 @@ namespace MoreMechanoids
                 p.mindState.duty = new PawnDuty(DefDatabase<DutyDef>.GetNamed("AgentAttack"));
             }
         }
-
-        public override void LordToilTick() => base.LordToilTick();
     }
 }

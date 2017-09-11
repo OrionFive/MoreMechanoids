@@ -3,7 +3,6 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
-using RimWorld.Planet;
 
 namespace MoreMechanoids
 {
@@ -63,13 +62,13 @@ namespace MoreMechanoids
         private static Job GotoForce(Pawn pawn, LocalTargetInfo target, PathEndMode pathEndMode)
         {
             Log.Message(pawn+", "+target);
-            PawnPath pawnPath = pawn.Map.pathFinder.FindPath(pawn.Position, target, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAnything), pathEndMode);
-            
-            Thing thing = null;
+            PawnPath pawnPath = pawn.Map.pathFinder.FindPath(pawn.Position, target, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.NoPassClosedDoors), pathEndMode);
+
             Log.Message("Path Length: "+pawnPath.NodesLeftCount);
             //if (pawnPath.NodesLeftCount >= 3)
             //{
-            thing = pawnPath.FirstBlockingBuilding(out IntVec3 cellBeforeBlocker);
+            IntVec3 cellBeforeBlocker;
+            var thing = pawnPath.FirstBlockingBuilding(out cellBeforeBlocker);
             //}
             pawnPath.ReleaseToPool();
 
@@ -125,6 +124,9 @@ namespace MoreMechanoids
             };
         }
 
-        private static bool IsBetter(Thing newWeapon, ThingWithComps oldWeapon) => newWeapon.MarketValue > oldWeapon.MarketValue * 1.2f;
+        private static bool IsBetter(Thing newWeapon, ThingWithComps oldWeapon)
+        {
+            return newWeapon.MarketValue > oldWeapon.MarketValue*1.2f;
+        }
     }
 }

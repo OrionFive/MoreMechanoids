@@ -22,14 +22,14 @@ namespace MoreMechanoids
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue(ref this.discovered, "discovered");
-            Scribe_Values.LookValue(ref this.disguiseDamage, "disguiseDamage", true);
-            Scribe_Values.LookValue(ref this.ticksToNextRepair, "ticksToNextRepair");
+            Scribe_Values.Look(ref discovered, "discovered");
+            Scribe_Values.Look(ref disguiseDamage, "disguiseDamage", true);
+            Scribe_Values.Look(ref ticksToNextRepair, "ticksToNextRepair");
         }
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            if (!this.discovered && mode == DestroyMode.Kill)
+            if (!discovered && mode == DestroyMode.KillFinalize)
             {
                 Log.Message("Agent got killed...");
             }
@@ -40,32 +40,32 @@ namespace MoreMechanoids
         {
             base.Tick();
 
-            if (this.Dead) Log.Message("Dead");
-            if (!this.Spawned) Log.Message("!SpawnedInWorld");
-            if (this.holdingContainer != null) Log.Message("Has holder: " + this.holdingContainer);
+            if (Dead) Log.Message("Dead");
+            if (!Spawned) Log.Message("!SpawnedInWorld");
+            if (ParentHolder != null) Log.Message("Has holder: " + ParentHolder);
 
             // Don't heal right after crash
             // Once not downed, start healing faster
-            if (this.disguiseDamage && !this.health.Downed)
+            if (disguiseDamage && !health.Downed)
             {
-                this.disguiseDamage = false;
+                disguiseDamage = false;
             }
 
             // Only heal if not disguising
-            if (!this.disguiseDamage) TickHeal(this.discovered);
+            if (!disguiseDamage) TickHeal(discovered);
 
-            if (this.discovered && this.guest != null)
+            if (discovered && guest != null)
             {
-                this.guest.released = true;
+                guest.released = true;
             }
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, respawningAfterLoad);
 
-            this.Drawer.Notify_Spawned();
-            this.pather.ResetToCurrentPosition();
+            Drawer.Notify_Spawned();
+            pather.ResetToCurrentPosition();
             map.mapPawns.RegisterPawn(this);
         }
 
@@ -103,8 +103,7 @@ namespace MoreMechanoids
             Log.Message("Agent settings.");
 
 
-            typeof (Thing).GetField("mapIndexOrState", BindingFlags.NonPublic | BindingFlags.Instance)
-                .SetValue(pawn, -1);
+            typeof(Thing).GetField("mapIndexOrState", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(pawn, -1);
 
             GenPlace.TryPlaceThing(pawn, position, pawn.Map, ThingPlaceMode.Direct);
             Log.Message(pawn.Name + ": Spawned new instance.");
@@ -113,7 +112,7 @@ namespace MoreMechanoids
             if (pawn.story.SkinColor != Color.white)
             {
                 Find.LetterStack.ReceiveLetter("Mechanoid Agent", pawn.Name + " has been exposed as a Mechanoid agent!",
-                    LetterType.BadUrgent, pawn);
+                    LetterDefOf.BadUrgent, pawn);
             }
 
             //State singleState = new State_ExitMapNearest();
@@ -121,7 +120,8 @@ namespace MoreMechanoids
             //BrainMaker.MakeNewBrain(Faction.OfMechanoids, stateGraph, new[] {pawn});
 
             pawn.ClearMind();
-            Lord lord = LordMaker.MakeNewLord(Faction.OfMechanoids, new LordJob_AssaultColony() /*CreateAttackGraph(pawn.Map)*/, pawn.Map, new[] {pawn});
+            Lord lord = LordMaker.MakeNewLord(Faction.OfMechanoids, new LordJob_AssaultColony()
+                /*CreateAttackGraph(pawn.Map)*/, pawn.Map, new[] {pawn});
             Log.Message(pawn.Name + ": " + pawn.mindState.Active);
         }
 
@@ -131,7 +131,7 @@ namespace MoreMechanoids
             bool canTimeoutOrFlee = false;
             bool canKidnap = false;
             Faction assaulterFaction = Faction.OfMechanoids;
-            
+
             StateGraph stateGraph = new StateGraph();
             LordToil stateSap = null;
             if (sappers)
@@ -141,7 +141,7 @@ namespace MoreMechanoids
             }
             LordToil stateAssault = new LordToil_AgentAttack();
             stateGraph.lordToils.Add(stateAssault);
-            LordToil_ExitMapBest stateExitMapAnywhere = new LordToil_ExitMapBest();
+            LordToil_ExitMap stateExitMapAnywhere = new LordToil_ExitMap();
             stateGraph.lordToils.Add(stateExitMapAnywhere);
             if (sappers)
             {
@@ -160,8 +160,8 @@ namespace MoreMechanoids
                     }
                     assaultToExit.preActions.Add(
                         new TransitionAction_Message(
-                            "MessageRaidersGivenUpLeaving".Translate(new object[]
-                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
+                            "MessageRaidersGivenUpLeaving".Translate(
+                                assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name)));
                     assaultToExit.triggers.Add(
                         new Trigger_TicksPassed((!sappers)
                             ? AssaultTimeBeforeGiveUp.RandomInRange
@@ -174,10 +174,10 @@ namespace MoreMechanoids
                     }
                     assaultToExit2.preActions.Add(
                         new TransitionAction_Message(
-                            "MessageRaidersSatisfiedLeaving".Translate(new object[]
-                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
+                            "MessageRaidersSatisfiedLeaving".Translate(
+                                assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name)));
                     FloatRange floatRange = new FloatRange(0.25f, 0.35f);
-                    float num = floatRange.RandomInRange*(float) map.wealthWatcher.HealthTotal;
+                    float num = floatRange.RandomInRange*map.wealthWatcher.HealthTotal;
                     if (num < 900f)
                     {
                         num = 900f;
@@ -197,8 +197,8 @@ namespace MoreMechanoids
                     }
                     assaultToKidnap.preActions.Add(
                         new TransitionAction_Message(
-                            "MessageRaidersKidnapping".Translate(new object[]
-                            {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
+                            "MessageRaidersKidnapping".Translate(assaulterFaction.def.pawnsPlural.CapitalizeFirst(),
+                                assaulterFaction.Name)));
                     assaultToKidnap.triggers.Add(new Trigger_KidnapVictimPresent());
                     stateGraph.transitions.Add(assaultToKidnap);
                 }
@@ -210,8 +210,8 @@ namespace MoreMechanoids
             }
             assaultToExit3.preActions.Add(
                 new TransitionAction_Message(
-                    "MessageRaidersLeaving".Translate(new object[]
-                    {assaulterFaction.def.pawnsPlural.CapitalizeFirst(), assaulterFaction.Name})));
+                    "MessageRaidersLeaving".Translate(assaulterFaction.def.pawnsPlural.CapitalizeFirst(),
+                        assaulterFaction.Name)));
             assaultToExit3.triggers.Add(new Trigger_BecameColonyAlly());
             stateGraph.transitions.Add(assaultToExit3);
             return stateGraph;
@@ -219,12 +219,12 @@ namespace MoreMechanoids
 
         private void TickHeal(bool allowMiracles)
         {
-            if (this.ticksToNextRepair-- > 0) return;
-            this.ticksToNextRepair = TicksBetweenRepairs;
+            if (ticksToNextRepair-- > 0) return;
+            ticksToNextRepair = TicksBetweenRepairs;
 
-            if (allowMiracles && this.CurJob != null)
+            if (allowMiracles && CurJob != null)
             {
-                if (this.CurJob.def == JobDefOf.AttackMelee)
+                if (CurJob.def == JobDefOf.AttackMelee)
                 {
                     if (Rand.Value < 0.5) GrowJackhammer();
                     else GrowSpike();
@@ -234,9 +234,8 @@ namespace MoreMechanoids
                     RestoreArms();
                 }
             }
-       
-            if (allowMiracles && this.def.repairEffect != null)
-                this.def.repairEffect.Spawn();
+
+            if (allowMiracles && def.repairEffect != null) def.repairEffect.Spawn();
 
             // Injuries
             Hediff[] damages = GetHediffs(allowMiracles);
@@ -253,43 +252,50 @@ namespace MoreMechanoids
             {
                 if (Rand.Value < 0.05f)
                 {
-                    this.health.RemoveHediff(hediff);
+                    health.RemoveHediff(hediff);
                 }
             }
         }
 
-        private Hediff[] GetHediffs(bool allowMiracles) => allowMiracles
-                ? this.health.hediffSet.hediffs.Where(h =>/* !(h is Hediff_MissingPart) &&*/ !(h is Hediff_AddedPart)).ToArray()
-                : this.health.hediffSet.hediffs.Where(h => h is Hediff_Injury).ToArray();
+        private Hediff[] GetHediffs(bool allowMiracles)
+        {
+            return allowMiracles ? health.hediffSet.hediffs.Where(h => /* !(h is Hediff_MissingPart) &&*/ !(h is Hediff_AddedPart))
+                .ToArray() : health.hediffSet.hediffs.Where(h => h is Hediff_Injury).ToArray();
+        }
 
         private void RestoreArms()
         {
             //BodyPartRecord part;
             //var hasArm = RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out part);
-            Hediff_AddedPart addedPart = this.health.hediffSet.GetHediffs<Hediff_AddedPart>().InRandomOrder().FirstOrDefault(part => part.def.addedPartProps.isBionic && ForManipulation(part));
+            Hediff_AddedPart addedPart =
+                health.hediffSet.GetHediffs<Hediff_AddedPart>()
+                    .InRandomOrder()
+                    .FirstOrDefault(part => part.def.addedPartProps.isBionic && ForManipulation(part));
             if (addedPart != null)
             {
-                this.health.RestorePart(addedPart.Part);
+                health.RestorePart(addedPart.Part);
                 //health.RemoveHediff(addedPart);
             }
         }
 
-        private static bool ForManipulation(Hediff_AddedPart part) => part.Part.def.Activities.Any(c => c.First == PawnCapacityDefOf.Manipulation);
+        private static bool ForManipulation(Hediff_AddedPart part)
+        {
+            return part.Part.def.tags.Any(tag => tag == "ManipulationLimbCore");
+        }
 
         private void GrowJackhammer()
         {
             HediffDef defArm = HediffDef.Named("JackhammerArm");
             //if (!health.hediffSet.HasHediff(defArm))
             {
-                bool hasArm = this.RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out BodyPartRecord part);
+                BodyPartRecord part;
+                bool hasArm =
+                    RaceProps.body.AllParts.Where(p => p.def.tags.Any(t => t == "ManipulationLimbCore"))
+                        .TryRandomElement(out part);
                 if (hasArm)
                 {
-                    this.health.AddHediff(defArm, part);
+                    health.AddHediff(defArm, part);
                     Log.Message("Added jackhammer!");
-                }
-                else
-                {
-                    //Log.Message("No free arm...");
                 }
             }
         }
@@ -299,15 +305,14 @@ namespace MoreMechanoids
             HediffDef defArm = HediffDef.Named("SpikeArm");
             //if (!health.hediffSet.HasHediff(defArm))
             {
-                if ( //pawn.RaceProps.body.AllParts.Where(p=>p.def.ca)
-    this.RaceProps.body.GetParts(PawnCapacityDefOf.Manipulation, "way1").TryRandomElement(out BodyPartRecord part))
+                BodyPartRecord part;
+                bool hasArm =
+                    RaceProps.body.AllParts.Where(p => p.def.tags.Any(t => t == "ManipulationLimbCore"))
+                        .TryRandomElement(out part);
+                if (hasArm)
                 {
-                    this.health.AddHediff(defArm, part);
+                    health.AddHediff(defArm, part);
                     Log.Message("Added spike!");
-                }
-                else
-                {
-                    //Log.Message("No free arm...");
                 }
             }
         }
@@ -315,11 +320,11 @@ namespace MoreMechanoids
         public override string GetInspectString()
         {
             StringBuilder sb = new StringBuilder();
-            PawnDuty pawnDuty = this.mindState.duty;
+            PawnDuty pawnDuty = mindState.duty;
             if (pawnDuty == null) sb.AppendLine("No duty");
             else sb.AppendLine("Duty: " + pawnDuty.def.defName);
-            if (this.jobs.curDriver != null) sb.AppendLine("Driver: " + this.jobs.curDriver.GetType().Name);
-            if (this.jobs.curJob != null) sb.AppendLine("Job: " + this.jobs.curJob.def.label);
+            if (jobs.curDriver != null) sb.AppendLine("Driver: " + jobs.curDriver.GetType().Name);
+            if (jobs.curJob != null) sb.AppendLine("Job: " + jobs.curJob.def.label);
             return sb.ToString();
         }
     }

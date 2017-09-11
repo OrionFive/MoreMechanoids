@@ -7,7 +7,10 @@ namespace MoreMechanoids
 {
     public class UnlockResearch : MapComponent
     {
-        public UnlockResearch(Map map) : base(map) => LockAllRecipes();
+        public UnlockResearch(Map map) : base(map)
+        {
+            LockAllRecipes();
+        }
 
         private static void LockAllRecipes()
         {
@@ -17,7 +20,10 @@ namespace MoreMechanoids
             }
         }
 
-        private static void LockRecipe(RecipeDef def) => def.recipeUsers = new List<ThingDef>();
+        private static void LockRecipe(RecipeDef def)
+        {
+            def.recipeUsers = new List<ThingDef>();
+        }
 
         private static void UnlockRecipe(string tableDefName, string defName)
         {
@@ -31,7 +37,10 @@ namespace MoreMechanoids
                 .SetValue(tableDef, null);
         }
 
-        public static void CreateMechanoidChip() => UnlockRecipe("TableMachining", "MM_CreateMechanoidChip");
+        public static void CreateMechanoidChip()
+        {
+            UnlockRecipe("TableMachining", "MM_CreateMechanoidChip");
+        }
 
         public static void ChipCrawler()
         {

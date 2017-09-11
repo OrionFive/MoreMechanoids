@@ -11,11 +11,15 @@ namespace MoreMechanoids
         private readonly string txtShortCircuit = "BotShortCircuit".Translate();
         private readonly string txtShortCircuitLabel = "BotShortCircuitLabel".Translate();
 
-        private static IEnumerable<PawnConverted> Mechanoids(Map map) => from Pawn pawn in map.mapPawns.PawnsInFaction(Faction.OfPlayer)
-                                                                         where !pawn.Dead && pawn.RaceProps.IsMechanoid && !pawn.health.Downed
-                                                                         select pawn as PawnConverted;
+        private static IEnumerable<PawnConverted> Mechanoids(Map map)
+        {
+            return from Pawn pawn in map.mapPawns.PawnsInFaction(Faction.OfPlayer) where !pawn.Dead && pawn.RaceProps.IsMechanoid && !pawn.health.Downed select pawn as PawnConverted;
+        }
 
-        protected override bool CanFireNowSub(IIncidentTarget target) => Mechanoids((Map)target).Any(m => m.workCapacity < 0.3f);
+        protected override bool CanFireNowSub(IIncidentTarget target)
+        {
+            return Mechanoids((Map) target).Any(m => m.workCapacity < 0.3f);
+        }
 
         public override bool TryExecute(IncidentParms parms)
         {
@@ -23,7 +27,7 @@ namespace MoreMechanoids
             PawnConverted[] validTargets = Mechanoids((Map)parms.target).Where(m => m.workCapacity < 0.3f).ToArray();
             if (!validTargets.Any()) return false;
             //Log.Message("Getting lucky?");
-            if (Rand.Value > validTargets.Count()*0.3f) return false;
+            if (Rand.Value > validTargets.Length*0.3f) return false;
             //Log.Message("Nope.");
             PawnConverted target = validTargets.RandomElementByWeight(m => 1 - m.workCapacity);
             ShortCircuit(target);

@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
 using UnityEngine;
 using Verse;
-using RimWorld.Planet;
+using Verse.AI;
 
 namespace MoreMechanoids
 {
@@ -13,38 +12,43 @@ namespace MoreMechanoids
     public class PawnConverted : Pawn
     {
         private string raceType = string.Empty;
-        public string RaceType { get => this.raceType; set => SetRaceType(value); }
+        public string RaceType { get { return raceType; } set { SetRaceType(value); } }
 
         private string workType = string.Empty;
-        public string WorkType { get => this.workType; set => SetJob(value); }
+        public string WorkType { get { return workType; } set { SetJob(value); } }
 
-        private void SetRaceType(string value) => this.raceType = GenText.ToTitleCaseSmart(value);
+        private void SetRaceType(string value)
+        {
+            raceType = GenText.ToTitleCaseSmart(value);
+        }
 
-        private void SetJob(string value) => this.workType = GenText.ToTitleCaseSmart(value);
+        private void SetJob(string value)
+        {
+            workType = GenText.ToTitleCaseSmart(value);
+        }
 
         public bool stayHome;
         public bool fullRepair;
 
-        public bool InStandby => (this.jobs.curDriver as JobDriver_Standby != null) && ((JobDriver_Standby)this.jobs.curDriver).StandingBy;
+        public bool InStandby { get { return jobs.curDriver is JobDriver_Standby && ((JobDriver_Standby) jobs.curDriver).StandingBy; } }
 
         public bool InStandbyPowered
         {
             get
             {
-                if (this.jobs.curJob == null) return false;
-                if (this.jobs.curJob.targetA == null) return false;
-                Building_RestSpot restSpot = this.jobs.curJob.targetA.Thing as Building_RestSpot;
-                return this.InStandby && this.jobs.curJob.targetA.HasThing && restSpot != null && restSpot.powerComp.PowerOn;
+                if (jobs.curJob == null) return false;
+                if (jobs.curJob.targetA == null) return false;
+                Building_RestSpot restSpot = jobs.curJob.targetA.Thing as Building_RestSpot;
+                return InStandby && jobs.curJob.targetA.HasThing && restSpot != null && restSpot.powerComp.PowerOn;
             }
         }
 
-        public bool Crashed => this.MentalStateDef == MoreMechanoidsDefOf.Crashed;
-        public override string LabelShort => this.NameStringShort;
-        public override string Label => string.Format("{0}, {1} ({2})", this.NameStringShort, this.RaceType, this.workType);
+        public bool Crashed { get { return MentalStateDef == MoreMechanoidsDefOf.Crashed; } }
+        public override string LabelShort { get { return NameStringShort; } }
+        public override string Label { get { return string.Format("{0}, {1} ({2})", NameStringShort, RaceType, workType); } }
         private const bool DisplayThoughtTab = false;
 
-        public static readonly Texture2D StayHomeTex =
-            SolidColorMaterials.NewSolidColorTexture(new Color(0.29f, 0.6f, 0.7f, 0.25f));
+        public static readonly Texture2D StayHomeTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.29f, 0.6f, 0.7f, 0.25f));
 
         private static readonly string txtKeepInside = "KeepInside".Translate();
         private static readonly string txtFullRepair = "FullRepair".Translate();
@@ -63,35 +67,23 @@ namespace MoreMechanoids
         private HediffDef hediffDeterioration = HediffDef.Named("MM_Deterioration");
         public float workCapacity;
 
-        public bool Busy => this.pather.Moving;
-        public static Command_Toggle GetCommandStayHome(int num) => new Command_Toggle
-        {
-            icon = texUI_StayHome,
-            defaultDesc = txtKeepInside,
-            hotKey = KeyBindingDefOf.CommandColonistDraft,
-            activateSound = SoundDef.Named("Click"),
-            groupKey = num
-        };
+        public bool Busy { get { return pather.Moving; } }
 
-        public static Command_Toggle GetCommandFullRepair(int num) => new Command_Toggle
+        public static Command_Toggle GetCommandStayHome(int num)
         {
-            icon = texUI_FullRepair,
-            defaultDesc = txtFullRepair,
-            hotKey = KeyBindingDefOf.CommandTogglePower,
-            activateSound = SoundDef.Named("Click"),
-            groupKey = num
-        };
+            return new Command_Toggle {icon = texUI_StayHome, defaultDesc = txtKeepInside, hotKey = KeyBindingDefOf.CommandColonistDraft, activateSound = SoundDef.Named("Click"), groupKey = num};
+        }
+
+        public static Command_Toggle GetCommandFullRepair(int num)
+        {
+            return new Command_Toggle {icon = texUI_FullRepair, defaultDesc = txtFullRepair, hotKey = KeyBindingDefOf.CommandTogglePower, activateSound = SoundDef.Named("Click"), groupKey = num};
+        }
 
         private static Backstory Adulthood
         {
             get
             {
-                Backstory b = new Backstory
-                {
-                    baseDesc = txtStoryAdultDesc,
-                    slot = BackstorySlot.Adulthood,
-                    identifier = "MadScientist1156994384"
-                };
+                Backstory b = new Backstory {baseDesc = txtStoryAdultDesc, slot = BackstorySlot.Adulthood, identifier = "MadScientist1156994384"};
                 typeof(Backstory).GetField("title", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(b, txtStoryAdultTitle);
                 typeof(Backstory).GetField("titleShort", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(b, txtStoryAdultShort);
 
@@ -103,50 +95,47 @@ namespace MoreMechanoids
         {
             get
             {
-                Backstory b = new Backstory
-                {
-                    baseDesc = txtStoryChildDesc,
-                    slot = BackstorySlot.Childhood,
-                    workDisables = WorkTags.None,
-                    identifier = "TragicTwin1582359021"
-                };
+                Backstory b = new Backstory {baseDesc = txtStoryChildDesc, slot = BackstorySlot.Childhood, workDisables = WorkTags.None, identifier = "TragicTwin1582359021"};
                 typeof(Backstory).GetField("title", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(b, txtStoryChildTitle);
                 typeof(Backstory).GetField("titleShort", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(b, txtStoryChildTitle);
                 return b;
             }
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, respawningAfterLoad);
 
-            if (this.Name is NameSingle)
+            if (Name is NameSingle)
             {
-                this.Name = new NameTriple("Mechanoid", this.Name.ToStringFull, this.def.LabelCap);
+                Name = new NameTriple("Mechanoid", Name.ToStringFull, def.LabelCap);
             }
 
-            if (this.story == null)
+            if (story == null)
             {
                 Initialize();
             }
         }
 
-        public override string GetInspectString() => base.GetInspectString() + "Crash chance: " + Mathf.Round(100 - this.workCapacity * 100) + "%\n";
+        public override string GetInspectString()
+        {
+            return base.GetInspectString() + "Crash chance: " + Mathf.Round(100 - workCapacity*100) + "%\n";
+        }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            this.story.childhood = Childhood;
-            this.story.adulthood = Adulthood;
+            story.childhood = Childhood;
+            story.adulthood = Adulthood;
 
             // store / restore nickname
-            Scribe_Values.LookValue(ref this.raceType, "raceType");
-            Scribe_Values.LookValue(ref this.workType, "workType");
-            Scribe_Values.LookValue(ref this.stayHome, "stayHome");
-            Scribe_Values.LookValue(ref this.fullRepair, "fullRepair");
-            Scribe_Values.LookValue(ref this.lastCrashTime, "lastCrashTime");
-            Scribe_Values.LookValue(ref this.nextDamageTicks, "nextDamageTicks");
-            Scribe_Values.LookValue(ref this.workCapacity, "workCapacity");
+            Scribe_Values.Look(ref raceType, "raceType");
+            Scribe_Values.Look(ref workType, "workType");
+            Scribe_Values.Look(ref stayHome, "stayHome");
+            Scribe_Values.Look(ref fullRepair, "fullRepair");
+            Scribe_Values.Look(ref lastCrashTime, "lastCrashTime");
+            Scribe_Values.Look(ref nextDamageTicks, "nextDamageTicks");
+            Scribe_Values.Look(ref workCapacity, "workCapacity");
         }
 
         // Copied from DrawPawnGUIOverlay(), so we can have the overlay even without a story
@@ -205,17 +194,17 @@ namespace MoreMechanoids
 
             const int num = 89327595;
 
-            if (!this.Dead && this.MentalStateDef == null)
+            if (!Dead && MentalStateDef == null)
             {
                 Command_Toggle commandStayHome = GetCommandStayHome(num);
-                commandStayHome.isActive = () => this.stayHome;
-                commandStayHome.toggleAction = () => SetStayHome(!this.stayHome);
+                commandStayHome.isActive = () => stayHome;
+                commandStayHome.toggleAction = () => SetStayHome(!stayHome);
                 commandStayHome.defaultDesc = txtKeepInside;
                 yield return commandStayHome;
 
                 Command_Toggle commandFullRepair = GetCommandFullRepair(num + 1);
-                commandFullRepair.isActive = () => this.fullRepair;
-                commandFullRepair.toggleAction = () => SetFullRepair(!this.fullRepair);
+                commandFullRepair.isActive = () => fullRepair;
+                commandFullRepair.toggleAction = () => SetFullRepair(!fullRepair);
                 commandFullRepair.defaultDesc = txtFullRepair;
                 yield return commandFullRepair;
             }
@@ -223,16 +212,14 @@ namespace MoreMechanoids
 
         public void SetStayHome(bool value)
         {
-            this.stayHome = value;
-            if (value)
-                this.jobs.StopAll(true);
+            stayHome = value;
+            if (value) jobs.StopAll(true);
         }
 
         public void SetFullRepair(bool value)
         {
-            this.fullRepair = value;
-            if (value && this.jobs != null)
-                this.jobs.StopAll(true);
+            fullRepair = value;
+            if (value && jobs != null) jobs.StopAll(true);
         }
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
@@ -241,11 +228,13 @@ namespace MoreMechanoids
             base.Destroy(mode);
         }
 
-        public override void PostMapInit() =>
+        public override void PostMapInit()
+        {
             //base.PostMapInit();
 
             // Nickname gets overwritten by story loader
             InitStory();
+        }
 
         private static List<WorkTypeDef> GetRandomWorkTypes(Pawn_StoryTracker story)
         {
@@ -262,30 +251,30 @@ namespace MoreMechanoids
             return workTypes;
         }
 
-        private void InitStory() =>
-            // Story
-            this.story = new Pawn_StoryTracker(this) { childhood = Childhood, adulthood = Adulthood, };
-
+        private void InitStory()
+        {
+            story = new Pawn_StoryTracker(this) {childhood = Childhood, adulthood = Adulthood};
+        }
 
         public void Initialize()
         {
-            bool unexpected = this.workTypes == null;
+            bool unexpected = workTypes == null;
 
-            this.ageTracker.AgeBiologicalTicks = 0;
-            this.ageTracker.BirthAbsTicks = GenDate.Year(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(this.Map.Tile).x) + GenDate.DaysPassed * GenDate.TicksPerDay;
+            ageTracker.AgeBiologicalTicks = 0;
+            ageTracker.BirthAbsTicks = GenDate.Year(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(Map.Tile).x) + GenDate.DaysPassed*GenDate.TicksPerDay;
 
-            this.RaceType = this.def.label;
+            RaceType = def.label;
 
-            typeof(RaceProperties).GetField("nameGenerator", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(this.RaceProps, RulePackDef.Named("NamerAnimalGenericMale"));
-            typeof(RaceProperties).GetField("nameGeneratorFemale", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(this.RaceProps, RulePackDef.Named("NamerAnimalGenericFemale"));
+            typeof(RaceProperties).GetField("nameGenerator", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(RaceProps, RulePackDef.Named("NamerAnimalGenericMale"));
+            typeof(RaceProperties).GetField("nameGeneratorFemale", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(RaceProps, RulePackDef.Named("NamerAnimalGenericFemale"));
 
             GiveRandomName();
 
             InitStory();
 
             // Skills
-            this.skills = new Pawn_SkillTracker(this);
-            this.skills.Learn(SkillDefOf.Melee, this.KindDef.minSkillPoints);
+            skills = new Pawn_SkillTracker(this);
+            skills.Learn(SkillDefOf.Melee, KindDef.minSkillPoints);
 
             if (!DisplayThoughtTab)
             {
@@ -298,24 +287,24 @@ namespace MoreMechanoids
             SpawnSetupWorkSettings();
 
             //needs.beauty = new Need_Beauty_Mechanoid(this);
-            this.needs.food = new Need_Food(this);
-            this.needs.rest = new Need_Rest(this);
-            this.needs.mood = new Need_Mood(this);
+            needs.food = new Need_Food(this);
+            needs.rest = new Need_Rest(this);
+            needs.mood = new Need_Mood(this);
             //needs.space = new Need_Space_Mechanoid(this);
 
 
-            this.apparel = new Pawn_ApparelTracker(this);
+            apparel = new Pawn_ApparelTracker(this);
 
             UpdateWorkCapacity();
 
             // Job (should go last!)
-            if (this.jobs.curJob == null)
+            if (jobs.curJob == null)
             {
-                Verse.AI.ThinkResult jobPackage = this.thinker.MainThinkNodeRoot.TryIssueJobPackage(this);
-                this.mindState.lastJobGiver = jobPackage.SourceNode; //.finalNode;
-                this.jobs.StartJob(jobPackage.Job);
+                ThinkResult jobPackage = thinker.MainThinkNodeRoot.TryIssueJobPackage(this, default(JobIssueParams));
+                mindState.lastJobGiver = jobPackage.SourceNode; //.finalNode;
+                jobs.StartJob(jobPackage.Job);
             }
-            Log.Message(this.Label + " initialized.");
+            Log.Message(Label + " initialized.");
 
             if (unexpected)
             {
@@ -327,49 +316,46 @@ namespace MoreMechanoids
         {
             // Hack namegen to avoid weird error
             List<string> names =
-                (List<string>)
-                    typeof (NameBank).GetMethod("NamesFor", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .Invoke(PawnNameDatabaseShuffled.BankOf(PawnNameCategory.HumanStandard),
-                            new object[] {PawnNameSlot.Nick, this.gender });
+                (List<string>) typeof(NameBank).GetMethod("NamesFor", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(PawnNameDatabaseShuffled.BankOf(PawnNameCategory.HumanStandard), new object[] {PawnNameSlot.Nick, gender});
 
             //Name = new NameSingle(names.RandomElement()); //NameGenerator.GenerateName(this); << throws weird error
-            this.Name = new NameTriple("Mechanoid", names.RandomElement(), this.def.LabelCap);
+            Name = new NameTriple("Mechanoid", names.RandomElement(), def.LabelCap);
         }
 
         private void SpawnSetupWorkSettings()
         {
-            if (this.workTypes == null)
+            if (workTypes == null)
             {
                 //Log.Warning("Unexpected creation of converted pawn.");
-                this.workTypes = GetRandomWorkTypes(this.story);
+                workTypes = GetRandomWorkTypes(story);
             }
 
-            this.WorkType = this.workTypes.Count > 0 ? this.workTypes[0].ToString() : string.Empty;
+            WorkType = workTypes.Count > 0 ? workTypes[0].ToString() : string.Empty;
 
             // Work
-            this.workSettings = new Pawn_WorkSettings(this);
-            this.workSettings.EnableAndInitialize();
+            workSettings = new Pawn_WorkSettings(this);
+            workSettings.EnableAndInitialize();
             List<SkillDef> skillsDefs = new List<SkillDef>();
             foreach (WorkTypeDef current in DefDatabase<WorkTypeDef>.AllDefs)
             {
-                if (this.workTypes.Contains(current))
+                if (workTypes.Contains(current))
                 {
-                    this.workSettings.SetPriority(current, 1);
+                    workSettings.SetPriority(current, 1);
                     skillsDefs.AddRange(current.relevantSkills);
                 }
                 else
                 {
-                    this.workSettings.Disable(current);
+                    workSettings.Disable(current);
                 }
             }
             skillsDefs.RemoveDuplicates();
             foreach (SkillDef skillDef in skillsDefs)
             {
-                SkillRecord record = this.skills.GetSkill(skillDef);
-                int minSkillLevel = this.KindDef.minSkillPoints;
+                SkillRecord record = skills.GetSkill(skillDef);
+                int minSkillLevel = KindDef.minSkillPoints;
                 if (record == null || record.XpTotalEarned < minSkillLevel)
                 {
-                    this.skills.Learn(skillDef, Rand.Range(minSkillLevel, this.KindDef.maxSkillPoints));
+                    skills.Learn(skillDef, Rand.Range(minSkillLevel, KindDef.maxSkillPoints));
                 }
             }
             //foreach (WorkTypeDef current in DefDatabase<WorkTypeDef>.AllDefs)
@@ -380,18 +366,21 @@ namespace MoreMechanoids
             //}
         }
 
-        private PawnKindDef KindDef => ((PawnKindDef)this.kindDef);
+        private PawnKindDef KindDef
+        { get { return (PawnKindDef) kindDef; } }
+
         public float GetCrashChance()
         {
-            int timeSinceCrash = Find.TickManager.TicksGame - this.lastCrashTime;
-            float crashChance = this.KindDef.crashChance; //0.05f;
-            return 0.00001f*crashChance*timeSinceCrash*(1 - this.workCapacity);
+            int timeSinceCrash = Find.TickManager.TicksGame - lastCrashTime;
+            float crashChance = KindDef.crashChance; //0.05f;
+            return 0.00001f*crashChance*timeSinceCrash*(1 - workCapacity);
         }
 
-        public void UpdateWorkCapacity() => this.workCapacity = this.health.capacities.GetEfficiency(PawnCapacityDefOf.Consciousness)
-                           * this.health.capacities.GetEfficiency(PawnCapacityDefOf.Sight)
-                           * this.health.capacities.GetEfficiency(PawnCapacityDefOf.Manipulation)
-                           * this.health.capacities.GetEfficiency(PawnCapacityDefOf.Moving);
+        public void UpdateWorkCapacity()
+        {
+            workCapacity = health.capacities.GetLevel(PawnCapacityDefOf.Consciousness)*health.capacities.GetLevel(PawnCapacityDefOf.Sight)*health.capacities.GetLevel(PawnCapacityDefOf.Manipulation)
+                           *health.capacities.GetLevel(PawnCapacityDefOf.Moving);
+        }
 
         // Copied from original tick
 
@@ -402,54 +391,83 @@ namespace MoreMechanoids
             //    Destroy();
             //    return;
             //}
-            if (this.stances != null && !this.stances.FullBodyBusy)
-                this.pather.PatherTick();
-
-            this.Drawer.DrawTrackerTick();
-            this.ageTracker.AgeTick();
-            if(this.health != null)
-                this.health.HealthTick();
-            if(this.stances != null)
-                this.stances.StanceTrackerTick();
-            if(this.mindState != null)
-                this.mindState.MindStateTick();
-
-            if (this.equipment != null)
+            base.Tick();
+            if (Find.TickManager.TicksGame%250 == 0)
             {
-                this.equipment.EquipmentTrackerTick();
+                TickRare();
             }
-            if (this.apparel == null)
-                this.apparel = new Pawn_ApparelTracker(this);
-            //if (apparel != null)
-            //{
-            //    apparel.ApparelTrackerTick();
-            //}
-            if (this.jobs != null)
+            if (!ThingOwnerUtility.ContentsFrozen(ParentHolder))
             {
-                this.jobs.JobTrackerTick();
+                if (Spawned)
+                {
+                    pather.PatherTick();
+                }
+                if (Spawned)
+                {
+                    stances.StanceTrackerTick();
+                    verbTracker.VerbsTick();
+                    natives.NativeVerbsTick();
+                }
+                if (Spawned)
+                {
+                    jobs.JobTrackerTick();
+                }
+                if (Spawned)
+                {
+                    Drawer.DrawTrackerTick();
+                }
+                health.HealthTick();
+                if (!Dead)
+                {
+                    mindState.MindStateTick();
+                    carryTracker.CarryHandsTick();
+                }
             }
-            if (this.holdingContainer != null)
+            if (!Dead)
             {
-                this.holdingContainer.ThingContainerTick();
+                needs.NeedsTrackerTick();
             }
-            /*if (talker as Pawn_Converted_TalkTracker != null)
+            if (!ThingOwnerUtility.ContentsFrozen(ParentHolder))
             {
-                ((Pawn_Converted_TalkTracker) talker).TalkTrackerTick();
-            }*/
-            //needs.NeedsTrackerTick();
-
-            if (this.caller != null)
-            {
-                this.caller.CallTrackerTick();
+                if (equipment != null)
+                {
+                    equipment.EquipmentTrackerTick();
+                }
+                if (apparel != null)
+                {
+                    apparel.ApparelTrackerTick();
+                }
+                //if (this.interactions != null)
+                //{
+                //    this.interactions.InteractionsTrackerTick();
+                //}
+                if (caller != null)
+                {
+                    caller.CallTrackerTick();
+                }
+                if (skills != null)
+                {
+                    skills.SkillsTick();
+                }
+                if (inventory != null)
+                {
+                    inventory.InventoryTrackerTick();
+                }
+                //if (this.drafter != null)
+                //{
+                //    this.drafter.DraftControllerTick();
+                //}
+                //if (this.relations != null)
+                //{
+                //    this.relations.SocialTrackerTick();
+                //}
+                //if (this.RaceProps.Humanlike)
+                //{
+                //    this.guest.GuestTrackerTick();
+                //}
+                ageTracker.AgeTick();
+                records.RecordsTick();
             }
-            if (this.skills != null)
-            {
-                this.skills.SkillsTick();
-            }
-            //if (playerController != null)
-            //{
-            //    playerController.PlayerControllerTick();
-            //}
 
             CrashCheck();
 
@@ -458,26 +476,25 @@ namespace MoreMechanoids
             // If at home and damaged, do full repair
             RepairCheck();
 
-            if (this.needs != null && this.needs.mood == null)
-                this.needs.mood = new Need_Mood(this);
+            if (needs != null && needs.mood == null) needs.mood = new Need_Mood(this);
         }
 
         private void RepairCheck()
         {
-            if (this.fullRepair) return;
+            if (fullRepair) return;
 
-            if (this.Map.areaManager.Home[this.Position] && 100 - this.workCapacity *100 > this.KindDef.fullRepairThreshold*100) SetFullRepair(true);
-            if (this.health.summaryHealth.SummaryHealthPercent < 1 - this.KindDef.fullRepairThreshold) SetFullRepair(true);
+            if (Map.areaManager.Home[Position] && 100 - workCapacity*100 > KindDef.fullRepairThreshold*100) SetFullRepair(true);
+            if (health.summaryHealth.SummaryHealthPercent < 1 - KindDef.fullRepairThreshold) SetFullRepair(true);
         }
 
         private void DamageCheck()
         {
-            if (this.Dead) return;
-            this.nextDamageTicks -= !this.InStandby ? 1f : 1f/ this.KindDef.standbyDeteriorationFactor;
-            if (this.nextDamageTicks < 0)
+            if (Dead) return;
+            nextDamageTicks -= !InStandby ? 1f : 1f/KindDef.standbyDeteriorationFactor;
+            if (nextDamageTicks < 0)
             {
-                this.nextDamageTicks = 60*60*Rand.Range(this.KindDef.minTimeBeforeDeteriorate, this.KindDef.maxTimeBeforeDeteriorate);
-                    // damage every x minutes, half as fast in standby
+                nextDamageTicks = 60*60*Rand.Range(KindDef.minTimeBeforeDeteriorate, KindDef.maxTimeBeforeDeteriorate);
+                // damage every x minutes, half as fast in standby
 
                 Deteriorate();
             }
@@ -486,37 +503,40 @@ namespace MoreMechanoids
         private void Deteriorate()
         {
             // Powered? No deterioriation
-            if (this.InStandbyPowered) return;
+            if (InStandbyPowered) return;
 
             IEnumerable<BodyPartRecord> source = GetDeterioratingParts().ToArray();
             if (source.Any())
             {
                 BodyPartRecord bodyPartRecord = source.RandomElement();
-                HediffDef hediffDef = this.hediffDeterioration;
+                HediffDef hediffDef = hediffDeterioration;
 
                 // Brain lasts longest
-                bool isBrain = bodyPartRecord.def.Activities.Any(a => a.First == PawnCapacityDefOf.Consciousness);
-                bool isInside = bodyPartRecord.depth!=BodyPartDepth.Outside;
+                bool isBrain = bodyPartRecord.def.tags.Any(t => t == "ConsciousnessSource");
+                bool isInside = bodyPartRecord.depth != BodyPartDepth.Outside;
                 float damageFactor;
                 if (isBrain) damageFactor = 1/4f;
                 else if (isInside) damageFactor = 1/2f;
                 else damageFactor = 1f;
 
-                float maxDamage = damageFactor*bodyPartRecord.def.hitPoints* this.KindDef.maxDeteriorationFactor;
+                float maxDamage = damageFactor*bodyPartRecord.def.hitPoints*KindDef.maxDeteriorationFactor;
                 float amount = Rand.Range(0, maxDamage);
 
                 Hediff_Injury hediffInjury = (Hediff_Injury) HediffMaker.MakeHediff(hediffDef, this);
                 hediffInjury.Severity = amount;
-                this.health.AddHediff(hediffInjury, bodyPartRecord, null);
+                health.AddHediff(hediffInjury, bodyPartRecord, null);
                 UpdateWorkCapacity();
             }
         }
 
-        private IEnumerable<BodyPartRecord> GetDeterioratingParts() => this.health.hediffSet.GetNotMissingParts();
+        private IEnumerable<BodyPartRecord> GetDeterioratingParts()
+        {
+            return health.hediffSet.GetNotMissingParts();
+        }
 
         private void CrashCheck()
         {
-            if (this.Dead || this.Crashed || this.InStandby) return;
+            if (Dead || Crashed || InStandby) return;
 
             if (Rand.Value < GetCrashChance())
             {
@@ -526,21 +546,21 @@ namespace MoreMechanoids
 
         private void Crash()
         {
-            if (this.Crashed) return;
+            if (Crashed) return;
 
-            this.lastCrashTime = Find.TickManager.TicksGame;
+            lastCrashTime = Find.TickManager.TicksGame;
 
-            if (this.mindState.mentalStateHandler.TryStartMentalState(MoreMechanoidsDefOf.Crashed))
+            if (mindState.mentalStateHandler.TryStartMentalState(MoreMechanoidsDefOf.Crashed))
             {
                 return;
             }
             //if (jobs == null) return;
 
             // Recover insanity?
-            if (this.MentalState != null && Rand.Value < 0.35f)
+            if (MentalState != null && Rand.Value < 0.35f)
             {
-                MoteMaker.MakeStaticMote(this.Position, this.Map, ThingDefOf.Mote_ShotFlash, Rand.Range(5f, 10f));
-                this.MentalState.RecoverFromState();
+                MoteMaker.MakeStaticMote(Position, Map, ThingDefOf.Mote_ShotFlash, Rand.Range(5f, 10f));
+                MentalState.RecoverFromState();
             }
 
             //if (jobs != null)
@@ -585,6 +605,11 @@ namespace MoreMechanoids
         }
          */
 
-        public void OnFullRepairComplete() => this.nextDamageTicks = this.nextDamageTicks = Rand.Range(60 * 60 * 5, 60 * 60 * 10); // 5-10 minutes
+        public void OnFullRepairComplete()
+        {
+            nextDamageTicks = nextDamageTicks = Rand.Range(60*60*5, 60*60*10);
+            // 5-10 minutes
+        }
+
     }
 }

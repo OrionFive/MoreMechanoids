@@ -1,4 +1,3 @@
-using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
@@ -20,7 +19,7 @@ namespace MoreMechanoids
         {
             get
             {
-                Corpse corpse = (Corpse)this.parent;
+                Corpse corpse = (Corpse) parent;
                 Pawn pawn = corpse.InnerPawn;
                 return pawn;
             }
@@ -29,23 +28,23 @@ namespace MoreMechanoids
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue(ref this.raiseTicks, "raiseTicks");
-            Scribe_Values.LookValue(ref this.raiseVelocity, "raiseVelocity");
-            Scribe_Values.LookValue(ref this.ticksToNextRepair, "ticksToNextRepair");
-            Scribe_Values.LookValue(ref this.showRealFace, "showRealFace");
-            Scribe_Values.LookValue(ref this.appearTicks, "appearTicks");
-            Scribe_Values.LookValue(ref this.originalSkinColor, "originalSkinColor");
+            Scribe_Values.Look(ref raiseTicks, "raiseTicks");
+            Scribe_Values.Look(ref raiseVelocity, "raiseVelocity");
+            Scribe_Values.Look(ref ticksToNextRepair, "ticksToNextRepair");
+            Scribe_Values.Look(ref showRealFace, "showRealFace");
+            Scribe_Values.Look(ref appearTicks, "appearTicks");
+            Scribe_Values.Look(ref originalSkinColor, "originalSkinColor");
         }
 
         public override void Initialize(CompProperties props)
         {
             base.Initialize(props);
-            
+
             Log.Message("Created agent corpse");
-            this.raiseTicks = Rand.Range(60*1, 60*4);
-            Log.Message(this.parent.def.category.ToString());
-            Log.Message("Class: " + this.parent.def.thingClass);
-            Log.Message(this.parent.def.thingClass == typeof(Corpse) ? "Is corpse" : "Not corpse");
+            raiseTicks = Rand.Range(60*1, 60*4);
+            Log.Message(parent.def.category.ToString());
+            Log.Message("Class: " + parent.def.thingClass);
+            Log.Message(parent.def.thingClass == typeof(Corpse) ? "Is corpse" : "Not corpse");
 
             //var smt = Type.GetType("EdB.Interface.SquadManagerThing,EdBInterface");
             //if (smt != null)
@@ -61,12 +60,12 @@ namespace MoreMechanoids
         public override void CompTick()
         {
             base.CompTick();
-            this.raiseTicks--;
-            if(this.raiseTicks <= 0)
+            raiseTicks--;
+            if (raiseTicks <= 0)
             {
                 TickHeal();
-                if (!this.showRealFace || this.appearTicks > 0) ShowRealFace();
-                if (this.Pawn.health.hediffSet.hediffs.Count <= 0)
+                if (!showRealFace || appearTicks > 0) ShowRealFace();
+                if (Pawn.health.hediffSet.hediffs.Count <= 0)
                 {
                     //if (!raisePosition.IsValid)
                     //{
@@ -74,27 +73,26 @@ namespace MoreMechanoids
                     //    Find.PawnDestinationManager.ReserveDestinationFor(innerPawn, raisePosition);
                     //    raisePosition.Walkable()
                     //}
-                    PawnDownedWiggler wiggler = this.Pawn.Drawer.renderer.wiggler;
-                    wiggler.SetToCustomRotation(Mathf.SmoothDampAngle(wiggler.downedAngle, 0, ref this.raiseVelocity, 1.2f));
+                    PawnDownedWiggler wiggler = Pawn.Drawer.renderer.wiggler;
+                    wiggler.SetToCustomRotation(Mathf.SmoothDampAngle(wiggler.downedAngle, 0, ref raiseVelocity, 1.2f));
                     if (wiggler.downedAngle < 1 || wiggler.downedAngle > 359)
                     {
                         wiggler.SetToCustomRotation(0);
                         CreateAgent();
                     }
-                }}
-
+                }
+            }
         }
 
         private void TickHeal()
         {
-            if (this.ticksToNextRepair-- > 0) return;
-            this.ticksToNextRepair = TicksBetweenRepairs;
+            if (ticksToNextRepair-- > 0) return;
+            ticksToNextRepair = TicksBetweenRepairs;
 
-            if(this.Pawn.def.repairEffect!=null)
-                this.Pawn.def.repairEffect.Spawn();
+            if (Pawn.def.repairEffect != null) Pawn.def.repairEffect.Spawn();
 
             // Injuries
-            List<Hediff> damages = this.Pawn.health.hediffSet.hediffs;
+            List<Hediff> damages = Pawn.health.hediffSet.hediffs;
             if (damages.Count == 0)
             {
                 return;
@@ -108,47 +106,47 @@ namespace MoreMechanoids
             {
                 if (Rand.Value < 0.10f)
                 {
-                    this.Pawn.health.RemoveHediff(hediff);
+                    Pawn.health.RemoveHediff(hediff);
                 }
             }
         }
 
         private void ShowRealFace()
         {
-            if (this.Pawn == null) return;
+            if (Pawn == null) return;
 
-            if (!this.showRealFace)
+            if (!showRealFace)
             {
-                this.showRealFace = true;
-                if (this.Pawn.story.SkinColor == Color.white)
+                showRealFace = true;
+                if (Pawn.story.SkinColor == Color.white)
                 {
-                    this.appearTicks = 0;
+                    appearTicks = 0;
                 }
                 else
                 {
-                    this.originalSkinColor = this.Pawn.story.SkinColor;
+                    originalSkinColor = Pawn.story.SkinColor;
                 }
             }
 
-            this.appearTicks--;
-            if (this.appearTicks <= 0)
+            appearTicks--;
+            if (appearTicks <= 0)
             {
                 //Pawn.story.SkinColor = Color.white;
-                this.Pawn.Drawer.renderer.graphics.headGraphic =
+                Pawn.Drawer.renderer.graphics.headGraphic =
                     GraphicDatabase.Get<Graphic_Multi>("Things/Pawn/Humanlike/Heads/Female/Female_Average_Agent",
                         ShaderDatabase.Cutout, Vector2.one, Color.white);
-                this.Pawn.Drawer.renderer.graphics.nakedGraphic.color = Color.white;
+                Pawn.Drawer.renderer.graphics.nakedGraphic.color = Color.white;
                 Log.Message("Head fixed.");
             }
             else
             {
-                Color color = Color.Lerp(Color.white, this.originalSkinColor, this.appearTicks /AppearTicks);
+                Color color = Color.Lerp(Color.white, originalSkinColor, appearTicks/AppearTicks);
                 //Pawn.story.skinColor = color;
-                this.Pawn.Drawer.renderer.graphics.headGraphic =
+                Pawn.Drawer.renderer.graphics.headGraphic =
                     GraphicDatabase.Get<Graphic_Multi>(
                         "Things/Pawn/Humanlike/Heads/Female/Female_Average_Agent"
-                        + Mathf.RoundToInt(1 + this.appearTicks /AppearTicks*6), ShaderDatabase.Cutout, Vector2.one, color);
-                this.Pawn.Drawer.renderer.graphics.nakedGraphic.color = color;
+                        + Mathf.RoundToInt(1 + appearTicks/AppearTicks*6), ShaderDatabase.Cutout, Vector2.one, color);
+                Pawn.Drawer.renderer.graphics.nakedGraphic.color = color;
             }
 
             //Log.Message(innerPawn.story.headGraphicPath);
@@ -162,8 +160,8 @@ namespace MoreMechanoids
             //GenPlace.TryPlaceThing(innerPawn, Position, ThingPlaceMode.Direct, out thing);
             //var raisedPawn = thing as MechanoidAgent;
             Log.Message("Creating agent.");
-            this.parent.Destroy();
-            MechanoidAgent.Discover(this.Pawn, this.parent.Position);
+            parent.Destroy();
+            MechanoidAgent.Discover(Pawn, parent.Position);
         }
     }
 }

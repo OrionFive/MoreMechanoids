@@ -10,19 +10,27 @@ namespace MoreMechanoids
         private readonly string txtLabel = "BotLabelRest".Translate();
         private int lastRestTick;
 
-        private bool Resting => Find.TickManager.TicksGame < this.lastRestTick + 2;
+        private bool Resting { get { return Find.TickManager.TicksGame < lastRestTick + 2; } }
 
-        public Need_Rest_Mechanoid(Pawn pawn)
-            : base(pawn)
+        public Need_Rest_Mechanoid(Pawn pawn) : base(pawn)
         {
-            this.CurLevel = 0.5f;
+            CurLevel = 0.5f;
         }
 
-        public override void NeedInterval() => this.CurLevel = 0.5f;
+        public override void NeedInterval()
+        {
+            CurLevel = 0.5f;
+        }
 
-        public void TickResting() => this.lastRestTick = Find.TickManager.TicksGame;
+        public void TickResting()
+        {
+            lastRestTick = Find.TickManager.TicksGame;
+        }
 
-        public override string GetTipString() => this.txtTooltip;
+        public override string GetTipString()
+        {
+            return txtTooltip;
+        }
     }
 }
 
@@ -30,9 +38,7 @@ public static class NeedsHelper
 {
     public static void AddNeed(this Pawn_NeedsTracker needs, NeedDef def)
     {
-        needs.GetType()
-            .GetMethod("AddNeed", BindingFlags.Instance | BindingFlags.NonPublic)
-            .Invoke(needs, new object[] {def});
+        needs.GetType().GetMethod("AddNeed", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(needs, new object[] {def});
         foreach (Need need in needs.AllNeeds)
         {
             Log.Message(need.LabelCap);

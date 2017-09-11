@@ -8,11 +8,17 @@ namespace MoreMechanoids
 {
     public class WorkGiver_RepairMechanoid : WorkGiver_Repair
     {
-        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Pawn);
+        public override ThingRequest PotentialWorkThingRequest { get { return ThingRequest.ForGroup(ThingRequestGroup.Pawn); } }
 
-        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) => pawn.Map.mapPawns.AllPawns.Where(IsRepairTarget).Select(p => (Thing)p);
+        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
+        {
+            return pawn.Map.mapPawns.AllPawns.Where(IsRepairTarget).Select(p => (Thing) p);
+        }
 
-        public override bool ShouldSkip(Pawn pawn) => !pawn.Map.mapPawns.AllPawns.Any(IsRepairTarget);
+        public override bool ShouldSkip(Pawn pawn)
+        {
+            return !pawn.Map.mapPawns.AllPawns.Any(IsRepairTarget);
+        }
 
         public static bool IsRepairTarget(Thing t)
         {
@@ -24,11 +30,11 @@ namespace MoreMechanoids
             // Damaged enough? Turn on full repair...
             if (converted.fullRepair) return true;
             if (!GetDamages(converted).Any()) return false;
-            
+
             return true;
         }
 
-        public override bool HasJobOnThing(Pawn pawn, Thing t)
+        public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (!IsRepairTarget(t))
             {
@@ -40,7 +46,7 @@ namespace MoreMechanoids
             }
             if (pawn.Faction == Faction.OfPlayer && !pawn.Map.areaManager.Home[t.Position])
             {
-                if (t.Position.GetDangerFor(pawn) != Danger.None) return false;
+                if (t.Position.GetDangerFor(pawn, pawn.Map) != Danger.None) return false;
             }
             PawnConverted converted = (PawnConverted) t;
 
@@ -52,9 +58,15 @@ namespace MoreMechanoids
             return true;
         }
 
-        public override Job JobOnThing(Pawn pawn, Thing t) => new Job(MoreMechanoidsDefOf.RepairMechanoid, t);
+        public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+        {
+            return new Job(MoreMechanoidsDefOf.RepairMechanoid, t);
+        }
 
-        public static IEnumerable<Hediff> GetDamages(PawnConverted converted) => converted.health.hediffSet.hediffs.Where(h => h.def.defName != "Offline" && IsDamagedEnough(h, converted.fullRepair));
+        public static IEnumerable<Hediff> GetDamages(PawnConverted converted)
+        {
+            return converted.health.hediffSet.hediffs.Where(h => h.def.defName != "Offline" && IsDamagedEnough(h, converted.fullRepair));
+        }
 
         private static bool IsDamagedEnough(Hediff hediff, bool fullRepair)
         {

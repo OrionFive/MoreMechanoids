@@ -94,9 +94,18 @@
         </filter>
         <count>1</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
     </ingredients>
 	<fixedIngredientFilter>
 		<thingDefs>
+            <li>Component</li>
             <li>Plasteel</li>
 			<li>MechanoidChip</li>
 			<li>Mechanoid_Crawler_Corpse</li>
@@ -104,6 +113,7 @@
 	</fixedIngredientFilter>
     <defaultIngredientFilter>
       <thingDefs>
+		<li>Component</li>
         <li>Plasteel</li>
 		<li>MechanoidChip</li>
         <li>Mechanoid_Crawler_Corpse</li>
@@ -156,9 +166,18 @@
         </filter>
         <count>1</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
     </ingredients>
 	<fixedIngredientFilter>
 		<thingDefs>
+            <li>Component</li>
             <li>Plasteel</li>
 			<li>MechanoidChip</li>
 			<li>Mechanoid_Skullywag_Corpse</li>
@@ -166,6 +185,7 @@
 	</fixedIngredientFilter>
     <defaultIngredientFilter>
       <thingDefs>
+		<li>Component</li>
         <li>Plasteel</li>
 		<li>MechanoidChip</li>
         <li>Mechanoid_Skullywag_Corpse</li>
@@ -211,9 +231,18 @@
         </filter>
         <count>1</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
     </ingredients>
 	<fixedIngredientFilter>
 		<thingDefs>
+            <li>Component</li>
             <li>Plasteel</li>
 			<li>MechanoidChip</li>
 			<li>Mechanoid_Scyther_Corpse</li>
@@ -221,6 +250,7 @@
 	</fixedIngredientFilter>
     <defaultIngredientFilter>
       <thingDefs>
+		<li>Component</li>
         <li>Plasteel</li>
 		<li>MechanoidChip</li>
         <li>Mechanoid_Scyther_Corpse</li>
@@ -265,9 +295,18 @@
         </filter>
         <count>1</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Component</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
     </ingredients>
 	<fixedIngredientFilter>
 		<thingDefs>
+            <li>Component</li>
             <li>Plasteel</li>
 			<li>MechanoidChip</li>
 			<li>Mechanoid_Centipede_Corpse</li>
@@ -275,6 +314,7 @@
 	</fixedIngredientFilter>
     <defaultIngredientFilter>
       <thingDefs>
+		<li>Component</li>
         <li>Plasteel</li>
 		<li>MechanoidChip</li>
         <li>Mechanoid_Centipede_Corpse</li>

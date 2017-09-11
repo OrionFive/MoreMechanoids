@@ -11,7 +11,7 @@
     <AssemblyName>MoreMechanoids</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -34,6 +35,8 @@
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>default</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
@@ -63,6 +66,8 @@
     <Compile Include="Convertable\MechanoidAgent.cs" />
     <Compile Include="Convertable\MechanoidAgentCorpseComp.cs" />
     <Compile Include="Convertable\MoreMechanoidsDefOf.cs" />
+    <Compile Include="Convertable\PawnColumnWorker_FullRepair.cs" />
+    <Compile Include="Convertable\PawnColumnWorker_StayHome.cs" />
     <Compile Include="Convertable\PawnKindDef.cs" />
     <Compile Include="Convertable\LordToil_AgentAttack.cs" />
     <Compile Include="Convertable\ThinkNode_ConditionalCrashed.cs" />

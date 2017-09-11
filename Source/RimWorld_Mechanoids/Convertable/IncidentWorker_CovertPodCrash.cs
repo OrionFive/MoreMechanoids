@@ -1,20 +1,20 @@
-using System.Linq;
 using RimWorld;
-using Verse;
 using RimWorld.Planet;
+using Verse;
 
 namespace MoreMechanoids
 {
     public class IncidentWorker_CovertPodCrash : IncidentWorker
     {
-        protected override bool CanFireNowSub(IIncidentTarget target) => ((Map)target).mapPawns.FreeColonistsCount > 4
-                   && ((Map)target).listerThings.ThingsOfDef(ThingDef.Named("MechanoidCovert")).Count <= ((Map)target).mapPawns.FreeColonistsCount / 4;
+        protected override bool CanFireNowSub(IIncidentTarget target)
+        {
+            return ((Map) target).mapPawns.FreeColonistsCount > 4 && ((Map) target).listerThings.ThingsOfDef(ThingDef.Named("MechanoidCovert")).Count <= ((Map) target).mapPawns.FreeColonistsCount/4;
+        }
 
         public override bool TryExecute(IncidentParms parms)
         {
-            IntVec3 intVec = DropCellFinder.RandomDropSpot((Map)parms.target);
-            Find.LetterStack.ReceiveLetter("LetterLabelRefugeePodCrash".Translate(), "RefugeePodCrash".Translate(),
-                LetterType.BadNonUrgent, new GlobalTargetInfo(intVec, (Map)parms.target));
+            IntVec3 intVec = DropCellFinder.RandomDropSpot((Map) parms.target);
+            Find.LetterStack.ReceiveLetter("LetterLabelRefugeePodCrash".Translate(), "RefugeePodCrash".Translate(), LetterDefOf.Good, new GlobalTargetInfo(intVec, (Map) parms.target));
             Faction faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Spacer);
             Pawn pawn = PawnGenerator.GeneratePawn(Verse.PawnKindDef.Named("MechanoidCovert"), faction);
             pawn.gender = Gender.Female;
@@ -22,8 +22,8 @@ namespace MoreMechanoids
             FixHair(pawn);
 
             pawn.Name = PawnBioAndNameGenerator.GeneratePawnName(pawn);
-            HealthUtility.GiveInjuriesToForceDowned(pawn);
-            DropPodUtility.MakeDropPodAt(intVec, (Map)parms.target, new ActiveDropPodInfo {SingleContainedThing = pawn, openDelay = 180, leaveSlag = true});
+            HealthUtility.DamageUntilDowned(pawn);
+            DropPodUtility.MakeDropPodAt(intVec, (Map) parms.target, new ActiveDropPodInfo {SingleContainedThing = pawn, openDelay = 180, leaveSlag = true});
             return true;
         }
 
@@ -48,7 +48,7 @@ namespace MoreMechanoids
         {
             int tries = 100;
 
-            while (!pawn.story.hairDef.hairTags.Any(h => h == "Rural" || h == "Urban") || pawn.story.hairDef.hairGender!=HairGender.Female)
+            while (!pawn.story.hairDef.hairTags.Any(h => h == "Rural" || h == "Urban") || pawn.story.hairDef.hairGender != HairGender.Female)
             {
                 pawn.story.hairDef = PawnHairChooser.RandomHairDefFor(pawn, FactionDef.Named("Spacer"));
                 tries--;
