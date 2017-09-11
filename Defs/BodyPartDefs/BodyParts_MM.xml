@@ -1,18 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<!--
-	<activities>
-		<li>Manipulation_way1</li>
-	</activities>
-	
-	means that this body part is responsible for Manipulation activity in group "way1".
-	Efficiency of Pawn activity X is minimum of all X activity groups efficiency values.
-	X activity group efficiency is average value of all body parts efficiency values responsible for this activity in this group.
-	
-	So if there are body parts responsible for (1)Manipulation_foo, (2)Manipulation_foo, (1)Manipulation_bar, (2)Manipulation_bar
-	then Manipulation efficiency is min(avg((1)Manipulation_foo, (2)Manipulation_foo), avg((1)Manipulation_bar, (2)Manipulation_bar))
--->
-
 <BodyPartDefs>
 
   <!-- Crawler -->
@@ -24,6 +11,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -33,10 +21,11 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Eating</li>
-		<li>Manipulation_way1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>EatingPathway</li>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -47,9 +36,24 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Talking</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>TalkingPathway</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>InfraredSensor</defName>
+    <label>infrared sensor</label>
+	<hitPoints>5</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>SightSource</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -59,6 +63,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
 
   <BodyPartDef>
@@ -69,10 +74,11 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_way0</li>
-		<li>Moving_leftWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -83,10 +89,11 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_way0</li>
-		<li>Moving_rightWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -97,9 +104,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_leftWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -110,9 +118,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_rightWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
    
   <BodyPartDef>
@@ -123,9 +132,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_leftWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -136,9 +146,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_rightWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -149,11 +160,11 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_leftWay2</li>
-		<li>Moving_rightWay2</li>
-		<li>Manipulation_way2</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbSegment</li>
+		<li>ManipulationLimbSegment</li>
+	</tags>
   </BodyPartDef>
   
   <!-- Skullywag -->
@@ -164,10 +175,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_way1</li>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -177,6 +188,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -187,9 +199,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -200,9 +213,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -213,9 +227,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -225,6 +240,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -234,9 +250,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Consciousness_brain</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ConsciousnessSource</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -247,9 +264,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Sight_source</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>SightSource</li>
+	</tags>
   </BodyPartDef>
   
   <!-- Assimilated Human -->
@@ -260,6 +278,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
 	<dontSuggestAmputation>true</dontSuggestAmputation>
   </BodyPartDef>
   
@@ -271,6 +290,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -280,9 +300,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_rightWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -292,9 +313,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_leftWay1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -304,9 +326,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_way1</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <!-- Assaulter -->
@@ -317,9 +340,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -329,9 +353,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -341,9 +366,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -353,9 +379,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -365,6 +392,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -374,6 +402,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <!-- Carrier -->
@@ -384,6 +413,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -393,6 +423,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -403,9 +434,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_tool</li>
-    </activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+    </tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -416,9 +448,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_tool</li>
-    </activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbSegment</li>
+    </tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -429,9 +462,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_way0</li>
-    </activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -442,9 +476,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-    </activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -455,9 +490,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Sight_source</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>SightSource</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -468,9 +504,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-    </activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -481,9 +518,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-    </activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
   </BodyPartDef>
   
   <!-- Mammoth -->
@@ -494,6 +532,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -503,9 +542,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -515,6 +552,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -524,6 +562,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <!-- Flamebot -->
@@ -534,9 +573,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Moving_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -546,9 +583,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -558,9 +596,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -570,6 +609,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -579,9 +619,10 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
-	<activities>
-		<li>Manipulation_tool</li>
-	</activities>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
   </BodyPartDef>
   
   <!-- Boombot -->
@@ -592,6 +633,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -601,6 +643,7 @@
 	<oldInjuryBaseChance>0</oldInjuryBaseChance>
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
 
 </BodyPartDefs>
