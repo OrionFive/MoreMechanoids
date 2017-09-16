@@ -5,6 +5,23 @@ using Verse;
 
 namespace MoreMechanoids
 {
+    public class ResearchProjectDef : Verse.ResearchProjectDef
+    {
+        public List<string> unlockedRecipeDefs;
+        public string targetTableDef;
+
+        public void UnlockRecipes()
+        {
+            if (unlockedRecipeDefs != null && !string.IsNullOrEmpty(targetTableDef))
+            {
+                foreach (var recipeDef in unlockedRecipeDefs)
+                {
+                    UnlockResearch.UnlockRecipe(targetTableDef, recipeDef);
+                }
+            }
+        }
+    }
+
     public class UnlockResearch : MapComponent
     {
         public UnlockResearch(Map map) : base(map)
@@ -18,6 +35,7 @@ namespace MoreMechanoids
             {
                 LockRecipe(recipe);
             }
+            Log.Message("All mechanoid recipes locked.");
         }
 
         private static void LockRecipe(RecipeDef def)
@@ -25,45 +43,60 @@ namespace MoreMechanoids
             def.recipeUsers = new List<ThingDef>();
         }
 
-        private static void UnlockRecipe(string tableDefName, string defName)
+        public static void UnlockRecipe(string tableDefName, string defName)
         {
+            Log.Message("Unlocking recipe " + defName + " at " + tableDefName);
             ThingDef tableDef = DefDatabase<ThingDef>.GetNamed(tableDefName);
 
             RecipeDef recipeDef = DefDatabase<RecipeDef>.GetNamed(defName);
             recipeDef.recipeUsers = new List<ThingDef> {tableDef};
 
             // Clear cache to update existing objects
-            typeof (ThingDef).GetField("allRecipesCached", BindingFlags.NonPublic | BindingFlags.Instance)
-                .SetValue(tableDef, null);
+            typeof(ThingDef).GetField("allRecipesCached", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(tableDef, null);
         }
+    }
 
-        public static void CreateMechanoidChip()
+    public class Unlock_CreateMechanoidChip : ResearchMod
+    {
+        public override void Apply()
         {
-            UnlockRecipe("TableMachining", "MM_CreateMechanoidChip");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_CreateMechanoidChip");
         }
+    }
 
-        public static void ChipCrawler()
+    public class Unlock_ChipCrawler : ResearchMod
+    {
+        public override void Apply()
         {
-            UnlockRecipe("TableMachining", "MM_ChipCrawlerCleaning");
-            UnlockRecipe("TableMachining", "MM_ChipCrawlerHauling");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipCrawlerCleaning");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipCrawlerHauling");
         }
+    }
 
-        public static void ChipSkullywag()
+    public class Unlock_ChipSkullywag : ResearchMod
+    {
+        public override void Apply()
         {
-            UnlockRecipe("TableMachining", "MM_ChipSkullywagCooking");
-            UnlockRecipe("TableMachining", "MM_ChipSkullywagDoctor");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipSkullywagCooking");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipSkullywagDoctor");
         }
+    }
 
-        public static void ChipScyther()
+    public class Unlock_ChipScyther : ResearchMod
+    {
+        public override void Apply()
         {
-            UnlockRecipe("TableMachining", "MM_ChipScytherCutting");
-            UnlockRecipe("TableMachining", "MM_ChipScytherTailoring");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipScytherCutting");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipScytherTailoring");
         }
+    }
 
-        public static void ChipCentipede()
+    public class Unlock_ChipCentipede : ResearchMod
+    {
+        public override void Apply()
         {
-            UnlockRecipe("TableMachining", "MM_ChipCentipedeGrowing");
-            UnlockRecipe("TableMachining", "MM_ChipCentipedeMining");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipCentipedeGrowing");
+            UnlockResearch.UnlockRecipe("TableMachining", "MM_ChipCentipedeMining");
         }
     }
 }

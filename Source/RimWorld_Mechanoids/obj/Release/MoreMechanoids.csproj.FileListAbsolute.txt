@@ -1,6 +1,0 @@
-D:\Games\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\RimWorld_Mechanoids\obj\Release\MoreMechanoids.csprojResolveAssemblyReference.cache
-D:\Games\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Assemblies\MoreMechanoids.dll
-D:\Games\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\RimWorld_Mechanoids\obj\Release\MoreMechanoids.dll
-E:\Spiele\Steam\SteamApps\common\RimWorld\Mods\MoreMechanoids\Source\RimWorld_Mechanoids\obj\Release\MoreMechanoids.csprojResolveAssemblyReference.cache
-E:\Spiele\Steam\SteamApps\common\RimWorld\Mods\MoreMechanoids\Source\RimWorld_Mechanoids\obj\Release\MoreMechanoids.dll
-E:\Spiele\Steam\SteamApps\common\RimWorld\Mods\MoreMechanoids\Assemblies\MoreMechanoids.dll
