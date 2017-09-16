@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--========================= Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+
+  <MoreMechanoids.ResearchProjectDef>
+    <defName>MechanoidReprogramming</defName>
+    <label>mechanoid reprogramming</label>
+	<description>Learn to craft AI chips at the machining table that allow you to repurpose destroyed mechanoids. Actual reprogramming will require further research.</description>
+	<tab>Mechanoids</tab>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+	<prerequisites>
+		<li>MultiAnalyzer</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+		<li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+	<targetTableDef>TableMachining</targetTableDef>
+	<unlockedRecipeDefs>
+		<li>MM_CreateMechanoidChip</li>
+	</unlockedRecipeDefs>
+	<researchViewX>0</researchViewX>
+	<researchViewY>1</researchViewY>	
+  </MoreMechanoids.ResearchProjectDef>
+
+  <MoreMechanoids.ResearchProjectDef>
+	<defName>ReprogramCrawler</defName>
+	<label>reprogram crawler</label>
+	<description>Figure out ways to reuse the crawler mechanoid.</description>
+	<baseCost>1500</baseCost>
+	<prerequisites>
+		<li>MechanoidReprogramming</li>
+		<li>MultiAnalyzer</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+		<li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+	<techLevel>Industrial</techLevel>
+	<targetTableDef>TableMachining</targetTableDef>
+	<unlockedRecipeDefs>
+		<li>MM_ChipCrawlerCleaning</li>
+		<li>MM_ChipCrawlerHauling</li>
+	</unlockedRecipeDefs>
+	<researchViewX>1</researchViewX>
+	<researchViewY>2</researchViewY>
+  </MoreMechanoids.ResearchProjectDef>
+  
+  <MoreMechanoids.ResearchProjectDef>
+	<defName>ReprogramSkullywag</defName>
+	<label>reprogram skullywag</label>
+	<description>Figure out ways to reuse the skullywag mechanoid.</description>
+	<baseCost>2000</baseCost>
+	<prerequisites>
+		<li>MechanoidReprogramming</li>
+		<li>MultiAnalyzer</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+		<li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+	<techLevel>Industrial</techLevel>
+	<targetTableDef>TableMachining</targetTableDef>
+	<unlockedRecipeDefs>
+		<li>MM_ChipSkullywagCooking</li>
+		<li>MM_ChipSkullywagDoctor</li>
+	</unlockedRecipeDefs>
+	<researchViewX>1</researchViewX>
+	<researchViewY>3</researchViewY>
+  </MoreMechanoids.ResearchProjectDef>
+  
+  <MoreMechanoids.ResearchProjectDef>
+	<defName>ReprogramScyther</defName>
+	<label>reprogram scyther</label>
+	<description>Figure out ways to reuse the scyther mechanoid.</description>
+	<baseCost>2000</baseCost>
+	<prerequisites>
+		<li>MechanoidReprogramming</li>
+		<li>MultiAnalyzer</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+		<li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+	<techLevel>Industrial</techLevel>
+	<targetTableDef>TableMachining</targetTableDef>
+	<unlockedRecipeDefs>
+		<li>MM_ChipScytherCutting</li>
+		<li>MM_ChipScytherTailoring</li>
+	</unlockedRecipeDefs>
+	<researchViewX>1</researchViewX>
+	<researchViewY>4</researchViewY>
+  </MoreMechanoids.ResearchProjectDef>
+  
+  <MoreMechanoids.ResearchProjectDef>
+	<defName>ReprogramCentipede</defName>
+	<label>reprogram centipede</label>
+	<description>Figure out ways to reuse the centipede mechanoid.</description>
+	<baseCost>2000</baseCost>
+	<prerequisites>
+		<li>MechanoidReprogramming</li>
+		<li>MultiAnalyzer</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+		<li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+	<techLevel>Industrial</techLevel>
+	<targetTableDef>TableMachining</targetTableDef>
+	<unlockedRecipeDefs>
+		<li>MM_ChipCentipedeGrowing</li>
+		<li>MM_ChipCentipedeMining</li>
+	</unlockedRecipeDefs>
+	<researchViewX>1</researchViewX>
+	<researchViewY>5</researchViewY>
+  </MoreMechanoids.ResearchProjectDef>
+
+</Defs>
