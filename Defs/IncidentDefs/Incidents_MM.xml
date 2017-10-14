@@ -10,12 +10,4 @@
     <targetType>MapPlayerHome</targetType>
   </IncidentDef>
   
-
-	<!--IncidentDef>
-		<defName>CovertPodCrash</defName>
-		<workerClass>MoreMechanoids.IncidentWorker_CovertPodCrash</workerClass>
-		<baseChance>15</baseChance>
-		<populationEffect>None</populationEffect>
-    <targetType>BaseMap</targetType>
-	</IncidentDef-->
 </Defs>
