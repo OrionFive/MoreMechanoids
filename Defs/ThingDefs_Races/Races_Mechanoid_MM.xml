@@ -72,16 +72,6 @@
       <Component>2</Component>
     </butcherProducts>
   </ThingDef>
-  
-  <ThingDef Name="MechanoidCrawlerConverted" ParentName="MechanoidCrawler">
-    <defName>Mechanoid_Crawler_Converted</defName>
-    <thingClass>MoreMechanoids.PawnConverted</thingClass>
-    <race>
-      <nameCategory>HumanStandard</nameCategory>
-      <thinkTreeMain>Mechanoid_Converted</thinkTreeMain>
-	</race>
-	<recipes/>
-   </ThingDef>
 
   <!-- ============================= Skullywag ================================= -->
 
@@ -168,16 +158,6 @@
       <Component>3</Component>
     </butcherProducts>
   </ThingDef>
-  
-  <ThingDef Name="MechanoidSkullywagConverted" ParentName="MechanoidSkullywag">
-    <defName>Mechanoid_Skullywag_Converted</defName>
-    <thingClass>MoreMechanoids.PawnConverted</thingClass>
-    <race>
-      <nameCategory>HumanStandard</nameCategory>
-      <thinkTreeMain>Mechanoid_Converted</thinkTreeMain>
-	</race>
-	<recipes/>
-   </ThingDef>
 
   <!-- ============================= Centipede ================================= -->
   
@@ -232,16 +212,6 @@
       <Component>2</Component>
     </butcherProducts>
   </ThingDef>
-
-  <ThingDef Name="MechanoidCentipedeConverted" ParentName="MechanoidCentipede">
-    <defName>Mechanoid_Centipede_Converted</defName>
-    <thingClass>MoreMechanoids.PawnConverted</thingClass>
-    <race>
-      <nameCategory>HumanStandard</nameCategory>
-      <thinkTreeMain>Mechanoid_Converted</thinkTreeMain>
-	</race>
-	<recipes/>
-   </ThingDef>
 
 
   <!-- ============================= Scyther ================================= -->
@@ -307,16 +277,6 @@
       <Component>2</Component>
     </butcherProducts>
   </ThingDef>
-
-  <ThingDef Name="MechanoidScytherConverted" ParentName="MechanoidScyther">
-    <defName>Mechanoid_Scyther_Converted</defName>
-    <thingClass>MoreMechanoids.PawnConverted</thingClass>
-    <race>
-      <nameCategory>HumanStandard</nameCategory>
-      <thinkTreeMain>Mechanoid_Converted</thinkTreeMain>
-	</race>
-	<recipes/>
-   </ThingDef>
 
   <!-- ============================= Flamebot ================================= -->
 

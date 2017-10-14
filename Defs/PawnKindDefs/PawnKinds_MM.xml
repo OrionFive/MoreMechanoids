@@ -39,14 +39,6 @@
       <li>Melee</li>
     </weaponTags>
   </PawnKindDef>
-  
-  <PawnKindDef ParentName="Crawler" Class="MoreMechanoids.PawnKindDef">
-    <defName>CrawlerConverted</defName>
-    <race>Mechanoid_Crawler_Converted</race>
-	<backstoryCategory>Raider</backstoryCategory>
-    <defaultFactionType>PlayerColony</defaultFactionType>
-	<isFighter>false</isFighter>
-  </PawnKindDef>
  
   <!-- ============================= Skullywag ================================= -->
 
@@ -72,14 +64,6 @@
     <weaponTags>
       <li>Melee</li>
     </weaponTags>
-  </PawnKindDef>
-  
-  <PawnKindDef ParentName="Skullywag" Class="MoreMechanoids.PawnKindDef">
-    <defName>SkullywagConverted</defName>
-    <race>Mechanoid_Skullywag_Converted</race>
-	<backstoryCategory>Raider</backstoryCategory>
-    <defaultFactionType>PlayerColony</defaultFactionType>
-	<isFighter>false</isFighter>
   </PawnKindDef>
 
   <!-- ============================= Scyther ================================= -->
@@ -110,14 +94,6 @@
     <weaponTags>
       <li>MechanoidGunMedium</li>
     </weaponTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="Scyther" Class="MoreMechanoids.PawnKindDef">
-    <defName>ScytherConverted</defName>
-    <race>Mechanoid_Scyther_Converted</race>
-	<backstoryCategory>Raider</backstoryCategory>
-    <defaultFactionType>PlayerColony</defaultFactionType>
-	<isFighter>false</isFighter>
   </PawnKindDef>
 
   <!-- ============================= Flamebot ================================= -->
@@ -196,13 +172,6 @@
   </PawnKindDef>
 -->
 
-  <PawnKindDef ParentName="Centipede" Class="MoreMechanoids.PawnKindDef">
-    <defName>CentipedeConverted</defName>
-    <race>Mechanoid_Centipede_Converted</race>
-	<backstoryCategory>Raider</backstoryCategory>
-    <defaultFactionType>PlayerColony</defaultFactionType>
-	<isFighter>false</isFighter>
-  </PawnKindDef>
   
   <!-- ============================= Assaulter ================================= -->
 
