@@ -80,35 +80,4 @@
   </HediffDef>
 
 
-	
-  <HediffDef>
-    <hediffClass>Hediff_Injury</hediffClass>
-    <defName>MM_Deterioration</defName>
-    <displayWound>true</displayWound>
-    <label>deteriorating</label>
-	<description>This part may require maintenance.</description>
-    
-    <injuryProps>
-      <canMerge>true</canMerge>
-      <destroyedLabel>Useless</destroyedLabel>
-    </injuryProps>
-  </HediffDef>
-	
-  <HediffDef>
-    <hediffClass>Hediff</hediffClass>
-    <defName>Crashed</defName>
-    <label>crashed</label>
-	<description>Rebooting...</description>
-    
-    <stages>
-        <li>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>-0.7</offset>
-              </li>
-            </capMods>
-        </li>
-    </stages>
-  </HediffDef>
 </HediffDefs>
