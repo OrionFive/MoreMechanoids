@@ -200,12 +200,12 @@
 					<parts>
 						<li>
 							<def>MechanicalGearBox</def>
-							<coverage>0.1</coverage>
+							<coverage>0.6</coverage>
 							<depth>Inside</depth>
 						</li>
 						<li>
 							<def>CoreProcessor</def>
-							<coverage>0.05</coverage>
+							<coverage>0.1</coverage>
 							<depth>Inside</depth>
 						</li>
 					</parts>
@@ -654,17 +654,17 @@
 					<parts>
 						<li>
 							<def>MechanicalHoverComponent</def>
-							<coverage>0.05</coverage>
+							<coverage>0.2</coverage>
 							<depth>Inside</depth>
 						</li>
 						<li>
 							<def>MechanicalBackupHoverComponent</def>
-							<coverage>0.05</coverage>
+							<coverage>0.2</coverage>
 							<depth>Inside</depth>
 						</li>
 						<li>
 							<def>MechanicalGearBox</def>
-							<coverage>0.1</coverage>
+							<coverage>0.4</coverage>
 							<depth>Inside</depth>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
@@ -689,7 +689,7 @@
 							<parts>
 								<li>
 									<def>ArtificialBrain</def>
-									<coverage>0.02</coverage>
+									<coverage>0.5</coverage>
 									<depth>Inside</depth>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
@@ -697,16 +697,18 @@
 								</li>
 								<li>
 									<def>MechanicalAntenna</def>
-									<coverage>0.1</coverage>
-									<depth>Inside</depth>
+									<coverage>0.05</coverage>
+									<depth>Outside</depth>
 								</li>
 								<li>
 									<def>LeftSightSensor</def>
-									<coverage>0.15</coverage>
+									<coverage>0.05</coverage>
+									<depth>Outside</depth>
 								</li>
 								<li>
 									<def>FrontGun</def>
-									<coverage>0.15</coverage>
+									<coverage>0.1</coverage>
+									<depth>Outside</depth>
 								</li>
 							</parts>
 						</li>
@@ -722,6 +724,7 @@
 		<label>assaulter</label>
 		<corePart>
 			<def>MechanicalThorax</def>
+			<coverage>0.05</coverage>
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<groups>
@@ -731,32 +734,32 @@
 			<parts>
 				<li>
 					<def>FrontShield</def>
-					<coverage>0.35</coverage>
+					<coverage>0.5</coverage>
 					<groups>
 						<li>CoveredByShield</li>
 					</groups>
 					<parts>
 						<li>
 							<def>ShieldWindow</def>
+							<coverage>0.3</coverage>
+						</li>
+						<li>
+							<def>BottomLeftGunProtrusion</def>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>TopLeftGunProtrusion</def>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>BottomRightGunProtrusion</def>
+							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>TopRightGunProtrusion</def>
 							<coverage>0.05</coverage>
 						</li>
 					</parts>
-				</li>
-				<li>
-					<def>BottomLeftGunProtrusion</def>
-					<coverage>0.05</coverage>
-				</li>
-				<li>
-					<def>TopLeftGunProtrusion</def>
-					<coverage>0.05</coverage>
-				</li>
-				<li>
-					<def>BottomRightGunProtrusion</def>
-					<coverage>0.05</coverage>
-				</li>
-				<li>
-					<def>TopRightGunProtrusion</def>
-					<coverage>0.05</coverage>
 				</li>
 				<li>
 					<def>MechanicalNeck</def>
@@ -776,7 +779,7 @@
 							<parts>
 								<li>
 									<def>ArtificialBrain</def>
-									<coverage>0.01</coverage>
+									<coverage>0.5</coverage>
 									<depth>Inside</depth>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
@@ -784,23 +787,28 @@
 								</li>
 								<li>
 									<def>LeftSightSensor</def>
-									<coverage>0.01</coverage>
+									<coverage>0.1</coverage>
+									<depth>Outside</depth>
 								</li>
 								<li>
 									<def>RightSightSensor</def>
-									<coverage>0.01</coverage>
+									<coverage>0.1</coverage>
+									<depth>Outside</depth>
 								</li>
 								<li>
 									<def>LeftHearingSensor</def>
-									<coverage>0.01</coverage>
+									<coverage>0.03</coverage>
+									<depth>Outside</depth>
 								</li>
 								<li>
 									<def>RightHearingSensor</def>
-									<coverage>0.01</coverage>
+									<coverage>0.03</coverage>
+									<depth>Outside</depth>
 								</li>
 								<li>
 									<def>SmellSensor</def>
-									<coverage>0.01</coverage>
+									<coverage>0.03</coverage>
+									<depth>Outside</depth>
 								</li>
 							</parts>
 						</li>
@@ -808,7 +816,7 @@
 				</li>
 				<li>
 					<def>LeftMechanicalShoulder</def>
-					<coverage>0.01</coverage>
+					<coverage>0.05</coverage>
 					<groups>
 						<li>CoveredByShield</li>
 						<!--li>coveredbynaturalarmor</li-->
@@ -816,14 +824,14 @@
 					<parts>
 						<li>
 							<def>LeftMechanicalArm</def>
-							<coverage>0.01</coverage>
+							<coverage>0.8</coverage>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
 								<li>
 									<def>LeftMechanicalHand</def>
-									<coverage>0.01</coverage>
+									<coverage>0.1</coverage>
 									<height>Bottom</height>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
@@ -831,28 +839,28 @@
 									<parts>
 										<li>
 											<def>LeftHandMechanicalPinky</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
 											<def>LeftHandMechanicalMiddleFinger</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
 											<def>LeftHandMechanicalIndexFinger</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
 											<def>LeftHandMechanicalThumb</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
@@ -865,7 +873,7 @@
 				</li>
 				<li>
 					<def>RightMechanicalShoulder</def>
-					<coverage>0.01</coverage>
+					<coverage>0.05</coverage>
 					<groups>
 						<li>CoveredByShield</li>
 						<!--li>coveredbynaturalarmor</li-->
@@ -873,14 +881,14 @@
 					<parts>
 						<li>
 							<def>RightMechanicalArm</def>
-							<coverage>0.01</coverage>
+							<coverage>0.8</coverage>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
 								<li>
 									<def>RightMechanicalHand</def>
-									<coverage>0.01</coverage>
+									<coverage>0.1</coverage>
 									<height>Bottom</height>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
@@ -888,28 +896,28 @@
 									<parts>
 										<li>
 											<def>RightHandMechanicalPinky</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
 											<def>RightHandMechanicalMiddleFinger</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
 											<def>RightHandMechanicalIndexFinger</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
 											<def>RightHandMechanicalThumb</def>
-											<coverage>0.01</coverage>
+											<coverage>0.1</coverage>
 											<groups>
 												<li>RightHand</li>
 											</groups>
@@ -922,7 +930,7 @@
 				</li>
 				<li>
 					<def>LeftMechanicalLeg</def>
-					<coverage>0.01</coverage>
+					<coverage>0.1</coverage>
 					<height>Bottom</height>
 					<groups>
 						<li>CoveredByShield</li>
@@ -931,7 +939,7 @@
 					<parts>
 						<li>
 							<def>LeftMechanicalFoot</def>
-							<coverage>0.01</coverage>
+							<coverage>0.1</coverage>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
@@ -940,7 +948,7 @@
 				</li>
 				<li>
 					<def>RightMechanicalLeg</def>
-					<coverage>0.01</coverage>
+					<coverage>0.1</coverage>
 					<height>Bottom</height>
 					<groups>
 						<li>CoveredByShield</li>
@@ -949,7 +957,7 @@
 					<parts>
 						<li>
 							<def>RightMechanicalFoot</def>
-							<coverage>0.01</coverage>
+							<coverage>0.1</coverage>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
@@ -1000,11 +1008,11 @@
 							<parts>
 								<li>
 									<def>SightSensor</def>
-									<coverage>0.02</coverage>
+									<coverage>0.2</coverage>
 								</li>
 								<li>
 									<def>ArtificialBrain</def>
-									<coverage>0.01</coverage>
+									<coverage>0.3</coverage>
 									<depth>Inside</depth>
 								</li>
 							</parts>
@@ -1038,20 +1046,28 @@
 									<coverage>0.25</coverage>
 								</li>
 								<li>
+									<def>MechanicalTentacleSection</def>
+									<coverage>0.25</coverage>
+								</li>
+								<li>
+									<def>MechanicalTentacleSection</def>
+									<coverage>0.25</coverage>
+								</li>
+								<li>
 									<def>Claw</def>
-									<coverage>0.05</coverage>
+									<coverage>0.1</coverage>
 									<parts>
 										<li>
 											<def>ClawGrip</def>
-											<coverage>0.05</coverage>
+											<coverage>0.2</coverage>
 										</li>
 										<li>
 											<def>ClawGrip</def>
-											<coverage>0.05</coverage>
+											<coverage>0.2</coverage>
 										</li>
 										<li>
 											<def>ClawGrip</def>
-											<coverage>0.05</coverage>
+											<coverage>0.2</coverage>
 										</li>
 									</parts>
 								</li>
@@ -1112,7 +1128,7 @@
 					<parts>
 						<li>
 							<def>ArtificialBrain</def>
-							<coverage>0.01</coverage>
+							<coverage>0.05</coverage>
 							<depth>Inside</depth>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
@@ -1120,43 +1136,43 @@
 						</li>
 						<li>
 							<def>MetalTusk</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 						<li>
 							<def>MetalTusk</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 						<li>
 							<def>MetalTusk</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 						<li>
 							<def>MetalTusk</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 						<li>
 							<def>MetalTusk</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 						<li>
 							<def>LeftSightSensor</def>
-							<coverage>0.01</coverage>
+							<coverage>0.05</coverage>
 						</li>
 						<li>
 							<def>RightSightSensor</def>
-							<coverage>0.01</coverage>
+							<coverage>0.05</coverage>
 						</li>
 						<li>
 							<def>LeftHearingSensor</def>
-							<coverage>0.01</coverage>
+							<coverage>0.05</coverage>
 						</li>
 						<li>
 							<def>RightHearingSensor</def>
-							<coverage>0.01</coverage>
+							<coverage>0.05</coverage>
 						</li>
 						<li>
 							<def>SmellSensor</def>
-							<coverage>0.01</coverage>
+							<coverage>0.05</coverage>
 						</li>
 					</parts>
 				</li>
@@ -1170,7 +1186,7 @@
 					<parts>
 						<li>
 							<def>FrontLeftHoof</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 					</parts>
 				</li>
@@ -1184,7 +1200,7 @@
 					<parts>
 						<li>
 							<def>FrontRightHoof</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 					</parts>
 				</li>
@@ -1195,7 +1211,7 @@
 					<parts>
 						<li>
 							<def>RearLeftHoof</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 					</parts>
 				</li>
@@ -1206,7 +1222,7 @@
 					<parts>
 						<li>
 							<def>RearRightHoof</def>
-							<coverage>0.02</coverage>
+							<coverage>0.1</coverage>
 						</li>
 					</parts>
 				</li>
@@ -1248,13 +1264,43 @@
 					<depth>Outside</depth>
 				</li>
 				<li>
+					<def>SmallWheel</def>
+					<coverage>0.05</coverage>
+					<depth>Outside</depth>
+					<height>Bottom</height>
+				</li>
+				<li>
+					<def>SmallWheel</def>
+					<coverage>0.05</coverage>
+					<depth>Outside</depth>
+					<height>Bottom</height>
+				</li>
+				<li>
+					<def>SmallWheel</def>
+					<coverage>0.05</coverage>
+					<depth>Outside</depth>
+					<height>Bottom</height>
+				</li>
+				<li>
 					<def>FuelContainer</def>
-					<coverage>0.70</coverage>
+					<coverage>0.25</coverage>
 					<depth>Outside</depth>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 						<li>FuelContainer</li>
 					</groups>
+				</li>
+				<li>
+					<def>MechanicalCore</def>
+					<coverage>0.25</coverage>
+					<height>Middle</height>
+					<parts>
+						<li>
+							<def>MechanicalGearBox</def>
+							<coverage>0.4</coverage>
+							<depth>Inside</depth>
+						</li>
+					</parts>
 				</li>
 				<li>
 					<def>MechanicalHead</def>
@@ -1313,19 +1359,39 @@
 			</groups>
 			<parts>
 				<li>
-					<def>LeftMechanicalLeg</def>
-					<coverage>0.05</coverage>
+					<def>RollComponent</def>
+					<coverage>0.4</coverage>
+					<height>Bottom</height>
 					<depth>Outside</depth>
-				</li>
-				<li>
-					<def>RightMechanicalLeg</def>
-					<coverage>0.05</coverage>
-					<depth>Outside</depth>
+					<parts>
+						<li>
+							<def>MechanicalCore</def>
+							<coverage>0.8</coverage>
+							<depth>Inside</depth>
+							<parts>
+								<li>
+									<def>MechanicalGearBox</def>
+									<coverage>0.6</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>ArtificialBrain</def>
+									<coverage>0.02</coverage>
+									<depth>Inside</depth>
+								</li>
+								<li>
+									<def>Igniter</def>
+									<coverage>0.05</coverage>
+								</li>
+							</parts>
+						</li>
+					</parts>
 				</li>
 				<li>
 					<def>MechanicalHead</def>
-					<coverage>0.02</coverage>
+					<coverage>0.1</coverage>
 					<depth>Outside</depth>
+					<height>Top</height>
 					<groups>
 						<li>HeadAttackTool</li>
 						<!--li>coveredbynaturalarmor</li-->
@@ -1333,26 +1399,17 @@
 					<parts>
 						<li>
 							<def>LeftSightSensor</def>
-							<coverage>0.03</coverage>
+							<coverage>0.2</coverage>
 						</li>
 						<li>
 							<def>RightSightSensor</def>
-							<coverage>0.03</coverage>
-						</li>
-						<li>
-							<def>ArtificialBrain</def>
-							<coverage>0.02</coverage>
-							<depth>Inside</depth>
-						</li>
-						<li>
-							<def>Igniter</def>
-							<coverage>0.05</coverage>
+							<coverage>0.2</coverage>
 						</li>
 					</parts>
 				</li>
 				<li>
 					<def>LeftExplosiveTank</def>
-					<coverage>0.30</coverage>
+					<coverage>0.2</coverage>
 					<depth>Outside</depth>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
@@ -1360,7 +1417,7 @@
 				</li>
 				<li>
 					<def>RightExplosiveTank</def>
-					<coverage>0.30</coverage>
+					<coverage>0.2</coverage>
 					<depth>Outside</depth>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->

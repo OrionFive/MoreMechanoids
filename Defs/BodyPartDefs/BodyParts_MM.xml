@@ -563,6 +563,9 @@
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
     <isAlive>false</isAlive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
   </BodyPartDef>
   
   <!-- Flamebot -->
@@ -625,6 +628,19 @@
 	</tags>
   </BodyPartDef>
   
+  <BodyPartDef>
+    <defName>SmallWheel</defName>
+    <label>small wheel</label>
+	<hitPoints>15</hitPoints>
+	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
   <!-- Boombot -->
   <BodyPartDef>
     <defName>LeftExplosiveTank</defName>
@@ -644,6 +660,19 @@
 	<skinCovered>false</skinCovered>
 	<isSolid>true</isSolid>
     <isAlive>false</isAlive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>RollComponent</defName>
+    <label>rolling component</label>
+	<hitPoints>40</hitPoints>
+	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<skinCovered>false</skinCovered>
+	<isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
   </BodyPartDef>
 
 </BodyPartDefs>
