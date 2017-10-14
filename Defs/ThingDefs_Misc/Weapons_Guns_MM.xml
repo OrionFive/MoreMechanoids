@@ -31,221 +31,6 @@
     </projectile>
   </ThingDef>
 
-  <!-- ================= Mechanoid heavy charge blaster ================= -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_ChargeBlasterHeavy</defName>
-    <label>charge blaster shot</label>
-    <graphicData>
-      <texPath>Things/Projectile/Charge_Small</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>15</damageAmountBase>
-      <speed>90</speed>
-    </projectile>
-  </ThingDef>
-  
-  <ThingDef ParentName="BaseGun">
-    <defName>Gun_ChargeBlasterHeavy</defName>
-    <label>heavy charge blaster</label>
-    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
-    <graphicData>
-		<texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-		<MarketValue>2400</MarketValue>
-		<AccuracyTouch>0.60</AccuracyTouch>
-		<AccuracyShort>0.77</AccuracyShort>
-		<AccuracyMedium>0.59</AccuracyMedium>
-		<AccuracyLong>0.42</AccuracyLong>
-        <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
-    </statBases>
-    <tradeability>Never</tradeability>
-    <techLevel>Spacer</techLevel>
-    <destroyOnDrop>True</destroyOnDrop>
-    <menuHidden>True</menuHidden>
-    <weaponTags>
-      <li>MechanoidGunHeavy</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
-        <forcedMissRadius>2.9</forcedMissRadius>
-        <warmupTime>3.3</warmupTime>
-        <range>27</range>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <burstShotCount>24</burstShotCount>
-        <soundCast>ShotChargeBlaster</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  
-   <!-- ================= Mechanoid internal charge blaster ================= -->
-  <ThingDef ParentName="BaseGun">
-    <defName>Gun_ChargeBlasterInternal</defName>
-    <label>internal charge blaster</label>
-    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
-    <graphicData>
-		<texPath>Hidden</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-		<MarketValue>1500</MarketValue>
-		<AccuracyTouch>0.60</AccuracyTouch>
-		<AccuracyShort>0.77</AccuracyShort>
-		<AccuracyMedium>0.59</AccuracyMedium>
-		<AccuracyLong>0.42</AccuracyLong>
-        <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
-    </statBases>
-    <tradeability>Never</tradeability>
-    <techLevel>Spacer</techLevel>
-    <destroyOnDrop>True</destroyOnDrop>
-    <menuHidden>True</menuHidden>
-    <weaponTags>
-      <li>MechanoidGunAssaulter</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
-        <forcedMissRadius>2.9</forcedMissRadius>
-        <warmupTime>3.3</warmupTime>
-        <range>27</range>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <burstShotCount>24</burstShotCount>
-        <soundCast>ShotChargeBlaster</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <!-- ================= Mechanoid inferno cannon ================= -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_InfernoCannon</defName>
-    <label>inferno cannon shell</label>
-    <thingClass>Projectile_Explosive</thingClass>
-    <graphicData>
-      <texPath>Things/Projectile/InfernoCannonShot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <projectile>
-      <damageDef>Flame</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <speed>45</speed>
-      <explosionRadius>2.4</explosionRadius >
-      <postExplosionSpawnThingDef>FilthFuel</postExplosionSpawnThingDef>
-      <explosionSpawnChance>0.3</explosionSpawnChance>
-    </projectile>
-  </ThingDef>
-  <ThingDef ParentName="BaseGun">
-    <defName>Gun_InfernoCannon</defName>
-    <label>inferno cannon</label>
-    <description>Incendiary-shot mini-artillery device. Mechanoid-built.</description>
-    <graphicData>
-		<texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-		<MarketValue>2400</MarketValue>
-        <AccuracyTouch>0.70</AccuracyTouch>
-        <AccuracyShort>0.42</AccuracyShort>
-        <AccuracyMedium>0.18</AccuracyMedium>
-        <AccuracyLong>0.06</AccuracyLong>
-        <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
-   </statBases>
-    <tradeability>Never</tradeability>
-    <techLevel>Spacer</techLevel>
-    <destroyOnDrop>True</destroyOnDrop>
-    <menuHidden>True</menuHidden>
-    <weaponTags>
-      <li>MechanoidGunInferno</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_InfernoCannon</projectileDef>
-        <forcedMissRadius>3.5</forcedMissRadius>
-        <ai_IsIncendiary>true</ai_IsIncendiary>
-        <warmupTime>2.5</warmupTime>
-        <range>27</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>InfernoCannon_Fire</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>14</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-
-
-  <!-- ================= Mechanoid charge lance ================= -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_ChargeLance</defName>
-    <label>charge lance shot</label>
-    <graphicData>
-      <texPath>Things/Projectile/ChargeLanceShot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <drawSize>(3,3)</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>16</damageAmountBase>
-      <speed>120</speed>
-    </projectile>
-  </ThingDef>
-  <ThingDef ParentName="BaseGun">
-    <defName>Gun_ChargeLance</defName>
-    <label>charge lance</label>
-    <description>Charged-shot rail-assisted lance weapon. Fires a single charged shot at high velocity.</description>
-    <graphicData>
-		<texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-		<MarketValue>2000</MarketValue>
-        <AccuracyTouch>0.6</AccuracyTouch>
-        <AccuracyShort>0.7</AccuracyShort>
-        <AccuracyMedium>0.82</AccuracyMedium>
-        <AccuracyLong>0.7</AccuracyLong>
-        <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
-    </statBases>
-    <tradeability>Never</tradeability>
-    <techLevel>Spacer</techLevel>
-    <destroyOnDrop>True</destroyOnDrop>
-    <menuHidden>True</menuHidden>
-    <weaponTags>
-      <li>MechanoidGunMedium</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_ChargeLance</projectileDef>
-        <warmupTime>2</warmupTime>
-        <range>37</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>ChargeLance_Fire</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
   
   <!-- ================= Mechanoid Flamethrower ================= -->
   
@@ -273,13 +58,13 @@
 	<ThingDef ParentName="BaseGun">
 		<defName>MechanoidFlameThrower</defName>
 		<label>mechanoid flamethrower</label>
-		<description>a built in mechanoid flamethrower.</description>
+		<description>A built in flamethrower. Mechanoid-built.</description>
 		<graphicData>
 			<texPath>Hidden</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>3000</MarketValue>
+			<Mass>10</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.51</AccuracyShort>
 			<AccuracyMedium>0.25</AccuracyMedium>
@@ -296,8 +81,8 @@
 		<verbs>
 		  <li>
 			<verbClass>Verb_Shoot</verbClass>
-			<projectileDef>Bullet_FlameThrower</projectileDef>
 			<hasStandardCommand>true</hasStandardCommand>
+			<projectileDef>Bullet_FlameThrower</projectileDef>
 			<targetParams>
 			  <canTargetLocations>true</canTargetLocations>
 			</targetParams>

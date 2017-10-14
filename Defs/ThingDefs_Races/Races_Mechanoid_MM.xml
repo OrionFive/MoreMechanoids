@@ -13,7 +13,7 @@
 	  <ArmorRating_Blunt>-0.5</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
       <ArmorRating_Electric>-0.5</ArmorRating_Electric>
-      <MeatAmount>5</MeatAmount>
+      <MeatAmount>0</MeatAmount>
     </statBases>
     <verbs>
       <li>
@@ -41,7 +41,6 @@
       </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalCrawler</body>
@@ -104,7 +103,9 @@
         <linkedBodyPartsGroup>FrontParalyzeComponent</linkedBodyPartsGroup>
 		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
 		<targetParams>
+			<canTargetBuildings>true</canTargetBuildings>
 			<canTargetPawns>false</canTargetPawns>
+			<neverTargetDoors>false</neverTargetDoors>
 		</targetParams>
       </li>
       <li>
@@ -121,7 +122,6 @@
      </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid_Skullywag</thinkTreeMain>
       <body>MechanicalSkullywag</body>
@@ -150,7 +150,7 @@
     <butcherProducts>
       <Steel>45</Steel>
       <Plasteel>20</Plasteel>
-      <Component>2</Component>
+      <Component>3</Component>
     </butcherProducts>
   </ThingDef>
   
@@ -180,13 +180,12 @@
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
         <defaultCooldownTime>2.3</defaultCooldownTime>
-        <meleeDamageBaseAmount>25</meleeDamageBaseAmount>
+        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalCentipede</body>
@@ -261,7 +260,6 @@
       </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>Scyther</body>
@@ -312,7 +310,7 @@
     <label>flamebot</label>
     <description>A small mechanoid that spews fire. Though they are lightly armored, they can quickly cause chaos within your colony.</description>
     <statBases>
-      <MoveSpeed>4.0</MoveSpeed>
+      <MoveSpeed>4</MoveSpeed>
 	  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
       <ArmorRating_Electric>-0.5</ArmorRating_Electric>
@@ -329,7 +327,6 @@
       </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalFlamebot</body>
@@ -372,19 +369,18 @@
       <MoveSpeed>6</MoveSpeed>
 	  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-      <MeatAmount>100</MeatAmount>
+      <MeatAmount>0</MeatAmount>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.6</defaultCooldownTime>
+        <defaultCooldownTime>3</defaultCooldownTime>
         <meleeDamageBaseAmount>100</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalMammoth</body>
@@ -438,7 +434,6 @@
       </li>
     </verbs>
     <race>
-      <fleshType>Mechanoid</fleshType>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalAssaulter</body>

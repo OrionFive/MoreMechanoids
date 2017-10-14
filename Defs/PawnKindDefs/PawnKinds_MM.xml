@@ -96,7 +96,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Scyther</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.25</drawSize>
+          <drawSize>1.5</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
           </shadowData>
@@ -156,7 +156,7 @@
 	<defName>Centipede</defName>
     <label>centipede</label>
     <race>Mechanoid_Centipede</race>
-    <combatPower>300</combatPower>
+    <combatPower>290</combatPower>
 	<defaultFactionType>Mechanoid</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
@@ -197,15 +197,16 @@
       <li>MechanoidGunInferno</li>
     </weaponTags>
   </PawnKindDef>
+-->
 
-    <PawnKindDef ParentName="Centipede" Class="MoreMechanoids.PawnKindDef">
+  <PawnKindDef ParentName="Centipede" Class="MoreMechanoids.PawnKindDef">
     <defName>CentipedeConverted</defName>
     <race>Mechanoid_Centipede_Converted</race>
 	<backstoryCategory>Raider</backstoryCategory>
     <defaultFactionType>PlayerColony</defaultFactionType>
 	<isFighter>false</isFighter>
   </PawnKindDef>
--->
+  
   <!-- ============================= Assaulter ================================= -->
 
   <PawnKindDef>
@@ -245,13 +246,6 @@
     <combatPower>900</combatPower>
 	<defaultFactionType>Mechanoid</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>
-    <weaponMoney>
-      <min>1200</min>
-      <max>3000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>Melee</li>
-    </weaponTags>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -268,6 +262,9 @@
 		</dessicatedBodyGraphicData>
       </li>
     </lifeStages>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
   </PawnKindDef>
   
 </PawnKindDefs>
