@@ -30,12 +30,12 @@
         <kindDef>Normal</kindDef>
         <options>
             <Crawler>50</Crawler>
-            <Skullywag>60</Skullywag>
-            <Assaulter>70</Assaulter>
-            <Flamebot>90</Flamebot>
+            <Skullywag>40</Skullywag>
+            <Assaulter>100</Assaulter>
+            <Flamebot>40</Flamebot>
             <Centipede>100</Centipede>
             <Scyther>100</Scyther>
-            <Mammoth>200</Mammoth>
+            <Mammoth>40</Mammoth>
         </options>
       </li>
     </pawnGroupMakers>
