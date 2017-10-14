@@ -29,6 +29,7 @@
 	<defName>ReprogramCrawler</defName>
 	<label>reprogram crawler</label>
 	<description>Figure out ways to reuse the crawler mechanoid.</description>
+	<tab>Mechanoids</tab>
 	<baseCost>1500</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
@@ -51,6 +52,7 @@
 	<defName>ReprogramSkullywag</defName>
 	<label>reprogram skullywag</label>
 	<description>Figure out ways to reuse the skullywag mechanoid.</description>
+	<tab>Mechanoids</tab>
 	<baseCost>2000</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
@@ -73,6 +75,7 @@
 	<defName>ReprogramScyther</defName>
 	<label>reprogram scyther</label>
 	<description>Figure out ways to reuse the scyther mechanoid.</description>
+	<tab>Mechanoids</tab>
 	<baseCost>2000</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
@@ -95,6 +98,7 @@
 	<defName>ReprogramCentipede</defName>
 	<label>reprogram centipede</label>
 	<description>Figure out ways to reuse the centipede mechanoid.</description>
+	<tab>Mechanoids</tab>
 	<baseCost>2000</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>

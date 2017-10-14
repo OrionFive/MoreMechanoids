@@ -15,9 +15,9 @@
 
             <!-- If no duty issued a job -->
             <!-- Wander at fallback -->
-            <li Class="ThinkNode_ConditionalHasFallbackLocation" >
+            <li Class="ThinkNode_ConditionalHasDutyTarget" >
               <subNodes>
-                <li Class="JobGiver_WanderNearFallbackLocation" />
+                <li Class="JobGiver_WanderNearDutyLocation" />
               </subNodes>
             </li>
 

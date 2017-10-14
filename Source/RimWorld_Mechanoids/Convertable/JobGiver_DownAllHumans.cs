@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
@@ -13,6 +12,13 @@ namespace MoreMechanoids
     {
         public float targetKeepRadius = 72f;
         public float targetAcquireRadius = 65f;
+        private Predicate<Thing> validDoor = t => t is Building_Door && !t.Destroyed && !((Building_Door) t).Open;
+        private Predicate<Thing> validPawn = t => t is Pawn && !t.Destroyed && !((Pawn) t).Downed && t.def.race != null && t.def.race.IsFlesh;
+
+        protected override bool ExtraTargetValidator(Pawn pawn, Thing target)
+        {
+            return validDoor(target) || validPawn(target);
+        }
 
         protected override void UpdateEnemyTarget(Pawn pawn)
         {
@@ -37,8 +43,6 @@ namespace MoreMechanoids
                 }
             }
             // Select only flesh stuff
-            Predicate<Thing> validatorPawn = t => t is Pawn && !t.Destroyed && !((Pawn) t).Downed && t.def.race != null && t.def.race.IsFlesh;
-            Predicate<Thing> validatorDoor = t => t is Building_Door && !t.Destroyed && !((Building_Door) t).Open;
 
             // Method is internal (duh)
             MethodInfo notifyEngagedTarget = typeof(Pawn_MindState).GetMethod("Notify_EngagedTarget", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -48,35 +52,30 @@ namespace MoreMechanoids
                 //Log.Message(pawn.Label + ": trying to find target...");
                 const TargetScanFlags targetScanFlags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachable;
 
-                var bestAttackTarget = AttackTargetFinder.BestAttackTarget(pawn, targetScanFlags, validatorPawn, 0f, targetAcquireRadius);
-                thing = bestAttackTarget as Thing;
-                if (thing != null)
+                thing = AttackTargetFinder.BestAttackTarget(pawn, targetScanFlags, validPawn, 0f, targetAcquireRadius) as Thing;
+                if (thing == null)
                 {
-                    //Log.Message("Selected pawn " + thing.Label);
+                    //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
+                    Building_Door thing2 =
+                        pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
+                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
+                            .OrderBy(door => door.Position.DistanceToSquared(pawn.Position))
+                            .FirstOrDefault();
+                    if (thing2 != null)
+                    {
+                        //Log.Message("Selected door " + thing2.Label);
+                        thing = thing2;
+                    }
+                }
+                if (thing != null && thing != pawn.mindState.enemyTarget)
+                {
                     notifyEngagedTarget.Invoke(pawn.mindState, null);
                     Lord lord = pawn.Map.lordManager.LordOf(pawn);
                     if (lord != null)
                     {
                         lord.Notify_PawnAcquiredTarget(pawn, thing);
                     }
-                }
-                else // thing == null
-                {
-                    //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
-                    Building_Door thing2 =
-                        pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
-                            .Where(b => validatorDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
-                            .OrderBy(door => door.Position.DistanceToSquared(pawn.Position))
-                            .FirstOrDefault();
-                    if (thing2 != null)
-                    {
-                        notifyEngagedTarget.Invoke(pawn.mindState, null);
-                        //Log.Message("Selected door " + thing2.Label);
-                        thing = thing2;
-                    }
-                }
-                if (thing != pawn.mindState.enemyTarget)
-                {
+
                     if (pawn.CurJob != null)
                     {
                         pawn.CurJob.SetTarget(TargetIndex.A, thing);

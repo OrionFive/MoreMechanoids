@@ -170,9 +170,6 @@
           </shadowData>
 		  <shaderType>Cutout</shaderType>
 		</bodyGraphicData>
-		<dessicatedBodyGraphicData>
-		  <shaderType>Cutout</shaderType>
-		</dessicatedBodyGraphicData>
       </li>
     </lifeStages>
     <weaponMoney>
@@ -257,9 +254,6 @@
           </shadowData>
 		  <shaderType>Cutout</shaderType>
 		</bodyGraphicData>
-		<dessicatedBodyGraphicData>
-		  <shaderType>Cutout</shaderType>
-		</dessicatedBodyGraphicData>
       </li>
     </lifeStages>
     <weaponTags>

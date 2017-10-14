@@ -1098,11 +1098,6 @@
 					<depth>Outside</depth>
 				</li>
 				<li>
-					<def>Spine</def>
-					<coverage>0.02</coverage>
-					<depth>Inside</depth>
-				</li>
-				<li>
 					<def>InternalMetalPlate</def>
 					<coverage>0.03</coverage>
 					<depth>Inside</depth>
@@ -1177,7 +1172,7 @@
 					</parts>
 				</li>
 				<li>
-					<def>FrontLeftLeg</def>
+					<def>FrontLeftMechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
 					<groups>
@@ -1185,13 +1180,13 @@
 					</groups>
 					<parts>
 						<li>
-							<def>FrontLeftHoof</def>
-							<coverage>0.1</coverage>
+							<def>FrontLeftMechanicalHoof</def>
+							<coverage>0.2</coverage>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>FrontRightLeg</def>
+					<def>FrontRightMechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
 					<groups>
@@ -1199,30 +1194,30 @@
 					</groups>
 					<parts>
 						<li>
-							<def>FrontRightHoof</def>
-							<coverage>0.1</coverage>
+							<def>FrontRightMechanicalHoof</def>
+							<coverage>0.2</coverage>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>RearLeftLeg</def>
+					<def>RearLeftMechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
 					<parts>
 						<li>
-							<def>RearLeftHoof</def>
-							<coverage>0.1</coverage>
+							<def>RearLeftMechanicalHoof</def>
+							<coverage>0.2</coverage>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>RearRightLeg</def>
+					<def>RearRightMechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
 					<parts>
 						<li>
-							<def>RearRightHoof</def>
-							<coverage>0.1</coverage>
+							<def>RearRightMechanicalHoof</def>
+							<coverage>0.2</coverage>
 						</li>
 					</parts>
 				</li>

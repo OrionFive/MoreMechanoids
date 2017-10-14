@@ -119,6 +119,21 @@
 			<canTargetBuildings>false</canTargetBuildings>
 			<neverTargetDoors>true</neverTargetDoors>
 		</targetParams>
+		<isPrimary>true</isPrimary>
+     </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>0.1</defaultCooldownTime>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+        <meleeDamageDef>Crush</meleeDamageDef>
+        <linkedBodyPartsGroup>WheelsEnclosure</linkedBodyPartsGroup>
+		<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+ 		<targetParams>
+			<canTargetBuildings>false</canTargetBuildings>
+			<neverTargetDoors>true</neverTargetDoors>
+		</targetParams>
+		<isPrimary>false</isPrimary>
+		<commonality>0.1</commonality>
      </li>
     </verbs>
     <race>
@@ -359,7 +374,7 @@
     </butcherProducts>
   </ThingDef>
 
-  <!-- ============================= mammoth ================================= -->
+  <!-- ============================= Mammoth ================================= -->
   
   <ThingDef ParentName="BaseMechanoid">
     <defName>Mechanoid_Mammoth</defName>
@@ -376,7 +391,7 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <defaultCooldownTime>3</defaultCooldownTime>
         <meleeDamageBaseAmount>100</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
+        <meleeDamageDef>Crush</meleeDamageDef>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>

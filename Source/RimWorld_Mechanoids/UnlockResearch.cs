@@ -35,7 +35,7 @@ namespace MoreMechanoids
             {
                 LockRecipe(recipe);
             }
-            Log.Message("All mechanoid recipes locked.");
+            //Log.Message("All mechanoid recipes locked.");
         }
 
         private static void LockRecipe(RecipeDef def)

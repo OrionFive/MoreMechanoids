@@ -25,16 +25,58 @@
       <min>-100</min>
       <max>-100</max>
     </naturalColonyGoodwill>
+	<maxPawnOptionCostFactor>3.0</maxPawnOptionCostFactor>
     <pawnGroupMakers>
       <li>
+		<!-- Light melee -->
         <kindDef>Normal</kindDef>
+        <commonality>100</commonality>
         <options>
             <Crawler>50</Crawler>
-            <Skullywag>40</Skullywag>
+            <Skullywag>10</Skullywag>
+            <Flamebot>10</Flamebot>
+        </options>
+      </li>
+      <li>
+		<!-- Medium melee & ranged -->
+        <kindDef>Normal</kindDef>
+        <commonality>100</commonality>
+        <options>
+            <Crawler>50</Crawler>
+            <Skullywag>10</Skullywag>
+            <Assaulter>10</Assaulter>
+            <Scyther>10</Scyther>
+        </options>
+      </li>
+      <li>
+		<!-- Heavy ranged -->
+        <kindDef>Normal</kindDef>
+        <commonality>80</commonality>
+        <options>
             <Assaulter>100</Assaulter>
-            <Flamebot>40</Flamebot>
-            <Centipede>100</Centipede>
+            <Flamebot>30</Flamebot>
+            <Centipede>70</Centipede>
             <Scyther>100</Scyther>
+            <Mammoth>20</Mammoth>
+        </options>
+      </li>
+      <li>
+		<!-- Medium ranged -->
+        <kindDef>Normal</kindDef>
+        <commonality>70</commonality>
+        <options>
+            <Skullywag>10</Skullywag>
+            <Assaulter>100</Assaulter>
+            <Mammoth>10</Mammoth>
+        </options>
+	  </li>
+      <li>
+		<!-- Heavy mixed -->
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+            <Flamebot>10</Flamebot>
+            <Centipede>100</Centipede>
             <Mammoth>40</Mammoth>
         </options>
       </li>
