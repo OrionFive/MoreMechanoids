@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
@@ -15,6 +16,7 @@ namespace MoreMechanoids
 
         protected override void UpdateEnemyTarget(Pawn pawn)
         {
+            if (pawn == null) return;
             Thing thing = pawn.mindState.enemyTarget;
             if (thing != null)
             {
@@ -35,8 +37,8 @@ namespace MoreMechanoids
                 }
             }
             // Select only flesh stuff
-            Predicate<Thing> validatorPawn = t => t is Pawn && !t.Destroyed && !(t as Pawn).Downed && t.def.race != null && t.def.race.IsFlesh;
-            Predicate<Thing> validatorDoor = t => t is Building_Door && !t.Destroyed && !(t as Building_Door).Open;
+            Predicate<Thing> validatorPawn = t => t is Pawn && !t.Destroyed && !((Pawn) t).Downed && t.def.race != null && t.def.race.IsFlesh;
+            Predicate<Thing> validatorDoor = t => t is Building_Door && !t.Destroyed && !((Building_Door) t).Open;
 
             // Method is internal (duh)
             MethodInfo notifyEngagedTarget = typeof(Pawn_MindState).GetMethod("Notify_EngagedTarget", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -58,15 +60,15 @@ namespace MoreMechanoids
                         lord.Notify_PawnAcquiredTarget(pawn, thing);
                     }
                 }
-                else
+                else // thing == null
                 {
                     //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
                     Building_Door thing2 =
-                        thing.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
+                        pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
                             .Where(b => validatorDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
                             .OrderBy(door => door.Position.DistanceToSquared(pawn.Position))
                             .FirstOrDefault();
-                    if (thing2 != null && thing2 != thing)
+                    if (thing2 != null)
                     {
                         notifyEngagedTarget.Invoke(pawn.mindState, null);
                         //Log.Message("Selected door " + thing2.Label);
