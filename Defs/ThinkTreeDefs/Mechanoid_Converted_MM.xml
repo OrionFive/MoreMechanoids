@@ -20,51 +20,64 @@
 					<treeDef>MentalStateCritical</treeDef>
 				</li>
 
-				<!-- Flee explosions -->
-				<li Class="JobGiver_FleeExplosion" />
-
-				<!-- Self-defense only if not drafted -->
-				<li Class="ThinkNode_ConditionalDrafted">
-					<invert>true</invert>				
-					<subNodes>
-						<li Class="JobGiver_ConfigurableHostilityResponse" />
-					</subNodes>
+				<!-- React to close melee threat -->
+				<li Class="JobGiver_ReactToCloseMeleeThreat" />
+				
+				<!-- Mental state non critical -->
+				<li Class="ThinkNode_Subtree">
+				  <treeDef>MentalStateNonCritical</treeDef>
 				</li>
-
-				<!-- Mind broken - Wander -->
-				<li Class="ThinkNode_ConditionalMentalState">
-					<state>WanderSad</state>
-					<subNodes>
-						<li Class="JobGiver_WanderAnywhere">
-						  <maxDanger>Deadly</maxDanger>
-						</li>
-					</subNodes>
+					
+				<!-- Lord directives (high priority) -->
+				<li Class="ThinkNode_JoinVoluntarilyJoinableLord">
+				  <dutyHook>HighPriority</dutyHook>
+				  <subNodes>
+					<li Class="ThinkNode_Subtree">
+					  <treeDef>LordDuty</treeDef>
+					</li>
+				  </subNodes>
 				</li>
 	
 				<!-- Connected -->
 				<li Class="MoreMechanoids.ThinkNode_ConditionalAIEnabled">
 					<subNodes>
-					
+						<!-- Take direct orders when drafted -->
+						<li Class="ThinkNode_ConditionalColonist">
+						  <subNodes>
+							<li Class="ThinkNode_Tagger">
+							  <tagToGive>DraftedOrder</tagToGive>
+							  <subNodes>
+								<li Class="JobGiver_Orders" />
+							  </subNodes>
+							</li>
+						  </subNodes>
+						</li>
+						
 						<!-- If on colonist team, do forced and emergency work -->
 						<li Class="ThinkNode_ConditionalColonist">
 							<subNodes>
-								<!-- Take direct orders when drafted -->
-								<li Class="JobGiver_Orders" />
+								<!-- Seek allowed area -->
+								<li Class="JobGiver_SeekAllowedArea" />
 
-								<!-- Queue for forced work -->
-								<li Class="JobGiver_JobQueue" />
-
+								<!-- Seek safe temperatures -->
+								<li Class="JobGiver_SeekSafeTemperature" />
+								
+								<!-- Drop unnused inventory -->
+								<li Class="JobGiver_DropUnusedInventory" />
+								
+								<!-- Main colonist behavior core -->
+								<li Class="ThinkNode_ConditionalColonist">
+									<subNodes>
+										<li Class="ThinkNode_Subtree">
+											<treeDef>MainConvertedBehaviorCore</treeDef>
+											<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+										</li>
+									</subNodes>
+								</li>
+								
 								<!-- Do emergency work (supercedes satisfying needs, unless needs are extreme) -->
 								<li Class="JobGiver_Work">
 								  <emergency>true</emergency>
-								</li>
-							</subNodes>
-						</li>
-
-						<li Class="MoreMechanoids.ThinkNode_ConditionalStayHome">
-							<subNodes>
-								<li Class="MoreMechanoids.JobGiver_Standby">
-									<maxDanger>None</maxDanger>
 								</li>
 							</subNodes>
 						</li>

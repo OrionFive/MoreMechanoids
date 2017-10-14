@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThinkTrees>
 
+
+<ThinkTrees>
 
   <ThinkTreeDef>
     <defName>Mechanoid_Skullywag</defName>
     <thinkRoot Class="ThinkNode_Priority">
       <subNodes>
-        
         <li Class="ThinkNode_Subtree">
           <treeDef>Downed</treeDef>
         </li>
@@ -15,15 +15,22 @@
           <treeDef>SquadBrainDuty_Skullywag</treeDef>
         </li>
 
-        <li Class="JobGiver_WanderAnywhere">
-          <maxDanger>Deadly</maxDanger>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Tagger">
+          <tagToGive>Idle</tagToGive>
+          <subNodes>
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>Deadly</maxDanger>
+            </li>
+          </subNodes>
         </li>
           
-        <li Class="JobGiver_IdleError"/>
-        
+        <li Class="JobGiver_IdleError"/>        
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
-
 
 </ThinkTrees>
