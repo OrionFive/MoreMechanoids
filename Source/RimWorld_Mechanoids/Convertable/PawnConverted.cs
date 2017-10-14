@@ -58,8 +58,8 @@ namespace MoreMechanoids
         private static readonly string txtStoryAdultDesc = "BotStoryAdultDesc".Translate();
         private static readonly string txtStoryChildTitle = "BotStoryChildTitle".Translate();
         private static readonly string txtStoryChildDesc = "BotStoryChildDesc".Translate();
-        private static Texture2D texUI_StayHome = ContentFinder<Texture2D>.Get("UI/Commands/PAL/UI_StayHome");
-        private static Texture2D texUI_FullRepair = ContentFinder<Texture2D>.Get("UI/Commands/PAL/UI_FullRepair");
+        private static Texture2D texUI_StayHome = ContentFinder<Texture2D>.Get("UI/Icons/Mechanoid/StayHome");
+        private static Texture2D texUI_FullRepair = ContentFinder<Texture2D>.Get("UI/Icons/Mechanoid/FullRepair");
         // For initialization
         public List<WorkTypeDef> workTypes;
         private int lastCrashTime = -9999;

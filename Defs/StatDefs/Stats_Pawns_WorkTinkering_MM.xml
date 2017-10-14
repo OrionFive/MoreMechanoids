@@ -14,7 +14,7 @@
     </statFactors>
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus">
-        <skill>Research</skill>
+        <skill>Intellectual</skill>
         <baseFactor>0.4</baseFactor>
         <bonusFactor>0.06</bonusFactor>
       </li>

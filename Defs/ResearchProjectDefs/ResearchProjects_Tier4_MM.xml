@@ -32,7 +32,6 @@
 	<baseCost>1500</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
-		<li>MultiAnalyzer</li>
 	</prerequisites>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 	<requiredResearchFacilities>
@@ -55,7 +54,6 @@
 	<baseCost>2000</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
-		<li>MultiAnalyzer</li>
 	</prerequisites>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 	<requiredResearchFacilities>
@@ -78,7 +76,6 @@
 	<baseCost>2000</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
-		<li>MultiAnalyzer</li>
 	</prerequisites>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 	<requiredResearchFacilities>
@@ -101,7 +98,6 @@
 	<baseCost>2000</baseCost>
 	<prerequisites>
 		<li>MechanoidReprogramming</li>
-		<li>MultiAnalyzer</li>
 	</prerequisites>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
 	<requiredResearchFacilities>

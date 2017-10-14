@@ -5,6 +5,7 @@
     <defName>ShortCircuitMechanoid</defName>
     <workerClass>MoreMechanoids.IncidentWorker_ShortCircuitMechanoid</workerClass>
     <baseChance>6</baseChance>
+	<category>Misc</category>
     <minRefireDays>0</minRefireDays>
     <targetType>MapPlayerHome</targetType>
   </IncidentDef>
