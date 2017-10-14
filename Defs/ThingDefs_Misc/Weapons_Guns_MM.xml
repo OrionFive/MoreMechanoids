@@ -30,7 +30,47 @@
       <flyOverhead>false</flyOverhead>
     </projectile>
   </ThingDef>
-
+  
+   <!-- ================= Mechanoid assault charge blaster ================= -->
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeBlasterInternal</defName>
+    <label>internal charge blaster</label>
+    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
+    <graphicData>
+		<texPath>Hidden</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+		<MarketValue>1500</MarketValue>
+		<AccuracyTouch>0.60</AccuracyTouch>
+		<AccuracyShort>0.77</AccuracyShort>
+		<AccuracyMedium>0.59</AccuracyMedium>
+		<AccuracyLong>0.42</AccuracyLong>
+        <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunAssaulter</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>3.3</warmupTime>
+        <range>18</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>18</burstShotCount>
+        <soundCast>ShotChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
   
   <!-- ================= Mechanoid Flamethrower ================= -->
   
@@ -42,15 +82,15 @@
 	  <texPath>Things/Special/Fire/FireA</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
+    <thingClass>MoreMechanoids.Projectile_Ignite</thingClass>
     <projectile>
 	  <flyOverhead>false</flyOverhead>
       <speed>15</speed>
       <damageDef>Flame</damageDef>
       <damageAmountBase>2</damageAmountBase>
-      <explosionRadius>1.1</explosionRadius>
-      <postExplosionSpawnThingDef>FilthFuel</postExplosionSpawnThingDef>
-      <explosionSpawnChance>0.05</explosionSpawnChance>
+      <explosionRadius>1.5</explosionRadius>
+      <!--postExplosionSpawnThingDef>FilthFuel</postExplosionSpawnThingDef-->
+      <explosionSpawnChance>0.1</explosionSpawnChance>
     </projectile>
 	</ThingDef>
 

@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-	<BaseIntermediateOutputPath>C:\Temp\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>C:\Temp\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -60,6 +60,7 @@
     <Compile Include="Convertable\PawnColumnWorker_StayHome.cs" />
     <Compile Include="Convertable\PawnKindDef.cs" />
     <Compile Include="Convertable\LordToil_AgentAttack.cs" />
+    <Compile Include="Convertable\Projectile_Ignite.cs" />
     <Compile Include="Convertable\ThinkNode_ConditionalCrashed.cs" />
     <Compile Include="DamageWorker_AddStaged.cs" />
     <Compile Include="Convertable\IncidentWorker_ShortCircuitMechanoid.cs" />
