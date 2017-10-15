@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/raidCommonality</xpath>
+	  <value>
+		<raidCommonality>42</raidCommonality>
+	  </value>
+	</Operation> 
+	
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/earliestRaidDays</xpath>
+	  <value>
+		<earliestRaidDays>90</earliestRaidDays>
+	  </value>
+	</Operation> 
+		
+	<Operation Class="PatchOperationAdd">
+	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
+	  <value>
+		  <li>
+			<!-- Light melee -->
+			<kindDef>Normal</kindDef>
+			<commonality>120</commonality>
+			<options>
+				<Crawler>50</Crawler>
+				<Skullywag>10</Skullywag>
+				<Flamebot>10</Flamebot>
+			</options>
+		  </li>
+		  <li>
+			<!-- Medium melee & ranged -->
+			<kindDef>Normal</kindDef>
+			<commonality>120</commonality>
+			<options>
+				<Crawler>50</Crawler>
+				<Skullywag>10</Skullywag>
+				<Assaulter>10</Assaulter>
+				<Scyther>10</Scyther>
+			</options>
+		  </li>
+		  <li>
+			<!-- Heavy ranged -->
+			<kindDef>Normal</kindDef>
+			<commonality>80</commonality>
+			<options>
+				<Assaulter>100</Assaulter>
+				<Flamebot>30</Flamebot>
+				<Centipede>70</Centipede>
+				<Scyther>100</Scyther>
+				<Mammoth>20</Mammoth>
+			</options>
+		  </li>
+		  <li>
+			<!-- Medium ranged -->
+			<kindDef>Normal</kindDef>
+			<commonality>70</commonality>
+			<options>
+				<Skullywag>10</Skullywag>
+				<Assaulter>100</Assaulter>
+				<Mammoth>10</Mammoth>
+			</options>
+		  </li>
+		  <li>
+			<!-- Heavy mixed -->
+			<kindDef>Normal</kindDef>
+			<commonality>50</commonality>
+			<options>
+				<Flamebot>10</Flamebot>
+				<Centipede>100</Centipede>
+				<Mammoth>40</Mammoth>
+			</options>
+		  </li>	  
+	  </value>
+	</Operation> 
+</Patch>
