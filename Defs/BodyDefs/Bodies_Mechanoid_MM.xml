@@ -1122,7 +1122,7 @@
 					</groups>
 					<parts>
 						<li>
-							<def>ArtificialBrain</def>
+							<def>CoreProcessor</def>
 							<coverage>0.05</coverage>
 							<depth>Inside</depth>
 							<groups>

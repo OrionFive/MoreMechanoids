@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <!-- ============================= Crawler ================================= -->
 
@@ -341,7 +341,7 @@
     <label>mammoth</label>
     <description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down.</description>
     <statBases>
-      <MoveSpeed>6</MoveSpeed>
+      <MoveSpeed>4</MoveSpeed>
 	  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
       <MeatAmount>0</MeatAmount>
@@ -442,4 +442,4 @@
   </ThingDef>
 
   
-</ThingDefs>
+</Defs>

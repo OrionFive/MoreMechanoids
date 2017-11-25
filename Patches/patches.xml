@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationReplace">
-	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/raidCommonality</xpath>
+	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/raidCommonalityFromPointsCurve</xpath>
 	  <value>
-		<raidCommonality>42</raidCommonality>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<!--unchanged, left for tweaking-->
+				<li>(1000, 0.4)</li>
+				<li>(2500, 1)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
 	  </value>
 	</Operation> 
 	

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 
-<ThinkTrees>
+<Defs>
 
   <ThinkTreeDef>
     <defName>Mechanoid_Skullywag</defName>
@@ -33,4 +33,4 @@
     </thinkRoot>
   </ThinkTreeDef>
 
-</ThinkTrees>
+</Defs>

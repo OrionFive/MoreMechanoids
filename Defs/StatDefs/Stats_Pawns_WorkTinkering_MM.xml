@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<StatDefs>
+<Defs>
 
 
   <StatDef>
@@ -15,13 +15,13 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus">
         <skill>Intellectual</skill>
-        <baseFactor>0.4</baseFactor>
-        <bonusFactor>0.06</bonusFactor>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
       </li>
       <li Class="SkillNeed_BaseBonus">
         <skill>Crafting</skill>
-        <baseFactor>0.4</baseFactor>
-        <bonusFactor>0.06</bonusFactor>
+        <baseValue>0.4</baseValue>
+        <bonusPerLevel>0.06</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -41,4 +41,4 @@
   </StatDef>
 
 
-</StatDefs>
+</Defs>

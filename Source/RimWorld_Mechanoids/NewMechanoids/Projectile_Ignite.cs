@@ -16,8 +16,7 @@ namespace MoreMechanoids
         {
             Map map = Map;
             Destroy();
-            //ThingDef spawnThingDef = def.projectile.preExplosionSpawnThingDef;
-            float ignitionChance = def.projectile.explosionSpawnChance;
+            float ignitionChance = def.projectile.explosionChanceToStartFire;
             var radius = def.projectile.explosionRadius;
             var cellsToAffect = SimplePool<List<IntVec3>>.Get();
             cellsToAffect.Clear();

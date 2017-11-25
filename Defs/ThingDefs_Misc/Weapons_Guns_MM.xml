@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
   
   <ThingDef Name="FlameThrowerBullet" Abstract="True">
 		<category>Projectile</category>
@@ -59,7 +59,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
+        <defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
         <forcedMissRadius>1.9</forcedMissRadius>
         <warmupTime>3.3</warmupTime>
         <range>18</range>
@@ -89,8 +89,8 @@
       <damageDef>Flame</damageDef>
       <damageAmountBase>2</damageAmountBase>
       <explosionRadius>1.5</explosionRadius>
-      <!--postExplosionSpawnThingDef>FilthFuel</postExplosionSpawnThingDef-->
-      <explosionSpawnChance>0.1</explosionSpawnChance>
+      <explosionChanceToStartFire>0.1</explosionChanceToStartFire>
+	  <ai_IsIncendiary>true</ai_IsIncendiary>
     </projectile>
 	</ThingDef>
 
@@ -122,11 +122,10 @@
 		  <li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<projectileDef>Bullet_FlameThrower</projectileDef>
+			<defaultProjectile>Bullet_FlameThrower</defaultProjectile>
 			<targetParams>
 			  <canTargetLocations>true</canTargetLocations>
 			</targetParams>
-			<ai_IsIncendiary>true</ai_IsIncendiary>
 			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 			<warmupTime>3.3</warmupTime>
 			<burstShotCount>20</burstShotCount>
@@ -190,10 +189,10 @@
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
-        <projectileDef>BoomBoom</projectileDef>
+        <defaultProjectile>BoomBoom</defaultProjectile>
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
   </ThingDef>
 
-</ThingDefs>
+</Defs>
