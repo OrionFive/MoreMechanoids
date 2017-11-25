@@ -16,6 +16,12 @@ namespace MoreMechanoids
             //Log.Message("Trying open door on "+currentTarget.Thing);
             Building_Door door = this.currentTarget.Thing as Building_Door;
             if(door==null) return false;
+            if (door.Open)
+            {
+                this.CasterPawn.jobs.StopAll();
+                return true;
+            }
+
             if (this.CasterPawn.stances.FullBodyBusy)
             {
                 return false;
@@ -24,18 +30,10 @@ namespace MoreMechanoids
             {
                 Log.Warning(string.Concat(new object[] { this.CasterPawn, " unlocked ", door, " from out of position."}));
             }
-            door.GetType().GetMethod("DoorOpen",BindingFlags.NonPublic|BindingFlags.Instance).Invoke(door, new object[] {60});
-            door.StartManualOpenBy(this.CasterPawn);
-            door.GetType().GetField("holdOpenInt",BindingFlags.NonPublic|BindingFlags.Instance).SetValue(door, true);
+
+            door.GetType().GetMethod("DoorOpen", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(door, new object[] { 60 });
+            door.GetType().GetField("holdOpenInt", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(door, true);
                 
-            // Block door, tehehe
-            //if (door.Position.GetThingList().All(t => t.def.category != ThingCategory.Item))
-            //{
-            //    GenSpawn.Spawn(ThingDefOf.ChunkSlagSteel, door.Position);
-            //}
-
-            //Log.Message(casterPawn + " set " + door + " to " + casterPawn.Faction);
-
             unlockDoorSound.PlayOneShot(SoundInfo.InMap(this.CasterPawn));
             this.CasterPawn.Drawer.Notify_MeleeAttackOn(door);
             Vector3 loc = door.Position.ToVector3ShiftedWithAltitude(1);
