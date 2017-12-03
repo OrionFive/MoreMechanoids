@@ -6,7 +6,7 @@
   <ThingDef Name="MechanoidCrawler" ParentName="BaseMechanoid">
     <defName>Mechanoid_Crawler</defName>
     <label>crawler</label>
-    <description>Small spider-like robots. While not particularly sturdy, their speed, size and numbers more than make up for it. A tiny plasma cutter at their front allows them to cut through metal like butter. Their favorite passtime is open surgery.</description>
+    <description>Small bug-like robots. While not particularly sturdy, their speed, size and numbers more than make up for it. A tiny plasma cutter at their front allows them to cut through metal like butter. Their favorite passtime is open surgery.</description>
 	<stackLimit>5</stackLimit>
     <statBases>
       <MoveSpeed>7.0</MoveSpeed>
@@ -45,7 +45,7 @@
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalCrawler</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHealthScale>0.5</baseHealthScale>
+      <baseHealthScale>0.35</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -131,7 +131,7 @@
       <thinkTreeMain>Mechanoid_Skullywag</thinkTreeMain>
       <body>MechanicalSkullywag</body>
       <baseBodySize>1.0</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseHealthScale>0.7</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -185,7 +185,7 @@
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalCentipede</body>
       <baseBodySize>2.0</baseBodySize>
-      <baseHealthScale>1.2</baseHealthScale>
+      <baseHealthScale>1.5</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -249,7 +249,7 @@
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>Scyther</body>
       <baseBodySize>1.0</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseHealthScale>0.7</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -306,7 +306,7 @@
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalFlamebot</body>
       <baseBodySize>0.2</baseBodySize>
-      <baseHealthScale>0.5</baseHealthScale>
+      <baseHealthScale>0.4</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -360,7 +360,7 @@
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalMammoth</body>
       <baseBodySize>3.0</baseBodySize>
-      <baseHealthScale>2.5</baseHealthScale>
+      <baseHealthScale>1.9</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -413,7 +413,7 @@
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalAssaulter</body>
       <baseBodySize>1.25</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseHealthScale>0.9</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>

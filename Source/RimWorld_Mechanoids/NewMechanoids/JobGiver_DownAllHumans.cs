@@ -56,15 +56,15 @@ namespace MoreMechanoids
                 if (thing == null)
                 {
                     //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
-                    Building_Door thing2 =
+                    Building_Door d =
                         pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
                             .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
-                            .OrderBy(door => door.Position.DistanceToSquared(pawn.Position))
+                            .OrderBy(t => t.Position.DistanceToSquared(pawn.Position))
                             .FirstOrDefault();
-                    if (thing2 != null)
+                    if (d != null)
                     {
                         //Log.Message("Selected door " + thing2.Label);
-                        thing = thing2;
+                        thing = d;
                     }
                 }
                 if (thing != null && thing != pawn.mindState.enemyTarget)
