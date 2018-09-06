@@ -2,10 +2,10 @@
 <!--suppress ALL -->
 <LanguageData>
   
-	<MechanoidChip.label>mechanoid AI chip</MechanoidChip.label>
-	<MechanoidChip.description>An AI chip for repurposing dead mechanoids.</MechanoidChip.description>
+	<MechanoidChip.label>puce IA mécanoïde</MechanoidChip.label>
+	<MechanoidChip.description>Une puce d'IA pour la réutilisation des méchanoïdes morts.</MechanoidChip.description>
   
-	<UnfinishedMechanoidChip.label>unfinished mechanoid AI chip</UnfinishedMechanoidChip.label>
-	<UnfinishedMechanoidChip.description>An unfinished AI chip for repurposing dead mechanoids.</UnfinishedMechanoidChip.description>
+	<UnfinishedMechanoidChip.label>puce IA mécanoïde non finie</UnfinishedMechanoidChip.label>
+	<UnfinishedMechanoidChip.description>Une puce IA inachevée pour la réutilisation des méchanoïdes morts.</UnfinishedMechanoidChip.description>
 	
 </LanguageData>
