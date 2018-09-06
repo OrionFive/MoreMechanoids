@@ -2,7 +2,7 @@
 <!--suppress ALL -->
 <LanguageData>
 	
-	<TinkerSpeed.label>tinkering speed</TinkerSpeed.label>
-	<TinkerSpeed.description>Speed at which this person works on mechanical devices.</TinkerSpeed.description>
+	<TinkerSpeed.label>vitesse de bricolage</TinkerSpeed.label>
+	<TinkerSpeed.description>Vitesse à laquelle cette personne travaille sur des dispositifs mécaniques.</TinkerSpeed.description>
 
 </LanguageData>
