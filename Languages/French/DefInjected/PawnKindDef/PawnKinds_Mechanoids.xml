@@ -2,16 +2,16 @@
 <!--suppress ALL -->
 <LanguageData>
 	
-	<Crawler.label>crawler</Crawler.label>
-	<CrawlerConverted.label>crawler</CrawlerConverted.label>
+	<Crawler.label>chenille</Crawler.label>
+	<CrawlerConverted.label>chenille</CrawlerConverted.label>
 
-	<Skullywag.label>skullywag</Skullywag.label>
-	<SkullywagConverted.label>skullywag</SkullywagConverted.label>
+	<Skullywag.label>tête de mort</Skullywag.label>
+	<SkullywagConverted.label>tête de mort</SkullywagConverted.label>
 
-	<ScytherConverted.label>scyther</ScytherConverted.label>
+	<ScytherConverted.label>faux</ScytherConverted.label>
 
-	<Flamebot.label>flamebot</Flamebot.label>
+	<Flamebot.label>chalumeau</Flamebot.label>
 	
-	<Doomsday_Centipede.label>doomsday centipede</Doomsday_Centipede.label>
+	<Doomsday_Centipede.label>mille-pattes apocalyptique</Doomsday_Centipede.label>
 	
 </LanguageData>
