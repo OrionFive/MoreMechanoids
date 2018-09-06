@@ -2,10 +2,10 @@
 <!--suppress ALL -->
 <LanguageData>
 	
-	<DoBillsTinker.verb>tinker</DoBillsTinker.verb>
-	<DoBillsTinker.gerund>tinkering at</DoBillsTinker.gerund>
+	<DoBillsTinker.verb>bricoler</DoBillsTinker.verb>
+	<DoBillsTinker.gerund>rafistolage</DoBillsTinker.gerund>
 	
-	<FinishUnfinishedTinkering.verb>tinker</FinishUnfinishedTinkering.verb>
-	<FinishUnfinishedTinkering.gerund>tinkering at</FinishUnfinishedTinkering.gerund>
+	<FinishUnfinishedTinkering.verb>bricoler</FinishUnfinishedTinkering.verb>
+	<FinishUnfinishedTinkering.gerund>rafistolage</FinishUnfinishedTinkering.gerund>
 
 </LanguageData>
