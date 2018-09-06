@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	<MM_CreateMechanoidChip.label>Make mechanoid AI chip</MM_CreateMechanoidChip.label>
+	<MM_CreateMechanoidChip.description>Crafts an AI chip for repurposing dead mechanoids. Needs silver for highest quality circuitry.</MM_CreateMechanoidChip.description>
+	<MM_CreateMechanoidChip.jobString>Crafting chip.</MM_CreateMechanoidChip.jobString>
+
+	<MM_ChipCrawlerCleaning.label>Chip crawler for cleaning</MM_ChipCrawlerCleaning.label>
+	<MM_ChipCrawlerCleaning.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipCrawlerCleaning.description>
+	<MM_ChipCrawlerCleaning.jobString>Restoring mechanoid.</MM_ChipCrawlerCleaning.jobString>
+
+	<MM_ChipCrawlerHauling.label>Chip crawler for hauling</MM_ChipCrawlerHauling.label>
+	<MM_ChipCrawlerHauling.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipCrawlerHauling.description>
+	<MM_ChipCrawlerHauling.jobString>Restoring mechanoid.</MM_ChipCrawlerHauling.jobString>
+
+	<!--MM_ChipCrawlerCutting.label>Chip crawler for cutting</MM_ChipCrawlerCutting.label>
+	<MM_ChipCrawlerCutting.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipCrawlerCutting.description>
+	<MM_ChipCrawlerCutting.jobString>Restoring mechanoid.</MM_ChipCrawlerCutting.jobString-->
+
+	<MM_ChipSkullywagCooking.label>Chip skullywag for cooking</MM_ChipSkullywagCooking.label>
+	<MM_ChipSkullywagCooking.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipSkullywagCooking.description>
+	<MM_ChipSkullywagCooking.jobString>Restoring mechanoid.</MM_ChipSkullywagCooking.jobString>
+
+	<MM_ChipSkullywagDoctor.label>Chip skullywag for healing</MM_ChipSkullywagDoctor.label>
+	<MM_ChipSkullywagDoctor.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipSkullywagDoctor.description>
+	<MM_ChipSkullywagDoctor.jobString>Restoring mechanoid.</MM_ChipSkullywagDoctor.jobString>
+
+	<MM_ChipScytherTailoring.label>Chip scyther for tailoring</MM_ChipScytherTailoring.label>
+	<MM_ChipScytherTailoring.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipScytherTailoring.description>
+	<MM_ChipScytherTailoring.jobString>Restoring mechanoid.</MM_ChipScytherTailoring.jobString>
+
+	<MM_ChipScytherCutting.label>Chip scyther for cutting</MM_ChipScytherCutting.label>
+	<MM_ChipScytherCutting.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipScytherCutting.description>
+	<MM_ChipScytherCutting.jobString>Restoring mechanoid.</MM_ChipScytherCutting.jobString>
+
+	<MM_ChipCentipedeMining.label>Chip centipede for mining</MM_ChipCentipedeMining.label>
+	<MM_ChipCentipedeMining.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipCentipedeMining.description>
+	<MM_ChipCentipedeMining.jobString>Restoring mechanoid.</MM_ChipCentipedeMining.jobString>
+
+	<MM_ChipCentipedeGrowing.label>Chip centipede for growing</MM_ChipCentipedeGrowing.label>
+	<MM_ChipCentipedeGrowing.description>Restores a destroyed mechanoid with a new AI chip. This allows it to perform a singular function.</MM_ChipCentipedeGrowing.description>
+	<MM_ChipCentipedeGrowing.jobString>Restoring mechanoid.</MM_ChipCentipedeGrowing.jobString>
+
+</LanguageData>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Crawler.label>crawler</Crawler.label>
+	<CrawlerConverted.label>crawler</CrawlerConverted.label>
+
+	<Skullywag.label>skullywag</Skullywag.label>
+	<SkullywagConverted.label>skullywag</SkullywagConverted.label>
+
+	<ScytherConverted.label>scyther</ScytherConverted.label>
+
+	<Flamebot.label>flamebot</Flamebot.label>
+	
+	<Doomsday_Centipede.label>doomsday centipede</Doomsday_Centipede.label>
+	
+</LanguageData>

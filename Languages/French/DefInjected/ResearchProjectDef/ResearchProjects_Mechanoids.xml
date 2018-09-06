@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<MechanoidReprogramming.label>mechanoid reprogramming</MechanoidReprogramming.label>
+	<MechanoidReprogramming.description>Learn to craft AI chips at the machining table that allow you to repurpose destroyed mechanoids. Actual reprogramming will require further research.</MechanoidReprogramming.description>
+	<MechanoidReprogramming.descriptionDiscovered>You can now create AI chips at the machining table. Perform further research to discover how to use it on different mechanoid types.</MechanoidReprogramming.descriptionDiscovered>
+	
+	<MechanoidController.label>mechanoid control computer</MechanoidController.label>
+	<MechanoidController.description>Learn to build a control computer that performs the thinking for your mechanoids for improved performance and more control.</MechanoidController.description>
+	<MechanoidController.descriptionDiscovered>You have discovered how to build PAL, the benevolent self-learning computing unit. It allows you to keep your mechanoids at your base if required and lets them operate at much faster speeds with less down time.</MechanoidController.descriptionDiscovered>
+
+	<ReprogramCrawler.label>reprogram crawler</ReprogramCrawler.label>
+	<ReprogramCrawler.description>Figure out ways to reuse the crawler mechanoid.</ReprogramCrawler.description>
+	<ReprogramCrawler.descriptionDiscovered>You can now repurpose crawlers at the machining table. It requires crafting AI chips.</ReprogramCrawler.descriptionDiscovered>
+
+	<ReprogramSkullywag.label>reprogram skullywag</ReprogramSkullywag.label>
+	<ReprogramSkullywag.description>Figure out ways to reuse the skullywag mechanoid.</ReprogramSkullywag.description>
+	<ReprogramSkullywag.descriptionDiscovered>You can now repurpose skullywags at the machining table. It requires crafting AI chips.</ReprogramSkullywag.descriptionDiscovered>
+
+	<ReprogramScyther.label>reprogram scyther</ReprogramScyther.label>
+	<ReprogramScyther.description>Figure out ways to reuse the scyther mechanoid.</ReprogramScyther.description>
+	<ReprogramScyther.descriptionDiscovered>You can now repurpose scythers at the machining table. It requires crafting AI chips.</ReprogramScyther.descriptionDiscovered>
+
+	<ReprogramCentipede.label>reprogram centipede</ReprogramCentipede.label>
+	<ReprogramCentipede.description>Figure out ways to reuse the centipede mechanoid.</ReprogramCentipede.description>
+	<ReprogramCentipede.descriptionDiscovered>You can now repurpose centipede at the machining table. It requires crafting AI chips.</ReprogramCentipede.descriptionDiscovered>
+
+</LanguageData>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<RestMechanoidSmall.description>Allows converted Mechanoids to sleep safe and sound. And not wear out so fast.</RestMechanoidSmall.description>
+	<RestMechanoidSmall.label>small mechanoid charge panel</RestMechanoidSmall.label>
+  
+	<RestMechanoidLarge.description>Allows converted Mechanoids to sleep safe and sound. And not wear out so fast.</RestMechanoidLarge.description>
+	<RestMechanoidLarge.label>large mechanoid charge panel</RestMechanoidLarge.label>
+  
+</LanguageData>

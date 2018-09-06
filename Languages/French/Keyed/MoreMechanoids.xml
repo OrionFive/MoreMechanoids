@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Buildings -->
+  <InnerTemperature>Température interne {0}/{1}</InnerTemperature>
+  <NoPower>Le bâtiment n'a aucune énergie</NoPower>
+  <CurrentLevel>Niveau actuel: {0}</CurrentLevel>
+  <LevelRequired>Requis pour le prochain niveau: </LevelRequired>
+  <MechanoidsControlled>Mechanoids controllés: {0}/{1}</MechanoidsControlled>
+  <MechanoidsOwned>Mechanoids possédés: {0}</MechanoidsOwned>
+  <KeepInside>Arrêter de travailler et rester à l'intérieur</KeepInside>
+  <FullRepair>Faites réparer ce mechanoid entièrement.</FullRepair>
+  <NotConnected>Non connecté au PAL</NotConnected>
+  <NoBots>Aucun mechanoid sous contrôle</NoBots>
+  <LabelOffline>Hors-ligne</LabelOffline>
+  <PlaceOnLink>Doit être placé sur un lien du PAL</PlaceOnLink>
+  
+  <!-- Needs -->
+  <BotTooltipFood>Les mechanoids ne requièrent pas de nourriture</BotTooltipFood>
+  <BotTooltipRest>Les mechanoids peuvent calculer leurs actions indépendamment d'un contrôleur. Malheureusement ceci augmente la température sur leur puce. Une puce qui surchauffe peut causer des défaillances.</BotTooltipRest>
+  <BotLabelRest>Refroidissement de puce</BotLabelRest>
+  
+  <!-- Story -->
+  <BotStoryAdultTitle>Mechanoid capturé</BotStoryAdultTitle>
+  <BotStoryAdultShort>Capturé</BotStoryAdultShort>
+  <BotStoryAdultDesc>Ce mechanoid a été capturé et reprogrammé.</BotStoryAdultDesc>
+  <BotStoryChildTitle>Inconnu</BotStoryChildTitle>
+  <BotStoryChildDesc>Aucune capture antérieure de l'information n'est connue.</BotStoryChildDesc>
+  
+  <!-- Misc -->
+  <BotShortCircuit>Le mechanoid {0} a eu un court-circuit.</BotShortCircuit>
+  <BotShortCircuitLabel>Court-circuit</BotShortCircuitLabel>
+  <BotStandingBy>En veille.</BotStandingBy>
+  <BotRebooting>Redémarrage ({0}).</BotRebooting>
+  
+  <!-- Overview -->
+  <StayHomeCheck>Rester à la maison</StayHomeCheck>
+  <FullRepairCheck>Entièrement réparé</FullRepairCheck>
+  <WorkTypeHeading>Travail</WorkTypeHeading>
+  
+</LanguageData>
