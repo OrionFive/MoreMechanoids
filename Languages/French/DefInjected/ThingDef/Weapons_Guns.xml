@@ -2,14 +2,14 @@
 <!--suppress ALL -->
 <LanguageData>
   
-	<Bullet_FlameThrower.label>flame</Bullet_FlameThrower.label>
+	<Bullet_FlameThrower.label>flamme</Bullet_FlameThrower.label>
 
-	<MechanoidFlameThrower.label>flamethrower</MechanoidFlameThrower.label>
-	<MechanoidFlameThrower.description>a built in flamethrower.</MechanoidFlameThrower.description>
+	<MechanoidFlameThrower.label>lance-flammes</MechanoidFlameThrower.label>
+	<MechanoidFlameThrower.description>un lance-flammes intégré.</MechanoidFlameThrower.description>
 
 	<BoomBoom.label>boom boom</BoomBoom.label>
   
 	<MechanoidBoom.label>boom</MechanoidBoom.label>
-	<MechanoidBoom.description>this part goes BOOM!</MechanoidBoom.description>
+	<MechanoidBoom.description>cette partie fait BOOM !</MechanoidBoom.description>
 	
 </LanguageData>
