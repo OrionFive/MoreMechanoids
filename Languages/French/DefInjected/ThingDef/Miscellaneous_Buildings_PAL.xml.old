@@ -2,27 +2,27 @@
 <!--suppress ALL -->
 <LanguageData>
   
-	<PAL_Link.label>PAL link</PAL_Link.label>
-	<PAL_Link.description>Connects PAL to various subparts required for its operation.</PAL_Link.description>
+	<PAL_Link.label>lien PAL</PAL_Link.label>
+	<PAL_Link.description>Relie le PAL aux différentes sous-parties nécessaires à son fonctionnement.</PAL_Link.description>
   
-	<PAL_Core.label>PAL core</PAL_Core.label>
-	<PAL_Core.description>PAL (Personality driven ALgorithmic computer) is a sentient computer (or artificial intelligence) that controls the mechanoids of the colony and interacts with the colony's crew.
-		Must be placed on a link.</PAL_Core.description>
+	<PAL_Core.label>noyau PAL</PAL_Core.label>
+	<PAL_Core.description>PAL (Personality driven ALgorithmic computer) est un ordinateur sensible (ou intelligence artificielle) qui contrôle les méchanoïdes de la colonie et interagit avec son équipage.
+		Doit être placé sur un lien.</PAL_Core.description>
   
-	<PAL_Memory.label>PAL memory</PAL_Memory.label>
-	<PAL_Memory.description>A memory component for PAL. Required to upgrade PAL to higher levels.
-		Must be placed on a link.</PAL_Memory.description>
+	<PAL_Memory.label>mémoire PAL</PAL_Memory.label>
+	<PAL_Memory.description>Un composant mémoire pour PAL. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_Memory.description>
   
-	<PAL_PowerUnit.label>PAL power unit</PAL_PowerUnit.label>
-	<PAL_PowerUnit.description>A component for PAL required to handle higher amounts of energy. Required to upgrade PAL to higher levels.
-		Must be placed on a link.</PAL_PowerUnit.description>
+	<PAL_PowerUnit.label>Unité de puissance PAL</PAL_PowerUnit.label>
+	<PAL_PowerUnit.description>Un composant pour PAL nécessaire pour traiter des quantités d'énergie plus élevées. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_PowerUnit.description>
   
-	<PAL_Sensor.label>PAL sensor</PAL_Sensor.label>
-	<PAL_Sensor.description>A sensor component for PAL required to process environment data and connect to mechanoids. Required to upgrade PAL to higher levels.
-		Must be placed on a link.</PAL_Sensor.description>
+	<PAL_Sensor.label>capteur PAL</PAL_Sensor.label>
+	<PAL_Sensor.description>Un composant capteur pour PAL nécessaire au traitement des données d'environnement et à la connexion aux méchanoïdes. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_Sensor.description>
   
-	<PAL_Cooler.label>PAL cooler</PAL_Cooler.label>
-	<PAL_Cooler.description>This PAL component cools adjacent components and disperses the heat into the room. Required to upgrade PAL to higher levels.
-		Must be placed on a link.</PAL_Cooler.description>
+	<PAL_Cooler.label>refroidisseur PAL</PAL_Cooler.label>
+	<PAL_Cooler.description>Ce composant PAL refroidit les composants adjacents et disperse la chaleur dans la pièce. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_Cooler.description>
 	
 </LanguageData>
