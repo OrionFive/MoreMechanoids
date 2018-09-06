@@ -2,10 +2,10 @@
 <!--suppress ALL -->
 <LanguageData>
   
-	<RestMechanoidSmall.description>Allows converted Mechanoids to sleep safe and sound. And not wear out so fast.</RestMechanoidSmall.description>
-	<RestMechanoidSmall.label>small mechanoid charge panel</RestMechanoidSmall.label>
+	<RestMechanoidSmall.description>Permet aux mécanoïdes convertis de dormir sains et saufs. Et ne pas s'user si vite.</RestMechanoidSmall.description>
+	<RestMechanoidSmall.label>petit panneau de charge mécanoïde</RestMechanoidSmall.label>
   
-	<RestMechanoidLarge.description>Allows converted Mechanoids to sleep safe and sound. And not wear out so fast.</RestMechanoidLarge.description>
-	<RestMechanoidLarge.label>large mechanoid charge panel</RestMechanoidLarge.label>
+	<RestMechanoidLarge.description>Permet aux mécanoïdes convertis de dormir sains et saufs. Et ne pas s'user si vite.</RestMechanoidLarge.description>
+	<RestMechanoidLarge.label>grand panneau de charge mécanoïde</RestMechanoidLarge.label>
   
 </LanguageData>
