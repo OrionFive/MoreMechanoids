@@ -17,7 +17,7 @@
 	
 	<!-- Skullywag -->
 	<FrontParalyzeComponent.label>composant paralytique</FrontParalyzeComponent.label>
-	<WheelsEnclosure.label>Clôture de roue</WheelsEnclosure.label>
+	<WheelsEnclosure.label>enjoliveur de roues</WheelsEnclosure.label>
 	<LeftWheel.label>roue gauche</LeftWheel.label>
 	<RightWheel.label>roue droite</RightWheel.label>
 	<BackWheel.label>roue arrière</BackWheel.label>
