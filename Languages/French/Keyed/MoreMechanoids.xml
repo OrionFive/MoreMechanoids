@@ -6,29 +6,29 @@
   <NoPower>Le bâtiment n'a aucune énergie</NoPower>
   <CurrentLevel>Niveau actuel: {0}</CurrentLevel>
   <LevelRequired>Requis pour le prochain niveau: </LevelRequired>
-  <MechanoidsControlled>Mechanoids controllés: {0}/{1}</MechanoidsControlled>
-  <MechanoidsOwned>Mechanoids possédés: {0}</MechanoidsOwned>
+  <MechanoidsControlled>Méchanoïdes controllés: {0}/{1}</MechanoidsControlled>
+  <MechanoidsOwned>Méchanoïdes possédés: {0}</MechanoidsOwned>
   <KeepInside>Arrêter de travailler et rester à l'intérieur</KeepInside>
-  <FullRepair>Faites réparer ce mechanoid entièrement.</FullRepair>
+  <FullRepair>Faites réparer ce méchanoïde entièrement.</FullRepair>
   <NotConnected>Non connecté au PAL</NotConnected>
-  <NoBots>Aucun mechanoid sous contrôle</NoBots>
+  <NoBots>Aucun méchanoïde sous contrôle</NoBots>
   <LabelOffline>Hors-ligne</LabelOffline>
   <PlaceOnLink>Doit être placé sur un lien du PAL</PlaceOnLink>
   
   <!-- Needs -->
-  <BotTooltipFood>Les mechanoids ne requièrent pas de nourriture</BotTooltipFood>
-  <BotTooltipRest>Les mechanoids peuvent calculer leurs actions indépendamment d'un contrôleur. Malheureusement ceci augmente la température sur leur puce. Une puce qui surchauffe peut causer des défaillances.</BotTooltipRest>
+  <BotTooltipFood>Les méchanoïdes ne requièrent pas de nourriture</BotTooltipFood>
+  <BotTooltipRest>Les méchanoïdes peuvent calculer leurs actions indépendamment d'un contrôleur. Malheureusement ceci augmente la température sur leur puce. Une puce qui surchauffe peut causer des défaillances.</BotTooltipRest>
   <BotLabelRest>Refroidissement de puce</BotLabelRest>
   
   <!-- Story -->
-  <BotStoryAdultTitle>Mechanoid capturé</BotStoryAdultTitle>
+  <BotStoryAdultTitle>Méchanoïde capturé</BotStoryAdultTitle>
   <BotStoryAdultShort>Capturé</BotStoryAdultShort>
-  <BotStoryAdultDesc>Ce mechanoid a été capturé et reprogrammé.</BotStoryAdultDesc>
+  <BotStoryAdultDesc>Ce méchanoïde a été capturé et reprogrammé.</BotStoryAdultDesc>
   <BotStoryChildTitle>Inconnu</BotStoryChildTitle>
   <BotStoryChildDesc>Aucune capture antérieure de l'information n'est connue.</BotStoryChildDesc>
   
   <!-- Misc -->
-  <BotShortCircuit>Le mechanoid {0} a eu un court-circuit.</BotShortCircuit>
+  <BotShortCircuit>Le méchanoïde {0} a eu un court-circuit.</BotShortCircuit>
   <BotShortCircuitLabel>Court-circuit</BotShortCircuitLabel>
   <BotStandingBy>En veille.</BotStandingBy>
   <BotRebooting>Redémarrage ({0}).</BotRebooting>
