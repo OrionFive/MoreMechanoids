@@ -6,7 +6,7 @@
 	<FrontLeftMechanicalLeg.label>jambe gauche avant</FrontLeftMechanicalLeg.label>
 	<FrontRightMechanicalLeg.label>jambe droite avant</FrontRightMechanicalLeg.label>
 	<FrontParalyzeComponent.label>composant paralytique</FrontParalyzeComponent.label>
-	<WheelsEnclosure.label>Clôture de roue</WheelsEnclosure.label>
+	<WheelsEnclosure.label>enjoliveur de roues</WheelsEnclosure.label>
 	<MechanicalCoreSkullywag.label>coeur</MechanicalCoreSkullywag.label>
 	<MechanicalCoreScoutbot.label>coeur</MechanicalCoreScoutbot.label>
 	<CoveredByShield.label>bouclier</CoveredByShield.label>
