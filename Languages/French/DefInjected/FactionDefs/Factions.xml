@@ -2,10 +2,10 @@
 <!--suppress ALL -->
 <LanguageData>
 	
-	<Mechanoid.label>ruche de mechanoid</Mechanoid.label>
+	<Mechanoid.label>ruche de mécanoïde</Mechanoid.label>
 	<Mechanoid.description>une ruche d'ancienne machine auto-reproductrice.</Mechanoid.description>
-	<Mechanoid.pawnsPlural>mechanoids</Mechanoid.pawnsPlural>
-	<Mechanoid.fixedName>une ruche de mechanoid</Mechanoid.fixedName>
+	<Mechanoid.pawnsPlural>mécanoïdes</Mechanoid.pawnsPlural>
+	<Mechanoid.fixedName>une ruche de mécanoïde</Mechanoid.fixedName>
 	<Mechanoid.leaderTitle>contrôleur</Mechanoid.leaderTitle>
 
 </LanguageData>
