@@ -13,69 +13,81 @@
 	  </value>
 	</Operation> 
 	
-	<Operation Class="PatchOperationReplace">
+	<!--Operation Class="PatchOperationReplace">
 	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/earliestRaidDays</xpath>
 	  <value>
 		<earliestRaidDays>90</earliestRaidDays>
 	  </value>
-	</Operation> 
+	</Operation--> 
 		
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationReplace">
 	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
 	  <value>
+		<pawnGroupMakers>
+		  <li>
+			<!-- Classic -->
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<options>
+			  <Mech_Centipede>10</Mech_Centipede>
+			  <Mech_Lancer>10</Mech_Lancer>
+			  <Mech_Scyther>10</Mech_Scyther>
+			</options>
+		  </li>
 		  <li>
 			<!-- Light melee -->
-			<kindDef>Normal</kindDef>
+			<kindDef>Combat</kindDef>
 			<commonality>120</commonality>
 			<options>
-				<Crawler>50</Crawler>
-				<Skullywag>10</Skullywag>
-				<Flamebot>10</Flamebot>
+				<Mech_Crawler>50</Mech_Crawler>
+				<Mech_Skullywag>10</Mech_Skullywag>
+				<Mech_Flamebot>10</Mech_Flamebot>
 			</options>
 		  </li>
 		  <li>
 			<!-- Medium melee & ranged -->
-			<kindDef>Normal</kindDef>
+			<kindDef>Combat</kindDef>
 			<commonality>120</commonality>
 			<options>
-				<Crawler>50</Crawler>
-				<Skullywag>10</Skullywag>
-				<Assaulter>10</Assaulter>
-				<Scyther>10</Scyther>
+				<Mech_Crawler>50</Mech_Crawler>
+				<Mech_Skullywag>10</Mech_Skullywag>
+				<Mech_Assaulter>10</Mech_Assaulter>
+				<Mech_Lancer>10</Mech_Lancer>
 			</options>
 		  </li>
 		  <li>
 			<!-- Heavy ranged -->
-			<kindDef>Normal</kindDef>
+			<kindDef>Combat</kindDef>
 			<commonality>80</commonality>
 			<options>
-				<Assaulter>100</Assaulter>
-				<Flamebot>30</Flamebot>
-				<Centipede>70</Centipede>
-				<Scyther>100</Scyther>
-				<Mammoth>20</Mammoth>
+				<Mech_Assaulter>100</Mech_Assaulter>
+				<Mech_Flamebot>30</Mech_Flamebot>
+				<Mech_Centipede>70</Mech_Centipede>
+				<Mech_Scyther>100</Mech_Scyther>
+				<Mech_Mammoth>20</Mech_Mammoth>
 			</options>
 		  </li>
 		  <li>
 			<!-- Medium ranged -->
-			<kindDef>Normal</kindDef>
+			<kindDef>Combat</kindDef>
 			<commonality>70</commonality>
 			<options>
-				<Skullywag>10</Skullywag>
-				<Assaulter>100</Assaulter>
-				<Mammoth>10</Mammoth>
+				<Mech_Skullywag>10</Mech_Skullywag>
+				<Mech_Assaulter>100</Mech_Assaulter>
+				<Mech_Mammoth>10</Mech_Mammoth>
 			</options>
 		  </li>
 		  <li>
 			<!-- Heavy mixed -->
-			<kindDef>Normal</kindDef>
+			<kindDef>Combat</kindDef>
 			<commonality>50</commonality>
 			<options>
-				<Flamebot>10</Flamebot>
-				<Centipede>100</Centipede>
-				<Mammoth>40</Mammoth>
+				<Mech_Flamebot>10</Mech_Flamebot>
+				<Mech_Centipede>100</Mech_Centipede>
+				<Mech_Mammoth>40</Mech_Mammoth>
 			</options>
 		  </li>	  
+		</pawnGroupMakers>
 	  </value>
 	</Operation> 
 </Patch>

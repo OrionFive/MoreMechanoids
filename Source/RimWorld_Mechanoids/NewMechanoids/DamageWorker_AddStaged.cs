@@ -2,7 +2,7 @@ using Verse;
 
 namespace MoreMechanoids
 {
-    public class DamageWorker_AddGlobal : DamageWorker
+    public class DamageWorker_Paralyze : DamageWorker
     {
         public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {
@@ -13,7 +13,7 @@ namespace MoreMechanoids
                 //hediff.Severity = dinfo.Amount;
                 pawn.health.AddHediff(hediff, null, dinfo);
             }
-            return DamageResult.MakeNew(); ;
+            return new DamageResult();
         }
     }
 }

@@ -37,8 +37,8 @@
     </stages>
     <addedPartProps>
       <isGoodWeapon>true</isGoodWeapon>
-      <isBionic>true</isBionic>
-      <isSolid>true</isSolid>
+      <betterThanNatural>true</betterThanNatural>
+      <solid>true</solid>
       <partEfficiency>1.0</partEfficiency>
     </addedPartProps>
   </HediffDef>
@@ -72,8 +72,8 @@
     </stages>
     <addedPartProps>
       <isGoodWeapon>true</isGoodWeapon>
-      <isBionic>true</isBionic>
-      <isSolid>true</isSolid>
+      <betterThanNatural>true</betterThanNatural>
+      <solid>true</solid>
       <partEfficiency>1.0</partEfficiency>
     </addedPartProps>
   </HediffDef>

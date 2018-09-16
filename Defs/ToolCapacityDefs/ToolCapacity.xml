@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ToolCapacityDef>
+    <defName>Ram</defName>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>ParalyzingPoke</defName>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>UnlockDoor</defName>
+  </ToolCapacityDef>
+
+</Defs>

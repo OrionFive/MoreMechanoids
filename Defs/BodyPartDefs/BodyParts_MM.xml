@@ -8,20 +8,22 @@
     <defName>MechanicalShell</defName>
     <label>shell</label>
 	<hitPoints>15</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>PlasmaCutter</defName>
     <label>plasma cutter</label>
 	<hitPoints>5</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>EatingPathway</li>
 		<li>ManipulationLimbCore</li>
@@ -33,10 +35,12 @@
     <label>antenna</label>
 	<hitPoints>2</hitPoints>
     <frostbiteVulnerability>10</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 	<tags>
 		<li>TalkingPathway</li>
 	</tags>
@@ -47,10 +51,11 @@
     <label>infrared sensor</label>
 	<hitPoints>5</hitPoints>
     <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>SightSource</li>
 	</tags>
@@ -60,107 +65,39 @@
     <defName>MechanicalCore</defName>
     <label>core</label>
 	<hitPoints>5</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
 
   <BodyPartDef>
-    <defName>FrontLeftMechanicalLeg</defName>
-    <label>front left leg</label>
+    <defName>MechanicalCrawlerLeg</defName>
+    <label>mechanical leg</label>
 	<hitPoints>5</hitPoints>
     <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ManipulationLimbSegment</li>
 		<li>MovingLimbCore</li>
 	</tags>
   </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>FrontRightMechanicalLeg</defName>
-    <label>front right leg</label>
-	<hitPoints>5</hitPoints>
-    <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>ManipulationLimbSegment</li>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>MiddleLeftMechanicalLeg</defName>
-    <label>middle left leg</label>
-	<hitPoints>5</hitPoints>
-    <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>MiddleRightMechanicalLeg</defName>
-    <label>middle right leg</label>
-	<hitPoints>5</hitPoints>
-    <frostbiteVulnerability>1</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-   
-  <BodyPartDef>
-    <defName>RearLeftMechanicalLeg</defName>
-    <label>rear left leg</label>
-	<hitPoints>5</hitPoints>
-    <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>RearRightMechanicalLeg</defName>
-    <label>rear right leg</label>
-	<hitPoints>5</hitPoints>
-    <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
+
   <BodyPartDef>
     <defName>MechanicalGearBox</defName>
     <label>gear box</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbSegment</li>
 		<li>ManipulationLimbSegment</li>
@@ -172,10 +109,11 @@
     <defName>FrontParalyzeComponent</defName>
     <label>paralytic component</label>
 	<hitPoints>20</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ManipulationLimbCore</li>
 	</tags>
@@ -185,72 +123,48 @@
     <defName>WheelsEnclosure</defName>
     <label>wheels enclosure</label>
 	<hitPoints>80</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
-    <defName>LeftWheel</defName>
-    <label>left wheel</label>
+    <defName>Wheel</defName>
+    <label>wheel</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>7</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+ 	<bleedRate>0</bleedRate>
+   <alive>false</alive>
 	<tags>
 		<li>MovingLimbCore</li>
 	</tags>
   </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>RightWheel</defName>
-    <label>right wheel</label>
-	<hitPoints>10</hitPoints>
-    <frostbiteVulnerability>7</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>BackWheel</defName>
-    <label>back wheel</label>
-	<hitPoints>10</hitPoints>
-    <frostbiteVulnerability>8</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
+
   <BodyPartDef>
     <defName>MechanicalCoreSkullywag</defName>
     <label>core</label>
 	<hitPoints>60</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>CoreProcessor</defName>
     <label>core processor</label>
 	<hitPoints>15</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+ 	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ConsciousnessSource</li>
 	</tags>
@@ -261,10 +175,11 @@
     <label>infrared sensor</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>SightSource</li>
 	</tags>
@@ -275,11 +190,11 @@
     <defName>MechanicalSkull</defName>
     <label>steel skull</label>
 	<hitPoints>50</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<dontSuggestAmputation>true</dontSuggestAmputation>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <!-- Scoutbot -->
@@ -287,20 +202,22 @@
     <defName>MechanicalCoreScoutbot</defName>
     <label>core</label>
 	<hitPoints>50</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>MechanicalHoverComponent</defName>
     <label>hover component</label>
 	<hitPoints>20</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbCore</li>
 	</tags>
@@ -310,10 +227,11 @@
     <defName>MechanicalBackupHoverComponent</defName>
     <label>backup hover component</label>
 	<hitPoints>20</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbCore</li>
 	</tags>
@@ -323,10 +241,11 @@
     <defName>FrontGun</defName>
     <label>front gun</label>
 	<hitPoints>30</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ManipulationLimbCore</li>
 	</tags>
@@ -334,75 +253,39 @@
   
   <!-- Assaulter -->
   <BodyPartDef>
-    <defName>TopRightGunProtrusion</defName>
-    <label>top right gun protrusion</label>
+    <defName>GunProtrusion</defName>
+    <label>gun protrusion</label>
 	<hitPoints>30</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ManipulationLimbCore</li>
 	</tags>
   </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>BottomRightGunProtrusion</defName>
-    <label>bottom right gun protrusion</label>
-	<hitPoints>30</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>ManipulationLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>TopLeftGunProtrusion</defName>
-    <label>top left gun protrusion</label>
-	<hitPoints>30</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>ManipulationLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>BottomLeftGunProtrusion</defName>
-    <label>bottom left gun protrusion</label>
-	<hitPoints>30</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>ManipulationLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
+
   <BodyPartDef>
     <defName>FrontShield</defName>
     <label>front shield</label>
 	<hitPoints>200</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>ShieldWindow</defName>
     <label>front shield window</label>
 	<hitPoints>10</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <!-- Carrier -->
@@ -410,20 +293,22 @@
     <defName>MechanicalCephalothorax</defName>
     <label>cephalothorax</label>
 	<hitPoints>10</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>LargeMechanicalAbdomen</defName>
     <label>large abdomen</label>
 	<hitPoints>10</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
@@ -431,10 +316,11 @@
     <label>tentacle</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>6</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbCore</li>
     </tags>
@@ -445,10 +331,11 @@
     <label>tentacle section</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>7</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbSegment</li>
     </tags>
@@ -459,10 +346,11 @@
     <label>claw</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ManipulationLimbCore</li>
     </tags>
@@ -473,10 +361,12 @@
     <label>claw grip</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>8</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 	<tags>
 		<li>ManipulationLimbCore</li>
     </tags>
@@ -487,38 +377,27 @@
     <label>sight sensor</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>5</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>SightSource</li>
 	</tags>
   </BodyPartDef>
   
   <BodyPartDef>
-    <defName>FrontLeftMechanicalPalp</defName>
-    <label>front shield window</label>
+    <defName>MechanicalPalp</defName>
+    <label>mechanical palp</label>
 	<hitPoints>10</hitPoints>
     <frostbiteVulnerability>10</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>ManipulationLimbCore</li>
-    </tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>FrontRightMechanicalPalp</defName>
-    <label>front shield window</label>
-	<hitPoints>10</hitPoints>
-    <frostbiteVulnerability>10</frostbiteVulnerability>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 	<tags>
 		<li>ManipulationLimbCore</li>
     </tags>
@@ -529,185 +408,101 @@
     <defName>MechanicalBody</defName>
     <label>mechanical body</label>
 	<hitPoints>100</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>ArmorPlating</defName>
     <label>armor plating</label>
 	<hitPoints>150</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>InternalMetalPlate</defName>
     <label>internal metal plate</label>
 	<hitPoints>80</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>MetalTusk</defName>
     <label>metal tusk</label>
 	<hitPoints>50</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 	<tags>
 		<li>ManipulationLimbCore</li>
     </tags>
   </BodyPartDef>
   
     <BodyPartDef>
-    <defName>FrontLeftMechanicalLeg</defName>
-    <label>front left mechanical leg</label>
+    <defName>MechanicalMammothLeg</defName>
+    <label>mechanical leg</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
     <tags>
       <li>MovingLimbCore</li>
     </tags>
   </BodyPartDef>
-
+ 
   <BodyPartDef>
-    <defName>FrontRightMechanicalLeg</defName>
-    <label>front right mechanical leg</label>
-    <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-    <tags>
-      <li>MovingLimbCore</li>
-    </tags>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>RearLeftMechanicalLeg</defName>
-    <label>rear left mechanical leg</label>
-    <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-    <tags>
-      <li>MovingLimbCore</li>
-    </tags>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>RearRightMechanicalLeg</defName>
-    <label>rear right mechanical leg</label>
-    <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-    <tags>
-      <li>MovingLimbCore</li>
-    </tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>FrontLeftMechanicalHoof</defName>
-    <label>front left mechanical hoof</label>
+    <defName>MechanicalMammothHoof</defName>
+    <label>mechanical hoof</label>
     <hitPoints>10</hitPoints>
     <frostbiteVulnerability>6</frostbiteVulnerability>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
     <tags>
       <li>MovingLimbSegment</li>
     </tags>
   </BodyPartDef>
 
-  <BodyPartDef>
-    <defName>FrontRightMechanicalHoof</defName>
-    <label>front right mechanical hoof</label>
-    <hitPoints>10</hitPoints>
-    <frostbiteVulnerability>6</frostbiteVulnerability>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-    <tags>
-      <li>MovingLimbSegment</li>
-    </tags>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>RearLeftMechanicalHoof</defName>
-    <label>rear left mechanical hoof</label>
-    <hitPoints>10</hitPoints>
-    <frostbiteVulnerability>6</frostbiteVulnerability>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-    <tags>
-      <li>MovingLimbSegment</li>
-    </tags>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>RearRightMechanicalHoof</defName>
-    <label>rear right mechanical hoof</label>
-    <hitPoints>10</hitPoints>
-    <frostbiteVulnerability>6</frostbiteVulnerability>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-    <tags>
-      <li>MovingLimbSegment</li>
-    </tags>
-  </BodyPartDef>
-  
   <!-- Flamebot -->
   <BodyPartDef>
     <defName>MechanicalBodySmall</defName>
     <label>body</label>
 	<hitPoints>20</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
-    <defName>LeftTubing</defName>
-    <label>left tubing</label>
+    <defName>FlamebotTubing</defName>
+    <label>tubing</label>
 	<hitPoints>10</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-	<tags>
-		<li>ManipulationLimbCore</li>
-	</tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>RightTubing</defName>
-    <label>right tubing</label>
-	<hitPoints>10</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
 	<tags>
 		<li>ManipulationLimbCore</li>
 	</tags>
@@ -717,20 +512,22 @@
     <defName>FuelContainer</defName>
     <label>fuel container</label>
 	<hitPoints>30</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>Igniter</defName>
     <label>igniter</label>
 	<hitPoints>15</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>ManipulationLimbCore</li>
 	</tags>
@@ -740,10 +537,11 @@
     <defName>SmallWheel</defName>
     <label>small wheel</label>
 	<hitPoints>15</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbCore</li>
 	</tags>
@@ -751,33 +549,25 @@
   
   <!-- Boombot -->
   <BodyPartDef>
-    <defName>LeftExplosiveTank</defName>
-    <label>left explosive tank</label>
+    <defName>ExplosiveTank</defName>
+    <label>explosive tank</label>
 	<hitPoints>5</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>RightExplosiveTank</defName>
-    <label>right explosive tank</label>
-	<hitPoints>5</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
-	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
   </BodyPartDef>
   
   <BodyPartDef>
     <defName>RollComponent</defName>
     <label>rolling component</label>
 	<hitPoints>40</hitPoints>
-	<oldInjuryBaseChance>0</oldInjuryBaseChance>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 	<skinCovered>false</skinCovered>
-	<isSolid>true</isSolid>
-    <isAlive>false</isAlive>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
 	<tags>
 		<li>MovingLimbCore</li>
 	</tags>

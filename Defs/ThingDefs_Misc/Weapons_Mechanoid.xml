@@ -42,13 +42,14 @@
     </graphicData>
     <statBases>
 		<MarketValue>1500</MarketValue>
-		<AccuracyTouch>0.50</AccuracyTouch>
-		<AccuracyShort>0.65</AccuracyShort>
-		<AccuracyMedium>0.50</AccuracyMedium>
-		<AccuracyLong>0.35</AccuracyLong>
+        <Mass>22</Mass>
+		<AccuracyTouch>0.10</AccuracyTouch>
+		<AccuracyShort>0.15</AccuracyShort>
+		<AccuracyMedium>0.20</AccuracyMedium>
+		<AccuracyLong>0.05</AccuracyLong>
         <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
     </statBases>
-    <tradeability>Never</tradeability>
+    <tradeability>None</tradeability>
     <techLevel>Spacer</techLevel>
     <destroyOnDrop>True</destroyOnDrop>
     <menuHidden>True</menuHidden>
@@ -60,12 +61,11 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
-        <forcedMissRadius>2.6</forcedMissRadius>
         <warmupTime>3.3</warmupTime>
         <range>18</range>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <burstShotCount>18</burstShotCount>
-        <soundCast>ShotChargeBlaster</soundCast>
+        <soundCast>Shot_ChargeBlaster</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>7</muzzleFlashScale>
       </li>
@@ -104,14 +104,15 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+			<MarketValue>1500</MarketValue>
 			<Mass>10</Mass>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.51</AccuracyShort>
 			<AccuracyMedium>0.25</AccuracyMedium>
 			<AccuracyLong>0.11</AccuracyLong>
-			<RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>3.66</RangedWeapon_Cooldown>
 		</statBases>
-		<tradeability>Never</tradeability>
+		<tradeability>None</tradeability>
 		<techLevel>Spacer</techLevel>
 		<destroyOnDrop>True</destroyOnDrop>
 		<menuHidden>True</menuHidden>
@@ -127,7 +128,7 @@
 			  <canTargetLocations>true</canTargetLocations>
 			</targetParams>
 			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-			<warmupTime>3.3</warmupTime>
+			<warmupTime>0.3</warmupTime>
 			<burstShotCount>20</burstShotCount>
 			<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
 			<range>9</range>
@@ -166,9 +167,10 @@
     </graphicData>
 	<statBases>
 		<MarketValue>3000</MarketValue>
+        <Mass>20</Mass>
         <RangedWeapon_Cooldown>2.64</RangedWeapon_Cooldown>
 	</statBases>
-    <tradeability>Never</tradeability>
+    <tradeability>None</tradeability>
 	<techLevel>Spacer</techLevel>
 	<destroyOnDrop>True</destroyOnDrop>
 	<menuHidden>True</menuHidden>
@@ -181,8 +183,8 @@
         <verbClass>Verb_LaunchProjectile</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>2</range>
-        <forcedMissRadius>1.0</forcedMissRadius>
         <warmupTime>0.83</warmupTime>
+        <forcedMissRadius>0.1</forcedMissRadius>
         <noiseRadius>8</noiseRadius>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <soundCast>ThrowGrenade</soundCast>

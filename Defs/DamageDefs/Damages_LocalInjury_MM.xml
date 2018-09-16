@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DamageDef>
-	<workerClass>MoreMechanoids.DamageWorker_AddGlobal</workerClass>
+	<workerClass>MoreMechanoids.DamageWorker_Paralyze</workerClass>
 	<defName>Paralyze</defName>
 	<label>paralyze</label>
 	<harmsHealth>false</harmsHealth>

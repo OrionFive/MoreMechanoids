@@ -54,19 +54,23 @@
 							</groups>
 						</li>
 						<li>
-							<def>LeftSightSensor</def>
+							<def>SightSensor</def>
+							<customLabel>left sight sensor</customLabel>
 							<coverage>0.15</coverage>
 						</li>
 						<li>
-							<def>RightSightSensor</def>
+							<def>SightSensor</def>
+							<customLabel>right sight sensor</customLabel>
 							<coverage>0.15</coverage>
 						</li>
 						<li>
-							<def>LeftHearingSensor</def>
+							<def>HearingSensor</def>
+							<customLabel>left hearing sensor</customLabel>
 							<coverage>0.025</coverage>
 						</li>
 						<li>
-							<def>RightHearingSensor</def>
+							<def>HearingSensor</def>
+							<customLabel>left hearing sensor</customLabel>
 							<coverage>0.025</coverage>
 						</li>
 						<li>
@@ -80,51 +84,57 @@
 					</parts>
 				</li>
 				<li>
-					<def>FrontLeftMechanicalLeg</def>
+					<def>MechanicalCrawlerLeg</def>
 					<coverage>0.06</coverage>
 					<height>Bottom</height>
+					<customLabel>front left leg</customLabel>
 					<groups>
-						<li>FrontLeftMechanicalLeg</li>
+						<li>FrontLegs</li>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 				</li>
 				<li>
-					<def>FrontRightMechanicalLeg</def>
+					<def>MechanicalCrawlerLeg</def>
 					<coverage>0.06</coverage>
 					<height>Bottom</height>
+					<customLabel>front right leg</customLabel>
 					<groups>
-						<li>FrontRightMechanicalLeg</li>
+						<li>FrontLegs</li>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 				</li>
 				<li>
-					<def>MiddleLeftMechanicalLeg</def>
+					<def>MechanicalCrawlerLeg</def>
 					<coverage>0.06</coverage>
 					<height>Bottom</height>
-					<groups>
-						<!--li>coveredbynaturalarmor</li-->
-					</groups>
-				</li>
-				<li>
-					<def>MiddleRightMechanicalLeg</def>
-					<coverage>0.06</coverage>
-					<height>Bottom</height>
+					<customLabel>middle left leg</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 				</li>
 				<li>
-					<def>RearLeftMechanicalLeg</def>
+					<def>MechanicalCrawlerLeg</def>
 					<coverage>0.06</coverage>
 					<height>Bottom</height>
+					<customLabel>middle right leg</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 				</li>
 				<li>
-					<def>RearRightMechanicalLeg</def>
+					<def>MechanicalCrawlerLeg</def>
 					<coverage>0.06</coverage>
 					<height>Bottom</height>
+					<customLabel>rear left leg</customLabel>
+					<groups>
+						<!--li>coveredbynaturalarmor</li-->
+					</groups>
+				</li>
+				<li>
+					<def>MechanicalCrawlerLeg</def>
+					<coverage>0.06</coverage>
+					<height>Bottom</height>
+					<customLabel>rear right leg</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
@@ -164,25 +174,28 @@
 					</groups>
 					<parts>
 						<li>
-							<def>LeftWheel</def>
+							<def>Wheel</def>
 							<coverage>0.3</coverage>
 							<depth>Inside</depth>
+							<customLabel>left wheel</customLabel>
 							<groups>
 								<li>WheelsEnclosure</li>
 							</groups>
 						</li>
 						<li>
-							<def>RightWheel</def>
+							<def>Wheel</def>
 							<coverage>0.3</coverage>
 							<depth>Inside</depth>
+							<customLabel>right wheel</customLabel>
 							<groups>
 								<li>WheelsEnclosure</li>
 							</groups>
 						</li>
 						<li>
-							<def>BackWheel</def>
+							<def>Wheel</def>
 							<coverage>0.3</coverage>
 							<depth>Inside</depth>
+							<customLabel>back wheel</customLabel>
 							<groups>
 								<li>WheelsEnclosure</li>
 							</groups>
@@ -222,6 +235,7 @@
 							<def>MechanicalHead</def>
 							<coverage>0.75</coverage>
 							<groups>
+								<li>HeadAttackTool</li>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
@@ -258,19 +272,21 @@
 			</groups>
 			<parts>
 				<li>
-					<def>LeftClavicle</def>
+					<def>Clavicle</def>
 					<coverage>0.005</coverage>
 					<height>Top</height>
 					<depth>Inside</depth>
+					<customLabel>left clavicle</customLabel>
 					<groups>
 						<li>Torso</li>
 					</groups>
 				</li>
 				<li>
-					<def>RightClavicle</def>
+					<def>Clavicle</def>
 					<coverage>0.005</coverage>
 					<height>Top</height>
 					<depth>Inside</depth>
+					<customLabel>right clavicle</customLabel>
 					<groups>
 						<li>Torso</li>
 					</groups>
@@ -284,100 +300,12 @@
 					</groups>
 				</li>
 				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
-				</li>
-				<li>
-					<def>Rib</def>
-					<coverage>0.001</coverage>
-					<depth>Inside</depth>
-					<groups>
-						<li>Torso</li>
-					</groups>
+				  <def>Ribcage</def>
+				  <coverage>0.036</coverage>
+				  <depth>Inside</depth>
+				  <groups>
+					<li>Torso</li>
+				  </groups>
 				</li>
 				<li>
 					<def>Pelvis</def>
@@ -432,32 +360,36 @@
 									</parts>
 								</li>
 								<li>
-									<def>LeftSightSensor</def>
+									<def>SightSensor</def>
 									<coverage>0.05</coverage>
+									<customLabel>left sight sensor</customLabel>
 									<groups>
 										<li>FullHead</li>
 										<li>Eyes</li>
 									</groups>
 								</li>
 								<li>
-									<def>RightSightSensor</def>
+									<def>SightSensor</def>
 									<coverage>0.05</coverage>
+									<customLabel>right sight sensor</customLabel>
 									<groups>
 										<li>FullHead</li>
 										<li>Eyes</li>
 									</groups>
 								</li>
 								<li>
-									<def>LeftHearingSensor</def>
+									<def>HearingSensor</def>
 									<coverage>0.05</coverage>
+									<customLabel>left hearing sensor</customLabel>
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
 									</groups>
 								</li>
 								<li>
-									<def>RightHearingSensor</def>
+									<def>HearingSensor</def>
 									<coverage>0.05</coverage>
+									<customLabel>right hearing sensor</customLabel>
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
@@ -482,51 +414,58 @@
 					</parts>
 				</li>
 				<li>
-					<def>LeftMechanicalShoulder</def>
+					<def>MechanicalShoulder</def>
 					<coverage>0.1</coverage>
+					<customLabel>left should</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>LeftMechanicalArm</def>
+							<def>MechanicalArm</def>
 							<coverage>0.95</coverage>
+							<customLabel>left arm</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
 								<li>
-									<def>LeftMechanicalHand</def>
+									<def>MechanicalHand</def>
 									<coverage>0.2</coverage>
 									<height>Bottom</height>
+									<customLabel>left hand</customLabel>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
 									</groups>
 									<parts>
 										<li>
-											<def>LeftHandMechanicalPinky</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>left pinky</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>LeftHandMechanicalMiddleFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>left middle finger</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>LeftHandMechanicalIndexFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>left index finger</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>LeftHandMechanicalThumb</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>left thumb</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
@@ -538,51 +477,58 @@
 					</parts>
 				</li>
 				<li>
-					<def>RightMechanicalShoulder</def>
+					<def>MechanicalShoulder</def>
 					<coverage>0.1</coverage>
+					<customLabel>right shoulder</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>RightMechanicalArm</def>
+							<def>MechanicalArm</def>
 							<coverage>0.95</coverage>
+							<customLabel>right arm</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
 								<li>
-									<def>RightMechanicalHand</def>
+									<def>MechanicalHand</def>
 									<coverage>0.2</coverage>
 									<height>Bottom</height>
+									<customLabel>right hand</customLabel>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
 									</groups>
 									<parts>
 										<li>
-											<def>RightHandMechanicalPinky</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>right pinky</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>RightHandMechanicalMiddleFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>right middle finger</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>RightHandMechanicalIndexFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>right index finger</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>RightHandMechanicalThumb</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.05</coverage>
+											<customLabel>right thumb</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
@@ -594,16 +540,18 @@
 					</parts>
 				</li>
 				<li>
-					<def>LeftMechanicalLeg</def>
+					<def>MechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>left leg</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>LeftMechanicalFoot</def>
+							<def>MechanicalFoot</def>
 							<coverage>0.2</coverage>
+							<customLabel>left foot</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
@@ -611,16 +559,18 @@
 					</parts>
 				</li>
 				<li>
-					<def>RightMechanicalLeg</def>
+					<def>MechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>right leg</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>RightMechanicalFoot</def>
+							<def>MechanicalFoot</def>
 							<coverage>0.2</coverage>
+							<customLabel>right foot</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
@@ -701,9 +651,10 @@
 									<depth>Outside</depth>
 								</li>
 								<li>
-									<def>LeftSightSensor</def>
+									<def>SightSensor</def>
 									<coverage>0.05</coverage>
 									<depth>Outside</depth>
+									<customLabel>left sight sensor</customLabel>
 								</li>
 								<li>
 									<def>FrontGun</def>
@@ -742,22 +693,41 @@
 						<li>
 							<def>ShieldWindow</def>
 							<coverage>0.3</coverage>
+							<groups>
+								<li>GunProtrusion</li>
+							</groups>
 						</li>
 						<li>
-							<def>BottomLeftGunProtrusion</def>
+							<def>GunProtrusion</def>
+							<customLabel>bottom left gun protrusion</customLabel>
 							<coverage>0.05</coverage>
+							<groups>
+								<li>GunProtrusion</li>
+							</groups>
 						</li>
 						<li>
-							<def>TopLeftGunProtrusion</def>
+							<def>GunProtrusion</def>
+							<customLabel>top left gun protrusion</customLabel>
 							<coverage>0.05</coverage>
+							<groups>
+								<li>GunProtrusion</li>
+							</groups>
 						</li>
 						<li>
-							<def>BottomRightGunProtrusion</def>
+							<def>GunProtrusion</def>
+							<customLabel>bottom right gun protrusion</customLabel>
 							<coverage>0.05</coverage>
+							<groups>
+								<li>GunProtrusion</li>
+							</groups>
 						</li>
 						<li>
-							<def>TopRightGunProtrusion</def>
+							<def>GunProtrusion</def>
+							<customLabel>top right gun protrusion</customLabel>
 							<coverage>0.05</coverage>
+							<groups>
+								<li>GunProtrusion</li>
+							</groups>
 						</li>
 					</parts>
 				</li>
@@ -786,24 +756,28 @@
 									</groups>
 								</li>
 								<li>
-									<def>LeftSightSensor</def>
+									<def>SightSensor</def>
 									<coverage>0.1</coverage>
 									<depth>Outside</depth>
+									<customLabel>left sight sensor</customLabel>
 								</li>
 								<li>
-									<def>RightSightSensor</def>
+									<def>SightSensor</def>
 									<coverage>0.1</coverage>
 									<depth>Outside</depth>
+									<customLabel>right sight sensor</customLabel>
 								</li>
 								<li>
-									<def>LeftHearingSensor</def>
+									<def>HearingSensor</def>
 									<coverage>0.03</coverage>
 									<depth>Outside</depth>
+									<customLabel>left hearing sensor</customLabel>
 								</li>
 								<li>
-									<def>RightHearingSensor</def>
+									<def>HearingSensor</def>
 									<coverage>0.03</coverage>
 									<depth>Outside</depth>
+									<customLabel>right hearing sensor</customLabel>
 								</li>
 								<li>
 									<def>SmellSensor</def>
@@ -815,52 +789,59 @@
 					</parts>
 				</li>
 				<li>
-					<def>LeftMechanicalShoulder</def>
+					<def>MechanicalShoulder</def>
 					<coverage>0.05</coverage>
+					<customLabel>left shoulder</customLabel>
 					<groups>
 						<li>CoveredByShield</li>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>LeftMechanicalArm</def>
+							<def>MechanicalArm</def>
+							<customLabel>left arm</customLabel>
 							<coverage>0.8</coverage>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
 								<li>
-									<def>LeftMechanicalHand</def>
+									<def>MechanicalHand</def>
 									<coverage>0.1</coverage>
 									<height>Bottom</height>
+									<customLabel>left hand</customLabel>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
 									</groups>
 									<parts>
 										<li>
-											<def>LeftHandMechanicalPinky</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>left pinky</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>LeftHandMechanicalMiddleFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>left middle finger</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>LeftHandMechanicalIndexFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>left index finger</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>LeftHandMechanicalThumb</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>left thumb</customLabel>
 											<groups>
 												<li>LeftHand</li>
 											</groups>
@@ -872,52 +853,59 @@
 					</parts>
 				</li>
 				<li>
-					<def>RightMechanicalShoulder</def>
+					<def>MechanicalShoulder</def>
 					<coverage>0.05</coverage>
+					<customLabel>right shoulder</customLabel>
 					<groups>
 						<li>CoveredByShield</li>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>RightMechanicalArm</def>
+							<def>MechanicalArm</def>
 							<coverage>0.8</coverage>
+							<customLabel>right arm</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
 							<parts>
 								<li>
-									<def>RightMechanicalHand</def>
+									<def>MechanicalHand</def>
 									<coverage>0.1</coverage>
 									<height>Bottom</height>
+									<customLabel>right hand</customLabel>
 									<groups>
 										<!--li>coveredbynaturalarmor</li-->
 									</groups>
 									<parts>
 										<li>
-											<def>RightHandMechanicalPinky</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>right pinky</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>RightHandMechanicalMiddleFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>right middle finger</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>RightHandMechanicalIndexFinger</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>right index finger</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
 										</li>
 										<li>
-											<def>RightHandMechanicalThumb</def>
+											<def>MechanicalFinger</def>
 											<coverage>0.1</coverage>
+											<customLabel>right thumb</customLabel>
 											<groups>
 												<li>RightHand</li>
 											</groups>
@@ -929,17 +917,19 @@
 					</parts>
 				</li>
 				<li>
-					<def>LeftMechanicalLeg</def>
+					<def>MechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>left leg</customLabel>
 					<groups>
 						<li>CoveredByShield</li>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>LeftMechanicalFoot</def>
+							<def>MechanicalFoot</def>
 							<coverage>0.1</coverage>
+							<customLabel>left foot</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
@@ -947,17 +937,19 @@
 					</parts>
 				</li>
 				<li>
-					<def>RightMechanicalLeg</def>
+					<def>MechanicalLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>right leg</customLabel>
 					<groups>
 						<li>CoveredByShield</li>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 					<parts>
 						<li>
-							<def>RightMechanicalFoot</def>
+							<def>MechanicalFoot</def>
 							<coverage>0.1</coverage>
+							<customLabel>right foot</customLabel>
 							<groups>
 								<!--li>coveredbynaturalarmor</li-->
 							</groups>
@@ -1018,17 +1010,19 @@
 							</parts>
 						</li>
 						<li>
-							<def>FrontLeftMechanicalPalp</def>
+							<def>MechanicalPalp</def>
 							<coverage>0.05</coverage>
 							<depth>Outside</depth>
+							<customLabel>front left mechanical palp</customLabel>
 							<groups>
                                 <li>MeleeTentacles</li>
                             </groups>
 						</li>
 						<li>
-							<def>FrontRightMechanicalPalp</def>
+							<def>MechanicalPalp</def>
 							<coverage>0.05</coverage>
 							<depth>Outside</depth>
+							<customLabel>front right mechanical palp</customLabel>
 							<groups>
                                 <li>MeleeTentacles</li>
                             </groups>
@@ -1132,38 +1126,57 @@
 						<li>
 							<def>MetalTusk</def>
 							<coverage>0.1</coverage>
+							<groups>
+								<li>Tusk</li>
+							</groups>
 						</li>
 						<li>
 							<def>MetalTusk</def>
 							<coverage>0.1</coverage>
+							<groups>
+								<li>Tusk</li>
+							</groups>
 						</li>
 						<li>
 							<def>MetalTusk</def>
 							<coverage>0.1</coverage>
+							<groups>
+								<li>Tusk</li>
+							</groups>
 						</li>
 						<li>
 							<def>MetalTusk</def>
 							<coverage>0.1</coverage>
+							<groups>
+								<li>Tusk</li>
+							</groups>
 						</li>
 						<li>
 							<def>MetalTusk</def>
 							<coverage>0.1</coverage>
+							<groups>
+								<li>Tusk</li>
+							</groups>
 						</li>
 						<li>
-							<def>LeftSightSensor</def>
+							<def>SightSensor</def>
 							<coverage>0.05</coverage>
+							<customLabel>left sight sensor</customLabel>
 						</li>
 						<li>
-							<def>RightSightSensor</def>
+							<def>SightSensor</def>
 							<coverage>0.05</coverage>
+							<customLabel>right sight sensor</customLabel>
 						</li>
 						<li>
-							<def>LeftHearingSensor</def>
+							<def>HearingSensor</def>
 							<coverage>0.05</coverage>
+							<customLabel>left hearing sensor</customLabel>
 						</li>
 						<li>
-							<def>RightHearingSensor</def>
+							<def>HearingSensor</def>
 							<coverage>0.05</coverage>
+							<customLabel>right hearing sensor</customLabel>
 						</li>
 						<li>
 							<def>SmellSensor</def>
@@ -1172,52 +1185,60 @@
 					</parts>
 				</li>
 				<li>
-					<def>FrontLeftMechanicalLeg</def>
+					<def>MechanicalMammothLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>front left leg</customLabel>
 					<groups>
-						<li>FrontLeftLeg</li>
+						<li>FrontLegs</li>
 					</groups>
 					<parts>
 						<li>
-							<def>FrontLeftMechanicalHoof</def>
+							<def>MechanicalMammothHoof</def>
 							<coverage>0.2</coverage>
+							<customLabel>front left hoof</customLabel>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>FrontRightMechanicalLeg</def>
+					<def>MechanicalMammothLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>front right leg</customLabel>
 					<groups>
-						<li>FrontRightLeg</li>
+						<li>FrontLegs</li>
 					</groups>
 					<parts>
 						<li>
-							<def>FrontRightMechanicalHoof</def>
+							<def>MechanicalMammothHoof</def>
 							<coverage>0.2</coverage>
+							<customLabel>front right hoof</customLabel>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>RearLeftMechanicalLeg</def>
+					<def>MechanicalMammothLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>rear left leg</customLabel>
 					<parts>
 						<li>
-							<def>RearLeftMechanicalHoof</def>
+							<def>MechanicalMammothHoof</def>
 							<coverage>0.2</coverage>
+							<customLabel>rear left hoof</customLabel>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>RearRightMechanicalLeg</def>
+					<def>MechanicalMammothLeg</def>
 					<coverage>0.1</coverage>
 					<height>Bottom</height>
+					<customLabel>rear right leg</customLabel>
 					<parts>
 						<li>
-							<def>RearRightMechanicalHoof</def>
+							<def>MechanicalMammothHoof</def>
 							<coverage>0.2</coverage>
+							<customLabel>rear right hoof</customLabel>
 						</li>
 					</parts>
 				</li>
@@ -1249,14 +1270,16 @@
 			</groups>
 			<parts>
 				<li>
-					<def>LeftTubing</def>
+					<def>FlamebotTubing</def>
 					<coverage>0.05</coverage>
 					<depth>Outside</depth>
+					<customLabel>left tubing</customLabel>
 				</li>
 				<li>
-					<def>RightTubing</def>
+					<def>FlamebotTubing</def>
 					<coverage>0.05</coverage>
 					<depth>Outside</depth>
+					<customLabel>right tubing</customLabel>
 				</li>
 				<li>
 					<def>SmallWheel</def>
@@ -1307,12 +1330,14 @@
 					</groups>
 					<parts>
 						<li>
-							<def>LeftSightSensor</def>
+							<def>SightSensor</def>
 							<coverage>0.02</coverage>
+							<customLabel>left sight sensor</customLabel>
 						</li>
 						<li>
-							<def>RightSightSensor</def>
+							<def>SightSensor</def>
 							<coverage>0.02</coverage>
+							<customLabel>right sight sensor</customLabel>
 						</li>
 						<li>
 							<def>ArtificialBrain</def>
@@ -1393,27 +1418,31 @@
 					</groups>
 					<parts>
 						<li>
-							<def>LeftSightSensor</def>
+							<def>SightSensor</def>
 							<coverage>0.2</coverage>
+							<customLabel>left sight sensor</customLabel>
 						</li>
 						<li>
-							<def>RightSightSensor</def>
+							<def>SightSensor</def>
 							<coverage>0.2</coverage>
+							<customLabel>right sight sensor</customLabel>
 						</li>
 					</parts>
 				</li>
 				<li>
-					<def>LeftExplosiveTank</def>
+					<def>ExplosiveTank</def>
 					<coverage>0.2</coverage>
 					<depth>Outside</depth>
+					<customLabel>left explosive tank</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
 				</li>
 				<li>
-					<def>RightExplosiveTank</def>
+					<def>ExplosiveTank</def>
 					<coverage>0.2</coverage>
 					<depth>Outside</depth>
+					<customLabel>right explosive tank</customLabel>
 					<groups>
 						<!--li>coveredbynaturalarmor</li-->
 					</groups>
