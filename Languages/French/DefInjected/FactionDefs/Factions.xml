@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Mechanoid.label>ruche de mécanoïde</Mechanoid.label>
+	<Mechanoid.description>une ruche d'ancienne machine auto-reproductrice.</Mechanoid.description>
+	<Mechanoid.pawnsPlural>mécanoïdes</Mechanoid.pawnsPlural>
+	<Mechanoid.fixedName>une ruche de mécanoïde</Mechanoid.fixedName>
+	<Mechanoid.leaderTitle>contrôleur</Mechanoid.leaderTitle>
+
+</LanguageData>

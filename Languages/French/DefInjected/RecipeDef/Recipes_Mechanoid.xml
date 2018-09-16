@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	<MM_CreateMechanoidChip.label>Fabriquer une puce IA mécanoïde</MM_CreateMechanoidChip.label>
+	<MM_CreateMechanoidChip.description>Fabrique une puce d'IA pour la réutilisation des méchanoïdes morts. Nécessite de l'argent pour des circuits de la plus haute qualité.</MM_CreateMechanoidChip.description>
+	<MM_CreateMechanoidChip.jobString>Une puce artisanale.</MM_CreateMechanoidChip.jobString>
+
+	<MM_ChipCrawlerCleaning.label>Puce pour crawler pour le nettoyage</MM_ChipCrawlerCleaning.label>
+	<MM_ChipCrawlerCleaning.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipCrawlerCleaning.description>
+	<MM_ChipCrawlerCleaning.jobString>Mécanoïde en restauration.</MM_ChipCrawlerCleaning.jobString>
+
+	<MM_ChipCrawlerHauling.label>Puce pour crawler pour le transport</MM_ChipCrawlerHauling.label>
+	<MM_ChipCrawlerHauling.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipCrawlerHauling.description>
+	<MM_ChipCrawlerHauling.jobString>Mécanoïde en restauration.</MM_ChipCrawlerHauling.jobString>
+
+	<MM_ChipCrawlerCutting.label>Puce pour crawler pour la coupe</MM_ChipCrawlerCutting.label>
+	<MM_ChipCrawlerCutting.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipCrawlerCutting.description>
+	<MM_ChipCrawlerCutting.jobString>Mécanoïde en restauration.</MM_ChipCrawlerCutting.jobString-->
+
+	<MM_ChipSkullywagCooking.label>Puce pour skullywag pour la cuisine</MM_ChipSkullywagCooking.label>
+	<MM_ChipSkullywagCooking.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipSkullywagCooking.description>
+	<MM_ChipSkullywagCooking.jobString>Mécanoïde en restauration.</MM_ChipSkullywagCooking.jobString>
+
+	<MM_ChipSkullywagDoctor.label>Puce pour skullywag pour le soin</MM_ChipSkullywagDoctor.label>
+	<MM_ChipSkullywagDoctor.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipSkullywagDoctor.description>
+	<MM_ChipSkullywagDoctor.jobString>Mécanoïde en restauration.</MM_ChipSkullywagDoctor.jobString>
+
+	<MM_ChipScytherTailoring.label>Puce pour scyther pour la couture</MM_ChipScytherTailoring.label>
+	<MM_ChipScytherTailoring.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipScytherTailoring.description>
+	<MM_ChipScytherTailoring.jobString>Mécanoïde en restauration.</MM_ChipScytherTailoring.jobString>
+
+	<MM_ChipScytherCutting.label>Puce pour scyther pour la coupe</MM_ChipScytherCutting.label>
+	<MM_ChipScytherCutting.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipScytherCutting.description>
+	<MM_ChipScytherCutting.jobString>Mécanoïde en restauration.</MM_ChipScytherCutting.jobString>
+
+	<MM_ChipCentipedeMining.label>Puce pour centipède pour le minage</MM_ChipCentipedeMining.label>
+	<MM_ChipCentipedeMining.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipCentipedeMining.description>
+	<MM_ChipCentipedeMining.jobString>Mécanoïde en restauration.</MM_ChipCentipedeMining.jobString>
+
+	<MM_ChipCentipedeGrowing.label>Puces pour centipède pour la croissance</MM_ChipCentipedeGrowing.label>
+	<MM_ChipCentipedeGrowing.description>Restaure un méchanoïde détruit avec une nouvelle puce IA. Cela lui permet d'accomplir une fonction singulière.</MM_ChipCentipedeGrowing.description>
+	<MM_ChipCentipedeGrowing.jobString>Mécanoïde en restauration.</MM_ChipCentipedeGrowing.jobString>
+
+</LanguageData>

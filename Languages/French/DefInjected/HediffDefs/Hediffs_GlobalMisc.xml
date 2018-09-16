@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<Paralyze.label>paralysie</Paralyze.label>
+	<rep>
+		<path>Paralyze.stages[0].label</path>
+		<trans>étourdi</trans>
+	</rep>
+	<rep>
+		<path>Paralyze.stages[1].label</path>
+		<trans>partielles</trans>
+	</rep>
+	<rep>
+		<path>Paralyze.stages[2].label</path>
+		<trans>violente</trans>
+	</rep>
+	<rep>
+		<path>Paralyze.stages[3].label</path>
+		<trans>évanouissement</trans>
+	</rep>
+	
+	<Offline.label>déconnecté</Offline.label>
+	<Offline.description>Non connecté au PAL.</Offline.description>
+
+	<Crashed.label>crash</Crashed.label>
+	<Crashed.description>Redémarrage...</Crashed.description>
+
+	<MM_Deterioration.label>détérioration</MM_Deterioration.label>
+	<MM_Deterioration.description>Cette pièce peut nécessiter un entretien.</MM_Deterioration.description>
+	<rep>
+		<path>MM_Deterioration.injuryProps.destroyedLabel</path>
+		<trans>Inutile</trans>
+	</rep>
+
+</LanguageData>

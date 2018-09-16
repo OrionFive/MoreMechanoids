@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<MechanoidReprogramming.label>reprogrammation mécanoïde</MechanoidReprogramming.label>
+	<MechanoidReprogramming.description>Apprenez à fabriquer des puces IA sur la table d'usinage qui vous permettront de réutiliser les mécanoïdes détruits. La reprogrammation proprement dite nécessitera des recherches plus poussées.</MechanoidReprogramming.description>
+	<MechanoidReprogramming.descriptionDiscovered>Vous pouvez maintenant créer des puces IA sur la table d'usinage. Effectuer d'autres recherches pour découvrir comment l'utiliser sur différents types de méchanoïdes.</MechanoidReprogramming.descriptionDiscovered>
+	
+	<MechanoidController.label>calculateur de commande mécanoïde</MechanoidController.label>
+	<MechanoidController.description>Apprenez à construire un ordinateur de contrôle qui effectue la réflexion pour vos mécanoïdes afin d'améliorer les performances et le contrôle.</MechanoidController.description>
+	<MechanoidController.descriptionDiscovered>Vous avez découvert comment construire PAL, l'unité de calcul à auto-apprentissage bénévole. Il vous permet de garder vos mécanoïdes à votre base si nécessaire et leur permet de fonctionner à des vitesses beaucoup plus rapides avec moins de temps d'arrêt.</MechanoidController.descriptionDiscovered>
+
+	<ReprogramCrawler.label>reprogrammer le crawler</ReprogramCrawler.label>
+	<ReprogramCrawler.description>Trouver des moyens de réutiliser le méchanoïde crawler.</ReprogramCrawler.description>
+	<ReprogramCrawler.descriptionDiscovered>Vous pouvez maintenant réutiliser les crawlers sur la table d'usinage. Il faut fabriquer des puces IA.</ReprogramCrawler.descriptionDiscovered>
+
+	<ReprogramSkullywag.label>reprogrammer le skullywag</ReprogramSkullywag.label>
+	<ReprogramSkullywag.description>Trouver des moyens de réutiliser le mécanoide skullywag.</ReprogramSkullywag.description>
+	<ReprogramSkullywag.descriptionDiscovered>Vous pouvez maintenant réutiliser les skullywags à la table d'usinage. Il faut fabriquer des puces IA.</ReprogramSkullywag.descriptionDiscovered>
+
+	<ReprogramScyther.label>reprogrammer le scyther</ReprogramScyther.label>
+	<ReprogramScyther.description>Trouver des moyens de réutiliser le méchanoïde Scyther.</ReprogramScyther.description>
+	<ReprogramScyther.descriptionDiscovered>Vous pouvez maintenant réutiliser les scyther sur la table d'usinage. Il faut fabriquer des puces IA.</ReprogramScyther.descriptionDiscovered>
+
+	<ReprogramCentipede.label>reprogrammer le centipède</ReprogramCentipede.label>
+	<ReprogramCentipede.description>Trouver des moyens de réutiliser le méchanoïde du centipède.</ReprogramCentipede.description>
+	<ReprogramCentipede.descriptionDiscovered>Vous pouvez maintenant réutiliser le centipède à la table d'usinage. Il faut fabriquer des puces IA.</ReprogramCentipede.descriptionDiscovered>
+
+</LanguageData>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[0]</path>
+		<trans>image->[pawn_nameFull], [circumstance_group] sur un établi. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[1]</path>
+		<trans>image->Le méchanoïde [pawn_nameFull], [circumstance_group]. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[2]</path>
+		<trans>image->Une silhouette à côté de [pawn_nameFull], [circumstance_group]. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[3]</path>
+		<trans>image->[pawn_nameFull], [circumstance_group], avec [pawn_possessive] maker. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[4]</path>
+		<trans>circumstance_phrase->enfin l'air paisible</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[5]</path>
+		<trans>circumstance_phrase->entièrement assemblé</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[6]</path>
+		<trans>circumstance_phrase->encore en construction</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[7]</path>
+		<trans>circumstance_phrase->l'assemblage de la dernière pièce à l'appareil [pawn_possessive] </trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[8]</path>
+		<trans>circumstance_phrase->avec des étincelles jaillissant de [pawn_possessive] </trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[9]</path>
+		<trans>circumstance_phrase->traînant en un seul morceau</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[10]</path>
+		<trans>circumstance_phrase->ouverture [pawn_possessive] yeux mécaniques</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[11]</path>
+		<trans>circumstance_phrase->réassemblage</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[12]</path>
+		<trans>circumstance_phrase->en cours d'allumage</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[13]</path>
+		<trans>circumstance_phrase->en cours d'ouverture</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[14]</path>
+		<trans>desc_sentence->[pawn_pronoun] a l'air plutôt endommagé.</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[15]</path>
+		<trans>desc_sentence->[pawn_pronoun] est une œuvre d'art.</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[16]</path>
+		<trans>desc_sentence->[pawn_pronoun] ne bouge pas, mais vous pouvez toujours ressentir un sentiment de menace.</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[17]</path>
+		<trans>desc_sentence->Il y a une lueur étrange à l'intérieur de [pawn_possessive] </trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[18]</path>
+		<trans>desc_sentence->A proximité [animal] regarde en l'air, effrayé.</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[19]</path>
+		<trans>desc_sentence->Un petit [animal] a été piégé à l'intérieur de [pawn_possessive] </trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[20]</path>
+		<trans>desc_sentence->Les outils traînent à gauche et à droite.</trans>
+	</rep>
+	<rep>
+		<path>CreatedMechanoid.rulePack.rulesStrings[21]</path>
+		<trans>desc_sentence->Il est évident que [pawn_possessive] ses entrailles sont totalement détruites.</trans>
+	</rep>
+
+
+
+
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[0]</path>
+		<trans>image->[pawn_nameFull] couché sur le sol [circumstance_group]. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[1]</path>
+		<trans>image->[pawn_nameFull] contorsion [pawn_possessive] ses membres [circumstance_group]. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[2]</path>
+		<trans>image->[pawn_nameFull] contorsion [pawn_possessive] ses membres [circumstance_group]. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[3]</path>
+		<trans>image->[pawn_nameFull] écroulant [circumstance_group]. [desc_sentence_group]</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[4]</path>
+		<trans>circumstance_phrase->avec [pawn_possessive] les yeux qui tournoient</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[5]</path>
+		<trans>circumstance_phrase->à l'agonie</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[6]</path>
+		<trans>circumstance_phrase->tout en regardant [pawn_possessive] la vie continue</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[7]</path>
+		<trans>circumstance_phrase->avec [pawn_possessive] tremblement des bras</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[8]</path>
+		<trans>circumstance_phrase->en bavant</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[9]</path>
+		<trans>circumstance_phrase->tout en respirant fortement</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[10]</path>
+		<trans>circumstance_phrase->tout en ayant l'air pathétique</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[11]</path>
+		<trans>circumstance_phrase->tout en regardant autour de lui [pawn_objective] pour obtenir de l'aide</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[12]</path>
+		<trans>circumstance_phrase->en attendant les secours</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[13]</path>
+		<trans>circumstance_phrase->alors qu'il tentait de s'enfuir</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[14]</path>
+		<trans>circumstance_phrase->avec un regard mort dans [pawn_possessive] yeux</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[15]</path>
+		<trans>circumstance_phrase->tout en retenant le vomi</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[16]</path>
+		<trans>circumstance_phrase->sans se soucier de rien</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[17]</path>
+		<trans>circumstance_phrase->avec un regard effrayé [pawn_possessive] face</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[18]</path>
+		<trans>circumstance_phrase->tout en essayant d'appeler à l'aide</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[19]</path>
+		<trans>desc_sentence->[pawn_pronoun] semble totalement inconscient de ce qu'il y a autour [pawn_objective].</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[20]</path>
+		<trans>desc_sentence->[pawn_possessive] l'expression est impuissante.</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[21]</path>
+		<trans>desc_sentence->[pawn_pronoun] est presque inconscient, [pawn_possessive] la langue qui se penche, la langue qui coule, la bave qui coule.</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[22]</path>
+		<trans>desc_sentence->[pawn_pronoun] a l'air effrayé.</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[23]</path>
+		<trans>desc_sentence->[pawn_pronoun] est couvert de saleté.</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[24]</path>
+		<trans>desc_sentence->[pawn_pronoun] semble avoir perdu une chaussure.</trans>
+	</rep>
+	<rep>
+		<path>Paralyzed.rulePack.rulesStrings[25]</path>
+		<trans>desc_sentence->[pawn_possessive] les cheveux sont complètement abîmés.</trans>
+	</rep>
+
+
+
+</LanguageData>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<DoBillsTinker.verb>bricoler</DoBillsTinker.verb>
+	<DoBillsTinker.gerund>rafistolage</DoBillsTinker.gerund>
+	
+	<FinishUnfinishedTinkering.verb>bricoler</FinishUnfinishedTinkering.verb>
+	<FinishUnfinishedTinkering.gerund>rafistolage</FinishUnfinishedTinkering.gerund>
+
+</LanguageData>

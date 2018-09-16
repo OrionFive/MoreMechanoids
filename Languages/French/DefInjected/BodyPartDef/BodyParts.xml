@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<!-- Crawler -->
+	<MechanicalShell.label>obus</MechanicalShell.label>
+	<PlasmaCutter.label>découpeur plasma</PlasmaCutter.label>
+	<MechanicalAntenna.label>antenne</MechanicalAntenna.label>
+	<MechanicalCore.label>coeur</MechanicalCore.label>
+	<FrontLeftMechanicalLeg.label>jambe gauche avant</FrontLeftMechanicalLeg.label>
+	<FrontRightMechanicalLeg.label>jambe droite avant</FrontRightMechanicalLeg.label>
+	<MiddleLeftMechanicalLeg.label>jambe centrale gauche</MiddleLeftMechanicalLeg.label>
+	<MiddleRightMechanicalLeg.label>jambe centrale droite</MiddleRightMechanicalLeg.label>
+	<RearLeftMechanicalLeg.label>jambe arrière gauche</RearLeftMechanicalLeg.label>
+	<RearRightMechanicalLeg.label>jambe arrière droite</RearRightMechanicalLeg.label>
+	<MechanicalGearBox.label>boîte d'engrenage</MechanicalGearBox.label>
+	
+	<!-- Skullywag -->
+	<FrontParalyzeComponent.label>composant paralytique</FrontParalyzeComponent.label>
+	<WheelsEnclosure.label>enjoliveur de roues</WheelsEnclosure.label>
+	<LeftWheel.label>roue gauche</LeftWheel.label>
+	<RightWheel.label>roue droite</RightWheel.label>
+	<BackWheel.label>roue arrière</BackWheel.label>
+	<MechanicalCoreSkullywag.label>coeur</MechanicalCoreSkullywag.label>
+	<CoreProcessor.label>coeur du processeur</CoreProcessor.label>
+	<InfraredSensor.label>capteur infrarouge</InfraredSensor.label>
+
+	<!-- Assimilated Human -->
+	<MechanicalSkull.label>Crâne d'acier</MechanicalSkull.label>
+  
+	<!-- Scoutbot -->
+	<MechanicalCoreScoutbot.label>coeur</MechanicalCoreScoutbot.label>
+	<MechanicalHoverComponent.label>composant de vol plané</MechanicalHoverComponent.label>
+	<MechanicalBackupHoverComponent.label>backup composant de vol plané</MechanicalBackupHoverComponent.label>
+	<FrontGun.label>armes frontales</FrontGun.label>
+	
+	<!-- Assaulter -->
+	<TopRightGunProtrusion.label>arme protonique droite supérieure</TopRightGunProtrusion.label>
+	<BottomRightGunProtrusion.label>arme protonique droite inférieure</BottomRightGunProtrusion.label>
+	<TopLeftGunProtrusion.label>arme protonique gauche supérieure</TopLeftGunProtrusion.label>
+	<BottomLeftGunProtrusion.label>arme protonique gauche inférieure</BottomLeftGunProtrusion.label>
+	<FrontShield.label>bouclier frontal</FrontShield.label>
+	<ShieldWindow.label>fênêtre du bouclier frontal</ShieldWindow.label>
+
+	<!-- Carrier -->
+	<MechanicalCephalothorax.label>céphalothorax</MechanicalCephalothorax.label>
+	<LargeMechanicalAbdomen.label>abdomen large</LargeMechanicalAbdomen.label>
+	<MechanicalTentacle.label>tentacule</MechanicalTentacle.label>
+	<MechanicalTentacleSection.label>section de tentacule</MechanicalTentacleSection.label>
+	<Claw.label>griffe</Claw.label>
+	<ClawGrip.label>poigne de griffe</ClawGrip.label>
+	<SightSensor.label>Capteur optique</SightSensor.label>
+	<FrontLeftMechanicalPalp.label>palpe gauche frontale</FrontLeftMechanicalPalp.label>
+	<FrontRightMechanicalPalp.label>palpe droite frontale</FrontRightMechanicalPalp.label>
+  
+	<!-- Mammoth -->
+	<MechanicalBody.label>corps</MechanicalBody.label>
+	<ArmorPlating.label>blindage</ArmorPlating.label>
+	<InternalMetalPlate.label>plaque métallique interne</InternalMetalPlate.label>
+	<MetalTusk.label>défense métallique</MetalTusk.label>
+  
+	<!-- Flamebot -->
+	<MechanicalBodySmall.label>corps</MechanicalBodySmall.label>
+	<LeftTubing.label>tuyau gauche</LeftTubing.label>
+	<RightTubing.label>tuyau droit</RightTubing.label>
+	<FuelContainer.label>réservoir d'essence</FuelContainer.label>
+	<Igniter.label>allumeur</Igniter.label>
+  
+	<!-- Boombot -->
+	<LeftExplosiveTank.label>réservoir explosif gauche</LeftExplosiveTank.label>
+	<RightExplosiveTank.label>réservoir explosif droit</RightExplosiveTank.label>
+
+
+</LanguageData>

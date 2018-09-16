@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<PAL_Link.label>lien PAL</PAL_Link.label>
+	<PAL_Link.description>Relie le PAL aux différentes sous-parties nécessaires à son fonctionnement.</PAL_Link.description>
+  
+	<PAL_Core.label>noyau PAL</PAL_Core.label>
+	<PAL_Core.description>PAL (Personality driven ALgorithmic computer) est un ordinateur sensible (ou intelligence artificielle) qui contrôle les méchanoïdes de la colonie et interagit avec son équipage.
+		Doit être placé sur un lien.</PAL_Core.description>
+  
+	<PAL_Memory.label>mémoire PAL</PAL_Memory.label>
+	<PAL_Memory.description>Un composant mémoire pour PAL. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_Memory.description>
+  
+	<PAL_PowerUnit.label>Unité de puissance PAL</PAL_PowerUnit.label>
+	<PAL_PowerUnit.description>Un composant pour PAL nécessaire pour traiter des quantités d'énergie plus élevées. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_PowerUnit.description>
+  
+	<PAL_Sensor.label>capteur PAL</PAL_Sensor.label>
+	<PAL_Sensor.description>Un composant capteur pour PAL nécessaire au traitement des données d'environnement et à la connexion aux méchanoïdes. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_Sensor.description>
+  
+	<PAL_Cooler.label>refroidisseur PAL</PAL_Cooler.label>
+	<PAL_Cooler.description>Ce composant PAL refroidit les composants adjacents et disperse la chaleur dans la pièce. Nécessaire pour mettre à niveau PAL à des niveaux supérieurs.
+		Doit être placé sur un lien.</PAL_Cooler.description>
+	
+</LanguageData>

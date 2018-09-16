@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<Bullet_FlameThrower.label>flamme</Bullet_FlameThrower.label>
+
+	<MechanoidFlameThrower.label>lance-flammes</MechanoidFlameThrower.label>
+	<MechanoidFlameThrower.description>un lance-flammes intégré.</MechanoidFlameThrower.description>
+
+	<BoomBoom.label>boom boom</BoomBoom.label>
+  
+	<MechanoidBoom.label>boom</MechanoidBoom.label>
+	<MechanoidBoom.description>cette partie fait BOOM !</MechanoidBoom.description>
+	
+</LanguageData>
