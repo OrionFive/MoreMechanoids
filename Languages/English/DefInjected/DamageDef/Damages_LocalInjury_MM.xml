@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<!-- 
+	<rep>
+		<path>Paralyze.label</path>
+		<trans>paralyze</trans>
+	</rep>
+	
+	<rep>
+		<path>Paralyze.deathMessage</path>
+		<trans>{0} died from nerve damage.</trans>
+	</rep>
+	-->
+	
+	<Paralyze.label>paralyze</Paralyze.label>
+	<Paralyze.deathMessage>{0} died from nerve damage.</Paralyze.deathMessage>
+	
+</LanguageData>
