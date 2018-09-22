@@ -16,16 +16,13 @@ namespace MoreMechanoids.Harmony
             [HarmonyPrefix]
             internal static bool Prefix(Pawn p, out bool __result)
             {
-                Log.Message("Checking "+p.LabelShort);
                 __result = true;
                 if (p.meleeVerbs == null) return true;
                 var allVerbs = p.meleeVerbs.GetUpdatedAvailableVerbsList(false).Select(v=>v.verb);
-                Log.Message("Has "+allVerbs.Count() +" verbs");
                 foreach (var verb in allVerbs)
                 {
                     if (verb.verbProps.ai_IsBuildingDestroyer)
                     {
-                        Log.Message("Building destroyer found");
                         return false;
                     }
                 }
