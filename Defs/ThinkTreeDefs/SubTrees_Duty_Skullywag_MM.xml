@@ -8,7 +8,12 @@
 	<thinkRoot Class="ThinkNode_Priority">
       <subNodes>
 		<!--li Class="MoreMechanoids.JobGiver_FixAttackTargets"/-->
-		<li Class="MoreMechanoids.JobGiver_DownAllHumans"/>
+		<li Class="MoreMechanoids.ThinkNode_ConditionalNonPlayerFaction">
+		  <subNodes>
+		    <li Class="MoreMechanoids.JobGiver_DownAllHumans"/>
+		  </subNodes>
+		</li>
+
         <li Class="ThinkNode_ConditionalHasLord">
           <subNodes>
             <!--li Class="ThinkNode_Duty"/-->
