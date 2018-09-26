@@ -59,12 +59,11 @@
     <Compile Include="NewMechanoids\PawnKindDef.cs" />
     <Compile Include="NewMechanoids\Projectile_Ignite.cs" />
     <Compile Include="NewMechanoids\DamageWorker_AddStaged.cs" />
+    <Compile Include="NewMechanoids\ThinkNode_ConditionalNonPlayerFaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NewMechanoids\Verb_Unlock.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Convertable\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -54,7 +54,7 @@ namespace MoreMechanoids
                     //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
                     Building_Door d =
                         pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
-                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
+                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.NoPassClosedDoorsOrWater, Danger.Deadly))
                             .OrderBy(t => t.Position.DistanceToSquared(pawn.Position))
                             .FirstOrDefault();
                     if (d != null)

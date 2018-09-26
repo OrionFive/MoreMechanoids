@@ -58,11 +58,16 @@ namespace MoreMechanoids
 
         private void UnlockDoor(Building_Door door)
         {
-            door.GetType().GetMethod("DoorOpen", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(door, new object[] {60});
-            door.GetType().GetField("holdOpenInt", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(door, true);
+            if (door.def.defName == "HeronInvisibleDoor")
+            {
+                ForceDoorExtended(door);
+            }
+            else
+            {
+                ForceDoor(door);
+            }
 
-            if(unlockDoorSound == null)
-                unlockDoorSound = SoundDef.Named("Explosion_EMP");
+            if (unlockDoorSound == null) unlockDoorSound = SoundDef.Named("Explosion_EMP");
 
             unlockDoorSound.PlayOneShot(SoundInfo.InMap(CasterPawn));
 
@@ -71,6 +76,19 @@ namespace MoreMechanoids
             MoteMaker.ThrowLightningGlow(loc, door.Map, Rand.Range(0.7f, 1.5f));
 
             CasterPawn.jobs.StopAll();
+        }
+
+        private static void ForceDoor(Building_Door door)
+        {
+            Traverse.Create(door).Method("DoorOpen", 60).GetValue();
+            Traverse.Create(door).Field("holdOpenInt").SetValue(true);
+        }
+
+        private static void ForceDoorExtended(Building_Door door)
+        {
+            var building = Traverse.Create(door).Field("parentDoor").GetValue<Building>();
+            Traverse.Create(building).Method("DoorOpen", 60).GetValue();
+            Traverse.Create(building).Field("holdOpenInt").SetValue(true);
         }
 
         protected override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
