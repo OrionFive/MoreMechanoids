@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <PlasmaCutter.label>플라즈마 절단기</PlasmaCutter.label>
+  <FrontLegs.label>앞다리</FrontLegs.label>
+
+
+  <!-- Skullywag -->
+
+  <FrontParalyzeComponent.label>마비 장치</FrontParalyzeComponent.label>
+  <WheelsEnclosure.label>바퀴 보호대</WheelsEnclosure.label>
+  <MechanicalCoreSkullywag.label>코어</MechanicalCoreSkullywag.label>
+
+
+  <!-- Scoutbot -->
+
+  <MechanicalCoreScoutbot.label>코어</MechanicalCoreScoutbot.label>
+
+
+  <!-- Assaulter -->
+
+  <CoveredByShield.label>방패</CoveredByShield.label>
+  <GunProtrusion.label>내장형 기관총</GunProtrusion.label>
+
+
+  <!-- Carrier -->
+
+  <MeleeTentacles.label>촉수</MeleeTentacles.label>
+
+
+  <!-- Mammoth -->
+
+  <Tusk.label>어금니</Tusk.label>
+
+
+  <!-- Flamebot -->
+
+  <Igniter.label>점화기</Igniter.label>
+  <FuelContainer.label>연료 탱크</FuelContainer.label>
+
+
+</LanguageData>
