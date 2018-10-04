@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using System.Reflection;
+using Harmony;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -43,14 +43,10 @@ namespace MoreMechanoids
                 }
             }
             // Select only flesh stuff
-
-            // Method is internal (duh)
-            MethodInfo notifyEngagedTarget = typeof(Pawn_MindState).GetMethod("Notify_EngagedTarget", BindingFlags.NonPublic | BindingFlags.Instance);
-
             if (thing == null)
             {
                 //Log.Message(pawn.Label + ": trying to find target...");
-                const TargetScanFlags targetScanFlags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachable;
+                const TargetScanFlags targetScanFlags = TargetScanFlags.NeedReachable;
 
                 thing = AttackTargetFinder.BestAttackTarget(pawn, targetScanFlags, validPawn, 0f, targetAcquireRadius) as Thing;
                 if (thing == null)
@@ -58,7 +54,7 @@ namespace MoreMechanoids
                     //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
                     Building_Door d =
                         pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
-                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
+                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.NoPassClosedDoorsOrWater, Danger.Deadly))
                             .OrderBy(t => t.Position.DistanceToSquared(pawn.Position))
                             .FirstOrDefault();
                     if (d != null)
@@ -69,7 +65,9 @@ namespace MoreMechanoids
                 }
                 if (thing != null && thing != pawn.mindState.enemyTarget)
                 {
-                    notifyEngagedTarget.Invoke(pawn.mindState, null);
+                    Log.Message(pawn.LabelShort + " attacking " + thing.LabelShort + " at " + thing.Position);
+                    Traverse.Create(pawn.mindState).Method("Notify_EngagedTarget");
+
                     Lord lord = pawn.Map.lordManager.LordOf(pawn);
                     if (lord != null)
                     {
@@ -81,6 +79,10 @@ namespace MoreMechanoids
                         pawn.CurJob.SetTarget(TargetIndex.A, thing);
                     }
                     pawn.mindState.enemyTarget = thing;
+                }
+                if(thing == null)
+                {
+                    pawn.mindState.enemyTarget = null;
                 }
             }
         }

@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- ============================= Base ================================= -->
-
-  <PawnKindDef Name="MechanoidBase" Abstract="True" Class="MoreMechanoids.PawnKindDef">
-	<crashChance>0.05</crashChance>
-	<fullRepairThreshold>0.4</fullRepairThreshold>
-	<standbyDeteriorationFactor>0.5</standbyDeteriorationFactor>
-	<minTimeBeforeDeteriorate>1.5</minTimeBeforeDeteriorate>
-	<maxTimeBeforeDeteriorate>2.5</maxTimeBeforeDeteriorate>
-	<maxDeteriorationFactor>0.3</maxDeteriorationFactor>
-	<minSkillPoints>50000</minSkillPoints>
-	<maxSkillPoints>100000</maxSkillPoints>
-  </PawnKindDef>
-
   <!-- ============================= Crawler ================================= -->
 
-  <PawnKindDef Name="Crawler" ParentName="MechanoidBase" Class="MoreMechanoids.PawnKindDef">
-    <defName>Crawler</defName>
+  <PawnKindDef Name="Crawler" ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+    <defName>Mech_Crawler</defName>
     <label>crawler</label>
-    <race>Mechanoid_Crawler</race>
+    <race>Mech_Crawler</race>
     <combatPower>35</combatPower>
     <defaultFactionType>Mechanoid</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
@@ -42,13 +29,13 @@
  
   <!-- ============================= Skullywag ================================= -->
 
-  <PawnKindDef Name="Skullywag" ParentName="MechanoidBase" Class="MoreMechanoids.PawnKindDef">
-    <defName>Skullywag</defName>
+  <PawnKindDef Name="Skullywag" ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+    <defName>Mech_Skullywag</defName>
     <label>skullywag</label>
-    <race>Mechanoid_Skullywag</race>
+    <race>Mech_Skullywag</race>
     <combatPower>120</combatPower>
     <defaultFactionType>Mechanoid</defaultFactionType>
-    <aiAvoidCover>true</aiAvoidCover>
+    <aiAvoidCover>false</aiAvoidCover>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -66,47 +53,17 @@
     </weaponTags>
   </PawnKindDef>
 
-  <!-- ============================= Scyther ================================= -->
-  
-  <PawnKindDef Name="Scyther" ParentName="MechanoidBase" Class="MoreMechanoids.PawnKindDef">
-    <defName>Scyther</defName>
-    <label>scyther</label>
-    <race>Mechanoid_Scyther</race>
-    <combatPower>160</combatPower>
-    <defaultFactionType>Mechanoid</defaultFactionType>
-    <aiAvoidCover>true</aiAvoidCover>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/Scyther</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>2000</min>
-      <max>5000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>MechanoidGunMedium</li>
-    </weaponTags>
-  </PawnKindDef>
-
   <!-- ============================= Flamebot ================================= -->
   
-  <PawnKindDef ParentName="MechanoidBase" Class="MoreMechanoids.PawnKindDef">
-    <defName>Flamebot</defName>
+  <PawnKindDef ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+    <defName>Mech_Flamebot</defName>
     <label>flamebot</label>
-    <race>Mechanoid_Flamebot</race>
+    <race>Mech_Flamebot</race>
     <combatPower>200</combatPower>
     <defaultFactionType>Mechanoid</defaultFactionType>
 	<weaponMoney>
-      <min>3000</min>
-      <max>3000</max>
+      <min>9999</min>
+      <max>9999</max>
     </weaponMoney>
     <weaponTags>
       <li>MechanoidFlamethrower</li>
@@ -125,65 +82,18 @@
       </li>
     </lifeStages>
   </PawnKindDef>
- 
-  <!-- ============================= Centipede ================================= -->
-
-  <PawnKindDef Name="Centipede" ParentName="MechanoidBase" Class="MoreMechanoids.PawnKindDef">
-	<defName>Centipede</defName>
-    <label>centipede</label>
-    <race>Mechanoid_Centipede</race>
-    <combatPower>290</combatPower>
-	<defaultFactionType>Mechanoid</defaultFactionType>
-	<aiAvoidCover>true</aiAvoidCover>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Mechanoid/Centipede</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
-          <shadowData>
-            <volume>(0.6, 0.8, 0.6)</volume>
-          </shadowData>
-		  <shaderType>Cutout</shaderType>
-		</bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>8000</min>
-      <max>8000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>MechanoidGunHeavy</li>
-    </weaponTags>
-  </PawnKindDef>
-  
-  <!--
-  <PawnKindDef ParentName="Centipede" Class="MoreMechanoids.PawnKindDef">
-	<defName>Doomsday_Centipede</defName>
-    <label>doomsday centipede</label>
-    <combatPower>500</combatPower>
-    <weaponMoney>
-      <min>12000</min>
-      <max>18000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>MechanoidGunInferno</li>
-    </weaponTags>
-  </PawnKindDef>
--->
-
-  
+   
   <!-- ============================= Assaulter ================================= -->
 
-  <PawnKindDef>
-    <defName>Assaulter</defName>
+  <PawnKindDef ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+    <defName>Mech_Assaulter</defName>
     <label>assaulter</label>
-    <race>Mechanoid_Assaulter</race>
+    <race>Mech_Assaulter</race>
     <combatPower>240</combatPower>
     <defaultFactionType>Mechanoid</defaultFactionType>
 	<weaponMoney>
-      <min>4000</min>
-      <max>4000</max>
+      <min>9999</min>
+      <max>9999</max>
     </weaponMoney>
     <weaponTags>
       <li>MechanoidGunAssaulter</li>
@@ -205,10 +115,11 @@
   
   <!-- ============================= Mammoth ================================= -->
   
-  <PawnKindDef>
-	<defName>Mammoth</defName>
+  <PawnKindDef ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+	<defName>Mech_Mammoth</defName>
     <label>mammoth</label>
-    <race>Mechanoid_Mammoth</race>
+    <canBeSapper>true</canBeSapper>
+    <race>Mech_Mammoth</race>
     <combatPower>900</combatPower>
 	<defaultFactionType>Mechanoid</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>

@@ -8,13 +8,8 @@
   </BodyPartGroupDef>
 
   <BodyPartGroupDef>
-    <defName>FrontLeftMechanicalLeg</defName>
-    <label>front left leg</label>
-  </BodyPartGroupDef>
-
-  <BodyPartGroupDef>
-    <defName>FrontRightMechanicalLeg</defName>
-    <label>front right leg</label>
+    <defName>FrontLegs</defName>
+    <label>front leg</label>
   </BodyPartGroupDef>
   
   <!-- Skullywag -->
@@ -45,6 +40,11 @@
     <label>shield</label>
   </BodyPartGroupDef>
   
+  <BodyPartGroupDef>
+    <defName>GunProtrusion</defName>
+    <label>gun protrusion</label>
+  </BodyPartGroupDef>
+  
   <!-- Carrier -->
   <BodyPartGroupDef>
     <defName>MeleeTentacles</defName>
@@ -52,6 +52,10 @@
   </BodyPartGroupDef>
   
   <!-- Mammoth -->
+  <BodyPartGroupDef>
+    <defName>Tusk</defName>
+    <label>tusk</label>
+  </BodyPartGroupDef>
   
   <!-- Flamebot -->
   <BodyPartGroupDef>
