@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Buildings -->
+  <InnerTemperature>inner temperature: {0}/{1}</InnerTemperature>
+  <NoPower>Building has no power</NoPower>
+  <CurrentLevel>Current level: {0}</CurrentLevel>
+  <LevelRequired>Required for next level: </LevelRequired>
+  <MechanoidsControlled>Controlled mechanoids: {0}/{1}</MechanoidsControlled>
+  <MechanoidsOwned>Owned mechanoids: {0}</MechanoidsOwned>
+  <KeepInside>Stop working and stay inside.</KeepInside>
+  <FullRepair>Get this mechanoid fully repaired.</FullRepair>
+  <NotConnected>Not connected to PAL</NotConnected>
+  <NoBots>No mechanoids under control.</NoBots>
+  <LabelOffline>Offline</LabelOffline>
+  <PlaceOnLink>Must be placed on PAL Link.</PlaceOnLink>
+  
+  <!-- Needs -->
+  <BotTooltipFood>Mechanoids do not require food.</BotTooltipFood>
+  <BotTooltipRest>Mechanoids can calculate their actions independent of a controller. Unfortunately this puts a lot of strain on their chip. An overheated chip can cause malfunctions.</BotTooltipRest>
+  <BotLabelRest>Chip Cooling</BotLabelRest>
+  
+  <!-- Story -->
+  <BotStoryAdultTitle>Captured Mechanoid</BotStoryAdultTitle>
+  <BotStoryAdultShort>Captured</BotStoryAdultShort>
+  <BotStoryAdultDesc>This mechanoid was captured and reprogrammed.</BotStoryAdultDesc>
+  <BotStoryChildTitle>Unknown</BotStoryChildTitle>
+  <BotStoryChildDesc>No information prior capture is known.</BotStoryChildDesc>
+  
+  <!-- Misc -->
+  <BotShortCircuit>The mechanoid {0} had a short circuit.</BotShortCircuit>
+  <BotShortCircuitLabel>Short Circuit</BotShortCircuitLabel>
+  <BotStandingBy>Standing by.</BotStandingBy>
+  <BotRebooting>Rebooting ({0}).</BotRebooting>
+  
+  <!-- Overview -->
+  <StayHomeCheck>Stay Home</StayHomeCheck>
+  <FullRepairCheck>Full Repair</FullRepairCheck>
+  <WorkTypeHeading>Job</WorkTypeHeading>
+  
+</LanguageData>
