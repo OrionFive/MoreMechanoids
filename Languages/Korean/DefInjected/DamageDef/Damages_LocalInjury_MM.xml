@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Paralyze.label>신경 손상</Paralyze.label>
+  <Paralyze.deathMessage>{0}(은)는 신경 손상으로 인해 죽었습니다.</Paralyze.deathMessage>
+
+
+</LanguageData>
