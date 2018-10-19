@@ -2,13 +2,13 @@
 <Defs>
   <!-- Added body parts -->
 
-  <HediffDef Name="AddedBodyPartBase" Abstract="True">
+  <HediffDef Name="AddedBodyPartBase_MM" Abstract="True">
     <hediffClass>Hediff_AddedPart</hediffClass>
     <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
     <isBad>false</isBad>
   </HediffDef>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="AddedBodyPartBase_MM">
     <defName>JackhammerArm</defName>
     <label>jackhammer arm</label>
     <comps>
@@ -43,7 +43,7 @@
     </addedPartProps>
   </HediffDef>
 
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef ParentName="AddedBodyPartBase_MM">
     <defName>SpikeArm</defName>
     <label>spike arm</label>
     <comps>
