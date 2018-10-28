@@ -3,7 +3,7 @@
 
   <!-- Crawler -->
 
-  <MechanicalCrawler.label>Chenille Mécanique</MechanicalCrawler.label>
+  <MechanicalCrawler.label>Crawler</MechanicalCrawler.label>
   <MechanicalCrawler.corePart.parts.1.parts.2.customLabel>capteur de vue gauche</MechanicalCrawler.corePart.parts.1.parts.2.customLabel>
   <MechanicalCrawler.corePart.parts.1.parts.3.customLabel>capteur de vue droite</MechanicalCrawler.corePart.parts.1.parts.3.customLabel>
   <MechanicalCrawler.corePart.parts.1.parts.4.customLabel>capteur auditif gauche</MechanicalCrawler.corePart.parts.1.parts.4.customLabel>
@@ -18,7 +18,7 @@
 
   <!-- Skullywag -->
 
-  <MechanicalSkullywag.label>Skullywag Mécanique</MechanicalSkullywag.label>
+  <MechanicalSkullywag.label>Skullywag</MechanicalSkullywag.label>
   <MechanicalSkullywag.corePart.parts.1.parts.0.customLabel>roue gauche</MechanicalSkullywag.corePart.parts.1.parts.0.customLabel>
   <MechanicalSkullywag.corePart.parts.1.parts.1.customLabel>roue droite</MechanicalSkullywag.corePart.parts.1.parts.1.customLabel>
   <MechanicalSkullywag.corePart.parts.1.parts.2.customLabel>roue arriere</MechanicalSkullywag.corePart.parts.1.parts.2.customLabel>
@@ -55,13 +55,13 @@
 
   <!-- Scoutbot -->
 
-  <MechanicalScoutbot.label>Scout-bot mécanique</MechanicalScoutbot.label>
+  <MechanicalScoutbot.label>Robot éclaireur</MechanicalScoutbot.label>
   <MechanicalScoutbot.corePart.parts.1.parts.0.parts.2.customLabel>capteur de vue gauche</MechanicalScoutbot.corePart.parts.1.parts.0.parts.2.customLabel>
 
 
   <!-- Assaulter -->
 
-  <MechanicalAssaulter.label>agresseur</MechanicalAssaulter.label>
+  <MechanicalAssaulter.label>Robot d'assaut</MechanicalAssaulter.label>
   <MechanicalAssaulter.corePart.parts.0.parts.1.customLabel>saillie inférieure du pistolet</MechanicalAssaulter.corePart.parts.0.parts.1.customLabel>
   <MechanicalAssaulter.corePart.parts.0.parts.2.customLabel>saillie supérieure en haut à gauche</MechanicalAssaulter.corePart.parts.0.parts.2.customLabel>
   <MechanicalAssaulter.corePart.parts.0.parts.3.customLabel>saillie du pistolet en bas à droite</MechanicalAssaulter.corePart.parts.0.parts.3.customLabel>
@@ -136,7 +136,7 @@
 				ArtificialBrain
 				Igniter -->
 
-  <MechanicalFlamebot.label>flame-bot</MechanicalFlamebot.label>
+  <MechanicalFlamebot.label>Flamebot</MechanicalFlamebot.label>
   <MechanicalFlamebot.corePart.parts.0.customLabel>tube gauche</MechanicalFlamebot.corePart.parts.0.customLabel>
   <MechanicalFlamebot.corePart.parts.1.customLabel>tube droit</MechanicalFlamebot.corePart.parts.1.customLabel>
   <MechanicalFlamebot.corePart.parts.7.parts.0.customLabel>capteur de vue gauche</MechanicalFlamebot.corePart.parts.7.parts.0.customLabel>
@@ -151,11 +151,11 @@
 			LeftExplosiveTank
 			RightExplosiveTank -->
 
-  <MechanicalBoombot.label>boom-bot</MechanicalBoombot.label>
+  <MechanicalBoombot.label>Robot explosif</MechanicalBoombot.label>
   <MechanicalBoombot.corePart.parts.1.parts.0.customLabel>capteur de vue gauche</MechanicalBoombot.corePart.parts.1.parts.0.customLabel>
   <MechanicalBoombot.corePart.parts.1.parts.1.customLabel>capteur de vue droite</MechanicalBoombot.corePart.parts.1.parts.1.customLabel>
-  <MechanicalBoombot.corePart.parts.2.customLabel>left explosive tank</MechanicalBoombot.corePart.parts.2.customLabel>
-  <MechanicalBoombot.corePart.parts.3.customLabel>right explosive tank</MechanicalBoombot.corePart.parts.3.customLabel>
+  <MechanicalBoombot.corePart.parts.2.customLabel>réservoir d'explosif gauche</MechanicalBoombot.corePart.parts.2.customLabel>
+  <MechanicalBoombot.corePart.parts.3.customLabel>réservoir d'explosif droit</MechanicalBoombot.corePart.parts.3.customLabel>
 
 
 </LanguageData>

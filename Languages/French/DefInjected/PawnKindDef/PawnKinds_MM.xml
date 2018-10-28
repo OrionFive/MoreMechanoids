@@ -21,14 +21,14 @@
 
   <!-- Assaulter -->
 
-  <Mech_Assaulter.label>assaulter</Mech_Assaulter.label>
-  <Mech_Assaulter.labelPlural>assaulters</Mech_Assaulter.labelPlural>
+  <Mech_Assaulter.label>Robot d'assaut</Mech_Assaulter.label>
+  <Mech_Assaulter.labelPlural>Robots d'assauts</Mech_Assaulter.labelPlural>
 
 
   <!-- Mammoth -->
 
-  <Mech_Mammoth.label>mammoth</Mech_Mammoth.label>
-  <Mech_Mammoth.labelPlural>mammoths</Mech_Mammoth.labelPlural>
+  <Mech_Mammoth.label>mammouth</Mech_Mammoth.label>
+  <Mech_Mammoth.labelPlural>mammouths</Mech_Mammoth.labelPlural>
 
 
 </LanguageData>

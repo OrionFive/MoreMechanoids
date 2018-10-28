@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <Paralyze.label>paralyze</Paralyze.label>
-  <Paralyze.deathMessage>{0} died from nerve damage.</Paralyze.deathMessage>
+  <Paralyze.label>paralyser</Paralyze.label>
+  <Paralyze.deathMessage>{0} décédé de lésions nerveuses.</Paralyze.deathMessage>
 
 
 </LanguageData>

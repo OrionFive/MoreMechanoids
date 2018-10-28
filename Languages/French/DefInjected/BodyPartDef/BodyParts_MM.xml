@@ -3,80 +3,80 @@
 
   <!-- Crawler -->
 
-  <MechanicalShell.label>shell</MechanicalShell.label>
-  <PlasmaCutter.label>plasma cutter</PlasmaCutter.label>
-  <MechanicalAntenna.label>antenna</MechanicalAntenna.label>
+  <MechanicalShell.label>coquille</MechanicalShell.label>
+  <PlasmaCutter.label>Cutter plasma</PlasmaCutter.label>
+  <MechanicalAntenna.label>antenne</MechanicalAntenna.label>
   <!--[Duplicated] <InfraredSensor.label>infrared sensor</InfraredSensor.label>-->
-  <MechanicalCore.label>core</MechanicalCore.label>
-  <MechanicalCrawlerLeg.label>mechanical leg</MechanicalCrawlerLeg.label>
-  <MechanicalGearBox.label>gear box</MechanicalGearBox.label>
+  <MechanicalCore.label>coeur</MechanicalCore.label>
+  <MechanicalCrawlerLeg.label>jambe mécanique</MechanicalCrawlerLeg.label>
+  <MechanicalGearBox.label>boîte de vitesses</MechanicalGearBox.label>
 
 
   <!-- Skullywag -->
 
-  <FrontParalyzeComponent.label>paralytic component</FrontParalyzeComponent.label>
-  <WheelsEnclosure.label>wheels enclosure</WheelsEnclosure.label>
-  <Wheel.label>wheel</Wheel.label>
-  <MechanicalCoreSkullywag.label>core</MechanicalCoreSkullywag.label>
-  <CoreProcessor.label>core processor</CoreProcessor.label>
-  <InfraredSensor.label>infrared sensor</InfraredSensor.label>
+  <FrontParalyzeComponent.label>composante paralytique</FrontParalyzeComponent.label>
+  <WheelsEnclosure.label>roulettes</WheelsEnclosure.label>
+  <Wheel.label>roue</Wheel.label>
+  <MechanicalCoreSkullywag.label>coeur</MechanicalCoreSkullywag.label>
+  <CoreProcessor.label>processeur de base</CoreProcessor.label>
+  <InfraredSensor.label>Capteur infrarouge</InfraredSensor.label>
 
 
   <!-- Assimilated Human -->
 
-  <MechanicalSkull.label>steel skull</MechanicalSkull.label>
+  <MechanicalSkull.label>crâne d'acier</MechanicalSkull.label>
 
 
   <!-- Scoutbot -->
 
-  <MechanicalCoreScoutbot.label>core</MechanicalCoreScoutbot.label>
-  <MechanicalHoverComponent.label>hover component</MechanicalHoverComponent.label>
-  <MechanicalBackupHoverComponent.label>backup hover component</MechanicalBackupHoverComponent.label>
-  <FrontGun.label>front gun</FrontGun.label>
+  <MechanicalCoreScoutbot.label>coeur</MechanicalCoreScoutbot.label>
+  <MechanicalHoverComponent.label>composante de vol</MechanicalHoverComponent.label>
+  <MechanicalBackupHoverComponent.label>composant de vol de secours</MechanicalBackupHoverComponent.label>
+  <FrontGun.label>pistolet avant</FrontGun.label>
 
 
   <!-- Assaulter -->
 
-  <GunProtrusion.label>gun protrusion</GunProtrusion.label>
-  <FrontShield.label>front shield</FrontShield.label>
-  <ShieldWindow.label>front shield window</ShieldWindow.label>
+  <GunProtrusion.label>saillie des armes à feu</GunProtrusion.label>
+  <FrontShield.label>bouclier avant</FrontShield.label>
+  <ShieldWindow.label>fenêtre de bouclier avant</ShieldWindow.label>
 
 
   <!-- Carrier -->
 
-  <MechanicalCephalothorax.label>cephalothorax</MechanicalCephalothorax.label>
-  <LargeMechanicalAbdomen.label>large abdomen</LargeMechanicalAbdomen.label>
-  <MechanicalTentacle.label>tentacle</MechanicalTentacle.label>
-  <MechanicalTentacleSection.label>tentacle section</MechanicalTentacleSection.label>
-  <Claw.label>claw</Claw.label>
-  <ClawGrip.label>claw grip</ClawGrip.label>
+  <MechanicalCephalothorax.label>céphalothorax</MechanicalCephalothorax.label>
+  <LargeMechanicalAbdomen.label>gros abdomen</LargeMechanicalAbdomen.label>
+  <MechanicalTentacle.label>tentacule</MechanicalTentacle.label>
+  <MechanicalTentacleSection.label>section de tentacule</MechanicalTentacleSection.label>
+  <Claw.label>griffe</Claw.label>
+  <ClawGrip.label>prise en griffe</ClawGrip.label>
   <!--[Core] <SightSensor.label>visual sensor</SightSensor.label>-->
-  <MechanicalPalp.label>mechanical palp</MechanicalPalp.label>
+  <MechanicalPalp.label>palp mécanique</MechanicalPalp.label>
 
 
   <!-- Mammoth -->
 
-  <MechanicalBody.label>mechanical body</MechanicalBody.label>
-  <ArmorPlating.label>armor plating</ArmorPlating.label>
-  <InternalMetalPlate.label>internal metal plate</InternalMetalPlate.label>
-  <MetalTusk.label>metal tusk</MetalTusk.label>
-  <MechanicalMammothLeg.label>mechanical leg</MechanicalMammothLeg.label>
-  <MechanicalMammothHoof.label>mechanical hoof</MechanicalMammothHoof.label>
+  <MechanicalBody.label>corps mécanique</MechanicalBody.label>
+  <ArmorPlating.label>blindage</ArmorPlating.label>
+  <InternalMetalPlate.label>plaque métallique interne</InternalMetalPlate.label>
+  <MetalTusk.label>défense en métal</MetalTusk.label>
+  <MechanicalMammothLeg.label>jambe mécanique</MechanicalMammothLeg.label>
+  <MechanicalMammothHoof.label>sabot mécanique</MechanicalMammothHoof.label>
 
 
   <!-- Flamebot -->
 
-  <MechanicalBodySmall.label>body</MechanicalBodySmall.label>
-  <FlamebotTubing.label>tubing</FlamebotTubing.label>
-  <FuelContainer.label>fuel container</FuelContainer.label>
-  <Igniter.label>igniter</Igniter.label>
-  <SmallWheel.label>small wheel</SmallWheel.label>
+  <MechanicalBodySmall.label>corps</MechanicalBodySmall.label>
+  <FlamebotTubing.label>tubes</FlamebotTubing.label>
+  <FuelContainer.label>bidon d'essence</FuelContainer.label>
+  <Igniter.label>allumeur</Igniter.label>
+  <SmallWheel.label>petite roue</SmallWheel.label>
 
 
   <!-- Boombot -->
 
-  <ExplosiveTank.label>explosive tank</ExplosiveTank.label>
-  <RollComponent.label>rolling component</RollComponent.label>
+  <ExplosiveTank.label>réservoir d'explosif</ExplosiveTank.label>
+  <RollComponent.label>composant de roulement</RollComponent.label>
 
 
 </LanguageData>

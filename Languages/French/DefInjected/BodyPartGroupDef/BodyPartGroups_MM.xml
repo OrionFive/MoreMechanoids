@@ -3,42 +3,42 @@
 
   <!-- Crawler -->
 
-  <PlasmaCutter.label>plasma cutter</PlasmaCutter.label>
-  <FrontLegs.label>front leg</FrontLegs.label>
+  <PlasmaCutter.label>Cutter plasma</PlasmaCutter.label>
+  <FrontLegs.label>jambe avant</FrontLegs.label>
 
 
   <!-- Skullywag -->
 
-  <FrontParalyzeComponent.label>paralytic component</FrontParalyzeComponent.label>
-  <WheelsEnclosure.label>wheels enclosure</WheelsEnclosure.label>
-  <MechanicalCoreSkullywag.label>core</MechanicalCoreSkullywag.label>
+  <FrontParalyzeComponent.label>composante paralytique</FrontParalyzeComponent.label>
+  <WheelsEnclosure.label>roulettes</WheelsEnclosure.label>
+  <MechanicalCoreSkullywag.label>coeur</MechanicalCoreSkullywag.label>
 
 
   <!-- Scoutbot -->
 
-  <MechanicalCoreScoutbot.label>core</MechanicalCoreScoutbot.label>
+  <MechanicalCoreScoutbot.label>coeur</MechanicalCoreScoutbot.label>
 
 
   <!-- Assaulter -->
 
-  <CoveredByShield.label>shield</CoveredByShield.label>
-  <GunProtrusion.label>gun protrusion</GunProtrusion.label>
+  <CoveredByShield.label>bouclier</CoveredByShield.label>
+  <GunProtrusion.label>saillie des armes à feu</GunProtrusion.label>
 
 
   <!-- Carrier -->
 
-  <MeleeTentacles.label>tentacle</MeleeTentacles.label>
+  <MeleeTentacles.label>tentacule</MeleeTentacles.label>
 
 
   <!-- Mammoth -->
 
-  <Tusk.label>tusk</Tusk.label>
+  <Tusk.label>défense</Tusk.label>
 
 
   <!-- Flamebot -->
 
-  <Igniter.label>igniter</Igniter.label>
-  <FuelContainer.label>fuel container</FuelContainer.label>
+  <Igniter.label>allumeur</Igniter.label>
+  <FuelContainer.label>bidon d'essence</FuelContainer.label>
 
 
 </LanguageData>
