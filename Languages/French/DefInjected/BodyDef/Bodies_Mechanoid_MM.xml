@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <MechanicalCrawler.label>Chenille Mécanique</MechanicalCrawler.label>
+  <MechanicalCrawler.corePart.parts.1.parts.2.customLabel>capteur de vue gauche</MechanicalCrawler.corePart.parts.1.parts.2.customLabel>
+  <MechanicalCrawler.corePart.parts.1.parts.3.customLabel>capteur de vue droite</MechanicalCrawler.corePart.parts.1.parts.3.customLabel>
+  <MechanicalCrawler.corePart.parts.1.parts.4.customLabel>capteur auditif gauche</MechanicalCrawler.corePart.parts.1.parts.4.customLabel>
+  <MechanicalCrawler.corePart.parts.1.parts.5.customLabel>capteur auditif droit</MechanicalCrawler.corePart.parts.1.parts.5.customLabel>
+  <MechanicalCrawler.corePart.parts.2.customLabel>jambe avant gauche</MechanicalCrawler.corePart.parts.2.customLabel>
+  <MechanicalCrawler.corePart.parts.3.customLabel>jambe avant droite</MechanicalCrawler.corePart.parts.3.customLabel>
+  <MechanicalCrawler.corePart.parts.4.customLabel>jambe Centrale gauche</MechanicalCrawler.corePart.parts.4.customLabel>
+  <MechanicalCrawler.corePart.parts.5.customLabel>jambe Centrale droite</MechanicalCrawler.corePart.parts.5.customLabel>
+  <MechanicalCrawler.corePart.parts.6.customLabel>jambe arrière gauche</MechanicalCrawler.corePart.parts.6.customLabel>
+  <MechanicalCrawler.corePart.parts.7.customLabel>jambe arrière droite</MechanicalCrawler.corePart.parts.7.customLabel>
+
+
+  <!-- Skullywag -->
+
+  <MechanicalSkullywag.label>Skullywag Mécanique</MechanicalSkullywag.label>
+  <MechanicalSkullywag.corePart.parts.1.parts.0.customLabel>roue gauche</MechanicalSkullywag.corePart.parts.1.parts.0.customLabel>
+  <MechanicalSkullywag.corePart.parts.1.parts.1.customLabel>roue droite</MechanicalSkullywag.corePart.parts.1.parts.1.customLabel>
+  <MechanicalSkullywag.corePart.parts.1.parts.2.customLabel>roue arriere</MechanicalSkullywag.corePart.parts.1.parts.2.customLabel>
+
+
+  <!-- Assimilated Human -->
+
+  <AssimilatedHuman.label>Humain</AssimilatedHuman.label>
+  <AssimilatedHuman.corePart.parts.0.customLabel>clavicule gauche</AssimilatedHuman.corePart.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.1.customLabel>clavicule droite</AssimilatedHuman.corePart.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.1.customLabel>capteur de vue gauche</AssimilatedHuman.corePart.parts.6.parts.0.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.2.customLabel>capteur de vue droite</AssimilatedHuman.corePart.parts.6.parts.0.parts.2.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.3.customLabel>capteur auditif gauche</AssimilatedHuman.corePart.parts.6.parts.0.parts.3.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.4.customLabel>capteur auditif droit</AssimilatedHuman.corePart.parts.6.parts.0.parts.4.customLabel>
+  <AssimilatedHuman.corePart.parts.7.customLabel>Épaule Gauche</AssimilatedHuman.corePart.parts.7.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.customLabel>bras gauche</AssimilatedHuman.corePart.parts.7.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.customLabel>main gauche</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.0.customLabel>petit doigt gauche</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.1.customLabel>majeur gauche</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.2.customLabel>index gauche</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.2.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.3.customLabel>pouce gauche</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.3.customLabel>
+  <AssimilatedHuman.corePart.parts.8.customLabel>Épaule Droite</AssimilatedHuman.corePart.parts.8.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.customLabel>bras droit</AssimilatedHuman.corePart.parts.8.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.customLabel>main droite</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.0.customLabel>petit doigt droit</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.1.customLabel>le majeur droit</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.2.customLabel>index droit</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.2.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.3.customLabel>pouce droit</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.3.customLabel>
+  <AssimilatedHuman.corePart.parts.9.customLabel>la jambe gauche</AssimilatedHuman.corePart.parts.9.customLabel>
+  <AssimilatedHuman.corePart.parts.9.parts.0.customLabel>pied gauche</AssimilatedHuman.corePart.parts.9.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.10.customLabel>jambe droite</AssimilatedHuman.corePart.parts.10.customLabel>
+  <AssimilatedHuman.corePart.parts.10.parts.0.customLabel>pied droit</AssimilatedHuman.corePart.parts.10.parts.0.customLabel>
+
+
+  <!-- Scoutbot -->
+
+  <MechanicalScoutbot.label>Scout-bot mécanique</MechanicalScoutbot.label>
+  <MechanicalScoutbot.corePart.parts.1.parts.0.parts.2.customLabel>capteur de vue gauche</MechanicalScoutbot.corePart.parts.1.parts.0.parts.2.customLabel>
+
+
+  <!-- Assaulter -->
+
+  <MechanicalAssaulter.label>agresseur</MechanicalAssaulter.label>
+  <MechanicalAssaulter.corePart.parts.0.parts.1.customLabel>saillie inférieure du pistolet</MechanicalAssaulter.corePart.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.0.parts.2.customLabel>saillie supérieure en haut à gauche</MechanicalAssaulter.corePart.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.0.parts.3.customLabel>saillie du pistolet en bas à droite</MechanicalAssaulter.corePart.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.0.parts.4.customLabel>saillie supérieure droite</MechanicalAssaulter.corePart.parts.0.parts.4.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.1.customLabel>capteur de vue gauche</MechanicalAssaulter.corePart.parts.1.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.2.customLabel>capteur de vue droite</MechanicalAssaulter.corePart.parts.1.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.3.customLabel>capteur auditif gauche</MechanicalAssaulter.corePart.parts.1.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.4.customLabel>capteur auditif droit</MechanicalAssaulter.corePart.parts.1.parts.0.parts.4.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.customLabel>épaule gauche</MechanicalAssaulter.corePart.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.customLabel>bras gauche</MechanicalAssaulter.corePart.parts.2.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.customLabel>main gauche</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.0.customLabel>petit doigt gauche</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.1.customLabel>majeur gauche</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.2.customLabel>index gauche</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.3.customLabel>pouce gauche</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.customLabel>épaule droite</MechanicalAssaulter.corePart.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.customLabel>bras droit</MechanicalAssaulter.corePart.parts.3.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.customLabel>main droite</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.0.customLabel>petit doigt droit</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.1.customLabel>le majeur droit</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.2.customLabel>index droit</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.3.customLabel>pouce droit</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.4.customLabel>la jambe gauche</MechanicalAssaulter.corePart.parts.4.customLabel>
+  <MechanicalAssaulter.corePart.parts.4.parts.0.customLabel>pied gauche</MechanicalAssaulter.corePart.parts.4.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.5.customLabel>jambe droite</MechanicalAssaulter.corePart.parts.5.customLabel>
+  <MechanicalAssaulter.corePart.parts.5.parts.0.customLabel>pied droit</MechanicalAssaulter.corePart.parts.5.parts.0.customLabel>
+
+
+  <!-- MechanicalCephalothorax
+			LargeMechanicalAbdomen
+				MechanicalTentacle (x6)
+					MechanicalTentacleSection
+						Claw
+							MechanicalFinger
+							MechanicalFinger
+							MechanicalFinger
+			MechanicalHead
+				EyeSensor
+				ArtificialBrain
+			FrontLeftMechanicalPalp
+			FrontRightMechanicalPalp -->
+
+  <MechanicalCarrier.label>transporteur</MechanicalCarrier.label>
+  <MechanicalCarrier.corePart.parts.0.parts.1.customLabel>palpe mécanique avant gauche</MechanicalCarrier.corePart.parts.0.parts.1.customLabel>
+  <MechanicalCarrier.corePart.parts.0.parts.2.customLabel>palpe mécanique avant droite</MechanicalCarrier.corePart.parts.0.parts.2.customLabel>
+
+
+  <!-- MechanicalMammoth -->
+
+  <MechanicalMammoth.label>mammouth</MechanicalMammoth.label>
+  <MechanicalMammoth.corePart.parts.4.parts.6.customLabel>capteur de vue gauche</MechanicalMammoth.corePart.parts.4.parts.6.customLabel>
+  <MechanicalMammoth.corePart.parts.4.parts.7.customLabel>capteur de vue droite</MechanicalMammoth.corePart.parts.4.parts.7.customLabel>
+  <MechanicalMammoth.corePart.parts.4.parts.8.customLabel>capteur auditif gauche</MechanicalMammoth.corePart.parts.4.parts.8.customLabel>
+  <MechanicalMammoth.corePart.parts.4.parts.9.customLabel>capteur auditif droit</MechanicalMammoth.corePart.parts.4.parts.9.customLabel>
+  <MechanicalMammoth.corePart.parts.5.customLabel>jambe avant gauche</MechanicalMammoth.corePart.parts.5.customLabel>
+  <MechanicalMammoth.corePart.parts.5.parts.0.customLabel>sabot avant gauche</MechanicalMammoth.corePart.parts.5.parts.0.customLabel>
+  <MechanicalMammoth.corePart.parts.6.customLabel>jambe avant droite</MechanicalMammoth.corePart.parts.6.customLabel>
+  <MechanicalMammoth.corePart.parts.6.parts.0.customLabel>sabot avant droit</MechanicalMammoth.corePart.parts.6.parts.0.customLabel>
+  <MechanicalMammoth.corePart.parts.7.customLabel>jambe arrière gauche</MechanicalMammoth.corePart.parts.7.customLabel>
+  <MechanicalMammoth.corePart.parts.7.parts.0.customLabel>sabot arrière gauche</MechanicalMammoth.corePart.parts.7.parts.0.customLabel>
+  <MechanicalMammoth.corePart.parts.8.customLabel>jambe arrière droite</MechanicalMammoth.corePart.parts.8.customLabel>
+  <MechanicalMammoth.corePart.parts.8.parts.0.customLabel>sabot arrière droit</MechanicalMammoth.corePart.parts.8.parts.0.customLabel>
+
+
+  <!-- MechanicalBodySmall
+			LeftTubing
+			RightTubing
+			FuelContainer
+			MechanicalHead
+				LeftSightSensor
+				RightSightSensor
+				ArtificialBrain
+				Igniter -->
+
+  <MechanicalFlamebot.label>flame-bot</MechanicalFlamebot.label>
+  <MechanicalFlamebot.corePart.parts.0.customLabel>tube gauche</MechanicalFlamebot.corePart.parts.0.customLabel>
+  <MechanicalFlamebot.corePart.parts.1.customLabel>tube droit</MechanicalFlamebot.corePart.parts.1.customLabel>
+  <MechanicalFlamebot.corePart.parts.7.parts.0.customLabel>capteur de vue gauche</MechanicalFlamebot.corePart.parts.7.parts.0.customLabel>
+  <MechanicalFlamebot.corePart.parts.7.parts.1.customLabel>capteur de vue droite</MechanicalFlamebot.corePart.parts.7.parts.1.customLabel>
+
+
+  <!-- MechanicalBodySmall
+			LeftMechanicalLeg
+			RightMechanicalLeg
+			MechanicalHead
+				ArtificialBrain
+			LeftExplosiveTank
+			RightExplosiveTank -->
+
+  <MechanicalBoombot.label>boom-bot</MechanicalBoombot.label>
+  <MechanicalBoombot.corePart.parts.1.parts.0.customLabel>capteur de vue gauche</MechanicalBoombot.corePart.parts.1.parts.0.customLabel>
+  <MechanicalBoombot.corePart.parts.1.parts.1.customLabel>capteur de vue droite</MechanicalBoombot.corePart.parts.1.parts.1.customLabel>
+  <MechanicalBoombot.corePart.parts.2.customLabel>left explosive tank</MechanicalBoombot.corePart.parts.2.customLabel>
+  <MechanicalBoombot.corePart.parts.3.customLabel>right explosive tank</MechanicalBoombot.corePart.parts.3.customLabel>
+
+
+</LanguageData>
