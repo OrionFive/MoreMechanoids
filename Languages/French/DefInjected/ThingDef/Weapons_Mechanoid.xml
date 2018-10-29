@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mechanoid assault charge blaster -->
+
+  <Gun_ChargeBlasterInternal.label>blaster à charge interne</Gun_ChargeBlasterInternal.label>
+  <Gun_ChargeBlasterInternal.description>Blaster chargé pour un tir suppressif de zone. Construit par un Mécanoïde.</Gun_ChargeBlasterInternal.description>
+
+
+  <!-- Mechanoid Flamethrower -->
+
+  <Bullet_FlameThrower.label>flame</Bullet_FlameThrower.label>
+
+  <MechanoidFlameThrower.label>lance-flammes mécanoïde</MechanoidFlameThrower.label>
+  <MechanoidFlameThrower.description>Un lance-flammes intégré. Construit par un Mécanoïde.</MechanoidFlameThrower.description>
+
+
+  <!-- Boombot -->
+
+  <BoomBoom.label>Boom boom</BoomBoom.label>
+
+  <MechanoidBoom.label>Mécanoïde boom</MechanoidBoom.label>
+  <MechanoidBoom.description>Cette partie va faire BOOM!</MechanoidBoom.description>
+  <MechanoidBoom.verbs.0.label>exploser</MechanoidBoom.verbs.0.label>
+
+
+</LanguageData>

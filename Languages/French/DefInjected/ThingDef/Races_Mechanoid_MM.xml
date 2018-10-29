@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <Mech_Crawler.label>crawler</Mech_Crawler.label>
+  <Mech_Crawler.description>Petits robots ressemblant à des insectes. Bien qu'ils ne soient pas particulièrement robustes, leur vitesse, leur taille et leur nombre le compensent largement. Un minuscule cutter plasma leur permet de couper le métal comme du beurre. Leur passe-temps favori est la chirurgie ouverte.</Mech_Crawler.description>
+  <Mech_Crawler.tools.0.label>Cutter plasma</Mech_Crawler.tools.0.label>
+  <Mech_Crawler.tools.1.label>les pattes avant</Mech_Crawler.tools.1.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Crawler_Corpse.label>Cadavre de crawler</Mech_Crawler_Corpse.label>
+  <Mech_Crawler_Corpse.description>Cadavre de crawler</Mech_Crawler_Corpse.description>
+
+
+  <!-- Skullywag -->
+
+  <Mech_Skullywag.label>skullywag</Mech_Skullywag.label>
+  <Mech_Skullywag.description>Le skullywag est un mécanoïde blindé léger avec une seule chose sur son esprit artificiel: Incapaciter tous les ennemis pour l'assimilation. Méfiez-vous de sa composante paralysante industrielle.</Mech_Skullywag.description>
+  <Mech_Skullywag.tools.0.label>composant de paralysie avant</Mech_Skullywag.tools.0.label>
+  <Mech_Skullywag.tools.1.label>tête</Mech_Skullywag.tools.1.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Skullywag_Corpse.label>Cadavre de skullywag</Mech_Skullywag_Corpse.label>
+  <Mech_Skullywag_Corpse.description>Cadavre de skullywag</Mech_Skullywag_Corpse.description>
+
+
+  <!-- Flamebot -->
+
+  <Mech_Flamebot.label>flamebot</Mech_Flamebot.label>
+  <Mech_Flamebot.description>Un petit mécanoïde qui crache du feu. Bien qu'ils soient légèrement blindés, ils peuvent rapidement causer le chaos dans votre colonie..</Mech_Flamebot.description>
+  <Mech_Flamebot.tools.0.label>allumeur</Mech_Flamebot.tools.0.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Flamebot_Corpse.label>Cadavre de flamebot</Mech_Flamebot_Corpse.label>
+  <Mech_Flamebot_Corpse.description>Cadavre de flamebot</Mech_Flamebot_Corpse.description>
+
+
+  <!-- Mammoth -->
+
+  <Mech_Mammoth.label></Mech_Mammoth.label>
+  <Mech_Mammoth.description>Les mammouths sont des mécanoïdes de combat lourdement blindés et fortement armés. Ce sera un défi à relever.</Mech_Mammoth.description>
+  <Mech_Mammoth.tools.0.label>tête</Mech_Mammoth.tools.0.label>
+  <Mech_Mammoth.tools.1.label>défense</Mech_Mammoth.tools.1.label>
+  <Mech_Mammoth.tools.2.label>jambe</Mech_Mammoth.tools.2.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Mammoth_Corpse.label>Cadavre de mammouth</Mech_Mammoth_Corpse.label>
+  <Mech_Mammoth_Corpse.description>Cadavre de mammouth</Mech_Mammoth_Corpse.description>
+
+
+  <!-- Assaulter -->
+
+  <Mech_Assaulter.label>Robot d'assaut</Mech_Assaulter.label>
+  <Mech_Assaulter.description>Le robot d'assaut est un mécanoïde de combat lourd. Son bouclier avant le protège de la plupart des coups de feu, c'est un mécanoïde de combat lourd. Il est basé sur son bouclier avant qui le protège de la plupart des coups de feu.</Mech_Assaulter.description>
+  <Mech_Assaulter.tools.0.label>bouclier</Mech_Assaulter.tools.0.label>
+  <Mech_Assaulter.tools.1.label>saillie des armes à feu</Mech_Assaulter.tools.1.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Assaulter_Corpse.label>Cadavre de robot d'assaut</Mech_Assaulter_Corpse.label>
+  <Mech_Assaulter_Corpse.description>Cadavre de robot d'assaut</Mech_Assaulter_Corpse.description>
+
+
+</LanguageData>
