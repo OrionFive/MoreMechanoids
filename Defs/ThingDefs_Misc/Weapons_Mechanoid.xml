@@ -43,10 +43,10 @@
     <statBases>
 		<MarketValue>1500</MarketValue>
         <Mass>22</Mass>
-		<AccuracyTouch>0.10</AccuracyTouch>
-		<AccuracyShort>0.15</AccuracyShort>
-		<AccuracyMedium>0.20</AccuracyMedium>
-		<AccuracyLong>0.05</AccuracyLong>
+		<AccuracyTouch>0.05</AccuracyTouch>
+		<AccuracyShort>0.10</AccuracyShort>
+		<AccuracyMedium>0.15</AccuracyMedium>
+		<AccuracyLong>0.025</AccuracyLong>
         <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
     </statBases>
     <tradeability>None</tradeability>
@@ -64,7 +64,7 @@
         <warmupTime>3.3</warmupTime>
         <range>18</range>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <burstShotCount>18</burstShotCount>
+        <burstShotCount>15</burstShotCount>
         <soundCast>Shot_ChargeBlaster</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>7</muzzleFlashScale>
