@@ -5,7 +5,7 @@
 
   <Gun_ChargeBlasterInternal.label>blaster à charge interne</Gun_ChargeBlasterInternal.label>
   <Gun_ChargeBlasterInternal.description>Blaster chargé pour un tir suppressif de zone. Construit par un Mécanoïde.</Gun_ChargeBlasterInternal.description>
-
+  <Gun_ChargeBlasterInternal.verbs.Verb_Shoot.label>blaster à charge interne</Gun_ChargeBlasterInternal.verbs.Verb_Shoot.label>
 
   <!-- Mechanoid Flamethrower -->
 
@@ -13,7 +13,7 @@
 
   <MechanoidFlameThrower.label>lance-flammes mécanoïde</MechanoidFlameThrower.label>
   <MechanoidFlameThrower.description>Un lance-flammes intégré. Construit par un Mécanoïde.</MechanoidFlameThrower.description>
-
+  <MechanoidFlameThrower.verbs.Verb_Shoot.label>Lance-flammes mécanoïde</MechanoidFlameThrower.verbs.Verb_Shoot.label>
 
   <!-- Boombot -->
 
