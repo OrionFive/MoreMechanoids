@@ -8,8 +8,8 @@
   <Mech_Crawler.tools.0.label>Cutter plasma</Mech_Crawler.tools.0.label>
   <Mech_Crawler.tools.1.label>les pattes avant</Mech_Crawler.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Crawler_Corpse.label>Cadavre de crawler</Mech_Crawler_Corpse.label>
-  <Mech_Crawler_Corpse.description>Cadavre de crawler</Mech_Crawler_Corpse.description>
+  <Corpse_Mech_Crawler.label>Cadavre de crawler</Corpse_Mech_Crawler.label>
+  <Corpse_Mech_Crawler.description>Cadavre de crawler</Corpse_Mech_Crawler.description>
 
 
   <!-- Skullywag -->
@@ -19,8 +19,8 @@
   <Mech_Skullywag.tools.0.label>composant de paralysie avant</Mech_Skullywag.tools.0.label>
   <Mech_Skullywag.tools.1.label>tête</Mech_Skullywag.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Skullywag_Corpse.label>Cadavre de skullywag</Mech_Skullywag_Corpse.label>
-  <Mech_Skullywag_Corpse.description>Cadavre de skullywag</Mech_Skullywag_Corpse.description>
+  <Corpse_Mech_Skullywag.label>Cadavre de skullywag</Corpse_Mech_Skullywag.label>
+  <Corpse_Mech_Skullywag.description>Cadavre de skullywag</Corpse_Mech_Skullywag.description>
 
 
   <!-- Flamebot -->
@@ -29,8 +29,8 @@
   <Mech_Flamebot.description>Un petit mécanoïde qui crache du feu. Bien qu'ils soient légèrement blindés, ils peuvent rapidement causer le chaos dans votre colonie..</Mech_Flamebot.description>
   <Mech_Flamebot.tools.0.label>allumeur</Mech_Flamebot.tools.0.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Flamebot_Corpse.label>Cadavre de flamebot</Mech_Flamebot_Corpse.label>
-  <Mech_Flamebot_Corpse.description>Cadavre de flamebot</Mech_Flamebot_Corpse.description>
+  <Corpse_Mech_Flamebot.label>Cadavre de flamebot</Corpse_Mech_Flamebot.label>
+  <Corpse_Mech_Flamebot.description>Cadavre de flamebot</Corpse_Mech_Flamebot.description>
 
 
   <!-- Mammoth -->
@@ -41,8 +41,8 @@
   <Mech_Mammoth.tools.1.label>défense</Mech_Mammoth.tools.1.label>
   <Mech_Mammoth.tools.2.label>jambe</Mech_Mammoth.tools.2.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Mammoth_Corpse.label>Cadavre de mammouth</Mech_Mammoth_Corpse.label>
-  <Mech_Mammoth_Corpse.description>Cadavre de mammouth</Mech_Mammoth_Corpse.description>
+  <Corpse_Mech_Mammoth.label>Cadavre de mammouth</Corpse_Mech_Mammoth.label>
+  <Corpse_Mech_Mammoth.description>Cadavre de mammouth</Corpse_Mech_Mammoth.description>
 
 
   <!-- Assaulter -->
@@ -52,8 +52,8 @@
   <Mech_Assaulter.tools.0.label>bouclier</Mech_Assaulter.tools.0.label>
   <Mech_Assaulter.tools.1.label>saillie des armes à feu</Mech_Assaulter.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Assaulter_Corpse.label>Cadavre de robot d'assaut</Mech_Assaulter_Corpse.label>
-  <Mech_Assaulter_Corpse.description>Cadavre de robot d'assaut</Mech_Assaulter_Corpse.description>
+  <Corpse_Mech_Assaulter.label>Cadavre de robot d'assaut</Corpse_Mech_Assaulter.label>
+  <Corpse_Mech_Assaulter.description>Cadavre de robot d'assaut</Corpse_Mech_Assaulter.description>
 
 
 </LanguageData>
