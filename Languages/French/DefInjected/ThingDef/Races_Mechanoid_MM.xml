@@ -35,7 +35,7 @@
 
   <!-- Mammoth -->
 
-  <Mech_Mammoth.label></Mech_Mammoth.label>
+  <Mech_Mammoth.label>mammouth</Mech_Mammoth.label>
   <Mech_Mammoth.description>Les mammouths sont des mécanoïdes de combat lourdement blindés et fortement armés. Ce sera un défi à relever.</Mech_Mammoth.description>
   <Mech_Mammoth.tools.0.label>tête</Mech_Mammoth.tools.0.label>
   <Mech_Mammoth.tools.1.label>défense</Mech_Mammoth.tools.1.label>
