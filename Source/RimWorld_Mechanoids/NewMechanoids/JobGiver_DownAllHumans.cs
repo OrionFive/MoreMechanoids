@@ -65,7 +65,7 @@ namespace MoreMechanoids
                 }
                 if (thing != null && thing != pawn.mindState.enemyTarget)
                 {
-                    Log.Message(pawn.LabelShort + " attacking " + thing.LabelShort + " at " + thing.Position);
+                    //Log.Message(pawn.LabelShort + " attacking " + thing.LabelShort + " at " + thing.Position);
                     Traverse.Create(pawn.mindState).Method("Notify_EngagedTarget");
 
                     Lord lord = pawn.Map.lordManager.LordOf(pawn);
