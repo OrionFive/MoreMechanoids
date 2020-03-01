@@ -11,6 +11,7 @@
   <HediffDef ParentName="AddedBodyPartBase_MM">
     <defName>JackhammerArm</defName>
     <label>jackhammer arm</label>
+    <description>A mechanical arm that is shaped and functions like a jackhammer.</description>
     <comps>
       <li Class="HediffCompProperties_VerbGiver">
         <compClass>HediffComp_VerbGiver</compClass>
@@ -46,6 +47,7 @@
   <HediffDef ParentName="AddedBodyPartBase_MM">
     <defName>SpikeArm</defName>
     <label>spike arm</label>
+    <description>>A solid metal arm shaped like a large spike.</description>
     <comps>
       <li Class="HediffCompProperties_VerbGiver">
         <compClass>HediffComp_VerbGiver</compClass>

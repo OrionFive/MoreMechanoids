@@ -6,7 +6,8 @@
     
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <defName>Paralyze</defName>
-    <label>paralyzation</label>
+    <label>paralysis</label>
+    <description>A temporary loss or impairment of voluntary movement, caused by electric damage done to the nerves.</description>
     <initialSeverity>0.3</initialSeverity>
     <comps>
       <li Class="HediffCompProperties_Disappears">

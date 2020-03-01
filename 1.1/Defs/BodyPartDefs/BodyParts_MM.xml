@@ -170,21 +170,6 @@
 	</tags>
   </BodyPartDef>
   
-  <BodyPartDef>
-    <defName>InfraredSensor</defName>
-    <label>infrared sensor</label>
-	<hitPoints>10</hitPoints>
-    <frostbiteVulnerability>5</frostbiteVulnerability>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>false</skinCovered>
-	<solid>true</solid>
-	<bleedRate>0</bleedRate>
-    <alive>false</alive>
-	<tags>
-		<li>SightSource</li>
-	</tags>
-  </BodyPartDef>
-  
   <!-- Assimilated Human -->
   <BodyPartDef>
     <defName>MechanicalSkull</defName>
