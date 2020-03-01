@@ -18,6 +18,9 @@
 	<loadAfter>
 		<li>UnlimitedHugs.HugsLib</li>
 	</loadAfter>
+    <incompatibleWith>
+      <li>Ludeon.Rimworld.Royalty</li>
+    </incompatibleWith>
 	<description>A new mechanical threat has risen! 
 
 	Features:

@@ -26,6 +26,7 @@ namespace MoreMechanoids
             var thing = pawn.mindState.enemyTarget;
             if (thing != null)
             {
+                //Log.Message($"{pawn.Label}: was going for {thing.Label}.");
                 if (thing.Destroyed || Find.TickManager.TicksGame - pawn.mindState.lastEngageTargetTick > 400 || !pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly, true)
                     || (pawn.Position - thing.Position).LengthHorizontalSquared > targetKeepRadius*targetKeepRadius)
                 {
@@ -42,25 +43,23 @@ namespace MoreMechanoids
                     thing = null;
                 }
             }
-            // Select only flesh stuff
+
             if (thing == null)
             {
-                //Log.Message(pawn.Label + ": trying to find target...");
                 const TargetScanFlags targetScanFlags = TargetScanFlags.NeedReachable;
 
                 thing = AttackTargetFinder.BestAttackTarget(pawn, targetScanFlags, validPawn, 0f, targetAcquireRadius) as Thing;
                 if (thing == null)
                 {
                     //Thing thing2 = GenAI.BestAttackTarget(pawn.Position, pawn, validatorDoor, targetAcquireRadius, 0f, targetScanFlags2);
-                    Building_Door d =
-                        pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
-                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.NoPassClosedDoorsOrWater, Danger.Deadly))
+                    var door = pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>()
+                            .Where(b => validDoor(b) && pawn.Map.reachability.CanReach(b.Position, pawn.Position, PathEndMode.Touch, TraverseMode.PassDoors, Danger.Deadly))
                             .OrderBy(t => t.Position.DistanceToSquared(pawn.Position))
                             .FirstOrDefault();
-                    if (d != null)
+
+                    if (door != null)
                     {
-                        //Log.Message("Selected door " + thing2.Label);
-                        thing = d;
+                        thing = door;
                     }
                 }
                 if (thing != null && thing != pawn.mindState.enemyTarget)

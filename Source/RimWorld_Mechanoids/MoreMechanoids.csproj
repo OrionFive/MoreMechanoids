@@ -68,7 +68,7 @@
     <Compile Include="Mechanoids\DamageWorker_AddStaged.cs" />
     <Compile Include="Mechanoids\ThinkNode_ConditionalNonPlayerFaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Mechanoids\Verb_Unlock.cs" />
+    <Compile Include="Mechanoids\Verb_UnlockDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
