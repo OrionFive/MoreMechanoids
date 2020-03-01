@@ -3,5 +3,6 @@
   <Excluded>
     <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\.git</exclude>
     <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\.vs</exclude>
+    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\packages</exclude>
   </Excluded>
 </Configuration>
