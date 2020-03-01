@@ -17,6 +17,7 @@
 	</modDependencies>
 	<loadAfter>
 		<li>UnlimitedHugs.HugsLib</li>
+		<li>spino.sandy.mechanoidsextra</li>
 	</loadAfter>
     <incompatibleWith>
       <li>Ludeon.Rimworld.Royalty</li>
