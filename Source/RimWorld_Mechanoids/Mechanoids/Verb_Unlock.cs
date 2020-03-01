@@ -1,5 +1,4 @@
-using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -17,21 +16,20 @@ namespace MoreMechanoids
             {
                 return false;
             }
-            if (this.CasterPawn.stances.FullBodyBusy)
+            if (CasterPawn.stances.FullBodyBusy)
             {
                 return false;
             }
             //Log.Message("Trying open door on "+currentTarget.Thing);
-            Building_Door door = this.currentTarget.Thing as Building_Door;
-            if(door==null) return false;
+            if(!(currentTarget.Thing is Building_Door door)) return false;
             if (door.Open)
             {
-                this.CasterPawn.jobs.StopAll();
+                CasterPawn.jobs.StopAll();
                 return true;
             }
             if (!CanHitTarget(door))
             {
-                Log.Warning(string.Concat(new object[] { this.CasterPawn, " unlocked ", door, " from out of position."}));
+                Log.Warning(string.Concat(CasterPawn, " unlocked ", door, " from out of position."));
                 return false;
             }
             CasterPawn.rotationTracker.Face(door.DrawPos);
@@ -44,15 +42,12 @@ namespace MoreMechanoids
             else
             {
                 var soundMiss = Traverse.Create(this).Method("SoundMiss").GetValue<SoundDef>();
-                soundMiss.PlayOneShot(new TargetInfo(door.Position, door.MapHeld, false)); 
-                this.CreateCombatLog((ManeuverDef maneuver) => maneuver.combatLogRulesMiss, false);
+                soundMiss.PlayOneShot(new TargetInfo(door.Position, door.MapHeld)); 
+                CreateCombatLog(maneuver => maneuver.combatLogRulesMiss, false);
             }
             CasterPawn.Drawer.Notify_MeleeAttackOn(door);
             CasterPawn.rotationTracker.FaceCell(door.Position);
-            if (CasterPawn.caller != null)
-            {
-                CasterPawn.caller.Notify_DidMeleeAttack();
-            }
+            CasterPawn.caller?.Notify_DidMeleeAttack();
             return true;
         }
 

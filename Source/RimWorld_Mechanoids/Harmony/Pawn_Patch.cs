@@ -1,5 +1,5 @@
 using System.Linq;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -19,14 +19,7 @@ namespace MoreMechanoids.Harmony
                 __result = true;
                 if (p.meleeVerbs == null) return true;
                 var allVerbs = p.meleeVerbs.GetUpdatedAvailableVerbsList(false).Select(v=>v.verb);
-                foreach (var verb in allVerbs)
-                {
-                    if (verb.verbProps.ai_IsBuildingDestroyer)
-                    {
-                        return false;
-                    }
-                }
-                return true;
+                return allVerbs.All(verb => !verb.verbProps.ai_IsBuildingDestroyer);
             }
         }
 
@@ -37,11 +30,7 @@ namespace MoreMechanoids.Harmony
             internal static bool Prefix(Pawn p, out bool __result)
             {
                 __result = true;
-                if (p.RaceProps.IsMechanoid)
-                {
-                    return false;
-                }
-                return true;
+                return !p.RaceProps.IsMechanoid;
             }
         }
     }

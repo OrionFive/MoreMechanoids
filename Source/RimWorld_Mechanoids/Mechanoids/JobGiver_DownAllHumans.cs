@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -12,8 +12,8 @@ namespace MoreMechanoids
     {
         public float targetKeepRadius = 72f;
         public float targetAcquireRadius = 65f;
-        private Predicate<Thing> validDoor = t => t is Building_Door && !t.Destroyed && !((Building_Door) t).Open;
-        private Predicate<Thing> validPawn = t => t is Pawn && !t.Destroyed && !((Pawn) t).Downed && t.def.race != null && t.def.race.IsFlesh;
+        private Predicate<Thing> validDoor = t => t is Building_Door door && !door.Destroyed && !door.Open;
+        private Predicate<Thing> validPawn = t => t is Pawn pawn && !pawn.Destroyed && !pawn.Downed && pawn.def.race != null && pawn.def.race.IsFlesh;
 
         protected override bool ExtraTargetValidator(Pawn pawn, Thing target)
         {
@@ -23,7 +23,7 @@ namespace MoreMechanoids
         protected override void UpdateEnemyTarget(Pawn pawn)
         {
             if (pawn == null) return;
-            Thing thing = pawn.mindState.enemyTarget;
+            var thing = pawn.mindState.enemyTarget;
             if (thing != null)
             {
                 if (thing.Destroyed || Find.TickManager.TicksGame - pawn.mindState.lastEngageTargetTick > 400 || !pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly, true)
@@ -31,13 +31,13 @@ namespace MoreMechanoids
                 {
                     thing = null;
                 }
-                Pawn pawn2 = thing as Pawn;
-                if (pawn2 != null && pawn2.Downed)
+
+                if (thing is Pawn pawn2 && pawn2.Downed)
                 {
                     thing = null;
                 }
-                Building_Door door = thing as Building_Door;
-                if (door != null && door.Open)
+
+                if (thing is Building_Door door && door.Open)
                 {
                     thing = null;
                 }
@@ -69,15 +69,11 @@ namespace MoreMechanoids
                     Traverse.Create(pawn.mindState).Method("Notify_EngagedTarget");
 
                     Lord lord = pawn.Map.lordManager.LordOf(pawn);
-                    if (lord != null)
-                    {
-                        lord.Notify_PawnAcquiredTarget(pawn, thing);
-                    }
 
-                    if (pawn.CurJob != null)
-                    {
-                        pawn.CurJob.SetTarget(TargetIndex.A, thing);
-                    }
+                    lord?.Notify_PawnAcquiredTarget(pawn, thing);
+
+                    pawn.CurJob?.SetTarget(TargetIndex.A, thing);
+
                     pawn.mindState.enemyTarget = thing;
                 }
                 if(thing == null)

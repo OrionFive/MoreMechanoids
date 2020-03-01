@@ -6,6 +6,6 @@ namespace MoreMechanoids
     [StaticConstructorOnStartup]
     public class ModBaseMoreMechanoids : ModBase
     {
-        public override string ModIdentifier { get { return "MoreMechanoids"; } }
+        public override string ModIdentifier => "MoreMechanoids";
     }
 }

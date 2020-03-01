@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <Mech_Crawler.label>crawler</Mech_Crawler.label>
+  <Mech_Crawler.description>Small bug-like robots. While not particularly sturdy, their speed, size and numbers more than make up for it. A tiny plasma cutter at their front allows them to cut through metal like butter. Their favorite passtime is open surgery.</Mech_Crawler.description>
+  <Mech_Crawler.tools.0.label>plasma cutter</Mech_Crawler.tools.0.label>
+  <Mech_Crawler.tools.1.label>front legs</Mech_Crawler.tools.1.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Crawler_Corpse.label>crawler corpse</Mech_Crawler_Corpse.label>
+  <Mech_Crawler_Corpse.description>crawler corpse</Mech_Crawler_Corpse.description>
+
+
+  <!-- Skullywag -->
+
+  <Mech_Skullywag.label>skullywag</Mech_Skullywag.label>
+  <Mech_Skullywag.description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing ComponentIndustrial.</Mech_Skullywag.description>
+  <Mech_Skullywag.tools.0.label>front paralyze component</Mech_Skullywag.tools.0.label>
+  <Mech_Skullywag.tools.1.label>head</Mech_Skullywag.tools.1.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Skullywag_Corpse.label>skullywag corpse</Mech_Skullywag_Corpse.label>
+  <Mech_Skullywag_Corpse.description>skullywag corpse</Mech_Skullywag_Corpse.description>
+
+
+  <!-- Flamebot -->
+
+  <Mech_Flamebot.label>flamebot</Mech_Flamebot.label>
+  <Mech_Flamebot.description>A small mechanoid that spews fire. Though they are lightly armored, they can quickly cause chaos within your colony.</Mech_Flamebot.description>
+  <Mech_Flamebot.tools.0.label>igniter</Mech_Flamebot.tools.0.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Flamebot_Corpse.label>flamebot corpse</Mech_Flamebot_Corpse.label>
+  <Mech_Flamebot_Corpse.description>flamebot corpse</Mech_Flamebot_Corpse.description>
+
+
+  <!-- Mammoth -->
+
+  <Mech_Mammoth.label>mammoth</Mech_Mammoth.label>
+  <Mech_Mammoth.description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down.</Mech_Mammoth.description>
+  <Mech_Mammoth.tools.0.label>head</Mech_Mammoth.tools.0.label>
+  <Mech_Mammoth.tools.1.label>tusk</Mech_Mammoth.tools.1.label>
+  <Mech_Mammoth.tools.2.label>leg</Mech_Mammoth.tools.2.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Mammoth_Corpse.label>mammoth corpse</Mech_Mammoth_Corpse.label>
+  <Mech_Mammoth_Corpse.description>mammoth corpse</Mech_Mammoth_Corpse.description>
+
+
+  <!-- Assaulter -->
+
+  <Mech_Assaulter.label>assaulter</Mech_Assaulter.label>
+  <Mech_Assaulter.description>The assaulter is a heavy combat mechanoid. It's built in front shield protects it from most gunfire.</Mech_Assaulter.description>
+  <Mech_Assaulter.tools.0.label>shield</Mech_Assaulter.tools.0.label>
+  <Mech_Assaulter.tools.1.label>gun protrusion</Mech_Assaulter.tools.1.label>
+  <!-- Flesh Type: Mechanoid -->
+  <Mech_Assaulter_Corpse.label>assaulter corpse</Mech_Assaulter_Corpse.label>
+  <Mech_Assaulter_Corpse.description>assaulter corpse</Mech_Assaulter_Corpse.description>
+
+
+</LanguageData>
