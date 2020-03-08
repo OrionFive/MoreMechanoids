@@ -221,6 +221,10 @@
 							<coverage>0.1</coverage>
 							<depth>Inside</depth>
 						</li>
+						<li>
+							<def>ShieldGenerator</def>
+							<coverage>0.25</coverage>
+						</li>
 					</parts>
 				</li>
 				<li>
@@ -1181,6 +1185,10 @@
 						<li>
 							<def>SmellSensor</def>
 							<coverage>0.05</coverage>
+						</li>
+						<li>
+							<def>ShieldGenerator</def>
+							<coverage>0.2</coverage>
 						</li>
 					</parts>
 				</li>

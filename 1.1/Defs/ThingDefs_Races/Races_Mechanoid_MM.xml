@@ -125,6 +125,12 @@
       <Plasteel>7</Plasteel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </butcherProducts>
+    <comps>
+      <li Class="MoreMechanoids.CompProperties_ShieldGenerator">
+		<shieldDef>Gear_MechanoidShield</shieldDef>
+	  </li>
+    </comps>
+
   </ThingDef>
 
   <!-- ============================= Flamebot ================================= -->
@@ -183,7 +189,7 @@
   <ThingDef ParentName="BaseMechanoid">
     <defName>Mech_Mammoth</defName>
     <label>mammoth</label>
-    <description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down.</description>
+    <description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down. They are protected with a heavy duty EMP shield.</description>
     <statBases>
       <MoveSpeed>3</MoveSpeed>
 	  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
@@ -256,6 +262,11 @@
       <Plasteel>30</Plasteel>
       <ComponentIndustrial>4</ComponentIndustrial>
     </butcherProducts>
+    <comps>
+      <li Class="MoreMechanoids.CompProperties_ShieldGenerator">
+		<shieldDef>Gear_MechanoidShieldEMP</shieldDef>
+	  </li>
+    </comps>
   </ThingDef>
  
   <!-- ============================= Assaulter ================================= --> 

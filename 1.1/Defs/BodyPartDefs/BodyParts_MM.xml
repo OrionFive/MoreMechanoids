@@ -170,6 +170,19 @@
 	</tags>
   </BodyPartDef>
   
+  <BodyPartDef>
+    <defName>ShieldGenerator</defName>
+    <label>shield generator</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+ 	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  
+  
   <!-- Assimilated Human -->
   <BodyPartDef>
     <defName>MechanicalSkull</defName>

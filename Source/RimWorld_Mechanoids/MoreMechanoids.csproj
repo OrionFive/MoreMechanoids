@@ -62,12 +62,16 @@
   <ItemGroup>
     <Compile Include="Harmony\Pawn_GuestTracker_Patch.cs" />
     <Compile Include="Harmony\Pawn_Patch.cs" />
+    <Compile Include="Mechanoids\CompProperties_ShieldGenerator.cs" />
+    <Compile Include="Mechanoids\CompShieldGenerator.cs" />
     <Compile Include="Mechanoids\JobGiver_AIOpenDoors.cs" />
     <Compile Include="Mechanoids\JobGiver_DownAllHumans.cs" />
     <Compile Include="Mechanoids\ModBaseMoreMechanoids.cs" />
     <Compile Include="Mechanoids\PawnKindDef.cs" />
     <Compile Include="Mechanoids\Projectile_Ignite.cs" />
     <Compile Include="Mechanoids\DamageWorker_AddStaged.cs" />
+    <Compile Include="Mechanoids\ReflectionCache.cs" />
+    <Compile Include="Mechanoids\ShieldBeltEMP.cs" />
     <Compile Include="Mechanoids\ThinkNode_ConditionalNonPlayerFaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mechanoids\Verb_UnlockDoor.cs" />

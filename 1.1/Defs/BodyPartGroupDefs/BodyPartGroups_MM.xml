@@ -28,6 +28,11 @@
     <label>core</label>
   </BodyPartGroupDef>
   
+  <BodyPartGroupDef>
+    <defName>ShieldGenerator</defName>
+    <label>shield generator</label>
+  </BodyPartGroupDef>
+  
   <!-- Scoutbot -->
   <BodyPartGroupDef>
     <defName>MechanicalCoreScoutbot</defName>
