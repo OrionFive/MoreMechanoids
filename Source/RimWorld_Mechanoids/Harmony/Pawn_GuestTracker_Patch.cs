@@ -37,11 +37,9 @@ namespace MoreMechanoids.Harmony
                 // Is it a mechanoid?
                 if (symbol.symbol == "pawn" && symbol.resolveParams.faction == Faction.OfMechanoids)
                 {
-                    Log.Message($"Found mechanoid of type {symbol.resolveParams.singlePawnKindDef.label} in ancient site.");
                     if (!CombatPower.Includes(symbol.resolveParams.singlePawnKindDef.combatPower))
                     {
                         symbol.resolveParams.singlePawnKindDef = DefDatabase<PawnKindDef>.AllDefsListForReading.Where(kind => kind.RaceProps.IsMechanoid && CombatPower.Includes(kind.combatPower)).RandomElementByWeight(kind => 1f / kind.combatPower);
-                        Log.Message($"Replaced it with {symbol.resolveParams.singlePawnKindDef.label}.");
                     }
 
                     // Check the next item

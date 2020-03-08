@@ -46,11 +46,8 @@ namespace MoreMechanoids
 
             if (dinfo.Def == DamageDefOf.EMP)
             {
-                Log.Message($"Received {dinfo.Amount} EMP damage.");
                 var newValue = reflection.GetField<float>("energy") - dinfo.Amount * reflection.GetField<float>("EnergyLossPerDamage");
                 reflection.SetField("energy", newValue);
-
-                Log.Message($"{Energy} energy remains.");
 
                 if (Energy < 0)
                 {
