@@ -64,7 +64,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>Gear_MechanoidShieldEMP</defName>
     <label>EMP shield projector</label>
-    <description>An EMP protection device. It can absorb EMP up to a certain amount.</description>
+    <description>An EMP protection device. It can absorb a large amount of EMP damage.</description>
     <thingClass>MoreMechanoids.ShieldBeltEMP</thingClass>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>

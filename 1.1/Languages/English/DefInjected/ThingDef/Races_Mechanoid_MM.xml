@@ -15,7 +15,7 @@
   <!-- Skullywag -->
 
   <Mech_Skullywag.label>skullywag</Mech_Skullywag.label>
-  <Mech_Skullywag.description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing ComponentIndustrial.</Mech_Skullywag.description>
+  <Mech_Skullywag.description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing cattle prod.</Mech_Skullywag.description>
   <Mech_Skullywag.tools.0.label>front paralyze component</Mech_Skullywag.tools.0.label>
   <Mech_Skullywag.tools.1.label>head</Mech_Skullywag.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
@@ -36,7 +36,7 @@
   <!-- Mammoth -->
 
   <Mech_Mammoth.label>mammoth</Mech_Mammoth.label>
-  <Mech_Mammoth.description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down.</Mech_Mammoth.description>
+  <Mech_Mammoth.description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down. They are protected with a heavy duty EMP shield.</Mech_Mammoth.description>
   <Mech_Mammoth.tools.0.label>head</Mech_Mammoth.tools.0.label>
   <Mech_Mammoth.tools.1.label>tusk</Mech_Mammoth.tools.1.label>
   <Mech_Mammoth.tools.2.label>leg</Mech_Mammoth.tools.2.label>

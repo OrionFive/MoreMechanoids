@@ -68,7 +68,7 @@
   <ThingDef Name="MechanoidSkullywag" ParentName="BaseMechanoid">
     <defName>Mech_Skullywag</defName>
     <label>skullywag</label>
-    <description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing ComponentIndustrial.</description>
+    <description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing cattle prod.</description>
     <statBases>
       <MoveSpeed>6</MoveSpeed>
 	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>

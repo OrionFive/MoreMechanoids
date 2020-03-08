@@ -12,6 +12,7 @@
   <FrontParalyzeComponent.label>paralytic component</FrontParalyzeComponent.label>
   <WheelsEnclosure.label>wheels enclosure</WheelsEnclosure.label>
   <MechanicalCoreSkullywag.label>core</MechanicalCoreSkullywag.label>
+  <ShieldGenerator.label>shield generator</ShieldGenerator.label>
 
 
   <!-- Scoutbot -->

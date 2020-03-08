@@ -20,6 +20,7 @@
   <MechanicalCoreSkullywag.label>core</MechanicalCoreSkullywag.label>
   <CoreProcessor.label>core processor</CoreProcessor.label>
   <InfraredSensor.label>infrared sensor</InfraredSensor.label>
+  <ShieldGenerator.label>shield generator</ShieldGenerator.label>
 
 
   <!-- Assimilated Human -->
