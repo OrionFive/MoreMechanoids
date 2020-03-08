@@ -1,25 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationReplace">
-	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/raidCommonalityFromPointsCurve</xpath>
-	  <value>
-		<raidCommonalityFromPointsCurve>
-			<points>
-				<!--unchanged, left for tweaking-->
-				<li>(1000, 0.4)</li>
-				<li>(2500, 1)</li>
-			</points>
-		</raidCommonalityFromPointsCurve>
-	  </value>
-	</Operation> 
-	
 	<!--Operation Class="PatchOperationReplace">
 	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/earliestRaidDays</xpath>
 	  <value>
 		<earliestRaidDays>90</earliestRaidDays>
 	  </value>
 	</Operation--> 
-		
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>/Defs/ThingDef[defName = "MechAssembler"]/comps/li[2]/spawnablePawnKinds</xpath>
+	  <value>
+		<li>Mech_Crawler</li>
+		<li>Mech_Skullywag</li>
+		<li>Mech_Assaulter</li>
+		<li>Mech_Flamebot</li>
+	  </value>
+	</Operation>
+
 	<Operation Class="PatchOperationAdd">
 	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
 	  <value>
@@ -64,6 +61,7 @@
 				<Mech_Skullywag>10</Mech_Skullywag>
 				<Mech_Assaulter>100</Mech_Assaulter>
 				<Mech_Mammoth>10</Mech_Mammoth>
+				<Mech_Pikeman>30</Mech_Pikeman>
 			</options>
 		  </li>
 		  <li>
@@ -74,6 +72,7 @@
 				<Mech_Flamebot>10</Mech_Flamebot>
 				<Mech_Centipede>100</Mech_Centipede>
 				<Mech_Mammoth>40</Mech_Mammoth>
+				<Mech_Pikeman>10</Mech_Pikeman>
 			</options>
 		  </li>	  
 	  </value>
