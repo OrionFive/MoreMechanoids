@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Harmony\Pawn_Patch.cs" />
+    <Compile Include="Mechanoids\JobGiver_AIOpenDoors.cs" />
     <Compile Include="Mechanoids\JobGiver_DownAllHumans.cs" />
     <Compile Include="Mechanoids\ModBaseMoreMechanoids.cs" />
     <Compile Include="Mechanoids\PawnKindDef.cs" />

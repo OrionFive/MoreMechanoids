@@ -5,12 +5,13 @@
   <!--============= AI Duty ============-->
   <ThinkTreeDef>
     <defName>SquadBrainDuty_Skullywag</defName>
-	<thinkRoot Class="ThinkNode_Priority">
+	<thinkRoot Class="MoreMechanoids.ThinkNode_ConditionalNonPlayerFaction">
       <subNodes>
 		<!--li Class="MoreMechanoids.JobGiver_FixAttackTargets"/-->
-		<li Class="MoreMechanoids.ThinkNode_ConditionalNonPlayerFaction">
+		<li Class="ThinkNode_Random">
 		  <subNodes>
 		    <li Class="MoreMechanoids.JobGiver_DownAllHumans"/>
+		    <li Class="MoreMechanoids.JobGiver_AIOpenDoors"/>
 		  </subNodes>
 		</li>
       </subNodes>
