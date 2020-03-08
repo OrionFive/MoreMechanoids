@@ -73,6 +73,7 @@
       <MoveSpeed>6</MoveSpeed>
 	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <PsychicSensitivity>0.25</PsychicSensitivity>
     </statBases>
     <tools>
       <li>
@@ -187,6 +188,7 @@
       <MoveSpeed>3</MoveSpeed>
 	  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <PsychicSensitivity>0.25</PsychicSensitivity>
     </statBases>
     <tools>
       <li>

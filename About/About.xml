@@ -18,9 +18,9 @@
 	<loadAfter>
 		<li>UnlimitedHugs.HugsLib</li>
 		<li>spino.sandy.mechanoidsextra</li>
+        <li>Ludeon.Rimworld.Royalty</li>
 	</loadAfter>
     <incompatibleWith>
-      <li>Ludeon.Rimworld.Royalty</li>
     </incompatibleWith>
 	<description>A new mechanical threat has risen! 
 
