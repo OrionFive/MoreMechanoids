@@ -18,7 +18,6 @@
 	<loadAfter>
 		<li>UnlimitedHugs.HugsLib</li>
 		<li>spino.sandy.mechanoidsextra</li>
-        <li>Ludeon.Rimworld.Royalty</li>
 	</loadAfter>
     <incompatibleWith>
     </incompatibleWith>
