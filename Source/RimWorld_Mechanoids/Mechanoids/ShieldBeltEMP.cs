@@ -1,4 +1,3 @@
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -8,11 +7,17 @@ namespace MoreMechanoids
 {
     public class ShieldBeltEMP : ShieldBelt
     {
-        private Material bubbleMat = MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent, Color.cyan);
+        private static Material bubbleMat;
         private ReflectionCache<ShieldBelt> reflection;
         public ShieldBeltEMP()
         {
             reflection = new ReflectionCache<ShieldBelt>(this);
+        }
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            if (bubbleMat == null) bubbleMat = MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent, Color.cyan);
+            base.SpawnSetup(map, respawningAfterLoad);
         }
 
         public override void DrawWornExtras()
