@@ -60,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Harmony\Pawn_GuestTracker_Patch.cs" />
+    <Compile Include="Harmony\SymbolResolver_RandomMechanoidGroup_Patch.cs" />
     <Compile Include="Harmony\Pawn_Patch.cs" />
     <Compile Include="Mechanoids\CompProperties_ShieldGenerator.cs" />
     <Compile Include="Mechanoids\CompShieldGenerator.cs" />

@@ -1,3 +1,4 @@
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -19,7 +20,8 @@ namespace MoreMechanoids
             Thing thing = ThingMaker.MakeThing(Props.shieldDef, stuff);
 
             Apparel shield = (Apparel) GenSpawn.Spawn(thing, Owner.Position, Owner.Map);
-            Owner.apparel.Wear(shield, false, true);
+
+            if(shield != null) Owner.apparel.Wear(shield, false, true);
         }
     }
 }
