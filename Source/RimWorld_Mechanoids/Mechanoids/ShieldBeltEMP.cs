@@ -5,6 +5,7 @@ using Verse;
 
 namespace MoreMechanoids
 {
+    [StaticConstructorOnStartup]
     public class ShieldBeltEMP : ShieldBelt
     {
         private static Material bubbleMat;
