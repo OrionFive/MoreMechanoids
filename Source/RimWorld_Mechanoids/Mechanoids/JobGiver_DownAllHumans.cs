@@ -16,6 +16,13 @@ namespace MoreMechanoids
             return validPawn(target);
         }
 
+        protected override Job TryGiveJob(Pawn pawn)
+        {
+            // Can be dormant and is dormant? Don't do this job
+            if ((pawn.GetComp<CompCanBeDormant>()?.Awake ?? true) == false) return null;
+            return base.TryGiveJob(pawn);
+        }
+
         protected override Thing FindAttackTarget(Pawn pawn)
         {
             TargetScanFlags flags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable;
