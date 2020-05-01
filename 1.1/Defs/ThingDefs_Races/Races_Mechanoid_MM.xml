@@ -57,9 +57,7 @@
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>15</Steel>
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>5</Steel>
     </butcherProducts>
   </ThingDef>
 
@@ -121,9 +119,7 @@
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>35</Steel>
-      <Plasteel>7</Plasteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>15</Steel>
     </butcherProducts>
     <comps>
       <li Class="MoreMechanoids.CompProperties_ShieldGenerator">
@@ -178,9 +174,7 @@
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>25</Steel>
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>10</Steel>
     </butcherProducts>
   </ThingDef>
 
@@ -258,9 +252,7 @@
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>150</Steel>
-      <Plasteel>30</Plasteel>
-      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>80</Steel>
     </butcherProducts>
     <comps>
       <li Class="MoreMechanoids.CompProperties_ShieldGenerator">
@@ -332,9 +324,7 @@
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>30</Steel>
-      <Plasteel>7</Plasteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>25</Steel>
     </butcherProducts>
   </ThingDef>
 
