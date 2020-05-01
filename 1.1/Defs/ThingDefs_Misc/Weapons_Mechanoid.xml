@@ -37,8 +37,8 @@
     <label>internal charge blaster</label>
     <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
     <graphicData>
-		<texPath>Hidden</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
+	  <texPath>Things/Item/Equipment/Weapon/ChargeBlasterInternal</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
 		<MarketValue>1500</MarketValue>
@@ -100,8 +100,8 @@
 		<label>mechanoid flamethrower</label>
 		<description>A built in flamethrower. Mechanoid-built.</description>
 		<graphicData>
-			<texPath>Hidden</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+		  <texPath>Things/Item/Equipment/Weapon/FlameThrower</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
 			<MarketValue>1500</MarketValue>
