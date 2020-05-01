@@ -15,7 +15,8 @@ namespace MoreMechanoids
             if (respawningAfterLoad) return;
 
             if (!ApparelUtility.HasPartsToWear(Owner, Props.shieldDef)) return; // Might spawn with damaged parts
-            
+            if (Owner.apparel.WornApparel.Any(a => a.def == Props.shieldDef)) return; // Might already have an active shield
+
             ThingDef stuff = GenStuff.RandomStuffFor(Props.shieldDef);
             Thing thing = ThingMaker.MakeThing(Props.shieldDef, stuff);
 
