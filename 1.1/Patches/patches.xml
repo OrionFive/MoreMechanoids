@@ -13,7 +13,7 @@
 		<li>Royalty</li>
 	  </mods>
       <match Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "MechAssembler"]/comps/li[2]/spawnablePawnKinds</xpath>
+        <xpath>/Defs/ThingDef[building/minMechClusterPoints]/comps/li[spawnablePawnKinds]/spawnablePawnKinds</xpath>
         <value>
       	<li>Mech_Crawler</li>
       	<li>Mech_Skullywag</li>
