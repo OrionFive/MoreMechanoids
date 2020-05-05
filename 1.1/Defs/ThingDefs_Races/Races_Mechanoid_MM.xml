@@ -253,6 +253,7 @@
     </race>
     <butcherProducts>
       <Steel>80</Steel>
+      <Plasteel>20</Plasteel>
     </butcherProducts>
     <comps>
       <li Class="MoreMechanoids.CompProperties_ShieldGenerator">
@@ -325,6 +326,7 @@
     </race>
     <butcherProducts>
       <Steel>25</Steel>
+      <Plasteel>5</Plasteel>
     </butcherProducts>
   </ThingDef>
 
