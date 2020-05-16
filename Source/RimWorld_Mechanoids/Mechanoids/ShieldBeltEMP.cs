@@ -15,12 +15,6 @@ namespace MoreMechanoids
             reflection = new ReflectionCache<ShieldBelt>(this);
         }
 
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            if (bubbleMat == null) bubbleMat = MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent, Color.cyan);
-            base.SpawnSetup(map, respawningAfterLoad);
-        }
-
         public override void DrawWornExtras()
         {
             if (ShieldState == ShieldState.Active && reflection.GetProperty<bool>("ShouldDisplay"))
@@ -35,10 +29,12 @@ namespace MoreMechanoids
                     drawPos += reflection.GetField<Vector3>("impactAngleVect") * num3;
                     num -= num3;
                 }
+
                 float angle = Rand.Range(0, 360);
                 Vector3 s = new Vector3(num, 1f, num);
                 Matrix4x4 matrix = default;
                 matrix.SetTRS(drawPos, Quaternion.AngleAxis(angle, Vector3.up), s);
+                if (!bubbleMat) bubbleMat = MaterialPool.MatFrom("Other/ShieldBubble", ShaderDatabase.Transparent, Color.cyan);
                 Graphics.DrawMesh(MeshPool.plane10, matrix, bubbleMat, 0);
             }
         }
