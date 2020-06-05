@@ -9,6 +9,7 @@ namespace MoreMechanoids
     {
         protected override void Impact(Thing hitThing)
         {
+            hitThing?.TryAttachFire(1);
             Ignite();
         }
 
