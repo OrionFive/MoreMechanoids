@@ -1,3 +1,4 @@
+using System;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -35,7 +36,11 @@ namespace MoreMechanoids
             CasterPawn.rotationTracker.Face(door.DrawPos);
 
             var nonMissChance = Traverse.Create(this).Method("GetNonMissChance", (LocalTargetInfo)door).GetValue<float>();
-            if(Rand.Chance(nonMissChance))
+            // Wood door ~100%, steel (160hp) ~69%, granite (270hp) ~41%, plasteel (450hp) ~24%
+            var hpChance = 1/(door.HitPoints / 110.0f);
+            var unlockChance = Math.Min(nonMissChance, hpChance);
+            
+            if(Rand.Chance(unlockChance))
             {
                 UnlockDoor(door);
             }
