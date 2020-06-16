@@ -37,7 +37,7 @@ namespace MoreMechanoids
 
             var nonMissChance = Traverse.Create(this).Method("GetNonMissChance", (LocalTargetInfo)door).GetValue<float>();
             // Wood door ~100%, steel (160hp) ~69%, granite (270hp) ~41%, plasteel (450hp) ~24%
-            var hpChance = 1/(Math.Max(door.HitPoints, 1) / 110.0f);
+            var hpChance = 110.0f / Math.Max(door.HitPoints, 1);
             var unlockChance = Math.Min(nonMissChance, hpChance);
             
             if(Rand.Chance(unlockChance))
