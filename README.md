@@ -1,6 +1,12 @@
 # MoreMechanoids
 Orion's RimWorld mod "MoreMechanoids".
 
+## Want to report bugs or suggest features?
+[Click here](https://github.com/OrionFive/Hospitality/issues/new/choose)
+
+
+## License Bla Bla
+
 All original artwork included is Copyright © 2015 Orion, and distributed under the Creative Commons License Attribution-ShareAlike 4.0 International, or CC-BY-SA 4.0I.
 
 The full license text can be found here:
