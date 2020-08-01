@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Paralyze.label>paralysis</Paralyze.label>
+  <Paralyze.description>A temporary loss or impairment of voluntary movement, caused by electric damage done to the nerves.</Paralyze.description>
+  <Paralyze.stages.0.label>dizzy</Paralyze.stages.0.label>
+  <Paralyze.stages.1.label>partial</Paralyze.stages.1.label>
+  <Paralyze.stages.2.label>severe</Paralyze.stages.2.label>
+  <Paralyze.stages.3.label>blackout</Paralyze.stages.3.label>
+
+
+</LanguageData>

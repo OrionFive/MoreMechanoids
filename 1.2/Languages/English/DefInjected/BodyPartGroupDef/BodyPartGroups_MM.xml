@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <PlasmaCutter.label>plasma cutter</PlasmaCutter.label>
+  <FrontLegs.label>front leg</FrontLegs.label>
+
+
+  <!-- Skullywag -->
+
+  <FrontParalyzeComponent.label>paralytic component</FrontParalyzeComponent.label>
+  <WheelsEnclosure.label>wheels enclosure</WheelsEnclosure.label>
+  <MechanicalCoreSkullywag.label>core</MechanicalCoreSkullywag.label>
+  <ShieldGenerator.label>shield generator</ShieldGenerator.label>
+
+
+  <!-- Scoutbot -->
+
+  <MechanicalCoreScoutbot.label>core</MechanicalCoreScoutbot.label>
+
+
+  <!-- Assaulter -->
+
+  <CoveredByShield.label>shield</CoveredByShield.label>
+  <GunProtrusion.label>gun protrusion</GunProtrusion.label>
+
+
+  <!-- Carrier -->
+
+  <MeleeTentacles.label>tentacle</MeleeTentacles.label>
+
+
+  <!-- Mammoth -->
+
+  <Tusk.label>tusk</Tusk.label>
+
+
+  <!-- Flamebot -->
+
+  <Igniter.label>igniter</Igniter.label>
+  <FuelContainer.label>fuel container</FuelContainer.label>
+
+
+</LanguageData>

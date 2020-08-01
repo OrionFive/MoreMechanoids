@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!--Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/earliestRaidDays</xpath>
+	  <value>
+		<earliestRaidDays>90</earliestRaidDays>
+	  </value>
+	</Operation--> 
+
+
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Royalty</li>
+	  </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[building/minMechClusterPoints]/comps/li[spawnablePawnKinds]/spawnablePawnKinds</xpath>
+        <value>
+      	<li>Mech_Crawler</li>
+      	<li>Mech_Skullywag</li>
+      	<li>Mech_Assaulter</li>
+      	<li>Mech_Flamebot</li>
+        </value>
+	  </match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
+	  <value>
+		  <li>
+			<!-- Light melee -->
+			<kindDef>Combat</kindDef>
+			<commonality>200</commonality>
+			<options>
+				<Mech_Crawler>50</Mech_Crawler>
+				<Mech_Skullywag>10</Mech_Skullywag>
+				<Mech_Flamebot>10</Mech_Flamebot>
+			</options>
+		  </li>
+		  <li>
+			<!-- Medium melee & ranged -->
+			<kindDef>Combat</kindDef>
+			<commonality>200</commonality>
+			<options>
+				<Mech_Crawler>50</Mech_Crawler>
+				<Mech_Skullywag>10</Mech_Skullywag>
+				<Mech_Assaulter>10</Mech_Assaulter>
+				<Mech_Lancer>10</Mech_Lancer>
+			</options>
+		  </li>
+		  <li>
+			<!-- Heavy ranged -->
+			<kindDef>Combat</kindDef>
+			<commonality>140</commonality>
+			<options>
+				<Mech_Assaulter>100</Mech_Assaulter>
+				<Mech_Flamebot>30</Mech_Flamebot>
+				<Mech_Centipede>70</Mech_Centipede>
+				<Mech_Scyther>100</Mech_Scyther>
+				<Mech_Mammoth>20</Mech_Mammoth>
+			</options>
+		  </li>
+		  <li>
+			<!-- Medium ranged -->
+			<kindDef>Combat</kindDef>
+			<commonality>140</commonality>
+			<options>
+				<Mech_Skullywag>10</Mech_Skullywag>
+				<Mech_Assaulter>100</Mech_Assaulter>
+				<Mech_Mammoth>10</Mech_Mammoth>
+				<Mech_Pikeman>30</Mech_Pikeman>
+			</options>
+		  </li>
+		  <li>
+			<!-- Heavy mixed -->
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<Mech_Flamebot>10</Mech_Flamebot>
+				<Mech_Centipede>100</Mech_Centipede>
+				<Mech_Mammoth>40</Mech_Mammoth>
+				<Mech_Pikeman>10</Mech_Pikeman>
+			</options>
+		  </li>	  
+	  </value>
+	</Operation> 
+</Patch>

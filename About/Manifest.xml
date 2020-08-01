@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
   <identifier>MoreMechanoids</identifier>
-  <version>1.1.8</version>
+  <version>1.2.1</version>
   <dependencies>
     <li>HugsLib</li>
   </dependencies>
@@ -9,6 +9,7 @@
   <loadBefore>
   </loadBefore>
   <loadAfter>
+    <li>HugsLib</li>
   </loadAfter>
   <!-- <suggests> -->
     <!-- <li>ExpansionMod &gt;= 1.5</li> -->

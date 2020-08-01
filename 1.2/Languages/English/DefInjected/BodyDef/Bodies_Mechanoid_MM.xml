@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <MechanicalCrawler.label>mechanical crawler</MechanicalCrawler.label>
+  <MechanicalCrawler.corePart.parts.1.parts.2.customLabel>left sight sensor</MechanicalCrawler.corePart.parts.1.parts.2.customLabel>
+  <MechanicalCrawler.corePart.parts.1.parts.3.customLabel>right sight sensor</MechanicalCrawler.corePart.parts.1.parts.3.customLabel>
+  <MechanicalCrawler.corePart.parts.1.parts.4.customLabel>left hearing sensor</MechanicalCrawler.corePart.parts.1.parts.4.customLabel>
+  <MechanicalCrawler.corePart.parts.1.parts.5.customLabel>left hearing sensor</MechanicalCrawler.corePart.parts.1.parts.5.customLabel>
+  <MechanicalCrawler.corePart.parts.2.customLabel>front left leg</MechanicalCrawler.corePart.parts.2.customLabel>
+  <MechanicalCrawler.corePart.parts.3.customLabel>front right leg</MechanicalCrawler.corePart.parts.3.customLabel>
+  <MechanicalCrawler.corePart.parts.4.customLabel>middle left leg</MechanicalCrawler.corePart.parts.4.customLabel>
+  <MechanicalCrawler.corePart.parts.5.customLabel>middle right leg</MechanicalCrawler.corePart.parts.5.customLabel>
+  <MechanicalCrawler.corePart.parts.6.customLabel>rear left leg</MechanicalCrawler.corePart.parts.6.customLabel>
+  <MechanicalCrawler.corePart.parts.7.customLabel>rear right leg</MechanicalCrawler.corePart.parts.7.customLabel>
+
+
+  <!-- Skullywag -->
+
+  <MechanicalSkullywag.label>mechanical skullywag</MechanicalSkullywag.label>
+  <MechanicalSkullywag.corePart.parts.1.parts.0.customLabel>left wheel</MechanicalSkullywag.corePart.parts.1.parts.0.customLabel>
+  <MechanicalSkullywag.corePart.parts.1.parts.1.customLabel>right wheel</MechanicalSkullywag.corePart.parts.1.parts.1.customLabel>
+  <MechanicalSkullywag.corePart.parts.1.parts.2.customLabel>back wheel</MechanicalSkullywag.corePart.parts.1.parts.2.customLabel>
+
+
+  <!-- Assimilated Human -->
+
+  <AssimilatedHuman.label>human</AssimilatedHuman.label>
+  <AssimilatedHuman.corePart.parts.0.customLabel>left clavicle</AssimilatedHuman.corePart.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.1.customLabel>right clavicle</AssimilatedHuman.corePart.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.1.customLabel>left sight sensor</AssimilatedHuman.corePart.parts.6.parts.0.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.2.customLabel>right sight sensor</AssimilatedHuman.corePart.parts.6.parts.0.parts.2.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.3.customLabel>left hearing sensor</AssimilatedHuman.corePart.parts.6.parts.0.parts.3.customLabel>
+  <AssimilatedHuman.corePart.parts.6.parts.0.parts.4.customLabel>right hearing sensor</AssimilatedHuman.corePart.parts.6.parts.0.parts.4.customLabel>
+  <AssimilatedHuman.corePart.parts.7.customLabel>left should</AssimilatedHuman.corePart.parts.7.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.customLabel>left arm</AssimilatedHuman.corePart.parts.7.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.customLabel>left hand</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.0.customLabel>left pinky</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.1.customLabel>left middle finger</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.2.customLabel>left index finger</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.2.customLabel>
+  <AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.3.customLabel>left thumb</AssimilatedHuman.corePart.parts.7.parts.0.parts.0.parts.3.customLabel>
+  <AssimilatedHuman.corePart.parts.8.customLabel>right shoulder</AssimilatedHuman.corePart.parts.8.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.customLabel>right arm</AssimilatedHuman.corePart.parts.8.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.customLabel>right hand</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.0.customLabel>right pinky</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.1.customLabel>right middle finger</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.1.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.2.customLabel>right index finger</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.2.customLabel>
+  <AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.3.customLabel>right thumb</AssimilatedHuman.corePart.parts.8.parts.0.parts.0.parts.3.customLabel>
+  <AssimilatedHuman.corePart.parts.9.customLabel>left leg</AssimilatedHuman.corePart.parts.9.customLabel>
+  <AssimilatedHuman.corePart.parts.9.parts.0.customLabel>left foot</AssimilatedHuman.corePart.parts.9.parts.0.customLabel>
+  <AssimilatedHuman.corePart.parts.10.customLabel>right leg</AssimilatedHuman.corePart.parts.10.customLabel>
+  <AssimilatedHuman.corePart.parts.10.parts.0.customLabel>right foot</AssimilatedHuman.corePart.parts.10.parts.0.customLabel>
+
+
+  <!-- Scoutbot -->
+
+  <MechanicalScoutbot.label>mechanical scoutbot</MechanicalScoutbot.label>
+  <MechanicalScoutbot.corePart.parts.1.parts.0.parts.2.customLabel>left sight sensor</MechanicalScoutbot.corePart.parts.1.parts.0.parts.2.customLabel>
+
+
+  <!-- Assaulter -->
+
+  <MechanicalAssaulter.label>assaulter</MechanicalAssaulter.label>
+  <MechanicalAssaulter.corePart.parts.0.parts.1.customLabel>bottom left gun protrusion</MechanicalAssaulter.corePart.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.0.parts.2.customLabel>top left gun protrusion</MechanicalAssaulter.corePart.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.0.parts.3.customLabel>bottom right gun protrusion</MechanicalAssaulter.corePart.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.0.parts.4.customLabel>top right gun protrusion</MechanicalAssaulter.corePart.parts.0.parts.4.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.1.customLabel>left sight sensor</MechanicalAssaulter.corePart.parts.1.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.2.customLabel>right sight sensor</MechanicalAssaulter.corePart.parts.1.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.3.customLabel>left hearing sensor</MechanicalAssaulter.corePart.parts.1.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.1.parts.0.parts.4.customLabel>right hearing sensor</MechanicalAssaulter.corePart.parts.1.parts.0.parts.4.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.customLabel>left shoulder</MechanicalAssaulter.corePart.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.customLabel>left arm</MechanicalAssaulter.corePart.parts.2.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.customLabel>left hand</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.0.customLabel>left pinky</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.1.customLabel>left middle finger</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.2.customLabel>left index finger</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.3.customLabel>left thumb</MechanicalAssaulter.corePart.parts.2.parts.0.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.customLabel>right shoulder</MechanicalAssaulter.corePart.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.customLabel>right arm</MechanicalAssaulter.corePart.parts.3.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.customLabel>right hand</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.0.customLabel>right pinky</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.1.customLabel>right middle finger</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.1.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.2.customLabel>right index finger</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.2.customLabel>
+  <MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.3.customLabel>right thumb</MechanicalAssaulter.corePart.parts.3.parts.0.parts.0.parts.3.customLabel>
+  <MechanicalAssaulter.corePart.parts.4.customLabel>left leg</MechanicalAssaulter.corePart.parts.4.customLabel>
+  <MechanicalAssaulter.corePart.parts.4.parts.0.customLabel>left foot</MechanicalAssaulter.corePart.parts.4.parts.0.customLabel>
+  <MechanicalAssaulter.corePart.parts.5.customLabel>right leg</MechanicalAssaulter.corePart.parts.5.customLabel>
+  <MechanicalAssaulter.corePart.parts.5.parts.0.customLabel>right foot</MechanicalAssaulter.corePart.parts.5.parts.0.customLabel>
+
+
+  <!-- MechanicalCephalothorax
+			LargeMechanicalAbdomen
+				MechanicalTentacle (x6)
+					MechanicalTentacleSection
+						Claw
+							MechanicalFinger
+							MechanicalFinger
+							MechanicalFinger
+			MechanicalHead
+				EyeSensor
+				ArtificialBrain
+			FrontLeftMechanicalPalp
+			FrontRightMechanicalPalp -->
+
+  <MechanicalCarrier.label>carrier</MechanicalCarrier.label>
+  <MechanicalCarrier.corePart.parts.0.parts.1.customLabel>front left mechanical palp</MechanicalCarrier.corePart.parts.0.parts.1.customLabel>
+  <MechanicalCarrier.corePart.parts.0.parts.2.customLabel>front right mechanical palp</MechanicalCarrier.corePart.parts.0.parts.2.customLabel>
+
+
+  <!-- MechanicalMammoth -->
+
+  <MechanicalMammoth.label>mammoth</MechanicalMammoth.label>
+  <MechanicalMammoth.corePart.parts.4.parts.6.customLabel>left sight sensor</MechanicalMammoth.corePart.parts.4.parts.6.customLabel>
+  <MechanicalMammoth.corePart.parts.4.parts.7.customLabel>right sight sensor</MechanicalMammoth.corePart.parts.4.parts.7.customLabel>
+  <MechanicalMammoth.corePart.parts.4.parts.8.customLabel>left hearing sensor</MechanicalMammoth.corePart.parts.4.parts.8.customLabel>
+  <MechanicalMammoth.corePart.parts.4.parts.9.customLabel>right hearing sensor</MechanicalMammoth.corePart.parts.4.parts.9.customLabel>
+  <MechanicalMammoth.corePart.parts.5.customLabel>front left leg</MechanicalMammoth.corePart.parts.5.customLabel>
+  <MechanicalMammoth.corePart.parts.5.parts.0.customLabel>front left hoof</MechanicalMammoth.corePart.parts.5.parts.0.customLabel>
+  <MechanicalMammoth.corePart.parts.6.customLabel>front right leg</MechanicalMammoth.corePart.parts.6.customLabel>
+  <MechanicalMammoth.corePart.parts.6.parts.0.customLabel>front right hoof</MechanicalMammoth.corePart.parts.6.parts.0.customLabel>
+  <MechanicalMammoth.corePart.parts.7.customLabel>rear left leg</MechanicalMammoth.corePart.parts.7.customLabel>
+  <MechanicalMammoth.corePart.parts.7.parts.0.customLabel>rear left hoof</MechanicalMammoth.corePart.parts.7.parts.0.customLabel>
+  <MechanicalMammoth.corePart.parts.8.customLabel>rear right leg</MechanicalMammoth.corePart.parts.8.customLabel>
+  <MechanicalMammoth.corePart.parts.8.parts.0.customLabel>rear right hoof</MechanicalMammoth.corePart.parts.8.parts.0.customLabel>
+
+
+  <!-- MechanicalBodySmall
+			LeftTubing
+			RightTubing
+			FuelContainer
+			MechanicalHead
+				LeftSightSensor
+				RightSightSensor
+				ArtificialBrain
+				Igniter -->
+
+  <MechanicalFlamebot.label>flamebot</MechanicalFlamebot.label>
+  <MechanicalFlamebot.corePart.parts.0.customLabel>left tubing</MechanicalFlamebot.corePart.parts.0.customLabel>
+  <MechanicalFlamebot.corePart.parts.1.customLabel>right tubing</MechanicalFlamebot.corePart.parts.1.customLabel>
+  <MechanicalFlamebot.corePart.parts.7.parts.0.customLabel>left sight sensor</MechanicalFlamebot.corePart.parts.7.parts.0.customLabel>
+  <MechanicalFlamebot.corePart.parts.7.parts.1.customLabel>right sight sensor</MechanicalFlamebot.corePart.parts.7.parts.1.customLabel>
+
+
+  <!-- MechanicalBodySmall
+			LeftMechanicalLeg
+			RightMechanicalLeg
+			MechanicalHead
+				ArtificialBrain
+			LeftExplosiveTank
+			RightExplosiveTank -->
+
+  <MechanicalBoombot.label>boombot</MechanicalBoombot.label>
+  <MechanicalBoombot.corePart.parts.1.parts.0.customLabel>left sight sensor</MechanicalBoombot.corePart.parts.1.parts.0.customLabel>
+  <MechanicalBoombot.corePart.parts.1.parts.1.customLabel>right sight sensor</MechanicalBoombot.corePart.parts.1.parts.1.customLabel>
+  <MechanicalBoombot.corePart.parts.2.customLabel>left explosive tank</MechanicalBoombot.corePart.parts.2.customLabel>
+  <MechanicalBoombot.corePart.parts.3.customLabel>right explosive tank</MechanicalBoombot.corePart.parts.3.customLabel>
+
+
+</LanguageData>

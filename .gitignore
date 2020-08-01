@@ -12,3 +12,4 @@ ExportedObj/
 *.txt
 Source/RimWorld_Mechanoids/obj/
 Source/.vs/
+Source/packages/
