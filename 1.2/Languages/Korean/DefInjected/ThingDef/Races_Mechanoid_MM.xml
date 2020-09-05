@@ -6,23 +6,23 @@
   <Mech_Crawler.tools.0.label>플라즈마 절단기</Mech_Crawler.tools.0.label>
   <Mech_Crawler.tools.1.label>앞다리 들</Mech_Crawler.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Crawler_Corpse.label>크롤러 잔해</Mech_Crawler_Corpse.label>
-  <Mech_Crawler_Corpse.description>크롤러의 잔해입니다.</Mech_Crawler_Corpse.description>
+  <Corpse_Mech_Crawler.label>크롤러 잔해</Corpse_Mech_Crawler.label>
+  <Corpse_Mech_Crawler.description>크롤러의 잔해입니다.</Corpse_Mech_Crawler.description>
   <!-- Skullywag -->
   <Mech_Skullywag.label>스컬리웨그</Mech_Skullywag.label>
   <Mech_Skullywag.description>스컬리웨그는 경장갑 메카노이드로 오직 하나의 목적을 가지고 있습니다. 바로 '융합'을 위해 모든 적을 기절시키는 것입니다. 마비 장치를 조심하십시오.</Mech_Skullywag.description>
   <Mech_Skullywag.tools.0.label>전면 마비 장치</Mech_Skullywag.tools.0.label>
   <Mech_Skullywag.tools.1.label>머리</Mech_Skullywag.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Skullywag_Corpse.label>스컬리웨그 잔해</Mech_Skullywag_Corpse.label>
-  <Mech_Skullywag_Corpse.description>스컬리웨그의 잔해입니다.</Mech_Skullywag_Corpse.description>
+  <Corpse_Mech_Skullywag.label>스컬리웨그 잔해</Corpse_Mech_Skullywag.label>
+  <Corpse_Mech_Skullywag.description>스컬리웨그의 잔해입니다.</Corpse_Mech_Skullywag.description>
   <!-- Flamebot -->
   <Mech_Flamebot.label>플레임 봇</Mech_Flamebot.label>
   <Mech_Flamebot.description>화염을 뿌리는 작은 메카노이드입니다. 얇은 장갑만 두르고 있지만 순식간에 정착지를 혼돈으로 빠트릴 수 있습니다.</Mech_Flamebot.description>
   <Mech_Flamebot.tools.0.label>점화기</Mech_Flamebot.tools.0.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Flamebot_Corpse.label>플레임 봇 잔해</Mech_Flamebot_Corpse.label>
-  <Mech_Flamebot_Corpse.description>플레임 봇의 잔해입니다.</Mech_Flamebot_Corpse.description>
+  <Corpse_Mech_Flamebot.label>플레임 봇 잔해</Corpse_Mech_Flamebot.label>
+  <Corpse_Mech_Flamebot.description>플레임 봇의 잔해입니다.</Corpse_Mech_Flamebot.description>
   <!-- Mammoth -->
   <Mech_Mammoth.label>맘모스</Mech_Mammoth.label>
   <Mech_Mammoth.description>맘모스는 중장갑에 중무장을 하고 있는 전투 메카노이드입니다. 이것들을 처리하는 것은 어려운 도전이 될 것입니다.</Mech_Mammoth.description>
@@ -30,14 +30,14 @@
   <Mech_Mammoth.tools.1.label>어금니</Mech_Mammoth.tools.1.label>
   <Mech_Mammoth.tools.2.label>다리</Mech_Mammoth.tools.2.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Mammoth_Corpse.label>맘모스 잔해</Mech_Mammoth_Corpse.label>
-  <Mech_Mammoth_Corpse.description>맘모스의 잔해입니다.</Mech_Mammoth_Corpse.description>
+  <Corpse_Mech_Mammoth.label>맘모스 잔해</Corpse_Mech_Mammoth.label>
+  <Corpse_Mech_Mammoth.description>맘모스의 잔해입니다.</Corpse_Mech_Mammoth.description>
   <!-- Assaulter -->
   <Mech_Assaulter.label>어썰터</Mech_Assaulter.label>
   <Mech_Assaulter.description>어썰터는 중무장 전투 메카노이드입니다. 전면 방패로 대부분의 총격을 방어할 수 있습니다.</Mech_Assaulter.description>
   <Mech_Assaulter.tools.0.label>방패</Mech_Assaulter.tools.0.label>
   <Mech_Assaulter.tools.1.label>내장형 기관총</Mech_Assaulter.tools.1.label>
   <!-- Flesh Type: Mechanoid -->
-  <Mech_Assaulter_Corpse.label>어썰터 잔해</Mech_Assaulter_Corpse.label>
-  <Mech_Assaulter_Corpse.description>어썰터의 잔해입니다.</Mech_Assaulter_Corpse.description>
+  <Corpse_Mech_Assaulter.label>어썰터 잔해</Corpse_Mech_Assaulter.label>
+  <Corpse_Mech_Assaulter.description>어썰터의 잔해입니다.</Corpse_Mech_Assaulter.description>
 </LanguageData>
