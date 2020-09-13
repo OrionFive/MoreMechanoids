@@ -12,6 +12,9 @@ namespace MoreMechanoids {
 
         protected override Job TryGiveJob(Pawn pawn)
         {
+            // Can be dormant and is dormant? Don't do this job
+            if ((pawn.GetComp<CompCanBeDormant>()?.Awake ?? true) == false) return null;
+
             if (!pawn.HostileTo(Faction.OfPlayer)) return null;
             
             var door = FindNearbyDoor(pawn, CloseSearchRadius, validDoor);
