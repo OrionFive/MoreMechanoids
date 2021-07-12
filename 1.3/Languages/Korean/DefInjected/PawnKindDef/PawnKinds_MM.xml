@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <Mech_Crawler.label>크롤러</Mech_Crawler.label>
+  <Mech_Crawler.labelPlural>크롤러들</Mech_Crawler.labelPlural>
+
+
+  <!-- Skullywag -->
+
+  <Mech_Skullywag.label>스컬리웨그</Mech_Skullywag.label>
+  <Mech_Skullywag.labelPlural>스컬리웨그들</Mech_Skullywag.labelPlural>
+
+
+  <!-- Flamebot -->
+
+  <Mech_Flamebot.label>플레임 봇</Mech_Flamebot.label>
+  <Mech_Flamebot.labelPlural>플레임 봇들</Mech_Flamebot.labelPlural>
+
+
+  <!-- Assaulter -->
+
+  <Mech_Assaulter.label>어썰터</Mech_Assaulter.label>
+  <Mech_Assaulter.labelPlural>어썰터들</Mech_Assaulter.labelPlural>
+
+
+  <!-- Mammoth -->
+
+  <Mech_Mammoth.label>맘모스</Mech_Mammoth.label>
+  <Mech_Mammoth.labelPlural>맘모스들</Mech_Mammoth.labelPlural>
+
+
+</LanguageData>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <PlasmaCutter.label>Cutter plasma</PlasmaCutter.label>
+  <FrontLegs.label>jambe avant</FrontLegs.label>
+
+
+  <!-- Skullywag -->
+
+  <FrontParalyzeComponent.label>composante paralytique</FrontParalyzeComponent.label>
+  <WheelsEnclosure.label>roulettes</WheelsEnclosure.label>
+  <MechanicalCoreSkullywag.label>coeur</MechanicalCoreSkullywag.label>
+
+
+  <!-- Scoutbot -->
+
+  <MechanicalCoreScoutbot.label>coeur</MechanicalCoreScoutbot.label>
+
+
+  <!-- Assaulter -->
+
+  <CoveredByShield.label>bouclier</CoveredByShield.label>
+  <GunProtrusion.label>saillie des armes à feu</GunProtrusion.label>
+
+
+  <!-- Carrier -->
+
+  <MeleeTentacles.label>tentacule</MeleeTentacles.label>
+
+
+  <!-- Mammoth -->
+
+  <Tusk.label>défense</Tusk.label>
+
+
+  <!-- Flamebot -->
+
+  <Igniter.label>allumeur</Igniter.label>
+  <FuelContainer.label>bidon d'essence</FuelContainer.label>
+
+
+</LanguageData>

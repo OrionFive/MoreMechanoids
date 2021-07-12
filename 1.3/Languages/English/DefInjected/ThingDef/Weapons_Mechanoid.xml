@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Mechanoid assault charge blaster -->
+
+  <Gun_ChargeBlasterInternal.label>internal charge blaster</Gun_ChargeBlasterInternal.label>
+  <Gun_ChargeBlasterInternal.description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</Gun_ChargeBlasterInternal.description>
+
+
+  <!-- Mechanoid Flamethrower -->
+
+  <Bullet_FlameThrower.label>flame</Bullet_FlameThrower.label>
+
+  <MechanoidFlameThrower.label>mechanoid flamethrower</MechanoidFlameThrower.label>
+  <MechanoidFlameThrower.description>A built in flamethrower. Mechanoid-built.</MechanoidFlameThrower.description>
+
+
+  <!-- Boombot -->
+
+  <BoomBoom.label>boom boom</BoomBoom.label>
+
+  <MechanoidBoom.label>mechanoid boom</MechanoidBoom.label>
+  <MechanoidBoom.description>This part goes BOOM!</MechanoidBoom.description>
+  <MechanoidBoom.verbs.0.label>explode</MechanoidBoom.verbs.0.label>
+
+
+</LanguageData>
