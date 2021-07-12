@@ -9,24 +9,19 @@ namespace MoreMechanoids
     public class ShieldBeltEMP : ShieldBelt
     {
         private static Material bubbleMat;
-        private ReflectionCache<ShieldBelt> reflection;
-        public ShieldBeltEMP()
-        {
-            reflection = new ReflectionCache<ShieldBelt>(this);
-        }
 
         public override void DrawWornExtras()
         {
-            if (ShieldState == ShieldState.Active && reflection.GetProperty<bool>("ShouldDisplay"))
+            if (ShieldState == ShieldState.Active && ShouldDisplay)
             {
-                float num = Mathf.Lerp(1.2f, 1.55f, reflection.GetField<float>("energy")) * 2.5f; // Added multiplier. The rest is all from base.
+                float num = Mathf.Lerp(1.2f, 1.55f, energy) * 2.5f; // Added multiplier. The rest is all from base.
                 Vector3 drawPos = Wearer.Drawer.DrawPos;
                 drawPos.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-                int num2 = Find.TickManager.TicksGame - reflection.GetField<int>("lastAbsorbDamageTick");
+                int num2 = Find.TickManager.TicksGame - lastAbsorbDamageTick;
                 if (num2 < 8)
                 {
                     float num3 = (8 - num2) / 8f * 0.05f;
-                    drawPos += reflection.GetField<Vector3>("impactAngleVect") * num3;
+                    drawPos += impactAngleVect * num3;
                     num -= num3;
                 }
 
@@ -48,12 +43,12 @@ namespace MoreMechanoids
 
             if (dinfo.Def == DamageDefOf.EMP)
             {
-                var newValue = reflection.GetField<float>("energy") - dinfo.Amount * reflection.GetField<float>("EnergyLossPerDamage");
-                reflection.SetField("energy", newValue);
+                var newValue = energy - dinfo.Amount * EnergyLossPerDamage;
+                energy = newValue;
 
                 if (Energy < 0)
                 {
-                    reflection.InvokeMethod<object>("Break");
+                    Break();
                 }
                 else
                 {

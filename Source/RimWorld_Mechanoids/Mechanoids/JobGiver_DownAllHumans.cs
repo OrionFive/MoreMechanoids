@@ -11,19 +11,19 @@ namespace MoreMechanoids
         public const float targetAcquireRadius = 56;
         private readonly Predicate<Thing> validPawn = t => t is Pawn pawn && !pawn.Destroyed && !pawn.Downed && pawn.def.race != null && pawn.def.race.IsFlesh;
 
-        protected override bool ExtraTargetValidator(Pawn pawn, Thing target)
+        public override bool ExtraTargetValidator(Pawn pawn, Thing target)
         {
             return validPawn(target);
         }
 
-        protected override Job TryGiveJob(Pawn pawn)
+        public override Job TryGiveJob(Pawn pawn)
         {
             // Can be dormant and is dormant? Don't do this job
             if ((pawn.GetComp<CompCanBeDormant>()?.Awake ?? true) == false) return null;
             return base.TryGiveJob(pawn);
         }
 
-        protected override Thing FindAttackTarget(Pawn pawn)
+        public override Thing FindAttackTarget(Pawn pawn)
         {
             TargetScanFlags flags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable;
             //if (this.needLOSToAcquireNonPawnTargets)

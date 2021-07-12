@@ -7,7 +7,7 @@ namespace MoreMechanoids
 {
     public class Projectile_Ignite : Projectile
     {
-        protected override void Impact(Thing hitThing)
+        public override void Impact(Thing hitThing)
         {
             hitThing?.TryAttachFire(1);
             Ignite();
@@ -23,10 +23,10 @@ namespace MoreMechanoids
             cellsToAffect.Clear();
             cellsToAffect.AddRange(def.projectile.damageDef.Worker.ExplosionCellsToHit(Position, map, radius));
 
-            MoteMaker.MakeStaticMote(Position, map, ThingDefOf.Mote_ExplosionFlash, radius*6f);
+            FleckMaker.Static(Position, map, FleckDefOf.ExplosionFlash, radius*6f);
             for (int i = 0; i < 4; i++)
             {
-                MoteMaker.ThrowSmoke(Position.ToVector3Shifted() + Gen.RandomHorizontalVector(radius*0.7f), map, radius*0.6f);
+                FleckMaker.ThrowSmoke(Position.ToVector3Shifted() + Gen.RandomHorizontalVector(radius*0.7f), map, radius*0.6f);
             }
 
             if (Rand.Chance(ignitionChance))

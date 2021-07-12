@@ -11,7 +11,7 @@ namespace MoreMechanoids
     {
         private static SoundDef unlockDoorSound;
 
-        protected override bool TryCastShot()
+        public override bool TryCastShot()
         {
             if (!CasterPawn.Spawned)
             {
@@ -72,8 +72,8 @@ namespace MoreMechanoids
             unlockDoorSound.PlayOneShot(SoundInfo.InMap(CasterPawn));
 
             Vector3 loc = door.Position.ToVector3ShiftedWithAltitude(1);
-            MoteMaker.ThrowMicroSparks(loc, door.Map);
-            MoteMaker.ThrowLightningGlow(loc, door.Map, Rand.Range(0.7f, 1.5f));
+            FleckMaker.ThrowMicroSparks(loc, door.Map);
+            FleckMaker.ThrowLightningGlow(loc, door.Map, Rand.Range(0.7f, 1.5f));
 
             CasterPawn.jobs.StopAll();
         }
@@ -91,7 +91,7 @@ namespace MoreMechanoids
             Traverse.Create(building).Field("holdOpenInt").SetValue(true);
         }
 
-        protected override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
+        public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
         {
             return new DamageWorker.DamageResult();
         }

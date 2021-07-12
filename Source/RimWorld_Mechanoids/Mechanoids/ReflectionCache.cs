@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
+[Obsolete]
 internal class ReflectionCache<T>
 {
     private readonly Dictionary<string, FieldInfo> fields = new Dictionary<string, FieldInfo>();

@@ -6,7 +6,7 @@ namespace MoreMechanoids
 {
     public class ThinkNode_ConditionalNonPlayerFaction : ThinkNode_Conditional
     {
-        protected override bool Satisfied(Pawn pawn)
+        public override bool Satisfied(Pawn pawn)
         {
             return pawn.Faction != null && pawn.Faction != Faction.OfPlayer;
         }

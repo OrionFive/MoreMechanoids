@@ -10,7 +10,7 @@ namespace MoreMechanoids {
         private static Predicate<Thing> validDoor = t => t is Building_Door door && !door.Destroyed && !door.Open;
         private static IntRange expiryInterval = new IntRange(450, 500);
 
-        protected override Job TryGiveJob(Pawn pawn)
+        public override Job TryGiveJob(Pawn pawn)
         {
             // Can be dormant and is dormant? Don't do this job
             if ((pawn.GetComp<CompCanBeDormant>()?.Awake ?? true) == false) return null;
