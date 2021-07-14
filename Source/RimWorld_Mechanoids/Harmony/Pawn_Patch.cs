@@ -10,7 +10,7 @@ namespace MoreMechanoids.Harmony
     /// </summary>
     internal static class SappersUtility_Patch
     {
-        [HarmonyPatch(typeof(SappersUtility), "HasBuildingDestroyerWeapon")]
+        [HarmonyPatch(typeof(SappersUtility), nameof(SappersUtility.HasBuildingDestroyerWeapon))]
         public class HasBuildingDestroyerWeapon
         {
             [HarmonyPrefix]
@@ -23,7 +23,7 @@ namespace MoreMechanoids.Harmony
             }
         }
 
-        [HarmonyPatch(typeof(SappersUtility), "CanMineReasonablyFast")]
+        [HarmonyPatch(typeof(SappersUtility), nameof(SappersUtility.CanMineReasonablyFast))]
         public class CanMineReasonablyFast
         {
             [HarmonyPrefix]

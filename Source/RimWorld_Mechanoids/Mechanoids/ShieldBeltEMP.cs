@@ -52,7 +52,7 @@ namespace MoreMechanoids
                 }
                 else
                 {
-                    Traverse.Create(this).Method("AbsorbedDamaged").SetValue(dinfo);
+                    AbsorbedDamage(dinfo);
                 }
 
                 return true;
