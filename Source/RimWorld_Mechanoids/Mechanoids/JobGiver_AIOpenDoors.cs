@@ -7,7 +7,7 @@ namespace MoreMechanoids {
     public class JobGiver_AIOpenDoors : ThinkNode_JobGiver
     {
         private const int CloseSearchRadius = 56;
-        private static Predicate<Thing> validDoor = t => t is Building_Door door && !door.Destroyed && !door.Open;
+        private static Predicate<Thing> validDoor = t => t is Building_Door {Destroyed: false, Open:false} door && !door.IsForcedOpen();
         private static IntRange expiryInterval = new IntRange(450, 500);
 
         public override Job TryGiveJob(Pawn pawn)
@@ -46,11 +46,5 @@ namespace MoreMechanoids {
         {
             return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerBuildings.AllBuildingsColonistOfClass<Building_Door>(), PathEndMode.Touch, TraverseParms.For(pawn), maxDist, validator) as Building_Door;
         }
-
-        private bool IsDoorInRange(Thing thing, Thing searcherThing, IntVec3 flagPosition, double radiusSquared)
-        {
-            return (thing.Position - flagPosition).LengthHorizontalSquared <= radiusSquared && searcherThing.HostileTo(thing) && validDoor(thing);
-        }
-
     }
 }

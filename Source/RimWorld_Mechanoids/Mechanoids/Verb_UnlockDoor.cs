@@ -23,7 +23,7 @@ namespace MoreMechanoids
             }
             //Log.Message("Trying open door on "+currentTarget.Thing);
             if(!(currentTarget.Thing is Building_Door door)) return false;
-            if (door.Open)
+            if (door.Open || door.IsForcedOpen())
             {
                 CasterPawn.jobs.StopAll();
                 return true;
@@ -35,10 +35,9 @@ namespace MoreMechanoids
             }
             CasterPawn.rotationTracker.Face(door.DrawPos);
 
-            var nonMissChance = Traverse.Create(this).Method("GetNonMissChance", (LocalTargetInfo)door).GetValue<float>();
             // Wood door ~100%, steel (160hp) ~69%, granite (270hp) ~41%, plasteel (450hp) ~24%
             var hpChance = 110.0f / Math.Max(door.HitPoints, 1);
-            var unlockChance = Math.Min(nonMissChance, hpChance);
+            var unlockChance = Math.Min(GetNonMissChance(door), hpChance);
             
             if(Rand.Chance(unlockChance))
             {
@@ -46,8 +45,7 @@ namespace MoreMechanoids
             }
             else
             {
-                var soundMiss = Traverse.Create(this).Method("SoundMiss").GetValue<SoundDef>();
-                soundMiss.PlayOneShot(new TargetInfo(door.Position, door.MapHeld)); 
+                SoundMiss().PlayOneShot(new TargetInfo(door.Position, door.MapHeld)); 
                 CreateCombatLog(maneuver => maneuver.combatLogRulesMiss, false);
             }
             CasterPawn.Drawer.Notify_MeleeAttackOn(door);
@@ -60,14 +58,14 @@ namespace MoreMechanoids
         {
             if (door.def.defName == "HeronInvisibleDoor")
             {
-                ForceDoorExtended(door);
+                ForceDoorExtended(door, base.Caster);
             }
             else
             {
-                ForceDoor(door);
+                ForceDoor(door, base.Caster);
             }
 
-            if (unlockDoorSound == null) unlockDoorSound = SoundDef.Named("Explosion_EMP");
+            unlockDoorSound ??= SoundDef.Named("Explosion_EMP");
 
             unlockDoorSound.PlayOneShot(SoundInfo.InMap(CasterPawn));
 
@@ -78,17 +76,17 @@ namespace MoreMechanoids
             CasterPawn.jobs.StopAll();
         }
 
-        private static void ForceDoor(Building_Door door)
+        private static void ForceDoor(Building_Door door, Thing instigator)
         {
-            Traverse.Create(door).Method("DoorOpen", 60).GetValue();
-            Traverse.Create(door).Field("holdOpenInt").SetValue(true);
+            door.GetComp<CompForceable>().Force();
+            door.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Gaussian(door.MaxHitPoints * 0.15f, 0.5f), 999, -1, instigator));
         }
 
-        private static void ForceDoorExtended(Building_Door door)
+        private static void ForceDoorExtended(Building_Door door, Thing instigator)
         {
-            var building = Traverse.Create(door).Field("parentDoor").GetValue<Building>();
-            Traverse.Create(building).Method("DoorOpen", 60).GetValue();
-            Traverse.Create(building).Field("holdOpenInt").SetValue(true);
+            // Not a RimWorld field
+            var building = Traverse.Create(door).Field("parentDoor").GetValue<Building>() as Building_Door;
+            ForceDoor(building, instigator);
         }
 
         public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)

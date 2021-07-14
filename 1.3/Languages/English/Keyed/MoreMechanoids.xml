@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  
+
+	  <DisabledForcedOpen>This door has been forced. Have someone repair it to restore it.</DisabledForcedOpen>
+
 </LanguageData>

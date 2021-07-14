@@ -24,6 +24,13 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
+	  <xpath>/Defs/ThingDef[@Name = "DoorBase"]/comps</xpath>
+	  <value>
+        <li Class="MoreMechanoids.CompProperties_Forceable"/>
+	  </value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
 	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
 	  <value>
 		  <li>
