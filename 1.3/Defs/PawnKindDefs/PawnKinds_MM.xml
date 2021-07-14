@@ -3,7 +3,7 @@
 
   <!-- ============================= Crawler ================================= -->
 
-  <PawnKindDef Name="Crawler" ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+  <PawnKindDef Name="Crawler" ParentName="BaseMechanoidKind" Class="PawnKindDef">
     <defName>Mech_Crawler</defName>
     <label>crawler</label>
     <race>Mech_Crawler</race>
@@ -29,7 +29,7 @@
  
   <!-- ============================= Skullywag ================================= -->
 
-  <PawnKindDef Name="Skullywag" ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+  <PawnKindDef Name="Skullywag" ParentName="BaseMechanoidKind" Class="PawnKindDef">
     <defName>Mech_Skullywag</defName>
     <label>skullywag</label>
     <race>Mech_Skullywag</race>
@@ -55,7 +55,7 @@
 
   <!-- ============================= Flamebot ================================= -->
   
-  <PawnKindDef ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+  <PawnKindDef ParentName="BaseMechanoidKind" Class="PawnKindDef">
     <defName>Mech_Flamebot</defName>
     <label>flamebot</label>
     <race>Mech_Flamebot</race>
@@ -85,7 +85,7 @@
    
   <!-- ============================= Assaulter ================================= -->
 
-  <PawnKindDef ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+  <PawnKindDef ParentName="BaseMechanoidKind" Class="PawnKindDef">
     <defName>Mech_Assaulter</defName>
     <label>assaulter</label>
     <race>Mech_Assaulter</race>
@@ -115,7 +115,7 @@
   
   <!-- ============================= Mammoth ================================= -->
   
-  <PawnKindDef ParentName="BaseMechanoidKind" Class="MoreMechanoids.PawnKindDef">
+  <PawnKindDef ParentName="BaseMechanoidKind" Class="PawnKindDef">
 	<defName>Mech_Mammoth</defName>
     <label>mammoth</label>
     <canBeSapper>true</canBeSapper>
