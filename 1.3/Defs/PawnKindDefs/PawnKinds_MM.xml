@@ -58,6 +58,7 @@
   <PawnKindDef ParentName="BaseMechanoidKind" Class="PawnKindDef">
     <defName>Mech_Flamebot</defName>
     <label>flamebot</label>
+    <canBeSapper>true</canBeSapper>
     <race>Mech_Flamebot</race>
     <combatPower>200</combatPower>
     <defaultFactionType>Mechanoid</defaultFactionType>
