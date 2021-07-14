@@ -66,7 +66,7 @@
   <ThingDef Name="MechanoidSkullywag" ParentName="BaseMechanoid">
     <defName>Mech_Skullywag</defName>
     <label>skullywag</label>
-    <description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles for assimilation. Beware its paralyzing cattle prod.</description>
+    <description>The skullywag is a light armored mechanoid with one thing on it's artificial mind: Incapacitate all hostiles. Beware its paralyzing cattle prod. It can also force your doors open.</description>
     <statBases>
       <MoveSpeed>6</MoveSpeed>
 	  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
@@ -183,7 +183,7 @@
   <ThingDef ParentName="BaseMechanoid">
     <defName>Mech_Mammoth</defName>
     <label>mammoth</label>
-    <description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down. They are protected with a heavy duty EMP shield.</description>
+    <description>Mammoths are heavily armored, heavily armed combat mechanoids. These will be a challenge to take down. They are protected with a heavy duty EMP shield. Mammoths will sometimes try to break through your walls.</description>
     <statBases>
       <MoveSpeed>3</MoveSpeed>
 	  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
