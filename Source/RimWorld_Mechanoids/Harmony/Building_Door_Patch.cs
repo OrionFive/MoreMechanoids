@@ -17,7 +17,7 @@ namespace MoreMechanoids.Harmony
 			{
 				foreach (var gizmo in __result)
 				{
-					Log.Message($"{gizmo.GetType().Name} - {(gizmo as Command)?.Label}");
+					//Log.Message($"{gizmo.GetType().Name} - {(gizmo as Command)?.Label}");
 					if (gizmo is Command_Toggle t && t.defaultLabel == "CommandToggleDoorHoldOpen".Translate())
 					{
 						var forcedOpen = __instance.IsForcedOpen();
