@@ -25,9 +25,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="Krafs.Rimworld.Ref" Version="*-*" GeneratePathProperty="true" />
+	<PackageReference Include="Krafs.Rimworld.Ref" Version="*" GeneratePathProperty="true" />
     <PackageReference Include="Lib.Harmony" Version="*" ExcludeAssets="runtime" />
-    <PackageReference Include="TaskPubliciser" Version="*" />
+    <PackageReference Include="TaskPubliciser" Version="1.0.3" />
+
     <PackageReference Include="Microsoft.NETCore.Platforms" Version="*" />
     <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib" Version="*" ExcludeAssets="runtime" />
   </ItemGroup>
