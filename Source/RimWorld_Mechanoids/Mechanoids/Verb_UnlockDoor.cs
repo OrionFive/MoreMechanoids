@@ -78,7 +78,7 @@ namespace MoreMechanoids
 
         private static void ForceDoor(Building_Door door, Thing instigator)
         {
-            door.GetComp<CompForceable>().Force();
+            door.GetComp<CompForceable>()?.Force();
             door.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Gaussian(door.MaxHitPoints * 0.15f, 0.5f), 999, -1, instigator));
         }
 
