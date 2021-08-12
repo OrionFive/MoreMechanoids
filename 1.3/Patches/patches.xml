@@ -30,6 +30,18 @@
 	  </value>
 	</Operation>
 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Doors Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+		  <xpath>/Defs/ThingDef[defName = "HeronInvisibleDoor"]/comps</xpath>
+		  <value>
+			<li Class="MoreMechanoids.CompProperties_Forceable"/>
+		  </value>
+		</match>
+	</Operation>
+
 	<Operation Class="PatchOperationAdd">
 	  <xpath>/Defs/FactionDef[defName = "Mechanoid"]/pawnGroupMakers</xpath>
 	  <value>

@@ -1,5 +1,6 @@
 using System;
 using HarmonyLib;
+using JetBrains.Annotations;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -54,39 +55,27 @@ namespace MoreMechanoids
             return true;
         }
 
-        private void UnlockDoor(Building_Door door)
+        private void UnlockDoor(ThingWithComps door)
         {
-            if (door.def.defName == "HeronInvisibleDoor")
-            {
-                ForceDoorExtended(door, base.Caster);
-            }
-            else
-            {
-                ForceDoor(door, base.Caster);
-            }
-
-            unlockDoorSound ??= SoundDef.Named("Explosion_EMP");
-
-            unlockDoorSound.PlayOneShot(SoundInfo.InMap(CasterPawn));
-
-            Vector3 loc = door.Position.ToVector3ShiftedWithAltitude(1);
-            FleckMaker.ThrowMicroSparks(loc, door.Map);
-            FleckMaker.ThrowLightningGlow(loc, door.Map, Rand.Range(0.7f, 1.5f));
+            ForceDoor(door, base.Caster);
 
             CasterPawn.jobs.StopAll();
         }
 
-        private static void ForceDoor(Building_Door door, Thing instigator)
+        private static void ForceDoor([CanBeNull]ThingWithComps door, Thing instigator)
         {
+            Log.Message($"Forcing door: {door?.def.defName}, forceableComp = {door?.GetComp<CompForceable>() != null}");
+            if (door == null) return;
             door.GetComp<CompForceable>()?.Force();
             door.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Gaussian(door.MaxHitPoints * 0.15f, 0.5f), 999, -1, instigator));
-        }
 
-        private static void ForceDoorExtended(Building_Door door, Thing instigator)
-        {
-            // Not a RimWorld field
-            var building = Traverse.Create(door).Field("parentDoor").GetValue<Building>() as Building_Door;
-            ForceDoor(building, instigator);
+            unlockDoorSound ??= SoundDef.Named("Explosion_EMP");
+
+            unlockDoorSound.PlayOneShot(SoundInfo.InMap(instigator));
+
+            Vector3 loc = door.Position.ToVector3ShiftedWithAltitude(1);
+            FleckMaker.ThrowMicroSparks(loc, door.Map);
+            FleckMaker.ThrowLightningGlow(loc, door.Map, Rand.Range(0.7f, 1.5f));
         }
 
         public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
