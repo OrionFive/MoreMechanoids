@@ -75,7 +75,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Flamebot</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
+          <drawSize>1.7</drawSize>
           <shadowData>
             <volume>(0.3, 0.3, 0.3)</volume>
           </shadowData>
