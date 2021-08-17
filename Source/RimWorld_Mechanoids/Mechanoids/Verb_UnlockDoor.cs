@@ -36,9 +36,9 @@ namespace MoreMechanoids
             }
             CasterPawn.rotationTracker.Face(door.DrawPos);
 
-            // Wood door ~100%, steel (160hp) ~69%, granite (270hp) ~41%, plasteel (450hp) ~24%
-            var hpChance = 110.0f / Math.Max(door.HitPoints, 1);
-            var unlockChance = Math.Min(GetNonMissChance(door), hpChance);
+            // Wood door ~54%, steel (160hp) ~37%, granite (270hp) ~23%, plasteel (450hp) ~13%
+            var hpChance = 60.0f / Math.Max(door.HitPoints, 1);
+            var unlockChance = GetNonMissChance(door) * hpChance;
             
             if(Rand.Chance(unlockChance))
             {
@@ -64,7 +64,7 @@ namespace MoreMechanoids
 
         private static void ForceDoor([CanBeNull]ThingWithComps door, Thing instigator)
         {
-            Log.Message($"Forcing door: {door?.def.defName}, forceableComp = {door?.GetComp<CompForceable>() != null}");
+            //Log.Message($"Forcing door: {door?.def.defName}, forceableComp = {door?.GetComp<CompForceable>() != null}");
             if (door == null) return;
             door.GetComp<CompForceable>()?.Force();
             door.TakeDamage(new DamageInfo(DamageDefOf.Crush, Rand.Gaussian(door.MaxHitPoints * 0.15f, 0.5f), 999, -1, instigator));
