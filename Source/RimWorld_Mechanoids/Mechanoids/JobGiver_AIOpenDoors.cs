@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -9,7 +10,7 @@ namespace MoreMechanoids {
     public class JobGiver_AIOpenDoors : ThinkNode_JobGiver
     {
         private const int CloseSearchRadius = 56;
-        private static readonly Predicate<Thing> validDoor = t => t is Building_Door {Destroyed: false, Open:false} door && !door.IsForcedOpen();
+        private static readonly Predicate<Thing> validDoor = t => t is Building_Door {Spawned: true, Destroyed: false, Open:false} door && !door.IsForcedOpen();
         private static IntRange expiryInterval = new IntRange(450, 500);
 
         public override Job TryGiveJob(Pawn pawn)
@@ -18,7 +19,9 @@ namespace MoreMechanoids {
             if ((pawn.GetComp<CompCanBeDormant>()?.Awake ?? true) == false) return null;
 
             if (!pawn.HostileTo(Faction.OfPlayer)) return null;
-            
+
+            if (PawnUtility.EnemiesAreNearby(pawn)) return null;
+
             var door = FindNearbyDoor(pawn, CloseSearchRadius, validDoor);
 
             if (door == null) return null;
@@ -28,9 +31,14 @@ namespace MoreMechanoids {
 
         private static Job CreateJob(Pawn pawn, Building_Door door)
         {
+            var newReq = new CastPositionRequest {caster = pawn, target = door};
+            
             foreach (var verb in pawn.VerbTracker.AllVerbs.InRandomOrder())
             {
-                if(verb.Available() && verb.IsUsableOn(door) && !door.Open)
+                newReq.verb = verb;
+                newReq.maxRangeFromTarget = Mathf.Max(verb.verbProps.range, 1.42f);
+
+                if(verb.Available() && verb.IsUsableOn(door) && CastPositionFinder.TryFindCastPosition(newReq, out _))
                 {
                     Job job = JobMaker.MakeJob(JobDefOf.UseVerbOnThing, door);
                     job.verbToUse = verb;
