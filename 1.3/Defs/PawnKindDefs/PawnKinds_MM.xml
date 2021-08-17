@@ -58,9 +58,9 @@
   <PawnKindDef ParentName="BaseMechanoidKind" Class="PawnKindDef">
     <defName>Mech_Flamebot</defName>
     <label>flamebot</label>
-    <canBeSapper>true</canBeSapper>
     <race>Mech_Flamebot</race>
     <combatPower>200</combatPower>
+    <isGoodBreacher>true</isGoodBreacher>
     <defaultFactionType>Mechanoid</defaultFactionType>
 	<weaponMoney>
       <min>9999</min>
@@ -119,7 +119,7 @@
   <PawnKindDef ParentName="BaseMechanoidKind" Class="PawnKindDef">
 	<defName>Mech_Mammoth</defName>
     <label>mammoth</label>
-    <canBeSapper>true</canBeSapper>
+    <isGoodBreacher>true</isGoodBreacher>
     <race>Mech_Mammoth</race>
     <combatPower>900</combatPower>
 	<defaultFactionType>Mechanoid</defaultFactionType>
