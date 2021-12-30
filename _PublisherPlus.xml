@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuration>
   <Excluded>
-    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\.git</exclude>
-    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\.vs</exclude>
-    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\packages</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\.git</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\.vs</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\MoreMechanoids\Source\RimWorld_Mechanoids\obj</exclude>
   </Excluded>
 </Configuration>
