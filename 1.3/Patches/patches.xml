@@ -100,6 +100,18 @@
 				<Mech_Pikeman>10</Mech_Pikeman>
 			</options>
 		  </li>	  
+		  <li>
+			<!-- Breach -->
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<Mech_Termite_Breach>1</Mech_Termite_Breach>
+				<Mech_Centipede>10</Mech_Centipede>
+				<Mech_Assaulter>10</Mech_Assaulter>
+				<Mech_Mammoth>3</Mech_Mammoth>
+				<Mech_Pikeman>10</Mech_Pikeman>
+			</options>
+		  </li>	  
 	  </value>
 	</Operation> 
 </Patch>
