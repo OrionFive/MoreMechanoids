@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -10,7 +9,11 @@ namespace MoreMechanoids {
     public class JobGiver_AIOpenDoors : ThinkNode_JobGiver
     {
         private const int CloseSearchRadius = 56;
-        private static readonly Predicate<Thing> validDoor = t => t is Building_Door {Spawned: true, Destroyed: false, Open:false} door && !door.IsForcedOpen();
+
+        private static readonly Predicate<Thing> validDoor = t => t is Building_Door
+        {
+            Spawned: true, Destroyed: false, Open: false, def.useHitPoints: true
+        } door && !door.IsForcedOpen();
         private static IntRange expiryInterval = new IntRange(450, 500);
 
         public override Job TryGiveJob(Pawn pawn)
