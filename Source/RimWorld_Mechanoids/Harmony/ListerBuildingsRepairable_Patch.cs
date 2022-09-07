@@ -14,9 +14,9 @@ namespace MoreMechanoids.Harmony
 		{
 			internal static void Postfix(Building b)
 			{
-				if (b is Building_Door door && door.IsForcedOpen() && door.HitPoints >= door.MaxHitPoints)
+				if (b.IsForcedOpen() && b.HitPoints >= b.MaxHitPoints)
 				{
-					door.Fix();
+					b.Fix();
 				}
 			}
 		}

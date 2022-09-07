@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThinkTreeDef[defName="SquadBrainDuty_Skullywag"]/thinkRoot/subNodes/li[1]/subNodes</xpath>
+    <value>
+      <li Class="MoreMechanoidsDoorsExpanded.JobGiver_OpenDoorsExpanded"/>
+    </value>
+  </Operation>
+</Patch>

@@ -1,10 +1,16 @@
 using RimWorld;
+using Verse;
 
 namespace MoreMechanoids
 {
 	public static class GenericUtility
 	{
-		public static bool IsForcedOpen(this Building_Door door)
+		public static bool CanBeForcedOpen(this Thing thing)
+		{
+			return thing is ThingWithComps door && !door.def.useHitPoints && door?.GetComp<CompForceable>() != null;
+
+        }
+		public static bool IsForcedOpen(this Building door)
         {
 			// Indestructible doors can't be forced
             if (!door.def.useHitPoints) return false;
@@ -13,7 +19,7 @@ namespace MoreMechanoids
             return comp == null || comp.forcedOpen; // So if the comp is missing, we don't try
         }
 
-		public static void Fix(this Building_Door door)
+		public static void Fix(this Building door)
 		{
 			door?.GetComp<CompForceable>()?.Fix();
 		}
