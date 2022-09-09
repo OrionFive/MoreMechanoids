@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ManeuverDef>
+    <defName>UnlockDoorsExpanded</defName>
+    <requiredCapacity>UnlockDoor</requiredCapacity>
+    <verb>
+      <verbClass>MoreMechanoidsDoorsExpanded.Verb_UnlockDoorsExpanded</verbClass>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Poke_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Poke_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Poke_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Poke_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+</Defs>

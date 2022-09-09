@@ -9,9 +9,7 @@ namespace MoreMechanoids
 	public class CompForceable : ThingComp
 	{
 		private CompProperties_Forceable Props => (CompProperties_Forceable) props;
-		private Building_Door Door => (Building_Door) parent;
 		private bool originalHoldOpenValue;
-
 		public bool forcedOpen;
 
 		public override void PostExposeData()
@@ -24,18 +22,13 @@ namespace MoreMechanoids
 		public void Force()
 		{
 			if (forcedOpen) return;
-			originalHoldOpenValue = Door.holdOpenInt;
-			forcedOpen = true;
-			Door.DoorOpen();
-			Door.holdOpenInt = true;
+			Props.DoorHandler.Force(parent, ref originalHoldOpenValue, ref forcedOpen);
 		}
 
 		public void Fix()
 		{
 			if (!forcedOpen) return;
-			Door.holdOpenInt = originalHoldOpenValue;
-			forcedOpen = false;
-			Door.DoorOpen(); // So it closes soon
+            Props.DoorHandler.Fix(parent, originalHoldOpenValue, ref forcedOpen);
 		}
 	}
 }

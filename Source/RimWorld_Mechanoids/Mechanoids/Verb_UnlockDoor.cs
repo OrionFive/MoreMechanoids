@@ -23,8 +23,8 @@ namespace MoreMechanoids
                 return false;
             }
             //Log.Message("Trying open door on "+currentTarget.Thing);
-            if(!(currentTarget.Thing is Building_Door door)) return false;
-            if (door.Open || door.IsForcedOpen())
+            if(!AreAllowedThing(out ThingWithComps door)) return false;
+            if (AreDoorOpen(door))
             {
                 CasterPawn.jobs.StopAll();
                 return true;
@@ -77,10 +77,25 @@ namespace MoreMechanoids
             FleckMaker.ThrowMicroSparks(loc, door.Map);
             FleckMaker.ThrowLightningGlow(loc, door.Map, Rand.Range(0.7f, 1.5f));
         }
+        protected virtual bool AreAllowedThing(out ThingWithComps door)
+        {
+            bool isADoor = currentTarget.Thing is Building_Door;
+            door = currentTarget.Thing as ThingWithComps;
+            return isADoor;
+        }
 
+        protected virtual bool AreDoorOpen(ThingWithComps thing)
+        {
+            return thing is Building_Door door && (door.Open || door.IsForcedOpen()); 
+        }
         public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)
         {
             return new DamageWorker.DamageResult();
+        }
+
+        public override bool IsUsableOn(Thing target)
+        {
+            return target is Building_Door;
         }
     }
 }

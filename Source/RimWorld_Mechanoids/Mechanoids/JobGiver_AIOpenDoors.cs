@@ -5,59 +5,20 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace MoreMechanoids {
-    public class JobGiver_AIOpenDoors : ThinkNode_JobGiver
-    {
-        private const int CloseSearchRadius = 56;
+namespace MoreMechanoids
+{
+    public class JobGiver_AIOpenDoors : JobGiver_DoorOpener    {
+        
 
         private static readonly Predicate<Thing> validDoor = t => t is Building_Door
         {
             Spawned: true, Destroyed: false, Open: false, def.useHitPoints: true
         } door && !door.IsForcedOpen();
-        private static IntRange expiryInterval = new IntRange(450, 500);
+       
 
-        public override Job TryGiveJob(Pawn pawn)
+        protected override Building FindNearbyDoor(Pawn pawn, float maxDist)
         {
-            // Can be dormant and is dormant? Don't do this job
-            if ((pawn.GetComp<CompCanBeDormant>()?.Awake ?? true) == false) return null;
-
-            if (!pawn.HostileTo(Faction.OfPlayer)) return null;
-
-            if (PawnUtility.EnemiesAreNearby(pawn)) return null;
-
-            var door = FindNearbyDoor(pawn, CloseSearchRadius, validDoor);
-
-            if (door == null) return null;
-
-            return CreateJob(pawn, door);
-        }
-
-        private static Job CreateJob(Pawn pawn, Building_Door door)
-        {
-            var newReq = new CastPositionRequest {caster = pawn, target = door};
-            
-            foreach (var verb in pawn.VerbTracker.AllVerbs.InRandomOrder())
-            {
-                newReq.verb = verb;
-                newReq.maxRangeFromTarget = Mathf.Max(verb.verbProps.range, 1.42f);
-
-                if(verb.Available() && verb.IsUsableOn(door) && CastPositionFinder.TryFindCastPosition(newReq, out _))
-                {
-                    Job job = JobMaker.MakeJob(JobDefOf.UseVerbOnThing, door);
-                    job.verbToUse = verb;
-                    job.expiryInterval = expiryInterval.RandomInRange;
-                    job.checkOverrideOnExpire = true;
-                    job.expireRequiresEnemiesNearby = true;
-                    job.attackDoorIfTargetLost = true;
-                    return job;
-                }
-            }
-            return null;
-        }
-
-        private static Building_Door FindNearbyDoor(Pawn pawn, float maxDist, Predicate<Thing> validator)
-        {
-            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, GetDoors(pawn), PathEndMode.Touch, TraverseParms.For(pawn), maxDist, validator) as Building_Door;
+            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, GetDoors(pawn), PathEndMode.Touch, TraverseParms.For(pawn), maxDist, validDoor) as Building_Door;
         }
 
         private static IEnumerable<Building_Door> GetDoors(Pawn pawn)
