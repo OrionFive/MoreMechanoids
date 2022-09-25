@@ -9,14 +9,14 @@
   <loadBefore>
   </loadBefore>
   <loadAfter>
-		<li>UnlimitedHugs.HugsLib</li>
-		<li>spino.sandy.mechanoidsextra</li>
+    <li>UnlimitedHugs.HugsLib</li>
+    <li>spino.sandy.mechanoidsextra</li>
     <li>jecrell.doorsexpanded</li>
     <li>limetreesnake.furnishing</li>
   </loadAfter>
   <!-- <suggests> -->
-    <!-- <li>ExpansionMod &gt;= 1.5</li> -->
-    <!-- <li>OtherCoolMod</li> -->
+  <!-- <li>ExpansionMod &gt;= 1.5</li> -->
+  <!-- <li>OtherCoolMod</li> -->
   <!-- </suggests> -->
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/OrionFive/MoreMechanoids/develop/About/Manifest.xml</manifestUri>
