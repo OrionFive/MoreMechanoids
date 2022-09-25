@@ -20,6 +20,8 @@
 	<loadAfter>
 		<li>UnlimitedHugs.HugsLib</li>
 		<li>spino.sandy.mechanoidsextra</li>
+    <li>jecrell.doorsexpanded</li>
+    <li>limetreesnake.furnishing</li>
 	</loadAfter>
     <incompatibleWith>
     </incompatibleWith>
