@@ -20,5 +20,5 @@
   <!-- </suggests> -->
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/OrionFive/MoreMechanoids/develop/About/Manifest.xml</manifestUri>
-  <downloadUri>https://github.com/OrionFive/MoreMechanoids/releases</downloadUri>
+  <downloadUri>https://github.com/OrionFive/MoreMechanoids/tags</downloadUri>
 </Manifest>
