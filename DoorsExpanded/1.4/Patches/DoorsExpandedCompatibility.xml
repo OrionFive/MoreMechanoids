@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[@Name = "AbstractHeronDoorBase"]/comps</xpath>
+      <value>
+        <li Class="MoreMechanoidsDoorsExpanded.CompProperties_DoorsExpandedForceable"/>
+      </value>
+  </Operation>
+  <!--Doors Expanded replace in code class for vanilla remote door. Because of that below path is required-->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@ParentName = "DoorBase" and defName = "Autodoor"]/comps</xpath>
+    <value>
+      <li Class="MoreMechanoidsDoorsExpanded.CompProperties_DoorsExpandedForceable"/>
+    </value>
+
+  </Operation>
+
+
+</Patch>

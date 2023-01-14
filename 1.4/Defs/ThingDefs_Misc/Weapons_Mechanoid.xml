@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef Name="FlameThrowerBullet" Abstract="True">
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>flame</label>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+		  <shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+	</ThingDef>
+	
+  <ThingDef Name="BaseBoom" Abstract="True">
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>1</speed>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+  </ThingDef>
+  
+   <!-- ================= Mechanoid assault charge blaster ================= -->
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeBlasterInternal</defName>
+    <label>internal charge blaster</label>
+    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
+    <graphicData>
+	  <texPath>Things/Item/Equipment/Weapon/ChargeBlasterInternal</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+		<MarketValue>1500</MarketValue>
+        <Mass>22</Mass>
+		<AccuracyTouch>0.05</AccuracyTouch>
+		<AccuracyShort>0.10</AccuracyShort>
+		<AccuracyMedium>0.15</AccuracyMedium>
+		<AccuracyLong>0.025</AccuracyLong>
+        <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>None</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <weaponTags>
+      <li>MechanoidGunAssaulter</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeBlasterHeavy</defaultProjectile>
+        <warmupTime>3.3</warmupTime>
+        <range>18</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>15</burstShotCount>
+        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  
+  <!-- ================= Mechanoid Flamethrower ================= -->
+  
+  <ThingDef ParentName="FlameThrowerBullet">
+	<defName>Bullet_FlameThrower</defName>
+	<label>flame</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+	  <texPath>Things/Special/Fire/FireA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>MoreMechanoids.Projectile_Ignite</thingClass>
+    <projectile>
+	  <flyOverhead>false</flyOverhead>
+      <speed>15</speed>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <explosionRadius>1.5</explosionRadius>
+      <explosionChanceToStartFire>0.1</explosionChanceToStartFire>
+	  <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGun">
+		<defName>MechanoidFlameThrower</defName>
+		<label>mechanoid flamethrower</label>
+		<description>A built in flamethrower. Mechanoid-built.</description>
+		<graphicData>
+		  <texPath>Things/Item/Equipment/Weapon/FlameThrower</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<Mass>10</Mass>
+			<AccuracyTouch>0.3</AccuracyTouch>
+			<AccuracyShort>0.51</AccuracyShort>
+			<AccuracyMedium>0.25</AccuracyMedium>
+			<AccuracyLong>0.11</AccuracyLong>
+			<RangedWeapon_Cooldown>3.66</RangedWeapon_Cooldown>
+		</statBases>
+		<tradeability>None</tradeability>
+		<techLevel>Spacer</techLevel>
+		<destroyOnDrop>True</destroyOnDrop>
+		<weaponTags>
+			<li>MechanoidFlamethrower</li>
+		</weaponTags>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_FlameThrower</defaultProjectile>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<warmupTime>0.3</warmupTime>
+			<burstShotCount>20</burstShotCount>
+			<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+			<range>9</range>
+			<soundCast>FlameThrower</soundCast>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		  </li>
+		</verbs>
+	</ThingDef>
+	
+  <!-- ==================== Boombot ========================== -->
+
+  <ThingDef ParentName="BaseBoom">
+    <defName>BoomBoom</defName>
+    <label>boom boom</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+	  <texPath>Hidden</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <explosionRadius >7.5</explosionRadius >
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>MechanoidBoom</defName>
+    <label>mechanoid boom</label>
+    <description>This part goes BOOM!</description>
+    <graphicData>
+      <texPath>Hidden</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<statBases>
+		<MarketValue>3000</MarketValue>
+        <Mass>20</Mass>
+        <RangedWeapon_Cooldown>2.64</RangedWeapon_Cooldown>
+	</statBases>
+    <tradeability>None</tradeability>
+	<techLevel>Spacer</techLevel>
+	<destroyOnDrop>True</destroyOnDrop>
+	<weaponTags>
+		<li>MechanoidBoom</li>
+	</weaponTags>
+    <verbs>
+      <li>
+        <label>explode</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>2</range>
+        <warmupTime>0.83</warmupTime>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <noiseRadius>8</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>BoomBoom</defaultProjectile>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</Defs>

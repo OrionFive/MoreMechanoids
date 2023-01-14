@@ -2,13 +2,12 @@
 using Verse;
 using Verse.AI;
 
-namespace MoreMechanoids
+namespace MoreMechanoids;
+
+public class ThinkNode_ConditionalNonPlayerFaction : ThinkNode_Conditional
 {
-    public class ThinkNode_ConditionalNonPlayerFaction : ThinkNode_Conditional
+    public override bool Satisfied(Pawn pawn)
     {
-        public override bool Satisfied(Pawn pawn)
-        {
-            return pawn.Faction != null && pawn.Faction != Faction.OfPlayer;
-        }
+        return pawn.Faction != null && pawn.Faction != Faction.OfPlayer;
     }
 }

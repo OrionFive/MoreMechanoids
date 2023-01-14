@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <!-- Crawler -->
+  
+  <BodyPartDef>
+    <defName>MechanicalShell</defName>
+    <label>shell</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>PlasmaCutter</defName>
+    <label>plasma cutter</label>
+	<hitPoints>5</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>EatingPathway</li>
+		<li>ManipulationLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalAntenna</defName>
+    <label>antenna</label>
+	<hitPoints>2</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>TalkingPathway</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>InfraredSensor</defName>
+    <label>infrared sensor</label>
+	<hitPoints>5</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>SightSource</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalCore</defName>
+    <label>core</label>
+	<hitPoints>5</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalCrawlerLeg</defName>
+    <label>mechanical leg</label>
+	<hitPoints>5</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalGearBox</defName>
+    <label>gear box</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbSegment</li>
+		<li>ManipulationLimbSegment</li>
+	</tags>
+  </BodyPartDef>
+  
+  <!-- Skullywag -->
+  <BodyPartDef>
+    <defName>FrontParalyzeComponent</defName>
+    <label>paralytic component</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>WheelsEnclosure</defName>
+    <label>wheels enclosure</label>
+	<hitPoints>80</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Wheel</defName>
+    <label>wheel</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>7</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+ 	<bleedRate>0</bleedRate>
+   <alive>false</alive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MechanicalCoreSkullywag</defName>
+    <label>core</label>
+	<hitPoints>60</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>CoreProcessor</defName>
+    <label>core processor</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+ 	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ConsciousnessSource</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>ShieldGenerator</defName>
+    <label>shield generator</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+ 	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  
+  
+  <!-- Assimilated Human -->
+  <BodyPartDef>
+    <defName>MechanicalSkull</defName>
+    <label>steel skull</label>
+	<hitPoints>50</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <!-- Scoutbot -->
+  <BodyPartDef>
+    <defName>MechanicalCoreScoutbot</defName>
+    <label>core</label>
+	<hitPoints>50</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalHoverComponent</defName>
+    <label>hover component</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalBackupHoverComponent</defName>
+    <label>backup hover component</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>FrontGun</defName>
+    <label>front gun</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <!-- Assaulter -->
+  <BodyPartDef>
+    <defName>GunProtrusion</defName>
+    <label>gun protrusion</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>FrontShield</defName>
+    <label>front shield</label>
+	<hitPoints>200</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>ShieldWindow</defName>
+    <label>front shield window</label>
+	<hitPoints>10</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <!-- Carrier -->
+   <BodyPartDef>
+    <defName>MechanicalCephalothorax</defName>
+    <label>cephalothorax</label>
+	<hitPoints>10</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>LargeMechanicalAbdomen</defName>
+    <label>large abdomen</label>
+	<hitPoints>10</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalTentacle</defName>
+    <label>tentacle</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>6</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalTentacleSection</defName>
+    <label>tentacle section</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>7</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Claw</defName>
+    <label>claw</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>ClawGrip</defName>
+    <label>claw grip</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>SightSensor</defName>
+    <label>sight sensor</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>SightSource</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MechanicalPalp</defName>
+    <label>mechanical palp</label>
+	<hitPoints>10</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <!-- Mammoth -->
+  <BodyPartDef>
+    <defName>MechanicalBody</defName>
+    <label>mechanical body</label>
+	<hitPoints>100</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>ArmorPlating</defName>
+    <label>armor plating</label>
+	<hitPoints>150</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>InternalMetalPlate</defName>
+    <label>internal metal plate</label>
+	<hitPoints>80</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>MetalTusk</defName>
+    <label>metal tusk</label>
+	<hitPoints>50</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>MechanicalMammothLeg</defName>
+    <label>mechanical leg</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>MechanicalMammothHoof</defName>
+    <label>mechanical hoof</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>6</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <!-- Flamebot -->
+  <BodyPartDef>
+    <defName>MechanicalBodySmall</defName>
+    <label>body</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>FlamebotTubing</defName>
+    <label>tubing</label>
+	<hitPoints>10</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>FuelContainer</defName>
+    <label>fuel container</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Igniter</defName>
+    <label>igniter</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>SmallWheel</defName>
+    <label>small wheel</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+  
+  <!-- Boombot -->
+  <BodyPartDef>
+    <defName>ExplosiveTank</defName>
+    <label>explosive tank</label>
+	<hitPoints>5</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>RollComponent</defName>
+    <label>rolling component</label>
+	<hitPoints>40</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+    <alive>false</alive>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+  </BodyPartDef>
+
+</Defs>
