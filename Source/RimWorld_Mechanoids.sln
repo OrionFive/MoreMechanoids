@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreMechanoids", "RimWorld_Mechanoids\MoreMechanoids.csproj", "{A36BEEB2-7379-475B-B537-827E34571962}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoorsExpanded", "DoorsExpanded\DoorsExpanded.csproj", "{3621C657-B760-4A34-8B62-3513E3BCEE7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreMechanoidsDoorsExpanded", "DoorsExpanded\MoreMechanoidsDoorsExpanded.csproj", "{3621C657-B760-4A34-8B62-3513E3BCEE7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

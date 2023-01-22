@@ -1,11 +1,10 @@
 using HugsLib;
 using Verse;
 
-namespace MoreMechanoids
+namespace MoreMechanoids;
+
+[StaticConstructorOnStartup]
+public class ModBaseMoreMechanoids : ModBase
 {
-    [StaticConstructorOnStartup]
-    public class ModBaseMoreMechanoids : ModBase
-    {
-        public override string ModIdentifier => "MoreMechanoids";
-    }
+    public override string ModIdentifier => "MoreMechanoids";
 }

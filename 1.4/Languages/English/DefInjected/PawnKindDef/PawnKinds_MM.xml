@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Crawler -->
+
+  <Mech_Crawler.label>crawler</Mech_Crawler.label>
+  <Mech_Crawler.labelPlural>crawlers</Mech_Crawler.labelPlural>
+
+
+  <!-- Skullywag -->
+
+  <Mech_Skullywag.label>skullywag</Mech_Skullywag.label>
+  <Mech_Skullywag.labelPlural>skullywags</Mech_Skullywag.labelPlural>
+
+
+  <!-- Flamebot -->
+
+  <Mech_Flamebot.label>flamebot</Mech_Flamebot.label>
+  <Mech_Flamebot.labelPlural>flamebots</Mech_Flamebot.labelPlural>
+
+
+  <!-- Assaulter -->
+
+  <Mech_Assaulter.label>assaulter</Mech_Assaulter.label>
+  <Mech_Assaulter.labelPlural>assaulters</Mech_Assaulter.labelPlural>
+
+
+  <!-- Mammoth -->
+
+  <Mech_Mammoth.label>mammoth</Mech_Mammoth.label>
+  <Mech_Mammoth.labelPlural>mammoths</Mech_Mammoth.labelPlural>
+
+
+</LanguageData>

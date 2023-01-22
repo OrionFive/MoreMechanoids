@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Skullywag Shield -->
+
+  <Gear_MechanoidShield.label>shield projector</Gear_MechanoidShield.label>
+  <Gear_MechanoidShield.description>A projectile-repulsion device. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. It prevents the wearer from firing out, and shuts down instantly if hit by EMP.</Gear_MechanoidShield.description>
+
+
+  <!-- Mammoth Shield -->
+
+  <Gear_MechanoidShieldEMP.label>EMP shield projector</Gear_MechanoidShieldEMP.label>
+  <Gear_MechanoidShieldEMP.description>An EMP protection device. It can absorb a large amount of EMP damage.</Gear_MechanoidShieldEMP.description>
+
+
+</LanguageData>

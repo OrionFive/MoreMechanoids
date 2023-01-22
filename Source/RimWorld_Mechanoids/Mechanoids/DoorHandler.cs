@@ -1,41 +1,34 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
-namespace MoreMechanoids
+namespace MoreMechanoids;
+
+public class DoorHandler
 {
-    public class DoorHandler
+    public virtual void Force(ThingWithComps thing, ref bool originalHoldOpenValue, ref bool forcedOpen)
     {
-        public virtual void Force(ThingWithComps thing, ref bool originalHoldOpenValue, ref bool forcedOpen)
+        if (thing is not Building_Door door)
         {
-            Building_Door door = thing as Building_Door;
-            if( door == null)
-            {
-                Log.Error($"Cant get as Building_Door: {thing.GetType()}");
-                return;
-            }
-            originalHoldOpenValue = door.holdOpenInt;
-            forcedOpen = true;
-            door.DoorOpen();
-            door.holdOpenInt = true;
+            Log.Error($"Cant get as Building_Door: {thing.GetType()}");
+            return;
         }
 
-        public virtual void Fix(ThingWithComps thing, bool originalHoldOpenValue, ref bool forcedOpen)
-        {
+        originalHoldOpenValue = door.holdOpenInt;
+        forcedOpen = true;
+        door.DoorOpen();
+        door.holdOpenInt = true;
+    }
 
-            Building_Door door = thing as Building_Door;
-            if (door == null)
-            {
-                Log.Error($"Cant get as Building_Door: {thing.GetType()}");
-                return;
-            }
-            door.holdOpenInt = originalHoldOpenValue;
-            forcedOpen = false;
-            door.DoorOpen();
+    public virtual void Fix(ThingWithComps thing, bool originalHoldOpenValue, ref bool forcedOpen)
+    {
+        if (thing is not Building_Door door)
+        {
+            Log.Error($"Cant get as Building_Door: {thing.GetType()}");
+            return;
         }
+
+        door.holdOpenInt = originalHoldOpenValue;
+        forcedOpen = false;
+        door.DoorOpen();
     }
 }
