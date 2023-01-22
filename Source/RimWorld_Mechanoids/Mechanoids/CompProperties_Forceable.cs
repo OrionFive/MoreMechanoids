@@ -7,11 +7,11 @@ namespace MoreMechanoids;
 /// </summary>
 public class CompProperties_Forceable : CompProperties
 {
-    public DoorHandler DoorHandler;
+    public DoorHandler doorHandler;
 
     public CompProperties_Forceable()
     {
         compClass = typeof(CompForceable);
-        DoorHandler = new DoorHandler();
+        doorHandler = new DoorHandler();
     }
 }

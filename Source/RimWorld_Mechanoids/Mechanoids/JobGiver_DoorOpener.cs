@@ -9,7 +9,7 @@ public abstract class JobGiver_DoorOpener : ThinkNode_JobGiver
 {
     private const int CloseSearchRadius = 56;
 
-    private static IntRange expiryInterval = new IntRange(450, 500);
+    private static IntRange expiryInterval = new(450, 500);
 
     public override Job TryGiveJob(Pawn pawn)
     {

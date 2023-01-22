@@ -14,7 +14,7 @@ public class SymbolResolver_RandomMechanoidGroup_Patch
     [HarmonyPatch(typeof(SymbolResolver_RandomMechanoidGroup), nameof(SymbolResolver_RandomMechanoidGroup.Resolve))]
     public class Resolve
     {
-        private static FloatRange CombatPower = new FloatRange(150, 500);
+        private static FloatRange combatPower = new(150, 500);
 
         [HarmonyPostfix]
         internal static void Postfix()
@@ -37,10 +37,10 @@ public class SymbolResolver_RandomMechanoidGroup_Patch
             // Is it a mechanoid?
             if (symbol.symbol == "pawn" && symbol.resolveParams.faction == Faction.OfMechanoids)
             {
-                if (!CombatPower.Includes(symbol.resolveParams.singlePawnKindDef.combatPower))
+                if (!combatPower.Includes(symbol.resolveParams.singlePawnKindDef.combatPower))
                 {
                     symbol.resolveParams.singlePawnKindDef = DefDatabase<PawnKindDef>.AllDefsListForReading
-                        .Where(kind => kind.RaceProps.IsMechanoid && CombatPower.Includes(kind.combatPower))
+                        .Where(kind => kind.RaceProps.IsMechanoid && combatPower.Includes(kind.combatPower))
                         .RandomElementByWeight(kind => 1f / kind.combatPower);
                 }
 

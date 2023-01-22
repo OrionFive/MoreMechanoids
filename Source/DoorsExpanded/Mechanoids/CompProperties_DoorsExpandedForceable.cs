@@ -8,6 +8,6 @@ public class CompProperties_DoorsExpandedForceable : CompProperties_Forceable
     public CompProperties_DoorsExpandedForceable()
     {
         compClass = typeof(CompForceable);
-        DoorHandler = new DoorsExpandedHandler();
+        doorHandler = new DoorsExpandedHandler();
     }
 }

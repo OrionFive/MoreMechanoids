@@ -20,17 +20,16 @@ public class RaidStrategyWorker_ImmediateAttackSappers_Patch
                 return;
             }
 
-            switch (p?.def.defName)
+            __result = p?.def.defName switch
             {
-                case "Mech_Mammoth":
+                "Mech_Mammoth" =>
                     // Only can be sappers 15% of the time; use points as seed, so same attack acts the same way
-                    __result = Rand.ChanceSeeded(0.15f, GenMath.RoundRandom(pointsTotal));
-                    break;
-                case "Mech_Flamebot":
+                    Rand.ChanceSeeded(0.15f, GenMath.RoundRandom(pointsTotal)),
+                "Mech_Flamebot" =>
                     // Only can be sappers 20% of the time; use points as seed, so same attack acts the same way
-                    __result = Rand.ChanceSeeded(0.20f, GenMath.RoundRandom(pointsTotal) + 1);
-                    break;
-            }
+                    Rand.ChanceSeeded(0.20f, GenMath.RoundRandom(pointsTotal) + 1),
+                _ => __result
+            };
         }
     }
 }

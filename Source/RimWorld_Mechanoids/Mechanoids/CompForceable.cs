@@ -25,7 +25,7 @@ public class CompForceable : ThingComp
             return;
         }
 
-        Props.DoorHandler.Force(parent, ref originalHoldOpenValue, ref forcedOpen);
+        Props.doorHandler.Force(parent, ref originalHoldOpenValue, ref forcedOpen);
     }
 
     public void Fix()
@@ -35,6 +35,6 @@ public class CompForceable : ThingComp
             return;
         }
 
-        Props.DoorHandler.Fix(parent, originalHoldOpenValue, ref forcedOpen);
+        Props.doorHandler.Fix(parent, originalHoldOpenValue, ref forcedOpen);
     }
 }
