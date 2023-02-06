@@ -5,8 +5,7 @@ namespace MoreMechanoids;
 
 public class CompProperties_ShieldGenerator : CompProperties
 {
-    [UsedImplicitly]
-    public ThingDef shieldDef;
+    [UsedImplicitly] public ThingDef shieldDef;
 
     public CompProperties_ShieldGenerator()
     {
