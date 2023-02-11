@@ -39,8 +39,7 @@ public class JobGiver_DownAllHumans : JobGiver_AIFightEnemies
 
     public override Thing FindAttackTarget(Pawn pawn)
     {
-        var flags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachableIfCantHitFromMyPos |
-                    TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable;
+        var flags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedAutoTargetable;
         //if (this.needLOSToAcquireNonPawnTargets)
         //    flags |= TargetScanFlags.NeedLOSToNonPawns;
         //if (this.PrimaryVerbIsIncendiary(pawn))
