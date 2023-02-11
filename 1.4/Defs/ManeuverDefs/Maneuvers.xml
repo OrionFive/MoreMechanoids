@@ -20,7 +20,7 @@
     <defName>ParalyzingPoke</defName>
     <requiredCapacity>ParalyzingPoke</requiredCapacity>
     <verb>
-      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <verbClass>MoreMechanoids.Verb_ParalyzingPoke</verbClass>
       <meleeDamageDef>Paralyze</meleeDamageDef>
     </verb>
     <logEntryDef>MeleeAttack</logEntryDef>
