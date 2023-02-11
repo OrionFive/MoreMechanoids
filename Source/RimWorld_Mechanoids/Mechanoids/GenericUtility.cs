@@ -27,7 +27,7 @@ public static class GenericUtility
         door?.GetComp<CompForceable>()?.Fix();
     }
 
-    public static bool ValidSkullywagPawn(Pawn pawn)
+    public static bool ValidSkullywagTargetPawn(Pawn pawn)
     {
         return pawn is { Destroyed: false, Downed: false } && !pawn.IsInvisible() && pawn.def.race is { IsFlesh: true };
     }

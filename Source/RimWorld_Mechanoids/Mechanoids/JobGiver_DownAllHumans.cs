@@ -14,7 +14,7 @@ public class JobGiver_DownAllHumans : JobGiver_AIFightEnemies
 
     public override bool ExtraTargetValidator(Pawn pawn, Thing target)
     {
-        return GenericUtility.ValidSkullywagPawn(target as Pawn);
+        return GenericUtility.ValidSkullywagTargetPawn(target as Pawn);
     }
 
     public override Job TryGiveJob(Pawn pawn)
@@ -29,7 +29,7 @@ public class JobGiver_DownAllHumans : JobGiver_AIFightEnemies
         UpdateEnemyTarget(pawn);
         var enemyTarget = pawn.mindState.enemyTarget;
 
-        if (enemyTarget is not Pawn enemyPawn || !GenericUtility.ValidSkullywagPawn(enemyPawn))
+        if (enemyTarget is not Pawn enemyPawn || !GenericUtility.ValidSkullywagTargetPawn(enemyPawn))
         {
             return null;
         }

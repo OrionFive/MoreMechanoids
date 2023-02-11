@@ -18,7 +18,7 @@ internal static class Pawn_MeleeVerbs_Patch
             }
 
             Verb result = null;
-            if (target is Pawn pawn && GenericUtility.ValidSkullywagPawn(pawn))
+            if (target is Pawn pawn && GenericUtility.ValidSkullywagTargetPawn(pawn))
             {
                 result = ___pawn.verbTracker.AllVerbs.FirstOrDefault(verb => verb is Verb_ParalyzingPoke);
             }
