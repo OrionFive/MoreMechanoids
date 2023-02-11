@@ -91,7 +91,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>5.0</power>
+        <power>1</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -100,7 +100,7 @@
     </tools>
     <race>
       <intelligence>ToolUser</intelligence>
-      <thinkTreeMain>Mechanoid_Skullywag</thinkTreeMain>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>MechanicalSkullywag</body>
       <baseBodySize>1.0</baseBodySize>
       <baseHealthScale>0.7</baseHealthScale>

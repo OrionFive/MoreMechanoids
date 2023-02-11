@@ -1,3 +1,4 @@
+using RimWorld;
 using Verse;
 
 namespace MoreMechanoids;
@@ -24,5 +25,10 @@ public static class GenericUtility
     public static void Fix(this Building door)
     {
         door?.GetComp<CompForceable>()?.Fix();
+    }
+
+    public static bool ValidSkullywagPawn(Pawn pawn)
+    {
+        return pawn is { Destroyed: false, Downed: false } && !pawn.IsInvisible() && pawn.def.race is { IsFlesh: true };
     }
 }
