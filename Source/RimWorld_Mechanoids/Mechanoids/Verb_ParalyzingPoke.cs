@@ -7,7 +7,7 @@ public class Verb_ParalyzingPoke : Verb_MeleeApplyHediff
 {
     public override bool IsUsableOn(Thing target)
     {
-        return GenericUtility.ValidSkullywagPawn(target as Pawn);
+        return GenericUtility.ValidSkullywagTargetPawn(target as Pawn);
     }
 
     public override DamageWorker.DamageResult ApplyMeleeDamageToTarget(LocalTargetInfo target)

@@ -22,7 +22,7 @@ internal static class AttackTargetFinder_Patch
             var oldValidator = validator;
             validator = attackTarget =>
                 oldValidator(attackTarget) && attackTarget.Thing is Pawn pawn &&
-                GenericUtility.ValidSkullywagPawn(pawn) ||
+                GenericUtility.ValidSkullywagTargetPawn(pawn) ||
                 attackTarget.Thing is Building_Door;
         }
     }

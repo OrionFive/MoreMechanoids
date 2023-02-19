@@ -7,7 +7,7 @@ namespace MoreMechanoids;
 
 public abstract class JobGiver_DoorOpener : ThinkNode_JobGiver
 {
-    private const int CloseSearchRadius = 56;
+    private const int CloseSearchRadius = 5600;
 
     private static IntRange expiryInterval = new IntRange(450, 500);
 
