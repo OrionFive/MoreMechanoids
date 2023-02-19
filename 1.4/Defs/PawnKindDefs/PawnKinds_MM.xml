@@ -11,6 +11,16 @@
     <defaultFactionType>Mechanoid</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Crawler</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Crawler</texPath>
@@ -37,6 +47,16 @@
     <defaultFactionType>Mechanoid</defaultFactionType>
     <aiAvoidCover>false</aiAvoidCover>
     <lifeStages>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Skullywag</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Skullywag</texPath>
@@ -71,6 +91,16 @@
     </weaponTags>
     <aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Flamebot</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Flamebot</texPath>
@@ -101,6 +131,16 @@
     </weaponTags>
     <aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Assaulter</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Assaulter</texPath>
@@ -125,6 +165,17 @@
 	<defaultFactionType>Mechanoid</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Mammoth</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.7, 0.9, 0.7)</volume>
+          </shadowData>
+		  <shaderType>Cutout</shaderType>
+		</bodyGraphicData>
+      </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Mechanoid/Mammoth</texPath>

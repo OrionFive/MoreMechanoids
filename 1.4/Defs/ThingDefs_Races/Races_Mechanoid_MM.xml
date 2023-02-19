@@ -50,11 +50,19 @@
 		  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
 		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
         </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+		  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+		  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
       </lifeStageAges>
 	  <soundCallIntervalRange>100000~200000</soundCallIntervalRange>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+      <mechWeightClass>Light</mechWeightClass>
     </race>
     <butcherProducts>
       <Steel>5</Steel>
@@ -112,11 +120,19 @@
           <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
           <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
         </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+          <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+        </li>
       </lifeStageAges>
       <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+      <mechWeightClass>Medium</mechWeightClass>
     </race>
     <butcherProducts>
       <Steel>15</Steel>
@@ -168,11 +184,19 @@
           <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
           <soundCall>Pawn_Mech_Scyther_Call</soundCall>
         </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
       </lifeStageAges>
       <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+      <mechWeightClass>Light</mechWeightClass>
     </race>
     <butcherProducts>
       <Steel>10</Steel>
@@ -246,11 +270,19 @@
           <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
           <soundCall>Pawn_Mech_Centipede_Call</soundCall>
         </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+        </li>
       </lifeStageAges>
       <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <butcherProducts>
       <Steel>80</Steel>
@@ -319,11 +351,19 @@
 		  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
 		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
         </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+		  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+		  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+		  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
       </lifeStageAges>
       <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
       <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <butcherProducts>
       <Steel>25</Steel>

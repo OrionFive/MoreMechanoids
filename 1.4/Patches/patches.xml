@@ -22,7 +22,228 @@
       </value>
     </match>
   </Operation>
+  
 
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs</xpath>
+      <value>
+	  
+	    <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>Mech_Crawler</defName>
+    <label>gestate crawler</label>
+    <description>Gestate a crawler mechanoid.</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreBasic</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_Crawler>1</Mech_Crawler>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_Crawler</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>	  
+	    <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>Mech_Flamebot</defName>
+    <label>gestate flamebot</label>
+    <description>Gestate a flamebot mechanoid.</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreBasic</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_Flamebot>1</Mech_Flamebot>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_Flamebot</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+	  
+	    <RecipeDef ParentName="MediumMechanoidRecipe">
+    <defName>Mech_Skullywag</defName>
+    <label>gestate skullywag</label>
+    <description>Gestate a skullywag mechanoid.</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreRegular</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_Skullywag>1</Mech_Skullywag>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_Skullywag</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+	  
+	  <RecipeDef ParentName="MediumMechanoidRecipe">
+    <defName>Mech_Assaulter</defName>
+    <label>gestate assaulter</label>
+    <description>Gestate an assaulter mechanoid.</description>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreRegular</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <Mech_Assaulter>1</Mech_Assaulter>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_Assaulter</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+  
+	  <RecipeDef ParentName="CentipedeMechanoidRecipe">
+    <defName>Mech_Mammoth</defName>
+    <label>gestate mammoth</label>
+    <description>Gestate a mammoth mechanoid.</description>
+    <products>
+      <Mech_Mammoth>1</Mech_Mammoth>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>Mech_Mammoth</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+			      <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "ResurrectLightMech"]/fixedIngredientFilter/thingDefs</xpath>
+					  <value>
+						<li>Corpse_Mech_Crawler</li>
+						<li>Corpse_Mech_Flamebot</li>
+					  </value>
+				  </li>
+			      <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "ResurrectMediumMech"]/fixedIngredientFilter/thingDefs</xpath>
+					  <value>
+						<li>Corpse_Mech_Skullywag</li>
+						<li>Corpse_Mech_Assaulter</li>
+					  </value>
+				  </li>
+			      <li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "ResurrectHeavyMech"]/fixedIngredientFilter/thingDefs</xpath>
+					  <value>
+						<li>Corpse_Mech_Mammoth</li>
+					  </value>
+				  </li>
+			      <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MechGestator"]/recipes</xpath>
+					  <value>
+						<li>Mech_Crawler</li>
+						<li>Mech_Flamebot</li>
+					  </value>
+				  </li>
+			      <li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "LargeMechGestator"]/recipes</xpath>
+					  <value>
+						<li>Mech_Skullywag</li>
+						<li>Mech_Assaulter</li>
+						<li>Mech_Mammoth</li>
+					  </value>
+				  </li>
+			</operations>
+		</match>
+	</Operation>
+	
   <Operation Class="PatchOperationFindMod">    
     <mods>
       <li>Doors Expanded (Dev)</li>
